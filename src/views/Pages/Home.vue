@@ -1,15 +1,19 @@
 <template lang="pug">
   .home-container
+    h1 origin
     .champion-origin-container
       .champion-origin-wrapper(v-for="origin in championListEachOrigin" :key="origin.origin")
         span.origin-title {{ origin.origin }}
         .champion-wrapper(v-for="champ in origin.championList" :key="champ.name")
           p {{ champ.name }}
           img(height="100" width="100" :src="champ.image")
-
-    .champion-container(v-for="champ in championList" :key="champ.name")
-      p {{ champ.name }}
-      img(height="100" width="100" :src="champ.image")
+    h1 class
+    .champion-class-container
+      .champion-class-wrapper(v-for="eachClass in championListEachClass" :key="eachClass.class")
+        span.class-title {{ eachClass.class }}
+        .champion-wrapper(v-for="champ in eachClass.championList" :key="champ.name")
+          p {{ champ.name }}
+          img(height="100" width="100" :src="champ.image")
 </template>
 
 <script lang="ts">
@@ -72,15 +76,18 @@ export default class Home extends Vue {
   background #8FF
   display flex
   flex-wrap wrap
+.champion-class-container
 .champion-origin-container
   display flex
   flex-wrap wrap
   padding 8px
   margin 8px
+.class-title
 .origin-title
   position absolute
   top -8px
   background #ffffff
+.champion-class-wrapper
 .champion-origin-wrapper
   position relative
   display flex
