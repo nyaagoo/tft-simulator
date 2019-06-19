@@ -6,7 +6,7 @@
         span.origin-title {{ origin.origin }}
         .champion-wrapper(v-for="champ in origin.championList" :key="champ.name")
           img(height="60" width="60" :src="champ.image")
-          p {{ champ.name }}
+          p.ma-0 {{ champ.name }}
     h1 class
     .champion-class-container
       .champion-class-wrapper(v-for="eachClass in championListEachClass" :key="eachClass.class")
