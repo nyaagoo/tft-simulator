@@ -1,14 +1,22 @@
 <template lang="pug">
   .home-container
-    .champion-container(v-for="champ in champions" :key="champ.name")
+    .champion-origin-container
+      .champion-origin-wrapper(v-for="origin in championListEachOrigin" :key="origin.origin")
+        span.origin-title {{ origin.origin }}
+        .champion-wrapper(v-for="champ in origin.championList" :key="champ.name")
+          p {{ champ.name }}
+          img(height="100" width="100" :src="champ.image")
+
+    .champion-container(v-for="champ in championList" :key="champ.name")
       p {{ champ.name }}
       img(height="100" width="100" :src="champ.image")
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "@/views/Pages/HelloWorld.vue"; // @ is an alias to /src
-import champions from "@/assets/champions.json";
+import HelloWorld from "@/views/Pages/HelloWorld.vue";
+import { Champion, ChampionOrigin, ChampionClass, Origin, Class } from "@/models/champion";
+import champion from "@/assets/champions.json";
 
 @Component({
   components: {
@@ -16,11 +24,47 @@ import champions from "@/assets/champions.json";
   }
 })
 export default class Home extends Vue {
-  champions = champions;
+  championList: Champion[] = champion;
+  championListEachOrigin: ChampionOrigin[] = [];
+  championListEachClass: ChampionClass[] = [];
   greet: string = "hello world";
+
+  created() {
+    const eachOrigin = this.championList.reduce<ChampionOrigin[]>((acc, current) => {
+      const element = acc.find(p => p.origin === current.origin);
+      if (element) {
+        element.championList.push(current);
+      } else {
+        acc.push({
+          origin: current.origin as Origin,
+          championList: [current]
+        });
+      }
+      return acc;
+    }, []);
+    this.championListEachOrigin = eachOrigin;
+
+    const eachClass = this.championList.reduce<ChampionClass[]>((acc, current) => {
+      const element = acc.find(p => p.class === current.class);
+      if (element) {
+        element.championList.push(current);
+      } else {
+        acc.push({
+          class: current.class as Class,
+          championList: [current]
+        });
+      }
+      return acc;
+    }, []);
+    this.championListEachClass = eachClass;
+
+    /* eslint-disable no-console */
+    console.info(eachOrigin);
+    console.info(eachClass);
+  }
 }
 </script>
-<style lang="stylus" scoped>
+<style lang="stylus" scoped>.
 .home-container
   margin auto
   height calc(100vh - 200px)
@@ -28,6 +72,22 @@ export default class Home extends Vue {
   background #8FF
   display flex
   flex-wrap wrap
+.champion-origin-container
+  display flex
+  flex-wrap wrap
+  padding 8px
+  margin 8px
+.origin-title
+  position absolute
+  top -8px
+  background #ffffff
+.champion-origin-wrapper
+  position relative
+  display flex
+  flex-wrap wrap
+  border 1px solid #88ff88
+  padding 8px
+  margin 8px
 .champion-container
   width 100px
 </style>
