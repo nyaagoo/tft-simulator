@@ -18,34 +18,37 @@ export type ChampionOrigin = { origin: Origin; championList: Champion[] };
 export type ChampionClass = { class: Class; championList: Champion[] };
 
 export type Origin =
-| "Demon"
-| "Dragon"
-| "Exile"
-| "Gracial"
-| "Robot"
-| "Imperial"
-| "Noble"
-| "Ninja"
-| "Pirate"
-| "Phantom"
-| "Wild"
-| "Void"
-| "Yordle";
+  | "Demon"
+  | "Dragon"
+  | "Exile"
+  | "Gracial"
+  | "Robot"
+  | "Imperial"
+  | "Noble"
+  | "Ninja"
+  | "Pirate"
+  | "Phantom"
+  | "Wild"
+  | "Void"
+  | "Yordle";
 
 export type Class =
-| "Assassin"
-| "Blademaster"
-| "Brawler"
-| "Elementalist"
-| "Guardian"
-| "Gunslinger"
-| "Knight"
-| "Ranger"
-| "Shapeshifter"
-| "Sorcerer";
+  | "Assassin"
+  | "Blademaster"
+  | "Brawler"
+  | "Elementalist"
+  | "Guardian"
+  | "Gunslinger"
+  | "Knight"
+  | "Ranger"
+  | "Shapeshifter"
+  | "Sorcerer";
 
 // TODO: 画面デザインまで固まったらこのデータはjsonから取ってくる。jsonはDBから取ってくるか埋め込むかは検討
-export const originSynergy: {[K in Origin]: {require: number, bonus: string}[]} = {
+export const originSynergy: {
+  [K in Origin]: { require: number; bonus: string }[]
+} = {
+  /* eslint-disable prettier/prettier */
   Demon: [
     {require: 2, bonus: "デーモンの攻撃は相手の30％の確率で相手のマナを無くし、同量のTrueダメージを与える"},
     {require: 4, bonus: "デーモンの攻撃は相手の50％の確率で相手のマナを無くし、同量のTrueダメージを与える"},
@@ -93,11 +96,15 @@ export const originSynergy: {[K in Origin]: {require: number, bonus: string}[]} 
   Yordle: [
     {require: 3, bonus: "味方ヨードルは20％の確率で攻撃を回避する"},
     {require: 6, bonus: "味方ヨードルは50％の確率で攻撃を回避する"}
-  ],
-}
+  ]
+    /* eslint-enable prettier/prettier */
+};
 
 // TODO: 画面デザインまで固まったらこのデータはjsonから取ってくる。jsonはDBから取ってくるか埋め込むかは検討
-export const classSynergy: {[K in Class]: {require: number, bonus: string}[]} = {
+export const classSynergy: {
+  [K in Class]: { require: number; bonus: string }[]
+} = {
+  /* eslint-disable prettier/prettier */
   Assassin: [
     {require: 3, bonus: "アサシンは戦闘開始時に最も遠い敵に飛びつき+150％のクリティカルダメージを与える"},
     {require: 6, bonus: "アサシンは戦闘開始時に最も遠い敵に飛びつき+350％のクリティカルダメージを与える"}
@@ -135,8 +142,13 @@ export const classSynergy: {[K in Class]: {require: number, bonus: string}[]} = 
   Sorcerer: [
     {require: 3, bonus:"味方が与えるAPダメージが上昇する"}
   ]
-}
+  /* eslint-enable prettier/prettier */
+};
 
-
-
-export const costColor: Map<number, string> = new Map([[1,"#bababa"],[2,"#94b6da"],[3,"#394eb4"],[4,"#b931ac"],[5,"#da8d3a"]]);
+export const costColor: Map<number, string> = new Map([
+  [1, "#bababa"],
+  [2, "#94b6da"],
+  [3, "#394eb4"],
+  [4, "#b931ac"],
+  [5, "#da8d3a"]
+]);

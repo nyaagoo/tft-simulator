@@ -4,7 +4,7 @@
       v-content
         router-link(to="/") Home
         span  | 
-        router-link(to="/about") About
+        router-link(to="/item") About
         router-view
 </template>
 

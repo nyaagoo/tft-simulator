@@ -40,7 +40,7 @@ export default class Home extends Vue {
   championList = champion;
   championListEachOrigin: ChampionOrigin[] = [];
   championListEachClass: ChampionClass[] = [];
-  costColor: Map<number,string> = costColor;
+  costColor: Map<number, string> = costColor;
   greet: string = "hello world";
 
   created() {
