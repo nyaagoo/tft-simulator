@@ -2,9 +2,9 @@
   #app
     v-app
       v-content
-        router-link(to="/") Home
+        router-link(to="/") Champion
         span  | 
-        router-link(to="/item") About
+        router-link(to="/item") Item
         router-view
 </template>
 
