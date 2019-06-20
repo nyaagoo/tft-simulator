@@ -5,14 +5,14 @@
       .champion-origin-wrapper(v-for="origin in championListEachOrigin" :key="origin.origin")
         span.origin-title {{ origin.origin }}
         .champion-wrapper(v-for="champ in origin.championList" :key="champ.name")
-          img(height="60" width="60" :src="champ.image")
+          img(:style="{ 'outline': `3px solid ${costColor.get(champ.cost)}`, 'outline-offset': '-3px' }")(height="60" width="60" :src="champ.image")
           p.ma-0.text-truncate {{ champ.name }}
     h1 class
     .champion-class-container
       .champion-class-wrapper(v-for="eachClass in championListEachClass" :key="eachClass.class")
         span.class-title {{ eachClass.class }}
         .champion-wrapper(v-for="champ in eachClass.championList" :key="champ.name")
-          img(height="60" width="60" :src="champ.image")
+          img(:style="{ 'outline': `3px solid ${costColor.get(champ.cost)}`, 'outline-offset': '-3px' }")(height="60" width="60" :src="champ.image")
           p.ma-0.text-truncate {{ champ.name }}
 </template>
 
@@ -24,7 +24,10 @@ import {
   ChampionOrigin,
   ChampionClass,
   Origin,
-  Class
+  Class,
+  costColor,
+  originSynergy,
+  classSynergy
 } from "@/models/champion";
 import champion from "@/assets/champions.json";
 
@@ -37,6 +40,7 @@ export default class Home extends Vue {
   championList = champion;
   championListEachOrigin: ChampionOrigin[] = [];
   championListEachClass: ChampionClass[] = [];
+  costColor: Map<number,string> = costColor;
   greet: string = "hello world";
 
   created() {
@@ -98,7 +102,7 @@ export default class Home extends Vue {
 .class-title
 .origin-title
   position absolute
-  top -8px
+  top -10px
   background #ffffff
 .champion-class-wrapper
 .champion-origin-wrapper
