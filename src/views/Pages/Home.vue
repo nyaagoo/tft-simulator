@@ -103,13 +103,16 @@ export default class Home extends Vue {
 .origin-title
   position absolute
   top -10px
-  background #ffffff
+  background #303030
+  padding-left 4px
+  padding-right  4px
 .champion-class-wrapper
 .champion-origin-wrapper
   position relative
   display flex
   flex-wrap wrap
   border 1px solid #88ff88
+  border-radius 8px
   padding 8px
   margin 8px
 .champion-container

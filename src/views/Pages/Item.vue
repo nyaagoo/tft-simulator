@@ -2,9 +2,9 @@
   .item-page
     h3 Item Build
     .item-build-container
-      .basic-item-container(v-for="item in buildItemEachBasicItem" :key="item.name")
+      .basic-item-container.ma-2.pa-2(v-for="item in buildItemEachBasicItem" :key="item.name")
         span {{ item.basicItem }}
-        .item-container.ma-2(v-for="item2 in item.buildItem" :key="item2.name")
+        .item-container.ma-2.ml-4(v-for="item2 in item.buildItem" :key="item2.name")
           img(:src="item2.img")
           span.pa-1 {{ item2.name }}
 
@@ -49,10 +49,9 @@ export default class Item extends Vue {
   display flex
   flex-wrap wrap
 .basic-item-container
-  margin 8px
-  padding 8px
   width 300px
-  border 2px solid #88ffff
+  border 1px solid #88ffff
+  border-radius 4px
   text-align left
 .item-container
   display flex

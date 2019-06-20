@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    v-app
+    v-app(dark)
       v-content
         router-link(to="/") Champion
         span  | 
@@ -14,5 +14,4 @@
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   text-align center
-  color #2c3e50
 </style>
