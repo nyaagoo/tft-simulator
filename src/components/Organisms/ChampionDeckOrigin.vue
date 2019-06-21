@@ -5,7 +5,7 @@
       .champion-origin-wrapper(v-for="origin in championListEachOrigin" :key="origin.origin")
         span.origin-title {{ origin.origin }}
         .champion-wrapper(v-for="champ in origin.championList" :key="champ.name")
-          img(:style="{ 'outline': `3px solid ${costColor.get(champ.cost)}`, 'outline-offset': '-3px' }")(height="60" width="60" :src="champ.image")
+          img.champion-img(:style="{ 'outline-color': `${costColor.get(champ.cost)}` }")(height="60" width="60" :src="champ.image" :alt="champ.name")
           p.ma-0.text-truncate {{ champ.name }}
 </template>
 <script lang="ts">
@@ -57,4 +57,8 @@ export default class DeckOrigin extends Vue {
   p
     width 60px
   padding 4px
+.champion-img
+  outline-style solid
+  outline-width 3px
+  outline-offset -3px
 </style>
