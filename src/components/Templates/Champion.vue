@@ -19,69 +19,29 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import {
-  Champion,
   ChampionOrigin,
   ChampionClass,
-  Origin,
-  Class,
   costColor,
   originSynergy,
   classSynergy
 } from "@/models/champion";
-import champion from "@/assets/champions.json";
 import router from "@/router";
+import { champion } from "@/store/index";
 
 @Component({
   name: "champion-template",
   components: {}
 })
 export default class ChampionTemplate extends Vue {
-  championList = champion;
   championListEachOrigin: ChampionOrigin[] = [];
   championListEachClass: ChampionClass[] = [];
   costColor: Map<number, string> = costColor;
-  greet: string = "hello world";
 
   mounted() {
-    const eachOrigin = this.championList.reduce<ChampionOrigin[]>(
-      (acc, current) => {
-        const currentOriginList = current.origin.split("\n");
-        currentOriginList.forEach(currentOrigin => {
-          const element = acc.find(p => p.origin === currentOrigin);
-          if (element) element.championList.push(current);
-          else
-            acc.push({
-              origin: currentOrigin as Origin,
-              championList: [current]
-            });
-        });
-        return acc;
-      },
-      []
-    );
-    this.championListEachOrigin = eachOrigin;
-
-    const eachClass = this.championList.reduce<ChampionClass[]>(
-      (acc, current) => {
-        const currentClassList = current.class.split("\n");
-        currentClassList.forEach(currentClass => {
-          const element = acc.find(p => p.class === currentClass);
-          if (element) element.championList.push(current);
-          else
-            acc.push({
-              class: currentClass as Class,
-              championList: [current]
-            });
-        });
-        return acc;
-      },
-      []
-    );
-    this.championListEachClass = eachClass;
-
-    /* eslint-disable no-console */
-    console.info(eachOrigin);
-    console.info(eachClass);
+    champion.SeparateChampionDeckOrigin();
+    this.championListEachOrigin = champion.championDeckOrigin;
+    champion.SeparateChampionDeckClass();
+    this.championListEachClass = champion.championDeckClass;
   }
 }
 </script>
