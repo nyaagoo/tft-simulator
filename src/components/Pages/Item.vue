@@ -11,14 +11,14 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import router from "@/router";
 import { BuildItem, BasicItem, buildItem } from "@/models/item";
+import router from "@/router";
 
 @Component({
   name: "item",
   components: {}
 })
-export default class Item extends Vue {
+export default class ItemPage extends Vue {
   buildItem: BuildItem[] = buildItem;
   buildItemEachBasicItem: {
     basicItem: BasicItem;

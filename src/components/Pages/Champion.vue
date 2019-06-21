@@ -18,7 +18,6 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "@/views/Pages/HelloWorld.vue";
 import {
   Champion,
   ChampionOrigin,
@@ -32,11 +31,9 @@ import {
 import champion from "@/assets/champions.json";
 
 @Component({
-  components: {
-    HelloWorld
-  }
+  components: {}
 })
-export default class Home extends Vue {
+export default class ChampionPage extends Vue {
   championList = champion;
   championListEachOrigin: ChampionOrigin[] = [];
   championListEachClass: ChampionClass[] = [];
