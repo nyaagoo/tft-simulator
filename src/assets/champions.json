@@ -1,7 +1,7 @@
 [
     {
         "name": "Aatrox",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Aatrox.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Aatrox.png",
         "origin": "Demon",
         "class": "Blademaster",
         "cost": 2,
@@ -15,7 +15,7 @@
     },
     {
         "name": "Ahri",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ahri.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ahri.png",
         "origin": "Wild",
         "class": "Sorcerer",
         "cost": 2,
@@ -29,7 +29,7 @@
     },
     {
         "name": "Akali",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Akali.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Akali.png",
         "origin": "Ninja",
         "class": "Assassin",
         "cost": 4,
@@ -43,7 +43,7 @@
     },
     {
         "name": "Anivia",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Anivia.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Anivia.png",
         "origin": "Glacial",
         "class": "Elementalist",
         "cost": 5,
@@ -57,7 +57,7 @@
     },
     {
         "name": "Ashe",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ashe.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ashe.png",
         "origin": "Glacial",
         "class": "Ranger",
         "cost": 3,
@@ -71,7 +71,7 @@
     },
     {
         "name": "Aurelion-Sol",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/AurelionSol.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/AurelionSol.png",
         "origin": "Dragon",
         "class": "Sorcerer",
         "cost": 4,
@@ -85,7 +85,7 @@
     },
     {
         "name": "Blitzcrank",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Blitzcrank.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Blitzcrank.png",
         "origin": "Robot",
         "class": "Guardian",
         "cost": 2,
@@ -99,7 +99,7 @@
     },
     {
         "name": "Brand",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Brand.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Brand.png",
         "origin": "Demon",
         "class": "Elementalist",
         "cost": 4,
@@ -113,7 +113,7 @@
     },
     {
         "name": "Braum",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Braum.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Braum.png",
         "origin": "Glacial",
         "class": "Guardian",
         "cost": 2,
@@ -127,7 +127,7 @@
     },
     {
         "name": "ChoGath",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Chogath.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Chogath.png",
         "origin": "Void",
         "class": "Brawler",
         "cost": 4,
@@ -141,7 +141,7 @@
     },
     {
         "name": "Darius",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Darius.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Darius.png",
         "origin": "Imperial",
         "class": "Blademaster",
         "cost": 1,
@@ -155,7 +155,7 @@
     },
     {
         "name": "Draven",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Draven.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Draven.png",
         "origin": "Imperial",
         "class": "Blademaster",
         "cost": 4,
@@ -169,7 +169,7 @@
     },
     {
         "name": "Elise",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Elise.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Elise.png",
         "origin": "Demon",
         "class": "Shapeshifter",
         "cost": 2,
@@ -183,7 +183,7 @@
     },
     {
         "name": "Evelynn",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Evelynn.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Evelynn.png",
         "origin": "Demon",
         "class": "Assassin",
         "cost": 3,
@@ -197,7 +197,7 @@
     },
     {
         "name": "Fiora",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Fiora.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Fiora.png",
         "origin": "Noble",
         "class": "Blademaster",
         "cost": 1,
@@ -211,7 +211,7 @@
     },
     {
         "name": "Gangplank",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gangplank.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gangplank.png",
         "origin": "Pirate",
         "class": "Blademaster\nGunslinger",
         "cost": 3,
@@ -225,7 +225,7 @@
     },
     {
         "name": "Garen",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Garen.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Garen.png",
         "origin": "Noble",
         "class": "Knight",
         "cost": 1,
@@ -239,7 +239,7 @@
     },
     {
         "name": "Gnar",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gnar.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gnar.png",
         "origin": "Wild\nYordle",
         "class": "Shapeshifter",
         "cost": 4,
@@ -253,7 +253,7 @@
     },
     {
         "name": "Graves",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Graves.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Graves.png",
         "origin": "Pirate",
         "class": "Gunslinger",
         "cost": 1,
@@ -267,7 +267,7 @@
     },
     {
         "name": "Karthus",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Karthus.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Karthus.png",
         "origin": "Phantom",
         "class": "Ranger",
         "cost": 5,
@@ -281,7 +281,7 @@
     },
     {
         "name": "Assassin",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kassadin.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kassadin.png",
         "origin": "Void",
         "class": "Sorcerer",
         "cost": 1,
@@ -295,7 +295,7 @@
     },
     {
         "name": "Katarina",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Katarina.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Katarina.png",
         "origin": "Imperial",
         "class": "Assassin",
         "cost": 3,
@@ -309,7 +309,7 @@
     },
     {
         "name": "Kayle",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kayle.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kayle.png",
         "origin": "Noble",
         "class": "Knight",
         "cost": 5,
@@ -323,7 +323,7 @@
     },
     {
         "name": "Kennen",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kennen.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kennen.png",
         "origin": "Ninja\nYordle",
         "class": "Elementalist",
         "cost": 3,
@@ -337,7 +337,7 @@
     },
     {
         "name": "KhaZix",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Khazix.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Khazix.png",
         "origin": "Void",
         "class": "Assassin",
         "cost": 1,
@@ -351,7 +351,7 @@
     },
     {
         "name": "Kindred",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kindred.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kindred.png",
         "origin": "Phantom",
         "class": "Sorcerer",
         "cost": 4,
@@ -365,7 +365,7 @@
     },
     {
         "name": "Leona",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Leona.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Leona.png",
         "origin": "Noble",
         "class": "Guardian",
         "cost": 4,
@@ -379,7 +379,7 @@
     },
     {
         "name": "Lissandra",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lissandra.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lissandra.png",
         "origin": "Glacial",
         "class": "Elementalist",
         "cost": 1,
@@ -393,7 +393,7 @@
     },
     {
         "name": "Lucian",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lucian.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lucian.png",
         "origin": "Noble",
         "class": "Gunslinger",
         "cost": 2,
@@ -407,7 +407,7 @@
     },
     {
         "name": "Lulu",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lulu.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lulu.png",
         "origin": "Yordle",
         "class": "Sorcerer",
         "cost": 2,
@@ -421,7 +421,7 @@
     },
     {
         "name": "Miss-Fortune",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/MissFortune.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/MissFortune.png",
         "origin": "Pirate",
         "class": "Gunslinger",
         "cost": 5,
@@ -435,7 +435,7 @@
     },
     {
         "name": "Mordekaiser",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Mordekaiser.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Mordekaiser.png",
         "origin": "Phantom",
         "class": "Knight",
         "cost": 1,
@@ -449,7 +449,7 @@
     },
     {
         "name": "Morgana",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Morgana.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Morgana.png",
         "origin": "Demon",
         "class": "Sorcerer",
         "cost": 3,
@@ -463,7 +463,7 @@
     },
     {
         "name": "Nidalee",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Nidalee.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Nidalee.png",
         "origin": "Wild",
         "class": "Shapeshifter",
         "cost": 1,
@@ -477,7 +477,7 @@
     },
     {
         "name": "Poppy",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Poppy.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Poppy.png",
         "origin": "Yordle",
         "class": "Knight",
         "cost": 3,
@@ -491,7 +491,7 @@
     },
     {
         "name": "Pyke",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Pyke.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Pyke.png",
         "origin": "Pirate",
         "class": "Assassin",
         "cost": 2,
@@ -505,7 +505,7 @@
     },
     {
         "name": "RekSai",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/RekSai.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/RekSai.png",
         "origin": "Void",
         "class": "Brawler",
         "cost": 2,
@@ -519,7 +519,7 @@
     },
     {
         "name": "Rengar",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Rengar.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Rengar.png",
         "origin": "Wild",
         "class": "Assassin",
         "cost": 3,
@@ -533,7 +533,7 @@
     },
     {
         "name": "Sejuani",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Sejuani.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Sejuani.png",
         "origin": "Glacial",
         "class": "Knight",
         "cost": 4,
@@ -547,7 +547,7 @@
     },
     {
         "name": "Shen",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shen.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shen.png",
         "origin": "Ninja",
         "class": "Blademaster",
         "cost": 2,
@@ -561,7 +561,7 @@
     },
     {
         "name": "Shyvana",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shyvana.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shyvana.png",
         "origin": "Dragon",
         "class": "Shapeshifter",
         "cost": 3,
@@ -575,7 +575,7 @@
     },
     {
         "name": "Swain",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Swain.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Swain.png",
         "origin": "Imperial\nDemon",
         "class": "Shapeshifter",
         "cost": 5,
@@ -589,7 +589,7 @@
     },
     {
         "name": "Tristana",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Tristana.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Tristana.png",
         "origin": "Yordle",
         "class": "Gunslinger",
         "cost": 1,
@@ -603,7 +603,7 @@
     },
     {
         "name": "Varus",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Varus.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Varus.png",
         "origin": "Demon",
         "class": "Ranger",
         "cost": 2,
@@ -617,7 +617,7 @@
     },
     {
         "name": "Vayne",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Vayne.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Vayne.png",
         "origin": "Noble",
         "class": "Ranger",
         "cost": 1,
@@ -631,7 +631,7 @@
     },
     {
         "name": "Veigar",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Veigar.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Veigar.png",
         "origin": "Yordle",
         "class": "Sorcerer",
         "cost": 3,
@@ -645,7 +645,7 @@
     },
     {
         "name": "Volibear",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Volibear.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Volibear.png",
         "origin": "Glacial",
         "class": "Brawler",
         "cost": 2,
@@ -659,7 +659,7 @@
     },
     {
         "name": "Warwick",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Warwick.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Warwick.png",
         "origin": "Wild",
         "class": "Brawler",
         "cost": 1,
@@ -673,7 +673,7 @@
     },
     {
         "name": "Yasuo",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Yasuo.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Yasuo.png",
         "origin": "Exile",
         "class": "Blademaster",
         "cost": 5,
@@ -687,7 +687,7 @@
     },
     {
         "name": "Zed",
-        "image": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Zed.png",
+        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Zed.png",
         "origin": "Ninja",
         "class": "Assassin",
         "cost": 2,

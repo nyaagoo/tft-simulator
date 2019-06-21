@@ -11,7 +11,7 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { BuildItem, BasicItem, buildItem } from "@/models/item";
+import { BuildItem, BasicItemName, buildItemList } from "@/models/item";
 import router from "@/router";
 
 @Component({
@@ -19,15 +19,15 @@ import router from "@/router";
   components: {}
 })
 export default class ItemPage extends Vue {
-  buildItem: BuildItem[] = buildItem;
+  buildItem: BuildItem[] = buildItemList;
   buildItemEachBasicItem: {
-    basicItem: BasicItem;
+    basicItem: BasicItemName;
     buildItem: BuildItem[];
   }[] = [];
 
   created() {
     this.buildItemEachBasicItem = this.buildItem.reduce<
-      { basicItem: BasicItem; buildItem: BuildItem[] }[]
+      { basicItem: BasicItemName; buildItem: BuildItem[] }[]
     >((acc, current) => {
       current.recipe.forEach(recipeItem => {
         const basicItem = acc.find(x => x.basicItem === recipeItem);
