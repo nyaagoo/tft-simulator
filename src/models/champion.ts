@@ -1,4 +1,5 @@
 export interface Champion {
+  id: number;
   name: string;
   image: string;
   origin: string | Origin;

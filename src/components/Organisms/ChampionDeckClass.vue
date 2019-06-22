@@ -5,18 +5,20 @@
       .champion-class-wrapper(v-for="eachClass in championListEachClass" :key="eachClass.class")
         span.class-title {{ eachClass.class }}
         .champion-wrapper(v-for="champ in eachClass.championList" :key="champ.name")
-          img.champion-img(:style="{ 'outline-color': `${costColor.get(champ.cost)}` }")(height="60" width="60" :src="champ.image" :alt="champ.name")
-          p.ma-0.text-truncate {{ champ.name }}
+          champion-thumbnail(:champ="champ")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { ChampionClass, costColor } from "@/models/champion";
 import { champion } from "@/store/index";
+import ChampionThumbnail from "@/components/Organisms/ChampionThumbnail.vue";
 
 @Component({
   name: "deck-class",
-  components: {}
+  components: {
+    "champion-thumbnail": ChampionThumbnail
+  }
 })
 export default class DeckClass extends Vue {
   championListEachClass: ChampionClass[] = [];

@@ -3,7 +3,8 @@ import {
   ChampionClass,
   ChampionOrigin,
   Class,
-  Origin
+  Origin,
+  Champion
 } from "@/models/champion";
 import store from "@/store/store";
 import {
@@ -19,8 +20,10 @@ class ChampionModule extends VuexModule {
   // #region STATE
   counter: number = 0;
   readonly championList = championList;
+  // TODO:この名前冗長では？
   championDeckOrigin: ChampionOrigin[] = [];
   championDeckClass: ChampionClass[] = [];
+  championPicked: Champion[] = [];
   // #endregion
 
   // #region MUTATION
@@ -32,6 +35,11 @@ class ChampionModule extends VuexModule {
   @Mutation
   public SET_CHAMPION_DECK_CLASS(championClass: ChampionClass[]) {
     this.championDeckClass = championClass;
+  }
+
+  @Mutation
+  public SET_CHAMPION_PICKED(championList: Champion[]) {
+    this.championPicked = championList;
   }
   // #endregion
 
@@ -76,6 +84,18 @@ class ChampionModule extends VuexModule {
       []
     );
     this.SET_CHAMPION_DECK_CLASS(eachClass);
+  }
+
+  @Action({ rawError: true })
+  public ToggleChampionPicked(champion: Champion) {
+    const temporary = [...this.championPicked];
+    const existList = this.championPicked.some(c => c.id === champion.id);
+    if (existList) {
+      this.SET_CHAMPION_PICKED(temporary.filter(c => c.id !== champion.id));
+    } else {
+      temporary.push(champion);
+      this.SET_CHAMPION_PICKED(temporary);
+    }
   }
   // #endregion
 }

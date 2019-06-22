@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Aatrox",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Aatrox.png",
         "origin": "Demon",
@@ -14,6 +15,7 @@
         "magicRegist": 20
     },
     {
+        "id": 2,
         "name": "Ahri",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ahri.png",
         "origin": "Wild",
@@ -28,6 +30,7 @@
         "magicRegist": 20
     },
     {
+        "id": 3,
         "name": "Akali",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Akali.png",
         "origin": "Ninja",
@@ -42,6 +45,7 @@
         "magicRegist": 20
     },
     {
+        "id": 4,
         "name": "Anivia",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Anivia.png",
         "origin": "Glacial",
@@ -56,6 +60,7 @@
         "magicRegist": 20
     },
     {
+        "id": 5,
         "name": "Ashe",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ashe.png",
         "origin": "Glacial",
@@ -70,6 +75,7 @@
         "magicRegist": 20
     },
     {
+        "id": 6,
         "name": "Aurelion-Sol",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/AurelionSol.png",
         "origin": "Dragon",
@@ -84,6 +90,7 @@
         "magicRegist": 20
     },
     {
+        "id": 7,
         "name": "Blitzcrank",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Blitzcrank.png",
         "origin": "Robot",
@@ -98,6 +105,7 @@
         "magicRegist": 20
     },
     {
+        "id": 8,
         "name": "Brand",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Brand.png",
         "origin": "Demon",
@@ -112,6 +120,7 @@
         "magicRegist": 20
     },
     {
+        "id": 9,
         "name": "Braum",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Braum.png",
         "origin": "Glacial",
@@ -126,6 +135,7 @@
         "magicRegist": 20
     },
     {
+        "id": 10,
         "name": "ChoGath",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Chogath.png",
         "origin": "Void",
@@ -140,6 +150,7 @@
         "magicRegist": 20
     },
     {
+        "id": 11,
         "name": "Darius",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Darius.png",
         "origin": "Imperial",
@@ -154,6 +165,7 @@
         "magicRegist": 20
     },
     {
+        "id": 12,
         "name": "Draven",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Draven.png",
         "origin": "Imperial",
@@ -168,6 +180,7 @@
         "magicRegist": 20
     },
     {
+        "id": 13,
         "name": "Elise",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Elise.png",
         "origin": "Demon",
@@ -182,6 +195,7 @@
         "magicRegist": 20
     },
     {
+        "id": 14,
         "name": "Evelynn",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Evelynn.png",
         "origin": "Demon",
@@ -196,6 +210,7 @@
         "magicRegist": 20
     },
     {
+        "id": 15,
         "name": "Fiora",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Fiora.png",
         "origin": "Noble",
@@ -210,6 +225,7 @@
         "magicRegist": 20
     },
     {
+        "id": 16,
         "name": "Gangplank",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gangplank.png",
         "origin": "Pirate",
@@ -224,6 +240,7 @@
         "magicRegist": 20
     },
     {
+        "id": 17,
         "name": "Garen",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Garen.png",
         "origin": "Noble",
@@ -238,6 +255,7 @@
         "magicRegist": 20
     },
     {
+        "id": 18,
         "name": "Gnar",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gnar.png",
         "origin": "Wild\nYordle",
@@ -252,6 +270,7 @@
         "magicRegist": 20
     },
     {
+        "id": 19,
         "name": "Graves",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Graves.png",
         "origin": "Pirate",
@@ -266,6 +285,7 @@
         "magicRegist": 20
     },
     {
+        "id": 20,
         "name": "Karthus",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Karthus.png",
         "origin": "Phantom",
@@ -280,6 +300,7 @@
         "magicRegist": 20
     },
     {
+        "id": 21,
         "name": "Assassin",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kassadin.png",
         "origin": "Void",
@@ -294,6 +315,7 @@
         "magicRegist": 20
     },
     {
+        "id": 22,
         "name": "Katarina",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Katarina.png",
         "origin": "Imperial",
@@ -308,6 +330,7 @@
         "magicRegist": 20
     },
     {
+        "id": 23,
         "name": "Kayle",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kayle.png",
         "origin": "Noble",
@@ -322,6 +345,7 @@
         "magicRegist": 20
     },
     {
+        "id": 24,
         "name": "Kennen",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kennen.png",
         "origin": "Ninja\nYordle",
@@ -336,6 +360,7 @@
         "magicRegist": 20
     },
     {
+        "id": 25,
         "name": "KhaZix",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Khazix.png",
         "origin": "Void",
@@ -350,6 +375,7 @@
         "magicRegist": 20
     },
     {
+        "id": 26,
         "name": "Kindred",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kindred.png",
         "origin": "Phantom",
@@ -364,6 +390,7 @@
         "magicRegist": 20
     },
     {
+        "id": 27,
         "name": "Leona",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Leona.png",
         "origin": "Noble",
@@ -378,6 +405,7 @@
         "magicRegist": 20
     },
     {
+        "id": 28,
         "name": "Lissandra",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lissandra.png",
         "origin": "Glacial",
@@ -392,6 +420,7 @@
         "magicRegist": 20
     },
     {
+        "id": 29,
         "name": "Lucian",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lucian.png",
         "origin": "Noble",
@@ -406,6 +435,7 @@
         "magicRegist": 20
     },
     {
+        "id": 30,
         "name": "Lulu",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lulu.png",
         "origin": "Yordle",
@@ -420,6 +450,7 @@
         "magicRegist": 20
     },
     {
+        "id": 31,
         "name": "Miss-Fortune",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/MissFortune.png",
         "origin": "Pirate",
@@ -434,6 +465,7 @@
         "magicRegist": 20
     },
     {
+        "id": 32,
         "name": "Mordekaiser",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Mordekaiser.png",
         "origin": "Phantom",
@@ -448,6 +480,7 @@
         "magicRegist": 20
     },
     {
+        "id": 33,
         "name": "Morgana",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Morgana.png",
         "origin": "Demon",
@@ -462,6 +495,7 @@
         "magicRegist": 20
     },
     {
+        "id": 34,
         "name": "Nidalee",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Nidalee.png",
         "origin": "Wild",
@@ -476,6 +510,7 @@
         "magicRegist": 20
     },
     {
+        "id": 35,
         "name": "Poppy",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Poppy.png",
         "origin": "Yordle",
@@ -490,6 +525,7 @@
         "magicRegist": 20
     },
     {
+        "id": 36,
         "name": "Pyke",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Pyke.png",
         "origin": "Pirate",
@@ -504,6 +540,7 @@
         "magicRegist": 20
     },
     {
+        "id": 37,
         "name": "RekSai",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/RekSai.png",
         "origin": "Void",
@@ -518,6 +555,7 @@
         "magicRegist": 20
     },
     {
+        "id": 38,
         "name": "Rengar",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Rengar.png",
         "origin": "Wild",
@@ -532,6 +570,7 @@
         "magicRegist": 20
     },
     {
+        "id": 39,
         "name": "Sejuani",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Sejuani.png",
         "origin": "Glacial",
@@ -546,6 +585,7 @@
         "magicRegist": 25
     },
     {
+        "id": 40,
         "name": "Shen",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shen.png",
         "origin": "Ninja",
@@ -560,6 +600,7 @@
         "magicRegist": 20
     },
     {
+        "id": 41,
         "name": "Shyvana",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shyvana.png",
         "origin": "Dragon",
@@ -574,6 +615,7 @@
         "magicRegist": 20
     },
     {
+        "id": 42,
         "name": "Swain",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Swain.png",
         "origin": "Imperial\nDemon",
@@ -588,6 +630,7 @@
         "magicRegist": 20
     },
     {
+        "id": 43,
         "name": "Tristana",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Tristana.png",
         "origin": "Yordle",
@@ -602,6 +645,7 @@
         "magicRegist": 20
     },
     {
+        "id": 44,
         "name": "Varus",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Varus.png",
         "origin": "Demon",
@@ -616,6 +660,7 @@
         "magicRegist": 20
     },
     {
+        "id": 45,
         "name": "Vayne",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Vayne.png",
         "origin": "Noble",
@@ -630,6 +675,7 @@
         "magicRegist": 20
     },
     {
+        "id": 46,
         "name": "Veigar",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Veigar.png",
         "origin": "Yordle",
@@ -644,6 +690,7 @@
         "magicRegist": 20
     },
     {
+        "id": 47,
         "name": "Volibear",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Volibear.png",
         "origin": "Glacial",
@@ -658,6 +705,7 @@
         "magicRegist": 20
     },
     {
+        "id": 48,
         "name": "Warwick",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Warwick.png",
         "origin": "Wild",
@@ -672,6 +720,7 @@
         "magicRegist": 20
     },
     {
+        "id": 49,
         "name": "Yasuo",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Yasuo.png",
         "origin": "Exile",
@@ -686,6 +735,7 @@
         "magicRegist": 20
     },
     {
+        "id": 50,
         "name": "Zed",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Zed.png",
         "origin": "Ninja",
