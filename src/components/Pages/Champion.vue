@@ -1,5 +1,8 @@
 <template lang="pug">
   .champion-page
+    router-link(to="/") Champion
+    span  | 
+    router-link(to="/item") Item
     champion-template
 </template>
 

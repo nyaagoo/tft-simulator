@@ -1,7 +1,18 @@
 import championList from "@/assets/champions.json";
-import { ChampionClass, ChampionOrigin, Class, Origin } from "@/models/champion";
+import {
+  ChampionClass,
+  ChampionOrigin,
+  Class,
+  Origin
+} from "@/models/champion";
 import store from "@/store/store";
-import { Action, getModule, Module, Mutation, VuexModule } from "vuex-module-decorators";
+import {
+  Action,
+  getModule,
+  Module,
+  Mutation,
+  VuexModule
+} from "vuex-module-decorators";
 
 @Module({ dynamic: true, store, name: "champion", namespaced: true })
 class ChampionModule extends VuexModule {
@@ -19,8 +30,8 @@ class ChampionModule extends VuexModule {
   }
 
   @Mutation
-  public SET_CHAMPION_DECK_CLASS(championClass: ChampionClass[]){
-    this.championDeckClass = championClass
+  public SET_CHAMPION_DECK_CLASS(championClass: ChampionClass[]) {
+    this.championDeckClass = championClass;
   }
   // #endregion
 
@@ -28,23 +39,22 @@ class ChampionModule extends VuexModule {
   @Action({ rawError: true })
   public SeparateChampionDeckOrigin() {
     const eachOrigin = this.championList.reduce<ChampionOrigin[]>(
-    (acc, current) => {
-    const currentOriginList = current.origin.split("\n");
-    currentOriginList.forEach(currentOrigin => {
-      const element = acc.find(p => p.origin === currentOrigin);
-      if (element)
-        element.championList.push(current);
-      else
-        acc.push({
-          origin: currentOrigin as Origin,
-          championList: [current]
+      (acc, current) => {
+        const currentOriginList = current.origin.split("\n");
+        currentOriginList.forEach(currentOrigin => {
+          const element = acc.find(p => p.origin === currentOrigin);
+          if (element) element.championList.push(current);
+          else
+            acc.push({
+              origin: currentOrigin as Origin,
+              championList: [current]
+            });
         });
-    });
-    return acc;
-    },
-    []
-  );
-  this.SET_CHAMPION_DECK_ORIGIN(eachOrigin);
+        return acc;
+      },
+      []
+    );
+    this.SET_CHAMPION_DECK_ORIGIN(eachOrigin);
   }
 
   @Action({ rawError: true })
@@ -60,11 +70,11 @@ class ChampionModule extends VuexModule {
               class: currentClass as Class,
               championList: [current]
             });
-          });
-          return acc;
-          },
-          []
-        );
+        });
+        return acc;
+      },
+      []
+    );
     this.SET_CHAMPION_DECK_CLASS(eachClass);
   }
   // #endregion

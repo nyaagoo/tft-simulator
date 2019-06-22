@@ -18,7 +18,7 @@ export type BuildItem = {
   name: string;
   description: string;
   img: string;
-  recipe: BasicItemName[]
+  recipe: BasicItemName[];
 };
 
 export const basicItemList: BasicItem[] = [
@@ -61,10 +61,8 @@ export const basicItemList: BasicItem[] = [
     name: "ヘラ",
     description: "何かをするに違いない",
     img: "https://dummyimage.com/32x32"
-  },
-
-]
-
+  }
+];
 
 export const buildItemList: BuildItem[] = [
   {

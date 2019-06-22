@@ -16,14 +16,14 @@ import {
 } from "@/models/champion";
 import router from "@/router";
 import { champion } from "@/store/index";
-import DeckOrigin from '@/components/Organisms/ChampionDeckOrigin.vue';
-import DeckClass from '@/components/Organisms/ChampionDeckClass.vue';
+import DeckOrigin from "@/components/Organisms/ChampionDeckOrigin.vue";
+import DeckClass from "@/components/Organisms/ChampionDeckClass.vue";
 
 @Component({
   name: "champion-template",
   components: {
-      "champion-deck-origin": DeckOrigin,
-      "champion-deck-class": DeckClass
+    "champion-deck-origin": DeckOrigin,
+    "champion-deck-class": DeckClass
   }
 })
 export default class ChampionTemplate extends Vue {
