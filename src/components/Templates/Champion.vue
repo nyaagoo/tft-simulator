@@ -1,7 +1,10 @@
 <template lang="pug">
   .champion-template
+    tft-header
     champion-deck-origin
     champion-deck-class
+    .champion-pick
+      champion-footer
 
 </template>
 
@@ -18,12 +21,16 @@ import router from "@/router";
 import { champion } from "@/store/index";
 import DeckOrigin from "@/components/Organisms/ChampionDeckOrigin.vue";
 import DeckClass from "@/components/Organisms/ChampionDeckClass.vue";
+import TFTHeader from "@/components/Organisms/Header.vue";
+import ChampionFooter from "@/components/Organisms/ChampionFooter.vue";
 
 @Component({
   name: "champion-template",
   components: {
     "champion-deck-origin": DeckOrigin,
-    "champion-deck-class": DeckClass
+    "champion-deck-class": DeckClass,
+    "tft-header": TFTHeader,
+    "champion-footer": ChampionFooter
   }
 })
 export default class ChampionTemplate extends Vue {
@@ -39,8 +46,12 @@ export default class ChampionTemplate extends Vue {
 <style lang="stylus" scoped>
 .champion-template
   margin auto
-  height calc(100vh - 200px)
+  height calc(100vh - 64px - 128px)
   width 100vw
   display flex
   flex-wrap wrap
+  overflow-y auto
+.champion-pick
+  position absolute
+  bottom 0px
 </style>

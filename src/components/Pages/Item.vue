@@ -1,5 +1,6 @@
 <template lang="pug">
   .item-page
+    tft-header
     h3 Item Build
     .item-build-container
       .basic-item-container.ma-2.pa-2(v-for="item in buildItemEachBasicItem" :key="item.name")
@@ -11,12 +12,15 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { BuildItem, BasicItemName, buildItemList } from "@/models/item";
 import router from "@/router";
+import { BuildItem, BasicItemName, buildItemList } from "@/models/item";
+import TFTHeader from "@/components/Organisms/Header.vue";
 
 @Component({
   name: "item",
-  components: {}
+  components: {
+    "tft-header": TFTHeader
+  }
 })
 export default class ItemPage extends Vue {
   buildItem: BuildItem[] = buildItemList;

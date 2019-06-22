@@ -5,6 +5,7 @@ import store from "./store/store";
 import Vuetify from "vuetify";
 import "vuetify/dist/vuetify.min.css";
 import "./stylus/style.styl";
+import "material-design-icons-iconfont/dist/material-design-icons.css";
 
 Vue.use(Vuetify);
 
