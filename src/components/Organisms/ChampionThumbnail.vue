@@ -1,7 +1,7 @@
 <template lang="pug">
   .champion-thumbnail(@click="championPick(champ)")
     .champion-img-wrapper.mb-2
-      img.champion-img(:class="{ 'grayscale': !isPicked(champ.id) }" :style="{ 'outline-color': `${costColor.get(champ.cost)}` }")(height="60" width="60" :src="champ.image" :alt="champ.name")
+      img.champion-img(:class="{ 'grayscale': !isPicked(champ.id) }" :style="{ 'outline-color': `${costColor.get(champ.cost)}` }")(:src="champ.image" :alt="champ.name")
     p.ma-0.text-truncate {{ champ.name }}
 </template>
 <script lang="ts">
@@ -34,12 +34,12 @@ p
   outline-style solid
   outline-width 3px
   outline-offset -3px
-
+  heigth 60px
+  width 60px
 .champion-img-wrapper
   height 60px
   width 60px
   position: relative;
-
 .grayscale
   filter: grayscale(100%);
 </style>

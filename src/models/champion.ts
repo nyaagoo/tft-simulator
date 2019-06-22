@@ -22,7 +22,7 @@ export type Origin =
   | "Demon"
   | "Dragon"
   | "Exile"
-  | "Gracial"
+  | "Glacial"
   | "Robot"
   | "Imperial"
   | "Noble"
@@ -45,6 +45,22 @@ export type Class =
   | "Shapeshifter"
   | "Sorcerer";
 
+export type OriginCount = {
+  count: number;
+  origin: Origin;
+};
+
+export type ClassCount = {
+  count: number;
+  class: Class;
+};
+
+export type Synergy = {
+  type: string;
+  count: number;
+  synergy: string;
+};
+
 // TODO: 画面デザインまで固まったらこのデータはjsonから取ってくる。jsonはDBから取ってくるか埋め込むかは検討
 export const originSynergy: {
   [K in Origin]: { require: number; bonus: string }[]
@@ -61,7 +77,7 @@ export const originSynergy: {
   Exile: [
     {require: 1, bonus: "近くに他のチャンピオンがいない場合、最大ヘルスの割合に応じたシールドを得る"}
   ],
-  Gracial: [
+  Glacial: [
     {require: 1, bonus: "グレイシャルの攻撃は25％の確率で2秒間のスタンを与える"},
     {require: 4, bonus: "グレイシャルの攻撃は35％の確率で2秒間のスタンを与える"},
     {require: 6, bonus: "グレイシャルの攻撃は45％の確率で2秒間のスタンを与える"}

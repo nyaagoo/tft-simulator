@@ -4,7 +4,12 @@ import {
   ChampionOrigin,
   Class,
   Origin,
-  Champion
+  Champion,
+  originSynergy,
+  OriginCount,
+  Synergy,
+  ClassCount,
+  classSynergy
 } from "@/models/champion";
 import store from "@/store/store";
 import {
@@ -24,6 +29,9 @@ class ChampionModule extends VuexModule {
   championDeckOrigin: ChampionOrigin[] = [];
   championDeckClass: ChampionClass[] = [];
   championPicked: Champion[] = [];
+  activeOriginSynergy: Synergy[] = [];
+  activeClassSynergy: Synergy[] = [];
+
   // #endregion
 
   // #region MUTATION
@@ -40,6 +48,15 @@ class ChampionModule extends VuexModule {
   @Mutation
   public SET_CHAMPION_PICKED(championList: Champion[]) {
     this.championPicked = championList;
+  }
+
+  @Mutation
+  public SET_ACTIVE_ORIGIN_SYNERGY(synergyList: Synergy[]) {
+    this.activeOriginSynergy = synergyList;
+  }
+  @Mutation
+  public SET_ACTIVE_CLASS_SYNERGY(synergyList: Synergy[]) {
+    this.activeClassSynergy = synergyList;
   }
   // #endregion
 
@@ -88,15 +105,105 @@ class ChampionModule extends VuexModule {
 
   @Action({ rawError: true })
   public ToggleChampionPicked(champion: Champion) {
-    const temporary = [...this.championPicked];
     const existList = this.championPicked.some(c => c.id === champion.id);
     if (existList) {
-      this.SET_CHAMPION_PICKED(temporary.filter(c => c.id !== champion.id));
+      this.RemoveChampionPicked(champion);
     } else {
-      temporary.push(champion);
-      this.SET_CHAMPION_PICKED(temporary);
+      this.AddChampionPicked(champion);
     }
   }
+  @Action({ rawError: true })
+  public AddChampionPicked(champion: Champion) {
+    if (this.championPicked.length >= 10) return;
+    const temporary = [...this.championPicked];
+    temporary.push(champion);
+    this.SET_CHAMPION_PICKED(temporary);
+    this.CalculateAndSetOriginSynergy();
+    this.CalculateAndSetClassSynergy();
+  }
+
+  @Action({ rawError: true })
+  public RemoveChampionPicked(champion: Champion) {
+    const temporary = [...this.championPicked];
+    this.SET_CHAMPION_PICKED(temporary.filter(c => c.id !== champion.id));
+    this.CalculateAndSetOriginSynergy();
+    this.CalculateAndSetClassSynergy();
+  }
+
+  @Action({ rawError: true })
+  public CalculateAndSetOriginSynergy() {
+    const originCount: OriginCount[] = this.championPicked.reduce<
+      OriginCount[]
+    >((acc, current) => {
+      const currentOriginList = current.origin.split("\n");
+      currentOriginList.forEach(origin => {
+        const element = acc.find(p => p.origin === origin);
+        if (element) element.count++;
+        else
+          acc.push({
+            count: 1,
+            origin: origin as Origin
+          });
+      });
+      return acc;
+    }, []);
+
+    const activeSynergy: Synergy[] = [];
+    for (const originItem of originCount) {
+      const validSynergyList = originSynergy[originItem.origin].filter(
+        x => x.require <= originItem.count
+      );
+      if (validSynergyList.length === 0) continue;
+      const highestActiveSynergy = validSynergyList.reduce((pre, cur) =>
+        pre.require > cur.require ? pre : cur
+      );
+      activeSynergy.push({
+        type: originItem.origin,
+        count: originItem.count,
+        synergy: highestActiveSynergy.bonus
+      });
+    }
+    this.SET_ACTIVE_ORIGIN_SYNERGY(activeSynergy);
+  }
+
+  @Action({ rawError: true })
+  public CalculateAndSetClassSynergy() {
+    const classCount: ClassCount[] = this.championPicked.reduce<ClassCount[]>(
+      (acc, current) => {
+        const currentClassList = current.class.split("\n");
+        currentClassList.forEach(currentClass => {
+          const element = acc.find(p => p.class === currentClass);
+          if (element) element.count++;
+          else {
+            acc.push({
+              count: 1,
+              class: currentClass as Class
+            });
+          }
+        });
+        return acc;
+      },
+      []
+    );
+
+    const activeSynergy: Synergy[] = [];
+    for (const classItem of classCount) {
+      const validSynergyList = classSynergy[classItem.class].filter(
+        x => x.require <= classItem.count
+      );
+      if (validSynergyList.length === 0) continue;
+      const highestActiveSynergy = validSynergyList.reduce((pre, cur) =>
+        pre.require > cur.require ? pre : cur
+      );
+      activeSynergy.push({
+        type: classItem.class,
+        count: classItem.count,
+        synergy: highestActiveSynergy.bonus
+      });
+    }
+    this.SET_ACTIVE_CLASS_SYNERGY(activeSynergy);
+  }
+
   // #endregion
 }
 export const champion = getModule(ChampionModule);
