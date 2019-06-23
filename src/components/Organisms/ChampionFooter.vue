@@ -13,8 +13,8 @@
           .synergy-item-wrapper
             .type-chip-class {{synergy.type}}
             span {{synergy.synergy}}
-    .toggle-footer
-      v-btn(color="primary" outline dark @click="toggleFooter") Active Synergy
+    .toggle-footer-btn
+      v-btn(color="primary" dark @click="toggleFooter") Active Synergy
 
 </template>
 <script lang="ts">
@@ -72,18 +72,24 @@ export default class ChampionFooter extends Vue {
   flex-wrap wrap
   justify-content center
   padding 8px
-  background blue
+  box-sizing: content-box;
+  margin: 4px 16px;
+  background #263238
 .thumbnail-container-collapse
-  flex 0 0 100vw
+  flex 0 0 90vw
   justify-content center
-  height 64px
+  align-items center
   padding 0
+  margin auto
+  background transparent
 .synergy-container
-  flex 10000 1 680px
-  min-width 680px
-  background black
+  flex 10000 1 600px
+  min-width 600px
   padding 8px
   height 200px
+  margin: 4px 40px 4px 16px;
+  box-sizing border-box
+  background #263238
 .champion-thumbnail
   padding 8px
 .champion-img
@@ -92,10 +98,10 @@ export default class ChampionFooter extends Vue {
   outline-offset -3px
   height 48px
   width 48px
-.toggle-footer
+.toggle-footer-btn
   position absolute
   top -50px
-  left 40%
+  left calc(50vw - 85px)
 .synergy-list
   line-height 1.7
 .synergy-item-wrapper

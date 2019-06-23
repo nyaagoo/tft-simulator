@@ -3,6 +3,7 @@
     tft-header
     champion-deck-origin
     champion-deck-class
+    .champion-space
     .champion-pick
       champion-footer
 
@@ -46,11 +47,14 @@ export default class ChampionTemplate extends Vue {
 <style lang="stylus" scoped>
 .champion-template
   margin auto
-  height calc(100vh - 64px - 128px)
+  height calc(100vh - 64px)
   width 100vw
   display flex
   flex-wrap wrap
+  align-items flex-start
   overflow-y auto
+.champion-space
+  height 280px
 .champion-pick
   position absolute
   bottom 0px
