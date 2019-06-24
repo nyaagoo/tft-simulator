@@ -3,6 +3,8 @@
     .champion-thumbnail-container(:class="{'thumbnail-container-collapse': !isOpen}")
       .champion-thumbnail(v-for="champion in championPicked" :key="champion.id" @click="removeChampion(champion)")
         img.champion-img(:style="{ 'outline-color': `${costColor.get(champion.cost)}` }")(:src="champion.image" :alt="champion.name")
+      .champion-thumbnail(v-for="index in (10 - championPicked.length)" :key="index")
+        img.champion-img-undefined(src="@/assets/Champion/Undefined.png" :alt="index")
     .synergy-container(v-if="isOpen")
       ul
         li.synergy-list(v-for="synergy in activeOriginSynergy" :key="activeOriginSynergy.type")
@@ -96,6 +98,9 @@ export default class ChampionFooter extends Vue {
   outline-style solid
   outline-width 3px
   outline-offset -3px
+  height 48px
+  width 48px
+.champion-img-undefined
   height 48px
   width 48px
 .toggle-footer-btn
