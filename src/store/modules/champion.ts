@@ -65,7 +65,7 @@ class ChampionModule extends VuexModule {
   public SeparateChampionDeckOrigin() {
     const eachOrigin = this.championList.reduce<ChampionOrigin[]>(
       (acc, current) => {
-        const currentOriginList = current.origin.split("\n");
+        const currentOriginList = current.origin.split(",");
         currentOriginList.forEach(currentOrigin => {
           const element = acc.find(p => p.origin === currentOrigin);
           if (element) element.championList.push(current);
@@ -86,7 +86,7 @@ class ChampionModule extends VuexModule {
   public SeparateChampionDeckClass() {
     const eachClass = this.championList.reduce<ChampionClass[]>(
       (acc, current) => {
-        const currentClassList = current.class.split("\n");
+        const currentClassList = current.class.split(",");
         currentClassList.forEach(currentClass => {
           const element = acc.find(p => p.class === currentClass);
           if (element) element.championList.push(current);
@@ -135,7 +135,7 @@ class ChampionModule extends VuexModule {
     const originCount: OriginCount[] = this.championPicked.reduce<
       OriginCount[]
     >((acc, current) => {
-      const currentOriginList = current.origin.split("\n");
+      const currentOriginList = current.origin.split(",");
       currentOriginList.forEach(origin => {
         const element = acc.find(p => p.origin === origin);
         if (element) element.count++;
@@ -170,7 +170,7 @@ class ChampionModule extends VuexModule {
   public CalculateAndSetClassSynergy() {
     const classCount: ClassCount[] = this.championPicked.reduce<ClassCount[]>(
       (acc, current) => {
-        const currentClassList = current.class.split("\n");
+        const currentClassList = current.class.split(",");
         currentClassList.forEach(currentClass => {
           const element = acc.find(p => p.class === currentClass);
           if (element) element.count++;

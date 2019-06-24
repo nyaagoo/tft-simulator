@@ -29,7 +29,7 @@ import { Champion, costColor, Synergy } from "@/models/champion";
 })
 export default class ChampionFooter extends Vue {
   costColor: Map<number, string> = costColor;
-  isOpen: boolean = true;
+  isOpen: boolean = false;
 
   get championPicked(): Champion[] {
     return champion.championPicked;

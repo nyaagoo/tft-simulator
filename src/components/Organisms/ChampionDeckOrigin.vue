@@ -5,7 +5,7 @@
       .champion-origin-wrapper(v-for="origin in championListEachOrigin" :key="origin.origin")
         span.origin-title {{ origin.origin }}
         .champion-wrapper(v-for="champ in origin.championList" :key="champ.name")
-          champion-thumbnail(:champ="champ")
+          champion-thumbnail(:champ="champ" :originList="splitComma(champ.origin)" :classList="splitComma(champ.class)" )
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -27,6 +27,10 @@ export default class DeckOrigin extends Vue {
   mounted() {
     champion.SeparateChampionDeckOrigin();
     this.championListEachOrigin = champion.championDeckOrigin;
+  }
+
+  splitComma(str: string): string[] {
+    return str.split(",");
   }
 }
 </script>

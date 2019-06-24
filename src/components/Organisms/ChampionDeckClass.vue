@@ -5,7 +5,7 @@
       .champion-class-wrapper(v-for="eachClass in championListEachClass" :key="eachClass.class")
         span.class-title {{ eachClass.class }}
         .champion-wrapper(v-for="champ in eachClass.championList" :key="champ.name")
-          champion-thumbnail(:champ="champ")
+          champion-thumbnail(:champ="champ" :originList="splitComma(champ.origin)" :classList="splitComma(champ.class)")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -27,6 +27,10 @@ export default class DeckClass extends Vue {
   mounted() {
     champion.SeparateChampionDeckClass();
     this.championListEachClass = champion.championDeckClass;
+  }
+
+  splitComma(str: string): string[] {
+    return str.split(",");
   }
 }
 </script>
