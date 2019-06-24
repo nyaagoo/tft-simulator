@@ -1,8 +1,8 @@
 <template lang="pug">
   .champion-template
     tft-header
-    champion-deck-origin
-    champion-deck-class
+    champion-deck-origin.ma-1
+    champion-deck-class.ma-1
     .champion-space
     .champion-pick
       champion-footer
@@ -54,7 +54,7 @@ export default class ChampionTemplate extends Vue {
   align-items flex-start
   overflow-y auto
 .champion-space
-  height 280px
+  height 320px
 .champion-pick
   position absolute
   bottom 0px
