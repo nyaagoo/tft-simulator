@@ -4,8 +4,9 @@
     .champion-class-container
       .champion-class-wrapper(v-for="eachClass in championListEachClass" :key="eachClass.class")
         span.class-title {{ eachClass.class }}
-        .champion-wrapper(v-for="champ in eachClass.championList" :key="champ.name")
-          champion-thumbnail(:champ="champ" :originList="splitComma(champ.origin)" :classList="splitComma(champ.class)")
+        transition-group.champion-origin-inner(name="flip-list" tag="div")
+          .champion-wrapper(v-for="champ in eachClass.championList" :key="champ.name")
+            champion-thumbnail(:champ="champ" :originList="splitComma(champ.origin)" :classList="splitComma(champ.class)")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -68,4 +69,11 @@ export default class DeckClass extends Vue {
   outline-style solid
   outline-width 3px
   outline-offset -3px
+.champion-origin-inner
+  display flex
+  flex-wrap wrap
+.flip-list-item
+  display inline-block
+.flip-list-move
+  transition transform 0.4s
 </style>

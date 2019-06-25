@@ -4,8 +4,9 @@
     .champion-origin-container
       .champion-origin-wrapper(v-for="origin in championListEachOrigin" :key="origin.origin")
         span.origin-title {{ origin.origin }}
-        .champion-wrapper(v-for="champ in origin.championList" :key="champ.name")
-          champion-thumbnail(:champ="champ" :originList="splitComma(champ.origin)" :classList="splitComma(champ.class)" )
+        transition-group.champion-origin-inner(name="flip-list" tag="div")
+          .champion-wrapper(v-for="champ in origin.championList" :key="champ.name")
+            champion-thumbnail(:champ="champ" :originList="splitComma(champ.origin)" :classList="splitComma(champ.class)" )
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -48,13 +49,12 @@ export default class DeckOrigin extends Vue {
 .origin-title
   position absolute
   top -10px
+  left 8px
   background #303030
   padding-left 4px
   padding-right  4px
 .champion-origin-wrapper
   position relative
-  display flex
-  flex-wrap wrap
   border 1px solid #00B8D4
   border-radius 8px
   padding 8px
@@ -63,6 +63,11 @@ export default class DeckOrigin extends Vue {
   width 100px
 .champion-wrapper
   padding 4px
+.champion-origin-inner
+  display flex
+  flex-wrap wrap
+.flip-list-item
+  display inline-block
 .flip-list-move
   transition transform 0.4s
 </style>
