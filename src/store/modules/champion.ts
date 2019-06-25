@@ -1,4 +1,4 @@
-import championList from "@/assets/champions.json";
+import championList from "@/assets/json/champions.json";
 import {
   ChampionClass,
   ChampionOrigin,
