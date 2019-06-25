@@ -8,7 +8,7 @@ import {
   Module
 } from "vuex-module-decorators";
 import store from "@/store/store";
-import { BasicItem, BuildItem } from '@/models/item';
+import { BasicItem, BuildItem } from "@/models/item";
 
 @Module({ dynamic: true, store, name: "item", namespaced: true })
 class ItemModule extends VuexModule {
@@ -33,6 +33,5 @@ class ItemModule extends VuexModule {
     this.SET_COUNTER(this.counter + 1);
   }
   // #endregion
-
 }
 export const item = getModule(ItemModule);

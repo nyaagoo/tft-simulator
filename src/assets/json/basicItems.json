@@ -33,7 +33,7 @@
         "id": 6,
         "name": "ジャイアントベルト",
         "description": "最大HP+200",
-        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/1058.png"
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/1011.png"
     },
     {
         "id": 7,
@@ -45,6 +45,6 @@
         "id": 8,
         "name": "ヘラ",
         "description": "何かをするに違いない",
-        "img": "https://dummyimage.com/32x32"
+        "img": "./../img/Item/Spatula.png"
     }
 ]

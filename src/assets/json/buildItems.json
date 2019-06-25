@@ -37,7 +37,7 @@
             1,
             6
         ],
-        "img": "https://dummyimage.com/32x32"
+        "img": "./../img/Item/ZekesHerald.png"
     },
     {
         "id": 5,
@@ -52,7 +52,7 @@
     {
         "id": 6,
         "name": "ブラッドサースター",
-        "description": "",
+        "description": "35%のライフスティール",
         "recipe": [
             1,
             7
@@ -187,12 +187,12 @@
             3,
             7
         ],
-        "img": "https://dummyimage.com/32x32"
+        "img": "./../img/Item/IonicSpark.png"
     },
     {
         "id": 20,
         "name": "モレロノミコン",
-        "description": "",
+        "description": "スキルが1秒毎に対象最大HPの5%の炎上ダメージを与える",
         "recipe": [
             3,
             6
@@ -207,7 +207,7 @@
             3,
             8
         ],
-        "img": "https://dummyimage.com/32x32"
+        "img": "./../img/Item/Yuumi.png"
     },
     {
         "id": 22,
@@ -237,7 +237,7 @@
             4,
             7
         ],
-        "img": "https://dummyimage.com/32x32"
+        "img": "./../img/Item/Hush.png"
     },
     {
         "id": 25,
@@ -257,7 +257,7 @@
             4,
             8
         ],
-        "img": "https://dummyimage.com/32x32"
+        "img": "./../img/Item/Darkin.png"
     },
     {
         "id": 27,
@@ -277,7 +277,7 @@
             5,
             7
         ],
-        "img": "https://dummyimage.com/32x32"
+        "img": "./../img/Item/SwordBreaker.png"
     },
     {
         "id": 29,
@@ -287,7 +287,7 @@
             5,
             6
         ],
-        "img": "https://dummyimage.com/32x32"
+        "img": "./../img/Item/RedBuff.png"
     },
     {
         "id": 30,
@@ -337,7 +337,7 @@
             7,
             7
         ],
-        "img": "https://dummyimage.com/32x32"
+        "img": "./../img/Item/DragonsClaw.png"
     },
     {
         "id": 35,

@@ -1,7 +1,6 @@
 <template lang="pug">
   .item-template
     tft-header
-    h3 Item Build
     item-build-sheed
 </template>
 <script lang="ts">

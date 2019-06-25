@@ -24,6 +24,6 @@ export type BuildItem = {
 };
 
 export type BuildFromBasicItem = {
-  basicItem: BasicItem,
-  buildItem: BuildItem[]
-}
+  basicItem: BasicItem;
+  buildItem: BuildItem[];
+};
