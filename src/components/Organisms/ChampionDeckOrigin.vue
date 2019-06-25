@@ -21,12 +21,14 @@ import ChampionThumbnail from "@/components/Organisms/ChampionThumbnail.vue";
   }
 })
 export default class DeckOrigin extends Vue {
-  championListEachOrigin: ChampionOrigin[] = [];
   costColor: Map<number, string> = costColor;
 
   mounted() {
     champion.SeparateChampionDeckOrigin();
-    this.championListEachOrigin = champion.championDeckOrigin;
+  }
+
+  get championListEachOrigin() {
+    return champion.championDeckOrigin;
   }
 
   splitComma(str: string): string[] {
@@ -61,4 +63,6 @@ export default class DeckOrigin extends Vue {
   width 100px
 .champion-wrapper
   padding 4px
+.flip-list-move
+  transition transform 0.4s
 </style>

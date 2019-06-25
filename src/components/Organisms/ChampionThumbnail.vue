@@ -1,12 +1,20 @@
 <template lang="pug">
   .champion-thumbnail(@click="championPick(champ)")
     .champion-img-wrapper.mb-2
-      img.champion-img(:class="{ 'grayscale': !isPicked(champ.id) }" :style="{ 'outline-color': `${costColor.get(champ.cost)}` }")(:src="champ.image" :alt="champ.name")
-      .champion-origin-wrapper
-        img.champion-origin(v-for="(_, index) in originList" width=20 height=20 :src="imgPathOrigin[originList[index]]" :alt="champ.name")
-      .champion-class-wrapper
+      img.champion-img(
+        :class="{ 'grayscale': !isPicked(champ.id) }"
+        :style="{ 'outline-color': `${costColor.get(champ.cost)}` }"
+        :src="champ.image"
+        :alt="champ.name")
+      .champion-origin-wrapper(v-if="visibleOrigin")
+        img.champion-origin(
+          v-for="(_, index) in originList"
+          width=20 height=20
+          :src="imgPathOrigin[originList[index]]"
+          :alt="champ.name")
+      .champion-class-wrapper(v-if="visibleClass")
         img.champion-class(v-for="(_, index) in classList" width=20 height=20 :src="imgPathClass[classList[index]]" :alt="champ.name")
-      .champion-cost-wrapper
+      .champion-cost-wrapper(v-if="visibleCost")
         span.champion-cost ${{ champ.cost }}
 
     p.ma-0.text-truncate {{ champ.name }}
@@ -15,7 +23,7 @@
 import { Component, Vue, Prop } from "vue-property-decorator";
 import router from "@/router";
 import { Champion, costColor, Origin, Class } from "@/models/champion";
-import { champion } from "@/store/index";
+import { champion, setting } from "@/store/index";
 import { imgPathOrigin, imgPathClass } from "@/static/path";
 
 @Component({
@@ -29,6 +37,15 @@ export default class components extends Vue {
   costColor: Map<number, string> = costColor;
   imgPathOrigin: { [K in Origin]: string } = imgPathOrigin;
   imgPathClass: { [K in Class]: string } = imgPathClass;
+  get visibleOrigin() {
+    return setting.visibleChampionOrigin;
+  }
+  get visibleClass() {
+    return setting.visibleChampionClass;
+  }
+  get visibleCost() {
+    return setting.visibleChampionCost;
+  }
   championPick(c: Champion) {
     champion.ToggleChampionPicked(c);
   }

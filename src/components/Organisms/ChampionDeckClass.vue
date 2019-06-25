@@ -21,12 +21,13 @@ import ChampionThumbnail from "@/components/Organisms/ChampionThumbnail.vue";
   }
 })
 export default class DeckClass extends Vue {
-  championListEachClass: ChampionClass[] = [];
   costColor: Map<number, string> = costColor;
 
   mounted() {
     champion.SeparateChampionDeckClass();
-    this.championListEachClass = champion.championDeckClass;
+  }
+  get championListEachClass(): ChampionClass[] {
+    return champion.championDeckClass;
   }
 
   splitComma(str: string): string[] {

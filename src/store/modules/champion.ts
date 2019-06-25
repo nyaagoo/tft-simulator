@@ -204,6 +204,58 @@ class ChampionModule extends VuexModule {
     this.SET_ACTIVE_CLASS_SYNERGY(activeSynergy);
   }
 
+  @Action({ rawError: true })
+  public sortChampionOriginCost() {
+    const copyDeckOrigin = [...this.championDeckOrigin];
+    copyDeckOrigin.forEach(x =>
+      x.championList.sort((pre, cur) => {
+        if (pre.cost > cur.cost) return 1;
+        else if (pre.cost < cur.cost) return -1;
+        return 0;
+      })
+    );
+    this.SET_CHAMPION_DECK_ORIGIN(copyDeckOrigin);
+  }
+
+  @Action({ rawError: true })
+  public sortChampionClassCost() {
+    const copyDeckClass = [...this.championDeckClass];
+    copyDeckClass.forEach(x =>
+      x.championList.sort((pre, cur) => {
+        if (pre.cost > cur.cost) return 1;
+        else if (pre.cost < cur.cost) return -1;
+        return 0;
+      })
+    );
+    this.SET_CHAMPION_DECK_CLASS(copyDeckClass);
+  }
+
+  @Action({ rawError: true })
+  public sortChampionOriginName() {
+    const copyDeckOrigin = [...this.championDeckOrigin];
+    copyDeckOrigin.forEach(x =>
+      x.championList.sort((pre, cur) => {
+        if (pre.name > cur.name) return 1;
+        else if (pre.name < cur.name) return -1;
+        return 0;
+      })
+    );
+    this.SET_CHAMPION_DECK_ORIGIN(copyDeckOrigin);
+  }
+
+  @Action({ rawError: true })
+  public sortChampionClassName() {
+    const copyDeckClass = [...this.championDeckClass];
+    copyDeckClass.forEach(x =>
+      x.championList.sort((pre, cur) => {
+        if (pre.name > cur.name) return 1;
+        else if (pre.name < cur.name) return -1;
+        return 0;
+      })
+    );
+    this.SET_CHAMPION_DECK_CLASS(copyDeckClass);
+  }
+
   // #endregion
 }
 export const champion = getModule(ChampionModule);
