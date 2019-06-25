@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "Aatrox",
+        "ruby": "エイトロックス",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Aatrox.png",
         "origin": "Demon",
         "class": "Blademaster",
@@ -17,6 +18,7 @@
     {
         "id": 2,
         "name": "Ahri",
+        "ruby": "アーリ",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ahri.png",
         "origin": "Wild",
         "class": "Sorcerer",
@@ -32,6 +34,7 @@
     {
         "id": 3,
         "name": "Akali",
+        "ruby": "アカリ",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Akali.png",
         "origin": "Ninja",
         "class": "Assassin",
@@ -47,6 +50,7 @@
     {
         "id": 4,
         "name": "Anivia",
+        "ruby": "アニビア",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Anivia.png",
         "origin": "Glacial",
         "class": "Elementalist",
@@ -62,6 +66,7 @@
     {
         "id": 5,
         "name": "Ashe",
+        "ruby": "アッシュ",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ashe.png",
         "origin": "Glacial",
         "class": "Ranger",
@@ -77,6 +82,7 @@
     {
         "id": 6,
         "name": "Aurelion-Sol",
+        "ruby": "オレリオン・ソル",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/AurelionSol.png",
         "origin": "Dragon",
         "class": "Sorcerer",
@@ -92,6 +98,7 @@
     {
         "id": 7,
         "name": "Blitzcrank",
+        "ruby": "ブリッツクランク",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Blitzcrank.png",
         "origin": "Robot",
         "class": "Guardian",
@@ -107,6 +114,7 @@
     {
         "id": 8,
         "name": "Brand",
+        "ruby": "ブランド",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Brand.png",
         "origin": "Demon",
         "class": "Elementalist",
@@ -122,6 +130,7 @@
     {
         "id": 9,
         "name": "Braum",
+        "ruby": "ブラウム",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Braum.png",
         "origin": "Glacial",
         "class": "Guardian",
@@ -137,6 +146,7 @@
     {
         "id": 10,
         "name": "ChoGath",
+        "ruby": "チョガス",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Chogath.png",
         "origin": "Void",
         "class": "Brawler",
@@ -152,6 +162,7 @@
     {
         "id": 11,
         "name": "Darius",
+        "ruby": "ダリウス",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Darius.png",
         "origin": "Imperial",
         "class": "Blademaster",
@@ -167,6 +178,7 @@
     {
         "id": 12,
         "name": "Draven",
+        "ruby": "ドレイブン",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Draven.png",
         "origin": "Imperial",
         "class": "Blademaster",
@@ -182,6 +194,7 @@
     {
         "id": 13,
         "name": "Elise",
+        "ruby": "エリス",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Elise.png",
         "origin": "Demon",
         "class": "Shapeshifter",
@@ -197,6 +210,7 @@
     {
         "id": 14,
         "name": "Evelynn",
+        "ruby": "イブリン",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Evelynn.png",
         "origin": "Demon",
         "class": "Assassin",
@@ -212,6 +226,7 @@
     {
         "id": 15,
         "name": "Fiora",
+        "ruby": "フィオラ",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Fiora.png",
         "origin": "Noble",
         "class": "Blademaster",
@@ -227,6 +242,7 @@
     {
         "id": 16,
         "name": "Gangplank",
+        "ruby": "ガングプランク",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gangplank.png",
         "origin": "Pirate",
         "class": "Blademaster\nGunslinger",
@@ -242,6 +258,7 @@
     {
         "id": 17,
         "name": "Garen",
+        "ruby": "ガレン",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Garen.png",
         "origin": "Noble",
         "class": "Knight",
@@ -257,6 +274,7 @@
     {
         "id": 18,
         "name": "Gnar",
+        "ruby": "ナー",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gnar.png",
         "origin": "Wild\nYordle",
         "class": "Shapeshifter",
@@ -272,6 +290,7 @@
     {
         "id": 19,
         "name": "Graves",
+        "ruby": "グレイブス",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Graves.png",
         "origin": "Pirate",
         "class": "Gunslinger",
@@ -287,6 +306,7 @@
     {
         "id": 20,
         "name": "Karthus",
+        "ruby": "カーサス",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Karthus.png",
         "origin": "Phantom",
         "class": "Ranger",
@@ -301,7 +321,8 @@
     },
     {
         "id": 21,
-        "name": "Assassin",
+        "name": "Kassadin",
+        "ruby": "カサディン",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kassadin.png",
         "origin": "Void",
         "class": "Sorcerer",
@@ -317,6 +338,7 @@
     {
         "id": 22,
         "name": "Katarina",
+        "ruby": "カタリナ",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Katarina.png",
         "origin": "Imperial",
         "class": "Assassin",
@@ -332,6 +354,7 @@
     {
         "id": 23,
         "name": "Kayle",
+        "ruby": "ケイル",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kayle.png",
         "origin": "Noble",
         "class": "Knight",
@@ -347,6 +370,7 @@
     {
         "id": 24,
         "name": "Kennen",
+        "ruby": "ケネン",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kennen.png",
         "origin": "Ninja\nYordle",
         "class": "Elementalist",
@@ -362,6 +386,7 @@
     {
         "id": 25,
         "name": "KhaZix",
+        "ruby": "カジックス",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Khazix.png",
         "origin": "Void",
         "class": "Assassin",
@@ -377,6 +402,7 @@
     {
         "id": 26,
         "name": "Kindred",
+        "ruby": "キンドレッド",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kindred.png",
         "origin": "Phantom",
         "class": "Sorcerer",
@@ -392,6 +418,7 @@
     {
         "id": 27,
         "name": "Leona",
+        "ruby": "レオナ",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Leona.png",
         "origin": "Noble",
         "class": "Guardian",
@@ -406,7 +433,7 @@
     },
     {
         "id": 28,
-        "name": "Lissandra",
+        "name": "リサンドラ",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lissandra.png",
         "origin": "Glacial",
         "class": "Elementalist",
@@ -422,6 +449,7 @@
     {
         "id": 29,
         "name": "Lucian",
+        "ruby": "ルシアン",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lucian.png",
         "origin": "Noble",
         "class": "Gunslinger",
@@ -437,6 +465,7 @@
     {
         "id": 30,
         "name": "Lulu",
+        "ruby": "ルル",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lulu.png",
         "origin": "Yordle",
         "class": "Sorcerer",
@@ -452,6 +481,7 @@
     {
         "id": 31,
         "name": "Miss-Fortune",
+        "ruby": "ミス・フォーチュン",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/MissFortune.png",
         "origin": "Pirate",
         "class": "Gunslinger",
@@ -467,6 +497,7 @@
     {
         "id": 32,
         "name": "Mordekaiser",
+        "ruby": "モルデカイザー",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Mordekaiser.png",
         "origin": "Phantom",
         "class": "Knight",
@@ -482,6 +513,7 @@
     {
         "id": 33,
         "name": "Morgana",
+        "ruby": "モルガナ",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Morgana.png",
         "origin": "Demon",
         "class": "Sorcerer",
@@ -497,6 +529,7 @@
     {
         "id": 34,
         "name": "Nidalee",
+        "ruby": "ニダリー",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Nidalee.png",
         "origin": "Wild",
         "class": "Shapeshifter",
@@ -512,6 +545,7 @@
     {
         "id": 35,
         "name": "Poppy",
+        "ruby": "ポッピー",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Poppy.png",
         "origin": "Yordle",
         "class": "Knight",
@@ -527,6 +561,7 @@
     {
         "id": 36,
         "name": "Pyke",
+        "ruby": "パイク",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Pyke.png",
         "origin": "Pirate",
         "class": "Assassin",
@@ -542,6 +577,7 @@
     {
         "id": 37,
         "name": "RekSai",
+        "ruby": "レクサイ",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/RekSai.png",
         "origin": "Void",
         "class": "Brawler",
@@ -557,6 +593,7 @@
     {
         "id": 38,
         "name": "Rengar",
+        "ruby": "レンガー",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Rengar.png",
         "origin": "Wild",
         "class": "Assassin",
@@ -572,6 +609,7 @@
     {
         "id": 39,
         "name": "Sejuani",
+        "ruby": "セジュアニ",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Sejuani.png",
         "origin": "Glacial",
         "class": "Knight",
@@ -587,6 +625,7 @@
     {
         "id": 40,
         "name": "Shen",
+        "ruby": "シェン",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shen.png",
         "origin": "Ninja",
         "class": "Blademaster",
@@ -602,6 +641,7 @@
     {
         "id": 41,
         "name": "Shyvana",
+        "ruby": "シヴァーナ",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shyvana.png",
         "origin": "Dragon",
         "class": "Shapeshifter",
@@ -617,6 +657,7 @@
     {
         "id": 42,
         "name": "Swain",
+        "ruby": "スウェイン",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Swain.png",
         "origin": "Imperial\nDemon",
         "class": "Shapeshifter",
@@ -632,6 +673,7 @@
     {
         "id": 43,
         "name": "Tristana",
+        "ruby": "トリスターナ",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Tristana.png",
         "origin": "Yordle",
         "class": "Gunslinger",
@@ -647,6 +689,7 @@
     {
         "id": 44,
         "name": "Varus",
+        "ruby": "ヴァルス",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Varus.png",
         "origin": "Demon",
         "class": "Ranger",
@@ -662,6 +705,7 @@
     {
         "id": 45,
         "name": "Vayne",
+        "ruby": "ヴェイン",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Vayne.png",
         "origin": "Noble",
         "class": "Ranger",
@@ -677,6 +721,7 @@
     {
         "id": 46,
         "name": "Veigar",
+        "ruby": "ヴェイガー",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Veigar.png",
         "origin": "Yordle",
         "class": "Sorcerer",
@@ -692,6 +737,7 @@
     {
         "id": 47,
         "name": "Volibear",
+        "ruby": "ボリベア",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Volibear.png",
         "origin": "Glacial",
         "class": "Brawler",
@@ -707,6 +753,7 @@
     {
         "id": 48,
         "name": "Warwick",
+        "ruby": "ワーウィック",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Warwick.png",
         "origin": "Wild",
         "class": "Brawler",
@@ -722,6 +769,7 @@
     {
         "id": 49,
         "name": "Yasuo",
+        "ruby": "ヤスオ",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Yasuo.png",
         "origin": "Exile",
         "class": "Blademaster",
@@ -737,6 +785,7 @@
     {
         "id": 50,
         "name": "Zed",
+        "ruby": "ゼド",
         "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Zed.png",
         "origin": "Ninja",
         "class": "Assassin",

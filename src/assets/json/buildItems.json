@@ -1,0 +1,362 @@
+[
+    {
+        "id": 1,
+        "name": "インフィニティ エッジ",
+        "description": "+200%のクリティカルダメージ",
+        "recipe": [
+            1,
+            1
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3031.png"
+    },
+    {
+        "id": 2,
+        "name": "天帝の剣",
+        "description": "毎秒5%の確率でクリティカル攻撃を行う",
+        "recipe": [
+            1,
+            2
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3131.png"
+    },
+    {
+        "id": 3,
+        "name": "ガーディアンエンジェル",
+        "description": "300HPで復活する",
+        "recipe": [
+            1,
+            5
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3026.png"
+    },
+    {
+        "id": 4,
+        "name": "ジークヘラルド",
+        "description": "隣接する味方の攻撃速度が上昇",
+        "recipe": [
+            1,
+            6
+        ],
+        "img": "https://dummyimage.com/32x32"
+    },
+    {
+        "id": 5,
+        "name": "ヘクステックガンブレード",
+        "description": "25%のライフスティール、スペルヴァンプ",
+        "recipe": [
+            1,
+            3
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3146.png"
+    },
+    {
+        "id": 6,
+        "name": "ブラッドサースター",
+        "description": "",
+        "recipe": [
+            1,
+            7
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3080.png"
+    },
+    {
+        "id": 7,
+        "name": "ショウジンの矛",
+        "description": "スキル使用後、攻撃毎に最大マナの20%を得る",
+        "recipe": [
+            1,
+            4
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3161.png"
+    },
+    {
+        "id": 8,
+        "name": "妖夢の霊剣",
+        "description": "ユニットにアサシンを付与",
+        "recipe": [
+            1,
+            8
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3142.png"
+    },
+    {
+        "id": 9,
+        "name": "ラピッドファイアキャノン",
+        "description": "攻撃射程が2倍 命中率100%",
+        "recipe": [
+            2,
+            2
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3094.png"
+    },
+    {
+        "id": 10,
+        "name": "グインソーレイジブレード",
+        "description": "攻撃速度が命中ごとに5%ずつ無限に上昇",
+        "recipe": [
+            2,
+            3
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3124.png"
+    },
+    {
+        "id": 11,
+        "name": "スタティック シヴ",
+        "description": "攻撃3回毎に100の魔法ダメージ",
+        "recipe": [
+            2,
+            4
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3087.png"
+    },
+    {
+        "id": 12,
+        "name": "ファントムダンサー",
+        "description": "クリティカル攻撃を完全回避",
+        "recipe": [
+            2,
+            5
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3046.png"
+    },
+    {
+        "id": 13,
+        "name": "マーキュリアル・シミター",
+        "description": "攻撃命中時、対象の★1つを消すチャンスがある",
+        "recipe": [
+            2,
+            7
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3139.png"
+    },
+    {
+        "id": 14,
+        "name": "タイタンハイドラ",
+        "description": "最大HPの10%のスプラッシュダメージを追加",
+        "recipe": [
+            2,
+            6
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3748.png"
+    },
+    {
+        "id": 15,
+        "name": "ルイドキングブレード",
+        "description": "ユニットにブレードマスターを付与",
+        "recipe": [
+            2,
+            8
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3163.png"
+    },
+    {
+        "id": 16,
+        "name": "ラバドン・デスキャップ",
+        "description": "AP+50%",
+        "recipe": [
+            3,
+            3
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3089.png"
+    },
+    {
+        "id": 17,
+        "name": "ルーデンエコー",
+        "description": "スキル命中時100のスプラッシュダメージを追加",
+        "recipe": [
+            3,
+            4
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3285.png"
+    },
+    {
+        "id": 18,
+        "name": "ソラリのロケット",
+        "description": "戦闘開始時、周囲のユニットに200のHPを追加",
+        "recipe": [
+            3,
+            5
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3190.png"
+    },
+    {
+        "id": 19,
+        "name": "アイオニックスパーク",
+        "description": "装備ユニットがスキル攻撃すると敵が100ダメージを受ける",
+        "recipe": [
+            3,
+            7
+        ],
+        "img": "https://dummyimage.com/32x32"
+    },
+    {
+        "id": 20,
+        "name": "モレロノミコン",
+        "description": "",
+        "recipe": [
+            3,
+            6
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3165.png"
+    },
+    {
+        "id": 21,
+        "name": "ユーミ",
+        "description": "ユニットにソーサラーを付与",
+        "recipe": [
+            3,
+            8
+        ],
+        "img": "https://dummyimage.com/32x32"
+    },
+    {
+        "id": 22,
+        "name": "セラフ・エンブレイズ",
+        "description": "スキル攻撃のたびに⑳マナを回復",
+        "recipe": [
+            4,
+            4
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3040.png"
+    },
+    {
+        "id": 23,
+        "name": "フローズンハート",
+        "description": "周囲の敵の攻撃速度を20%低下",
+        "recipe": [
+            4,
+            5
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3110.png"
+    },
+    {
+        "id": 24,
+        "name": "ハッシュ",
+        "description": "高確率で攻撃の度に敵にサイレンスを付与",
+        "recipe": [
+            4,
+            7
+        ],
+        "img": "https://dummyimage.com/32x32"
+    },
+    {
+        "id": 25,
+        "name": "リデンプション",
+        "description": "装備したユニットの死亡時、周囲の味方すべての1000HP回復",
+        "recipe": [
+            4,
+            6
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3107.png"
+    },
+    {
+        "id": 26,
+        "name": "ダーキン",
+        "description": "ユニットにデーモン付与",
+        "recipe": [
+            4,
+            8
+        ],
+        "img": "https://dummyimage.com/32x32"
+    },
+    {
+        "id": 27,
+        "name": "ソーンメイル",
+        "description": "攻撃毎に25%の反射ダメージ",
+        "recipe": [
+            5,
+            5
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3075.png"
+    },
+    {
+        "id": 28,
+        "name": "ソードブレイカー",
+        "description": "攻撃時、敵の装備を解除するチャンスがあります",
+        "recipe": [
+            5,
+            7
+        ],
+        "img": "https://dummyimage.com/32x32"
+    },
+    {
+        "id": 29,
+        "name": "赤バフ",
+        "description": "攻撃毎に対象最大HPの2.5%のダメージ 回復阻害",
+        "recipe": [
+            5,
+            6
+        ],
+        "img": "https://dummyimage.com/32x32"
+    },
+    {
+        "id": 30,
+        "name": "騎士の誓い",
+        "description": "ユニットにナイト付与",
+        "recipe": [
+            5,
+            8
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3109.png"
+    },
+    {
+        "id": 31,
+        "name": "ワーモグアーマー",
+        "description": "毎秒最大HPの5%を回復",
+        "recipe": [
+            6,
+            6
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3083.png"
+    },
+    {
+        "id": 32,
+        "name": "ゼファー",
+        "description": "戦闘開始時5秒間敵を風の力で動けなくさせる",
+        "recipe": [
+            6,
+            7
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3172.png"
+    },
+    {
+        "id": 33,
+        "name": "フローズンマレット",
+        "description": "ユニットにグレイシャルを付与",
+        "recipe": [
+            6,
+            8
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3022.png"
+    },
+    {
+        "id": 34,
+        "name": "ドラゴンクロー",
+        "description": "魔法ダメージへの耐性が33%増加",
+        "recipe": [
+            7,
+            7
+        ],
+        "img": "https://dummyimage.com/32x32"
+    },
+    {
+        "id": 35,
+        "name": "ルナーンハリケーン",
+        "description": "攻撃時2体を50%のダメージで追加攻撃",
+        "recipe": [
+            7,
+            8
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3085.png"
+    },
+    {
+        "id": 36,
+        "name": "自然の力",
+        "description": "ユニット召喚数を+1",
+        "recipe": [
+            8,
+            8
+        ],
+        "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/4401.png"
+    }
+]

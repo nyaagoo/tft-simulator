@@ -21,49 +21,6 @@ export type BuildItem = {
   recipe: BasicItemName[];
 };
 
-export const basicItemList: BasicItem[] = [
-  {
-    name: "BFソード",
-    description: "攻撃力+20",
-    img: "https://dummyimage.com/32x32"
-  },
-  {
-    name: "リカーブボウ",
-    description: "攻撃速度+20%",
-    img: "https://dummyimage.com/32x32"
-  },
-  {
-    name: "ムダニデカイロッド",
-    description: "魔法攻撃力+20%",
-    img: "https://dummyimage.com/32x32"
-  },
-  {
-    name: "女神の涙",
-    description: "最大マナ+20",
-    img: "https://dummyimage.com/32x32"
-  },
-  {
-    name: "チェインベスト",
-    description: "物理防御力+20",
-    img: "https://dummyimage.com/32x32"
-  },
-  {
-    name: "ジャイアントベルト",
-    description: "最大HP+200",
-    img: "https://dummyimage.com/32x32"
-  },
-  {
-    name: "ネガトロンクローク",
-    description: "魔法防御力+20",
-    img: "https://dummyimage.com/32x32"
-  },
-  {
-    name: "ヘラ",
-    description: "何かをするに違いない",
-    img: "https://dummyimage.com/32x32"
-  }
-];
-
 export const buildItemList: BuildItem[] = [
   {
     name: "インフィニティ エッジ",
