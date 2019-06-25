@@ -7,7 +7,6 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import { BuildItem, BasicItemName, buildItemList } from "@/models/item";
 import TFTHeader from "@/components/Organisms/Header.vue";
 import ItemBuildSheet from "@/components/Organisms/ItemBuildSheet.vue";
 

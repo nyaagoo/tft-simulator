@@ -1,38 +1,37 @@
 <template lang="pug">
   .item-build-sheet
     .basic-item-container.ma-2.pa-2(v-for="item in buildItemEachBasicItem" :key="item.name")
-      span {{ item.basicItem }}
+      img(heght=48 width=48 :src="item.basicItem.img")
+      span {{ item.basicItem.name }}
       .item-container.ma-2.ml-4(v-for="item2 in item.buildItem" :key="item2.name")
-        img(:src="item2.img")
+        img(heght=48 width=48 :src="item2.img")
         span.pa-1 {{ item2.name }}
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import { BuildItem, BasicItemName, buildItemList } from "@/models/item";
+import { BuildItem, BasicItemName, BasicItem, BuildFromBasicItem } from "@/models/item";
+import { item } from "@/store/index"
 
 @Component({
   name: "item-build-sheet",
   components: {}
 })
 export default class ItemBuildSheet extends Vue {
-  buildItem: BuildItem[] = buildItemList;
-  buildItemEachBasicItem: {
-    basicItem: BasicItemName;
-    buildItem: BuildItem[];
-  }[] = [];
+  buildItemEachBasicItem: BuildFromBasicItem[] = [];
 
   created() {
-    this.buildItemEachBasicItem = this.buildItem.reduce<
-      { basicItem: BasicItemName; buildItem: BuildItem[] }[]
-    >((acc, current) => {
-      current.recipe.forEach(recipeItem => {
-        const basicItem = acc.find(x => x.basicItem === recipeItem);
+    this.buildItemEachBasicItem = item.buildItemList.reduce<BuildFromBasicItem[]>((acc, current) => {
+      current.recipe.forEach(recipeItemId => {
+        const basicItem = acc.find(x => x.basicItem.id === recipeItemId);
         if (basicItem) {
           if (basicItem.buildItem.some(item => item.name === current.name))
             return;
           basicItem.buildItem.push(current);
-        } else acc.push({ basicItem: recipeItem, buildItem: [current] });
+        } else {
+          const basicItem =  item.basicItemList.find(basicItem => basicItem.id === recipeItemId);
+          acc.push({ basicItem: basicItem!, buildItem: [current] });
+        }
       });
       return acc;
     }, []);
