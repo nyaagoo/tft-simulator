@@ -119,13 +119,13 @@ export default class ChampionFooter extends Vue {
 .type-chip-origin
   color #222222
   width 80px
-  background #4FC3F7
+  background #00B8D4
   border 1px solid #E1F5FE
   border-radius 8px
 .type-chip-class
   color #222222
   width 80px
-  background #DCE775
+  background #00C853
   border 1px solid #F9FBE7
   border-radius 8px
 ul

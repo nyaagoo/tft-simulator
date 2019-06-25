@@ -53,7 +53,7 @@ export default class DeckOrigin extends Vue {
   position relative
   display flex
   flex-wrap wrap
-  border 1px solid #88ff88
+  border 1px solid #00B8D4
   border-radius 8px
   padding 8px
   margin 8px
