@@ -40,7 +40,7 @@ export default class ChampionTemplate extends Vue {
 
   mounted() {
     champion.SeparateChampionDeckClass();
-    this.championListEachClass = champion.championDeckClass;
+    this.championListEachClass = champion.deckClass;
   }
 }
 </script>

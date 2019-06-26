@@ -1,15 +1,16 @@
 import championList from "@/assets/json/champions.json";
 import {
+  Champion,
   ChampionClass,
   ChampionOrigin,
   Class,
-  Origin,
-  Champion,
-  originSynergy,
-  OriginCount,
-  Synergy,
   ClassCount,
-  classSynergy
+  classSynergy,
+  Origin,
+  OriginCount,
+  originSynergy,
+  Synergy,
+  FavoriteOriginClass
 } from "@/models/champion";
 import store from "@/store/store";
 import {
@@ -24,10 +25,14 @@ import {
 class ChampionModule extends VuexModule {
   // #region STATE
   counter: number = 0;
-  readonly championList = championList;
-  // TODO:この名前冗長では？
-  championDeckOrigin: ChampionOrigin[] = [];
-  championDeckClass: ChampionClass[] = [];
+  readonly championList = championList.map(champ => ({
+    ...champ,
+    origin: champ.origin.map(o => Origin[o as Origin]),
+    class: champ.class.map(c => Class[c as Class])
+  }));
+  deckOrigin: ChampionOrigin[] = [];
+  deckClass: ChampionClass[] = [];
+  championDeckFavorite: FavoriteOriginClass = {} as FavoriteOriginClass;
   championPicked: Champion[] = [];
   activeOriginSynergy: Synergy[] = [];
   activeClassSynergy: Synergy[] = [];
@@ -37,12 +42,12 @@ class ChampionModule extends VuexModule {
   // #region MUTATION
   @Mutation // counter
   public SET_CHAMPION_DECK_ORIGIN(championOrigin: ChampionOrigin[]) {
-    this.championDeckOrigin = championOrigin;
+    this.deckOrigin = championOrigin;
   }
 
   @Mutation
   public SET_CHAMPION_DECK_CLASS(championClass: ChampionClass[]) {
-    this.championDeckClass = championClass;
+    this.deckClass = championClass;
   }
 
   @Mutation
@@ -58,6 +63,11 @@ class ChampionModule extends VuexModule {
   public SET_ACTIVE_CLASS_SYNERGY(synergyList: Synergy[]) {
     this.activeClassSynergy = synergyList;
   }
+  @Mutation
+  public SET_FAVORITE_ORIGIN_CLASS(favoriteOriginClass: FavoriteOriginClass) {
+    this.championDeckFavorite = favoriteOriginClass;
+  }
+
   // #endregion
 
   // #region ACTION
@@ -65,13 +75,12 @@ class ChampionModule extends VuexModule {
   public SeparateChampionDeckOrigin() {
     const eachOrigin = this.championList.reduce<ChampionOrigin[]>(
       (acc, current) => {
-        const currentOriginList = current.origin.split(",");
-        currentOriginList.forEach(currentOrigin => {
+        current.origin.forEach(currentOrigin => {
           const element = acc.find(p => p.origin === currentOrigin);
           if (element) element.championList.push(current);
           else
             acc.push({
-              origin: currentOrigin as Origin,
+              origin: currentOrigin,
               championList: [current]
             });
         });
@@ -86,13 +95,12 @@ class ChampionModule extends VuexModule {
   public SeparateChampionDeckClass() {
     const eachClass = this.championList.reduce<ChampionClass[]>(
       (acc, current) => {
-        const currentClassList = current.class.split(",");
-        currentClassList.forEach(currentClass => {
+        current.class.forEach(currentClass => {
           const element = acc.find(p => p.class === currentClass);
           if (element) element.championList.push(current);
           else
             acc.push({
-              class: currentClass as Class,
+              class: currentClass,
               championList: [current]
             });
         });
@@ -135,14 +143,13 @@ class ChampionModule extends VuexModule {
     const originCount: OriginCount[] = this.championPicked.reduce<
       OriginCount[]
     >((acc, current) => {
-      const currentOriginList = current.origin.split(",");
-      currentOriginList.forEach(origin => {
+      current.origin.forEach(origin => {
         const element = acc.find(p => p.origin === origin);
         if (element) element.count++;
         else
           acc.push({
             count: 1,
-            origin: origin as Origin
+            origin: origin
           });
       });
       return acc;
@@ -170,14 +177,13 @@ class ChampionModule extends VuexModule {
   public CalculateAndSetClassSynergy() {
     const classCount: ClassCount[] = this.championPicked.reduce<ClassCount[]>(
       (acc, current) => {
-        const currentClassList = current.class.split(",");
-        currentClassList.forEach(currentClass => {
+        current.class.forEach(currentClass => {
           const element = acc.find(p => p.class === currentClass);
           if (element) element.count++;
           else {
             acc.push({
               count: 1,
-              class: currentClass as Class
+              class: currentClass
             });
           }
         });
@@ -206,7 +212,7 @@ class ChampionModule extends VuexModule {
 
   @Action({ rawError: true })
   public sortChampionOriginCost() {
-    const copyDeckOrigin = [...this.championDeckOrigin];
+    const copyDeckOrigin = [...this.deckOrigin];
     copyDeckOrigin.forEach(x =>
       x.championList.sort((pre, cur) => {
         if (pre.cost > cur.cost) return 1;
@@ -219,7 +225,7 @@ class ChampionModule extends VuexModule {
 
   @Action({ rawError: true })
   public sortChampionClassCost() {
-    const copyDeckClass = [...this.championDeckClass];
+    const copyDeckClass = [...this.deckClass];
     copyDeckClass.forEach(x =>
       x.championList.sort((pre, cur) => {
         if (pre.cost > cur.cost) return 1;
@@ -232,7 +238,7 @@ class ChampionModule extends VuexModule {
 
   @Action({ rawError: true })
   public sortChampionOriginName() {
-    const copyDeckOrigin = [...this.championDeckOrigin];
+    const copyDeckOrigin = [...this.deckOrigin];
     copyDeckOrigin.forEach(x =>
       x.championList.sort((pre, cur) => {
         if (pre.name > cur.name) return 1;
@@ -245,7 +251,7 @@ class ChampionModule extends VuexModule {
 
   @Action({ rawError: true })
   public sortChampionClassName() {
-    const copyDeckClass = [...this.championDeckClass];
+    const copyDeckClass = [...this.deckClass];
     copyDeckClass.forEach(x =>
       x.championList.sort((pre, cur) => {
         if (pre.name > cur.name) return 1;

@@ -1,6 +1,6 @@
 <template lang="pug">
   .champion-thumbnail(@click="championPick(champ)")
-    .champion-img-wrapper.mb-2
+    .champion-img-wrapper.pointer.mb-2
       img.champion-img(
         :class="{ 'grayscale': !isPicked(champ.id) }"
         :style="{ 'outline-color': `${costColor.get(champ.cost)}` }"

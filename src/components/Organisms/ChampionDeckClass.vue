@@ -6,7 +6,7 @@
         span.class-title {{ eachClass.class }}
         transition-group.champion-origin-inner(name="flip-list" tag="div")
           .champion-wrapper(v-for="champ in eachClass.championList" :key="champ.name")
-            champion-thumbnail(:champ="champ" :originList="splitComma(champ.origin)" :classList="splitComma(champ.class)")
+            champion-thumbnail(:champ="champ" :originList="champ.origin" :classList="champ.class")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -28,11 +28,7 @@ export default class DeckClass extends Vue {
     champion.SeparateChampionDeckClass();
   }
   get championListEachClass(): ChampionClass[] {
-    return champion.championDeckClass;
-  }
-
-  splitComma(str: string): string[] {
-    return str.split(",");
+    return champion.deckClass;
   }
 }
 </script>

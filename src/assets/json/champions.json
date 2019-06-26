@@ -1,801 +1,1550 @@
 [
-    {
-        "id": 1,
-        "name": "Aatrox",
-        "ruby": "エイトロックス",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Aatrox.png",
-        "origin": "Demon",
-        "class": "Blademaster",
-        "cost": 2,
-        "hp": 600,
-        "dps": 36,
-        "attackSpeed": 0.55,
-        "damage": 65,
-        "range": 180,
-        "armor": 25,
-        "magicRegist": 20
+  {
+    "id": 1,
+    "name": "Aatrox",
+    "ruby": "エイトロックス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Aatrox.png",
+    "skill": {
+      "name": "ダーキンブレード",
+      "description": "前方を切り裂き、範囲内にいる敵にダメージを与える。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            350,
+            575,
+            850
+          ]
+        }
+      ]
     },
-    {
-        "id": 2,
-        "name": "Ahri",
-        "ruby": "アーリ",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ahri.png",
-        "origin": "Wild",
-        "class": "Sorcerer",
-        "cost": 2,
-        "hp": 450,
-        "dps": 28,
-        "attackSpeed": 0.55,
-        "damage": 50,
-        "range": 660,
-        "armor": 20,
-        "magicRegist": 20
+    "origin": [
+      "Demon"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "cost": 2,
+    "hp": 600,
+    "dps": 36,
+    "attackSpeed": 0.55,
+    "damage": 65,
+    "range": 180,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 2,
+    "name": "Ahri",
+    "ruby": "アーリ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ahri.png",
+    "skill": {
+      "name": "幻惑のオーブ",
+      "description": "自分の元に戻ってくるオーブを直線上に放ち、貫通した敵にダメージを与える。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            100,
+            175,
+            250
+          ]
+        }
+      ]
     },
-    {
-        "id": 3,
-        "name": "Akali",
-        "ruby": "アカリ",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Akali.png",
-        "origin": "Ninja",
-        "class": "Assassin",
-        "cost": 4,
-        "hp": 600,
-        "dps": 49,
-        "attackSpeed": 0.7,
-        "damage": 70,
-        "range": 180,
-        "armor": 20,
-        "magicRegist": 20
+    "origin": [
+      "Wild"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 2,
+    "hp": 450,
+    "dps": 28,
+    "attackSpeed": 0.55,
+    "damage": 50,
+    "range": 660,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 3,
+    "name": "Akali",
+    "ruby": "アカリ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Akali.png",
+    "skill": {
+      "name": "五連苦無",
+      "description": "前方にくないを投げ、ダメージを与える。このスキルはクリティカル判定を持つ。",
+      "cost": 25,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            375,
+            550
+          ]
+        }
+      ]
     },
-    {
-        "id": 4,
-        "name": "Anivia",
-        "ruby": "アニビア",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Anivia.png",
-        "origin": "Glacial",
-        "class": "Elementalist",
-        "cost": 5,
-        "hp": 650,
-        "dps": 24,
-        "attackSpeed": 0.6,
-        "damage": 40,
-        "range": 890,
-        "armor": 20,
-        "magicRegist": 20
+    "origin": [
+      "Ninja"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 4,
+    "hp": 600,
+    "dps": 49,
+    "attackSpeed": 0.7,
+    "damage": 70,
+    "range": 180,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 4,
+    "name": "Anivia",
+    "ruby": "アニビア",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Anivia.png",
+    "skill": {
+      "name": "ブリザード",
+      "description": "巨大な吹雪を発生させ、範囲内の敵にダメージを与えて攻撃速度を低下させる。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            300,
+            600,
+            900
+          ]
+        },
+        {
+          "label": "低下攻撃速度",
+          "effects": [
+            50,
+            70,
+            90
+          ]
+        },
+        {
+          "label": "継続時間",
+          "effects": [
+            8,
+            8,
+            8
+          ]
+        }
+      ]
     },
-    {
-        "id": 5,
-        "name": "Ashe",
-        "ruby": "アッシュ",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ashe.png",
-        "origin": "Glacial",
-        "class": "Ranger",
-        "cost": 3,
-        "hp": 550,
-        "dps": 42,
-        "attackSpeed": 0.7,
-        "damage": 60,
-        "range": 960,
-        "armor": 20,
-        "magicRegist": 20
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Elementalist"
+    ],
+    "cost": 5,
+    "hp": 650,
+    "dps": 24,
+    "attackSpeed": 0.6,
+    "damage": 40,
+    "range": 890,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 5,
+    "name": "Ashe",
+    "ruby": "アッシュ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ashe.png",
+    "skill": {
+      "name": "クリスタルアロー",
+      "description": "矢を発射し、最初に当たった敵にスタン効果とダメージを与える。距離が遠いほどスタンの効果時間が長くなる。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            700,
+            950,
+            1200
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            1,
+            1.5,
+            2
+          ]
+        }
+      ]
     },
-    {
-        "id": 6,
-        "name": "Aurelion-Sol",
-        "ruby": "オレリオン・ソル",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/AurelionSol.png",
-        "origin": "Dragon",
-        "class": "Sorcerer",
-        "cost": 4,
-        "hp": 600,
-        "dps": 24,
-        "attackSpeed": 0.6,
-        "damage": 40,
-        "range": 720,
-        "armor": 20,
-        "magicRegist": 20
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Ranger"
+    ],
+    "cost": 3,
+    "hp": 550,
+    "dps": 42,
+    "attackSpeed": 0.7,
+    "damage": 60,
+    "range": 960,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 6,
+    "name": "Aurelion-Sol",
+    "ruby": "オレリオン・ソル",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/AurelionSol.png",
+    "skill": {
+      "name": "星炎の息吹",
+      "description": "直線状に巨大な炎を吐き、敵にダメージを与える。",
+      "cost": 125,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            250,
+            350,
+            450
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            0.35,
+            0.35,
+            0.35
+          ]
+        }
+      ]
     },
-    {
-        "id": 7,
-        "name": "Blitzcrank",
-        "ruby": "ブリッツクランク",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Blitzcrank.png",
-        "origin": "Robot",
-        "class": "Guardian",
-        "cost": 2,
-        "hp": 600,
-        "dps": 25,
-        "attackSpeed": 0.5,
-        "damage": 50,
-        "range": 180,
-        "armor": 35,
-        "magicRegist": 20
+    "origin": [
+      "Dragon"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 4,
+    "hp": 600,
+    "dps": 24,
+    "attackSpeed": 0.6,
+    "damage": 40,
+    "range": 720,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 7,
+    "name": "Blitzcrank",
+    "ruby": "ブリッツクランク",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Blitzcrank.png",
+    "skill": {
+      "name": "ロケットグラブ",
+      "description": "自分から最も遠い敵を自分の元に引き寄せてノックアップさせる。",
+      "cost": 150,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            100,
+            350,
+            800
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            2.5,
+            2.5,
+            2.5
+          ]
+        }
+      ]
     },
-    {
-        "id": 8,
-        "name": "Brand",
-        "ruby": "ブランド",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Brand.png",
-        "origin": "Demon",
-        "class": "Elementalist",
-        "cost": 4,
-        "hp": 700,
-        "dps": 36,
-        "attackSpeed": 0.6,
-        "damage": 60,
-        "range": 660,
-        "armor": 25,
-        "magicRegist": 20
+    "origin": [
+      "Robot"
+    ],
+    "class": [
+      "Brawler"
+    ],
+    "cost": 2,
+    "hp": 600,
+    "dps": 25,
+    "attackSpeed": 0.5,
+    "damage": 50,
+    "range": 180,
+    "armor": 35,
+    "magicRegist": 20
+  },
+  {
+    "id": 8,
+    "name": "Brand",
+    "ruby": "ブランド",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Brand.png",
+    "skill": {
+      "name": "業火",
+      "description": "跳ねる火の玉を放ち、命中した敵にダメージを与える。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            300,
+            400
+          ]
+        },
+        {
+          "label": "バウンド",
+          "effects": [
+            4,
+            4,
+            6
+          ]
+        }
+      ]
     },
-    {
-        "id": 9,
-        "name": "Braum",
-        "ruby": "ブラウム",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Braum.png",
-        "origin": "Glacial",
-        "class": "Guardian",
-        "cost": 2,
-        "hp": 750,
-        "dps": 24,
-        "attackSpeed": 0.6,
-        "damage": 40,
-        "range": 180,
-        "armor": 25,
-        "magicRegist": 20
+    "origin": [
+      "Demon"
+    ],
+    "class": [
+      "Elementalist"
+    ],
+    "cost": 4,
+    "hp": 700,
+    "dps": 36,
+    "attackSpeed": 0.6,
+    "damage": 60,
+    "range": 660,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 9,
+    "name": "Braum",
+    "ruby": "ブラウム",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Braum.png",
+    "skill": {
+      "name": "不破の盾",
+      "description": "受けるダメージの一定割合をブロックするバリアを発生させる。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ブロック割合",
+          "effects": [
+            60,
+            75,
+            90
+          ]
+        },
+        {
+          "label": "効果時間",
+          "effects": [
+            4,
+            4,
+            4
+          ]
+        }
+      ]
     },
-    {
-        "id": 10,
-        "name": "ChoGath",
-        "ruby": "チョガス",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Chogath.png",
-        "origin": "Void",
-        "class": "Brawler",
-        "cost": 4,
-        "hp": 1100,
-        "dps": 39,
-        "attackSpeed": 0.55,
-        "damage": 70,
-        "range": 180,
-        "armor": 20,
-        "magicRegist": 20
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Guardian"
+    ],
+    "cost": 2,
+    "hp": 750,
+    "dps": 24,
+    "attackSpeed": 0.6,
+    "damage": 40,
+    "range": 180,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 10,
+    "name": "ChoGath",
+    "ruby": "チョガス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Chogath.png",
+    "skill": {
+      "name": "ラプチャー",
+      "description": "地面からトゲを発生させ、範囲内の敵にダメージを与えてスタンさせる。",
+      "cost": 150,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            400,
+            600
+          ]
+        },
+        {
+          "label": "ノックアップ時間",
+          "effects": [
+            2,
+            2.25,
+            2.5
+          ]
+        },
+        {
+          "label": "範囲",
+          "effects": [
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "label": "ディレイ",
+          "effects": [
+            1.5,
+            1.5,
+            1.5
+          ]
+        }
+      ]
     },
-    {
-        "id": 11,
-        "name": "Darius",
-        "ruby": "ダリウス",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Darius.png",
-        "origin": "Imperial",
-        "class": "Blademaster",
-        "cost": 1,
-        "hp": 650,
-        "dps": 25,
-        "attackSpeed": 0.5,
-        "damage": 50,
-        "range": 180,
-        "armor": 25,
-        "magicRegist": 20
+    "origin": [
+      "Void"
+    ],
+    "class": [
+      "Brawler"
+    ],
+    "cost": 4,
+    "hp": 1100,
+    "dps": 39,
+    "attackSpeed": 0.55,
+    "damage": 70,
+    "range": 180,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 11,
+    "name": "Darius",
+    "ruby": "ダリウス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Darius.png",
+    "skill": {
+      "name": "皆殺しの斧",
+      "description": "斧を振り回して周囲の敵にダメージを与え、当たった敵の数に応じて体力を回復する。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            150,
+            225,
+            300
+          ]
+        },
+        {
+          "label": "回復量",
+          "effects": [
+            100,
+            150,
+            200
+          ]
+        },
+        {
+          "label": "ディレイ",
+          "effects": [
+            1.5,
+            1.5,
+            1.5
+          ]
+        }
+      ]
     },
-    {
-        "id": 12,
-        "name": "Draven",
-        "ruby": "ドレイブン",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Draven.png",
-        "origin": "Imperial",
-        "class": "Blademaster",
-        "cost": 4,
-        "hp": 700,
-        "dps": 49,
-        "attackSpeed": 0.65,
-        "damage": 75,
-        "range": 660,
-        "armor": 25,
-        "magicRegist": 20
+    "origin": [
+      "Imperial"
+    ],
+    "class": [
+      "Knight"
+    ],
+    "cost": 1,
+    "hp": 650,
+    "dps": 25,
+    "attackSpeed": 0.5,
+    "damage": 50,
+    "range": 180,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 12,
+    "name": "Draven",
+    "ruby": "ドレイブン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Draven.png",
+    "skill": {
+      "name": "回転斬斧",
+      "description": "次の通常攻撃に追加ダメージが付与される。斧をキャッチすると次の攻撃にも「回転斬斧」の効果がつく。「回転斬斧」は複数持てる。",
+      "cost": 0,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "効果時間",
+          "effects": [
+            8,
+            8,
+            8
+          ]
+        },
+        {
+          "label": "ダメージ倍率",
+          "effects": [
+            150,
+            200,
+            250
+          ]
+        }
+      ]
     },
-    {
-        "id": 13,
-        "name": "Elise",
-        "ruby": "エリス",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Elise.png",
-        "origin": "Demon",
-        "class": "Shapeshifter",
-        "cost": 2,
-        "hp": 500,
-        "dps": 24,
-        "attackSpeed": 0.6,
-        "damage": 40,
-        "range": 420,
-        "armor": 25,
-        "magicRegist": 20
+    "origin": [
+      "Imperial"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "cost": 4,
+    "hp": 700,
+    "dps": 49,
+    "attackSpeed": 0.65,
+    "damage": 75,
+    "range": 660,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 13,
+    "name": "Elise",
+    "ruby": "エリス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Elise.png",
+    "skill": {
+      "name": "蜘蛛形態",
+      "description": "子蜘蛛を召喚して変身し、ライフスティールを獲得する。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ライフスティール割合",
+          "effects": [
+            60,
+            90,
+            120
+          ]
+        },
+        {
+          "label": "召喚数",
+          "effects": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "子蜘蛛HP",
+          "effects": [
+            250,
+            375,
+            500
+          ]
+        }
+      ]
     },
-    {
-        "id": 14,
-        "name": "Evelynn",
-        "ruby": "イブリン",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Evelynn.png",
-        "origin": "Demon",
-        "class": "Assassin",
-        "cost": 3,
-        "hp": 550,
-        "dps": 30,
-        "attackSpeed": 0.6,
-        "damage": 50,
-        "range": 180,
-        "armor": 20,
-        "magicRegist": 20
+    "origin": [
+      "Demon"
+    ],
+    "class": [
+      "Shapeshifter"
+    ],
+    "cost": 2,
+    "hp": 500,
+    "dps": 24,
+    "attackSpeed": 0.6,
+    "damage": 40,
+    "range": 420,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 14,
+    "name": "Evelynn",
+    "ruby": "イブリン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Evelynn.png",
+    "skill": {
+      "name": "ラストカレス",
+      "description": "最も近くの敵3体にダメージを与え、ワープで離脱する。残り体力の少ない敵に対してはダメージが増加する。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            250,
+            300
+          ]
+        },
+        {
+          "label": "クリティカル倍率",
+          "effects": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "label": "クリティカル閾値",
+          "effects": [
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "label": "ブリンク距離",
+          "effects": [
+            3,
+            3,
+            3
+          ]
+        }
+      ]
     },
-    {
-        "id": 15,
-        "name": "Fiora",
-        "ruby": "フィオラ",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Fiora.png",
-        "origin": "Noble",
-        "class": "Blademaster",
-        "cost": 1,
-        "hp": 400,
-        "dps": 28,
-        "attackSpeed": 0.7,
-        "damage": 40,
-        "range": 180,
-        "armor": 25,
-        "magicRegist": 20
+    "origin": [
+      "Demon"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 3,
+    "hp": 550,
+    "dps": 30,
+    "attackSpeed": 0.6,
+    "damage": 50,
+    "range": 180,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 15,
+    "name": "Fiora",
+    "ruby": "フィオラ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Fiora.png",
+    "skill": {
+      "name": "リポスト",
+      "description": "ダメージやスキルの影響を受けなくなる。少ししてから最も近くの敵をスタンさせ、ダメージを与える。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            100,
+            175,
+            250
+          ]
+        },
+        {
+          "label": "スタン時間",
+          "effects": [
+            1.5,
+            1.5,
+            1.5
+          ]
+        },
+        {
+          "label": "ブロック時間",
+          "effects": [
+            1.5,
+            1.5,
+            1.5
+          ]
+        }
+      ]
     },
-    {
-        "id": 16,
-        "name": "Gangplank",
-        "ruby": "ガングプランク",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gangplank.png",
-        "origin": "Pirate",
-        "class": "Blademaster,Gunslinger",
-        "cost": 3,
-        "hp": 600,
-        "dps": 33,
-        "attackSpeed": 0.6,
-        "damage": 55,
-        "range": 180,
-        "armor": 20,
-        "magicRegist": 20
+    "origin": [
+      "Noble"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "cost": 1,
+    "hp": 400,
+    "dps": 28,
+    "attackSpeed": 0.7,
+    "damage": 40,
+    "range": 180,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 16,
+    "name": "Gangplank",
+    "ruby": "ガングプランク",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gangplank.png",
+    "skill": {
+      "name": "火薬樽",
+      "description": "一定時間ごとに樽を作り出す。発動時に樽は爆発し、近くの敵にダメージを与える。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            325,
+            450
+          ]
+        }
+      ]
     },
-    {
-        "id": 17,
-        "name": "Garen",
-        "ruby": "ガレン",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Garen.png",
-        "origin": "Noble",
-        "class": "Knight",
-        "cost": 1,
-        "hp": 600,
-        "dps": 30,
-        "attackSpeed": 0.55,
-        "damage": 55,
-        "range": 180,
-        "armor": 35,
-        "magicRegist": 20
+    "origin": [
+      "Pirate"
+    ],
+    "class": [
+      "Blademaster",
+      "Gunslinger"
+    ],
+    "cost": 3,
+    "hp": 600,
+    "dps": 33,
+    "attackSpeed": 0.6,
+    "damage": 55,
+    "range": 180,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 17,
+    "name": "Garen",
+    "ruby": "ガレン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Garen.png",
+    "skill": {
+      "name": "ジャッジメント",
+      "description": "剣を回転させて、周囲の敵にダメージを与える。回っている間はスキルダメージを受けない。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            60,
+            90,
+            120
+          ]
+        },
+        {
+          "label": "ダメージ回数",
+          "effects": [
+            9,
+            9,
+            9
+          ]
+        },
+        {
+          "label": "回転時間",
+          "effects": [
+            4,
+            4,
+            4
+          ]
+        }
+      ]
     },
-    {
-        "id": 18,
-        "name": "Gnar",
-        "ruby": "ナー",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gnar.png",
-        "origin": "Wild,Yordle",
-        "class": "Shapeshifter",
-        "cost": 4,
-        "hp": 850,
-        "dps": 31,
-        "attackSpeed": 0.7,
-        "damage": 45,
-        "range": 420,
-        "armor": 35,
-        "magicRegist": 20
+    "origin": [
+      "Noble"
+    ],
+    "class": [
+      "Knight"
+    ],
+    "cost": 1,
+    "hp": 600,
+    "dps": 30,
+    "attackSpeed": 0.55,
+    "damage": 55,
+    "range": 180,
+    "armor": 35,
+    "magicRegist": 20
+  },
+  {
+    "id": 18,
+    "name": "Gnar",
+    "ruby": "ナー",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gnar.png",
+    "skill": {
+      "name": "ナー！",
+      "description": "変身して体力と攻撃力が増加し、最も遠い位置にいる敵の背後までジャンプし、ダメージを与えて敵を後方に突き飛ばす。",
+      "cost": 125,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            300,
+            400
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "label": "ノックバック距離",
+          "effects": [
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "label": "変身継続時間",
+          "effects": [
+            60,
+            60,
+            60
+          ]
+        },
+        {
+          "label": "変身HP",
+          "effects": [
+            300,
+            300,
+            300
+          ]
+        },
+        {
+          "label": "変身ダメージ",
+          "effects": [
+            30,
+            60,
+            90
+          ]
+        }
+      ]
     },
-    {
-        "id": 19,
-        "name": "Graves",
-        "ruby": "グレイブス",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Graves.png",
-        "origin": "Pirate",
-        "class": "Gunslinger",
-        "cost": 1,
-        "hp": 500,
-        "dps": 28,
-        "attackSpeed": 0.5,
-        "damage": 55,
-        "range": 180,
-        "armor": 20,
-        "magicRegist": 20
+    "origin": [
+      "Wild",
+      "Yordle"
+    ],
+    "class": [
+      "Shapeshifter"
+    ],
+    "cost": 4,
+    "hp": 850,
+    "dps": 31,
+    "attackSpeed": 0.7,
+    "damage": 45,
+    "range": 420,
+    "armor": 35,
+    "magicRegist": 20
+  },
+  {
+    "id": 19,
+    "name": "Graves",
+    "ruby": "グレイブス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Graves.png",
+    "skill": {
+      "name": "散弾（自動効果）",
+      "description": "通常攻撃に追加ダメージが付与され、近くの敵に範囲ダメージを与える。",
+      "cost": 0,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ倍率",
+          "effects": [
+            0.1,
+            0.2,
+            0.3
+          ]
+        }
+      ]
     },
-    {
-        "id": 20,
-        "name": "Karthus",
-        "ruby": "カーサス",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Karthus.png",
-        "origin": "Phantom",
-        "class": "Ranger",
-        "cost": 5,
-        "hp": 850,
-        "dps": 42,
-        "attackSpeed": 0.65,
-        "damage": 65,
-        "range": 660,
-        "armor": 25,
-        "magicRegist": 20
+    "origin": [
+      "Pirate"
+    ],
+    "class": [
+      "Gunslinger"
+    ],
+    "cost": 1,
+    "hp": 500,
+    "dps": 28,
+    "attackSpeed": 0.5,
+    "damage": 55,
+    "range": 180,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 20,
+    "name": "Karthus",
+    "ruby": "カーサス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Karthus.png",
+    "skill": {
+      "name": "鎮魂歌",
+      "description": "長い詠唱の後に、複数のランダムな敵にダメージを与える。",
+      "cost": 0,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            350,
+            600,
+            850
+          ]
+        },
+        {
+          "label": "対象数",
+          "effects": [
+            4,
+            7,
+            10
+          ]
+        }
+      ]
     },
-    {
-        "id": 21,
-        "name": "Kassadin",
-        "ruby": "カサディン",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kassadin.png",
-        "origin": "Void",
-        "class": "Sorcerer",
-        "cost": 1,
-        "hp": 550,
-        "dps": 29,
-        "attackSpeed": 0.65,
-        "damage": 45,
-        "range": 180,
-        "armor": 25,
-        "magicRegist": 20
-    },
-    {
-        "id": 22,
-        "name": "Katarina",
-        "ruby": "カタリナ",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Katarina.png",
-        "origin": "Imperial",
-        "class": "Assassin",
-        "cost": 3,
-        "hp": 450,
-        "dps": 30,
-        "attackSpeed": 0.6,
-        "damage": 50,
-        "range": 180,
-        "armor": 20,
-        "magicRegist": 20
-    },
-    {
-        "id": 23,
-        "name": "Kayle",
-        "ruby": "ケイル",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kayle.png",
-        "origin": "Noble",
-        "class": "Knight",
-        "cost": 5,
-        "hp": 800,
-        "dps": 66,
-        "attackSpeed": 1.1,
-        "damage": 60,
-        "range": 660,
-        "armor": 35,
-        "magicRegist": 20
-    },
-    {
-        "id": 24,
-        "name": "Kennen",
-        "ruby": "ケネン",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kennen.png",
-        "origin": "Ninja,Yordle",
-        "class": "Elementalist",
-        "cost": 3,
-        "hp": 550,
-        "dps": 36,
-        "attackSpeed": 0.6,
-        "damage": 60,
-        "range": 420,
-        "armor": 20,
-        "magicRegist": 20
-    },
-    {
-        "id": 25,
-        "name": "KhaZix",
-        "ruby": "カジックス",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Khazix.png",
-        "origin": "Void",
-        "class": "Assassin",
-        "cost": 1,
-        "hp": 500,
-        "dps": 30,
-        "attackSpeed": 0.6,
-        "damage": 50,
-        "range": 180,
-        "armor": 20,
-        "magicRegist": 20
-    },
-    {
-        "id": 26,
-        "name": "Kindred",
-        "ruby": "キンドレッド",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kindred.png",
-        "origin": "Phantom",
-        "class": "Sorcerer",
-        "cost": 4,
-        "hp": 600,
-        "dps": 39,
-        "attackSpeed": 0.7,
-        "damage": 55,
-        "range": 660,
-        "armor": 20,
-        "magicRegist": 20
-    },
-    {
-        "id": 27,
-        "name": "Leona",
-        "ruby": "レオナ",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Leona.png",
-        "origin": "Noble",
-        "class": "Guardian",
-        "cost": 4,
-        "hp": 750,
-        "dps": 25,
-        "attackSpeed": 0.55,
-        "damage": 45,
-        "range": 180,
-        "armor": 55,
-        "magicRegist": 20
-    },
-    {
-        "id": 28,
-        "name": "リサンドラ",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lissandra.png",
-        "origin": "Glacial",
-        "class": "Elementalist",
-        "cost": 1,
-        "hp": 450,
-        "dps": 24,
-        "attackSpeed": 0.6,
-        "damage": 40,
-        "range": 660,
-        "armor": 20,
-        "magicRegist": 20
-    },
-    {
-        "id": 29,
-        "name": "Lucian",
-        "ruby": "ルシアン",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lucian.png",
-        "origin": "Noble",
-        "class": "Gunslinger",
-        "cost": 2,
-        "hp": 600,
-        "dps": 36,
-        "attackSpeed": 0.6,
-        "damage": 60,
-        "range": 660,
-        "armor": 25,
-        "magicRegist": 20
-    },
-    {
-        "id": 30,
-        "name": "Lulu",
-        "ruby": "ルル",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lulu.png",
-        "origin": "Yordle",
-        "class": "Sorcerer",
-        "cost": 2,
-        "hp": 500,
-        "dps": 30,
-        "attackSpeed": 0.6,
-        "damage": 50,
-        "range": 420,
-        "armor": 25,
-        "magicRegist": 20
-    },
-    {
-        "id": 31,
-        "name": "Miss-Fortune",
-        "ruby": "ミス・フォーチュン",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/MissFortune.png",
-        "origin": "Pirate",
-        "class": "Gunslinger",
-        "cost": 5,
-        "hp": 650,
-        "dps": 56,
-        "attackSpeed": 0.75,
-        "damage": 75,
-        "range": 660,
-        "armor": 20,
-        "magicRegist": 20
-    },
-    {
-        "id": 32,
-        "name": "Mordekaiser",
-        "ruby": "モルデカイザー",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Mordekaiser.png",
-        "origin": "Phantom",
-        "class": "Knight",
-        "cost": 1,
-        "hp": 500,
-        "dps": 25,
-        "attackSpeed": 0.5,
-        "damage": 50,
-        "range": 180,
-        "armor": 35,
-        "magicRegist": 20
-    },
-    {
-        "id": 33,
-        "name": "Morgana",
-        "ruby": "モルガナ",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Morgana.png",
-        "origin": "Demon",
-        "class": "Sorcerer",
-        "cost": 3,
-        "hp": 600,
-        "dps": 30,
-        "attackSpeed": 0.6,
-        "damage": 50,
-        "range": 420,
-        "armor": 20,
-        "magicRegist": 20
-    },
-    {
-        "id": 34,
-        "name": "Nidalee",
-        "ruby": "ニダリー",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Nidalee.png",
-        "origin": "Wild",
-        "class": "Shapeshifter",
-        "cost": 1,
-        "hp": 500,
-        "dps": 33,
-        "attackSpeed": 0.65,
-        "damage": 50,
-        "range": 660,
-        "armor": 20,
-        "magicRegist": 20
-    },
-    {
-        "id": 35,
-        "name": "Poppy",
-        "ruby": "ポッピー",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Poppy.png",
-        "origin": "Yordle",
-        "class": "Knight",
-        "cost": 3,
-        "hp": 750,
-        "dps": 25,
-        "attackSpeed": 0.5,
-        "damage": 50,
-        "range": 180,
-        "armor": 30,
-        "magicRegist": 20
-    },
-    {
-        "id": 36,
-        "name": "Pyke",
-        "ruby": "パイク",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Pyke.png",
-        "origin": "Pirate",
-        "class": "Assassin",
-        "cost": 2,
-        "hp": 600,
-        "dps": 33,
-        "attackSpeed": 0.55,
-        "damage": 60,
-        "range": 180,
-        "armor": 25,
-        "magicRegist": 20
-    },
-    {
-        "id": 37,
-        "name": "RekSai",
-        "ruby": "レクサイ",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/RekSai.png",
-        "origin": "Void",
-        "class": "Brawler",
-        "cost": 2,
-        "hp": 650,
-        "dps": 26,
-        "attackSpeed": 0.65,
-        "damage": 40,
-        "range": 180,
-        "armor": 20,
-        "magicRegist": 20
-    },
-    {
-        "id": 38,
-        "name": "Rengar",
-        "ruby": "レンガー",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Rengar.png",
-        "origin": "Wild",
-        "class": "Assassin",
-        "cost": 3,
-        "hp": 550,
-        "dps": 30,
-        "attackSpeed": 0.55,
-        "damage": 55,
-        "range": 180,
-        "armor": 20,
-        "magicRegist": 20
-    },
-    {
-        "id": 39,
-        "name": "Sejuani",
-        "ruby": "セジュアニ",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Sejuani.png",
-        "origin": "Glacial",
-        "class": "Knight",
-        "cost": 4,
-        "hp": 850,
-        "dps": 25,
-        "attackSpeed": 0.55,
-        "damage": 45,
-        "range": 180,
-        "armor": 35,
-        "magicRegist": 25
-    },
-    {
-        "id": 40,
-        "name": "Shen",
-        "ruby": "シェン",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shen.png",
-        "origin": "Ninja",
-        "class": "Blademaster",
-        "cost": 2,
-        "hp": 650,
-        "dps": 33,
-        "attackSpeed": 0.6,
-        "damage": 55,
-        "range": 180,
-        "armor": 30,
-        "magicRegist": 20
-    },
-    {
-        "id": 41,
-        "name": "Shyvana",
-        "ruby": "シヴァーナ",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shyvana.png",
-        "origin": "Dragon",
-        "class": "Shapeshifter",
-        "cost": 3,
-        "hp": 550,
-        "dps": 33,
-        "attackSpeed": 0.65,
-        "damage": 50,
-        "range": 180,
-        "armor": 20,
-        "magicRegist": 20
-    },
-    {
-        "id": 42,
-        "name": "Swain",
-        "ruby": "スウェイン",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Swain.png",
-        "origin": "Imperial,Demon",
-        "class": "Shapeshifter",
-        "cost": 5,
-        "hp": 850,
-        "dps": 42,
-        "attackSpeed": 0.65,
-        "damage": 65,
-        "range": 420,
-        "armor": 25,
-        "magicRegist": 20
-    },
-    {
-        "id": 43,
-        "name": "Tristana",
-        "ruby": "トリスターナ",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Tristana.png",
-        "origin": "Yordle",
-        "class": "Gunslinger",
-        "cost": 1,
-        "hp": 500,
-        "dps": 33,
-        "attackSpeed": 0.65,
-        "damage": 50,
-        "range": 890,
-        "armor": 20,
-        "magicRegist": 20
-    },
-    {
-        "id": 44,
-        "name": "Varus",
-        "ruby": "ヴァルス",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Varus.png",
-        "origin": "Demon",
-        "class": "Ranger",
-        "cost": 2,
-        "hp": 500,
-        "dps": 35,
-        "attackSpeed": 0.7,
-        "damage": 50,
-        "range": 890,
-        "armor": 25,
-        "magicRegist": 20
-    },
-    {
-        "id": 45,
-        "name": "Vayne",
-        "ruby": "ヴェイン",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Vayne.png",
-        "origin": "Noble",
-        "class": "Ranger",
-        "cost": 1,
-        "hp": 550,
-        "dps": 27,
-        "attackSpeed": 0.6,
-        "damage": 45,
-        "range": 660,
-        "armor": 25,
-        "magicRegist": 20
-    },
-    {
-        "id": 46,
-        "name": "Veigar",
-        "ruby": "ヴェイガー",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Veigar.png",
-        "origin": "Yordle",
-        "class": "Sorcerer",
-        "cost": 3,
-        "hp": 450,
-        "dps": 25,
-        "attackSpeed": 0.55,
-        "damage": 45,
-        "range": 660,
-        "armor": 20,
-        "magicRegist": 20
-    },
-    {
-        "id": 47,
-        "name": "Volibear",
-        "ruby": "ボリベア",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Volibear.png",
-        "origin": "Glacial",
-        "class": "Brawler",
-        "cost": 2,
-        "hp": 650,
-        "dps": 38,
-        "attackSpeed": 0.5,
-        "damage": 75,
-        "range": 180,
-        "armor": 35,
-        "magicRegist": 20
-    },
-    {
-        "id": 48,
-        "name": "Warwick",
-        "ruby": "ワーウィック",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Warwick.png",
-        "origin": "Wild",
-        "class": "Brawler",
-        "cost": 1,
-        "hp": 600,
-        "dps": 30,
-        "attackSpeed": 0.6,
-        "damage": 50,
-        "range": 180,
-        "armor": 30,
-        "magicRegist": 20
-    },
-    {
-        "id": 49,
-        "name": "Yasuo",
-        "ruby": "ヤスオ",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Yasuo.png",
-        "origin": "Exile",
-        "class": "Blademaster",
-        "cost": 5,
-        "hp": 650,
-        "dps": 65,
-        "attackSpeed": 1,
-        "damage": 65,
-        "range": 180,
-        "armor": 35,
-        "magicRegist": 20
-    },
-    {
-        "id": 50,
-        "name": "Zed",
-        "ruby": "ゼド",
-        "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Zed.png",
-        "origin": "Ninja",
-        "class": "Assassin",
-        "cost": 2,
-        "hp": 500,
-        "dps": 33,
-        "attackSpeed": 0.6,
-        "damage": 55,
-        "range": 180,
-        "armor": 25,
-        "magicRegist": 20
-    }
+    "origin": [
+      "Phantom"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 5,
+    "hp": 850,
+    "dps": 42,
+    "attackSpeed": 0.65,
+    "damage": 65,
+    "range": 660,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 21,
+    "name": "Kassadin",
+    "ruby": "カサディン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kassadin.png",
+    "origin": [
+      "Void"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 1,
+    "hp": 550,
+    "dps": 29,
+    "attackSpeed": 0.65,
+    "damage": 45,
+    "range": 180,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 22,
+    "name": "Katarina",
+    "ruby": "カタリナ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Katarina.png",
+    "origin": [
+      "Imperial"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 3,
+    "hp": 450,
+    "dps": 30,
+    "attackSpeed": 0.6,
+    "damage": 50,
+    "range": 180,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 23,
+    "name": "Kayle",
+    "ruby": "ケイル",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kayle.png",
+    "origin": [
+      "Noble"
+    ],
+    "class": [
+      "Knight"
+    ],
+    "cost": 5,
+    "hp": 800,
+    "dps": 66,
+    "attackSpeed": 1.1,
+    "damage": 60,
+    "range": 660,
+    "armor": 35,
+    "magicRegist": 20
+  },
+  {
+    "id": 24,
+    "name": "Kennen",
+    "ruby": "ケネン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kennen.png",
+    "origin": [
+      "Ninja",
+      "Yordle"
+    ],
+    "class": [
+      "Elementalist"
+    ],
+    "cost": 3,
+    "hp": 550,
+    "dps": 36,
+    "attackSpeed": 0.6,
+    "damage": 60,
+    "range": 420,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 25,
+    "name": "KhaZix",
+    "ruby": "カジックス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Khazix.png",
+    "origin": [
+      "Void"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 1,
+    "hp": 500,
+    "dps": 30,
+    "attackSpeed": 0.6,
+    "damage": 50,
+    "range": 180,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 26,
+    "name": "Kindred",
+    "ruby": "キンドレッド",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kindred.png",
+    "origin": [
+      "Phantom"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 4,
+    "hp": 600,
+    "dps": 39,
+    "attackSpeed": 0.7,
+    "damage": 55,
+    "range": 660,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 27,
+    "name": "Leona",
+    "ruby": "レオナ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Leona.png",
+    "origin": [
+      "Noble"
+    ],
+    "class": [
+      "Guardian"
+    ],
+    "cost": 4,
+    "hp": 750,
+    "dps": 25,
+    "attackSpeed": 0.55,
+    "damage": 45,
+    "range": 180,
+    "armor": 55,
+    "magicRegist": 20
+  },
+  {
+    "id": 28,
+    "name": "Lissandra",
+    "ruby": "リサンドラ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lissandra.png",
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Elementalist"
+    ],
+    "cost": 1,
+    "hp": 450,
+    "dps": 24,
+    "attackSpeed": 0.6,
+    "damage": 40,
+    "range": 660,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 29,
+    "name": "Lucian",
+    "ruby": "ルシアン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lucian.png",
+    "origin": [
+      "Noble"
+    ],
+    "class": [
+      "Gunslinger"
+    ],
+    "cost": 2,
+    "hp": 600,
+    "dps": 36,
+    "attackSpeed": 0.6,
+    "damage": 60,
+    "range": 660,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 30,
+    "name": "Lulu",
+    "ruby": "ルル",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lulu.png",
+    "origin": [
+      "Yordle"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 2,
+    "hp": 500,
+    "dps": 30,
+    "attackSpeed": 0.6,
+    "damage": 50,
+    "range": 420,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 31,
+    "name": "Miss-Fortune",
+    "ruby": "ミス・フォーチュン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/MissFortune.png",
+    "origin": [
+      "Pirate"
+    ],
+    "class": [
+      "Gunslinger"
+    ],
+    "cost": 5,
+    "hp": 650,
+    "dps": 56,
+    "attackSpeed": 0.75,
+    "damage": 75,
+    "range": 660,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 32,
+    "name": "Mordekaiser",
+    "ruby": "モルデカイザー",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Mordekaiser.png",
+    "origin": [
+      "Phantom"
+    ],
+    "class": [
+      "Knight"
+    ],
+    "cost": 1,
+    "hp": 500,
+    "dps": 25,
+    "attackSpeed": 0.5,
+    "damage": 50,
+    "range": 180,
+    "armor": 35,
+    "magicRegist": 20
+  },
+  {
+    "id": 33,
+    "name": "Morgana",
+    "ruby": "モルガナ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Morgana.png",
+    "origin": [
+      "Demon"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 3,
+    "hp": 600,
+    "dps": 30,
+    "attackSpeed": 0.6,
+    "damage": 50,
+    "range": 420,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 34,
+    "name": "Nidalee",
+    "ruby": "ニダリー",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Nidalee.png",
+    "origin": [
+      "Wild"
+    ],
+    "class": [
+      "Shapeshifter"
+    ],
+    "cost": 1,
+    "hp": 500,
+    "dps": 33,
+    "attackSpeed": 0.65,
+    "damage": 50,
+    "range": 660,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 35,
+    "name": "Poppy",
+    "ruby": "ポッピー",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Poppy.png",
+    "origin": [
+      "Yordle"
+    ],
+    "class": [
+      "Knight"
+    ],
+    "cost": 3,
+    "hp": 750,
+    "dps": 25,
+    "attackSpeed": 0.5,
+    "damage": 50,
+    "range": 180,
+    "armor": 30,
+    "magicRegist": 20
+  },
+  {
+    "id": 36,
+    "name": "Pyke",
+    "ruby": "パイク",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Pyke.png",
+    "origin": [
+      "Pirate"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 2,
+    "hp": 600,
+    "dps": 33,
+    "attackSpeed": 0.55,
+    "damage": 60,
+    "range": 180,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 37,
+    "name": "RekSai",
+    "ruby": "レクサイ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/RekSai.png",
+    "origin": [
+      "Void"
+    ],
+    "class": [
+      "Brawler"
+    ],
+    "cost": 2,
+    "hp": 650,
+    "dps": 26,
+    "attackSpeed": 0.65,
+    "damage": 40,
+    "range": 180,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 38,
+    "name": "Rengar",
+    "ruby": "レンガー",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Rengar.png",
+    "origin": [
+      "Wild"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 3,
+    "hp": 550,
+    "dps": 30,
+    "attackSpeed": 0.55,
+    "damage": 55,
+    "range": 180,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 39,
+    "name": "Sejuani",
+    "ruby": "セジュアニ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Sejuani.png",
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Knight"
+    ],
+    "cost": 4,
+    "hp": 850,
+    "dps": 25,
+    "attackSpeed": 0.55,
+    "damage": 45,
+    "range": 180,
+    "armor": 35,
+    "magicRegist": 25
+  },
+  {
+    "id": 40,
+    "name": "Shen",
+    "ruby": "シェン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shen.png",
+    "origin": [
+      "Ninja"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "cost": 2,
+    "hp": 650,
+    "dps": 33,
+    "attackSpeed": 0.6,
+    "damage": 55,
+    "range": 180,
+    "armor": 30,
+    "magicRegist": 20
+  },
+  {
+    "id": 41,
+    "name": "Shyvana",
+    "ruby": "シヴァーナ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shyvana.png",
+    "origin": [
+      "Dragon"
+    ],
+    "class": [
+      "Shapeshifter"
+    ],
+    "cost": 3,
+    "hp": 550,
+    "dps": 33,
+    "attackSpeed": 0.65,
+    "damage": 50,
+    "range": 180,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 42,
+    "name": "Swain",
+    "ruby": "スウェイン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Swain.png",
+    "origin": [
+      "Imperial",
+      "Demon"
+    ],
+    "class": [
+      "Shapeshifter"
+    ],
+    "cost": 5,
+    "hp": 850,
+    "dps": 42,
+    "attackSpeed": 0.65,
+    "damage": 65,
+    "range": 420,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 43,
+    "name": "Tristana",
+    "ruby": "トリスターナ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Tristana.png",
+    "origin": [
+      "Yordle"
+    ],
+    "class": [
+      "Gunslinger"
+    ],
+    "cost": 1,
+    "hp": 500,
+    "dps": 33,
+    "attackSpeed": 0.65,
+    "damage": 50,
+    "range": 890,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 44,
+    "name": "Varus",
+    "ruby": "ヴァルス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Varus.png",
+    "origin": [
+      "Demon"
+    ],
+    "class": [
+      "Ranger"
+    ],
+    "cost": 2,
+    "hp": 500,
+    "dps": 35,
+    "attackSpeed": 0.7,
+    "damage": 50,
+    "range": 890,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 45,
+    "name": "Vayne",
+    "ruby": "ヴェイン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Vayne.png",
+    "origin": [
+      "Noble"
+    ],
+    "class": [
+      "Ranger"
+    ],
+    "cost": 1,
+    "hp": 550,
+    "dps": 27,
+    "attackSpeed": 0.6,
+    "damage": 45,
+    "range": 660,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  {
+    "id": 46,
+    "name": "Veigar",
+    "ruby": "ヴェイガー",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Veigar.png",
+    "origin": [
+      "Yordle"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 3,
+    "hp": 450,
+    "dps": 25,
+    "attackSpeed": 0.55,
+    "damage": 45,
+    "range": 660,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  {
+    "id": 47,
+    "name": "Volibear",
+    "ruby": "ボリベア",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Volibear.png",
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Brawler"
+    ],
+    "cost": 2,
+    "hp": 650,
+    "dps": 38,
+    "attackSpeed": 0.5,
+    "damage": 75,
+    "range": 180,
+    "armor": 35,
+    "magicRegist": 20
+  },
+  {
+    "id": 48,
+    "name": "Warwick",
+    "ruby": "ワーウィック",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Warwick.png",
+    "origin": [
+      "Wild"
+    ],
+    "class": [
+      "Brawler"
+    ],
+    "cost": 1,
+    "hp": 600,
+    "dps": 30,
+    "attackSpeed": 0.6,
+    "damage": 50,
+    "range": 180,
+    "armor": 30,
+    "magicRegist": 20
+  },
+  {
+    "id": 49,
+    "name": "Yasuo",
+    "ruby": "ヤスオ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Yasuo.png",
+    "origin": [
+      "Exile"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "cost": 5,
+    "hp": 650,
+    "dps": 65,
+    "attackSpeed": 1,
+    "damage": 65,
+    "range": 180,
+    "armor": 35,
+    "magicRegist": 20
+  },
+  {
+    "id": 50,
+    "name": "Zed",
+    "ruby": "ゼド",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Zed.png",
+    "origin": [
+      "Ninja"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 2,
+    "hp": 500,
+    "dps": 33,
+    "attackSpeed": 0.6,
+    "damage": 55,
+    "range": 180,
+    "armor": 25,
+    "magicRegist": 20
+  }
 ]
