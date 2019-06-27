@@ -1,4 +1,6 @@
 import championList from "@/assets/json/champions.json";
+import originList from "@/assets/json/origins.json";
+import classList from "@/assets/json/classes.json";
 import {
   Champion,
   ChampionClass,
@@ -24,15 +26,22 @@ import {
 @Module({ dynamic: true, store, name: "champion", namespaced: true })
 class ChampionModule extends VuexModule {
   // #region STATE
-  counter: number = 0;
   readonly championList = championList.map(champ => ({
     ...champ,
     origin: champ.origin.map(o => Origin[o as Origin]),
     class: champ.class.map(c => Class[c as Class])
   }));
+  readonly originList = originList.map(item => ({
+    ...item,
+    name: Origin[item.name as Origin]
+  }));
+  readonly classList = classList.map(item => ({
+    ...item,
+    name: Class[item.name as Class]
+  }));
   deckOrigin: ChampionOrigin[] = [];
   deckClass: ChampionClass[] = [];
-  championDeckFavorite: FavoriteOriginClass = {} as FavoriteOriginClass;
+  deckFavorite: FavoriteOriginClass = { origin: [], class: [] };
   championPicked: Champion[] = [];
   activeOriginSynergy: Synergy[] = [];
   activeClassSynergy: Synergy[] = [];
@@ -64,8 +73,8 @@ class ChampionModule extends VuexModule {
     this.activeClassSynergy = synergyList;
   }
   @Mutation
-  public SET_FAVORITE_ORIGIN_CLASS(favoriteOriginClass: FavoriteOriginClass) {
-    this.championDeckFavorite = favoriteOriginClass;
+  public SET_FAVORITE_ORIGIN_CLASS(favorite: FavoriteOriginClass) {
+    this.deckFavorite = favorite;
   }
 
   // #endregion

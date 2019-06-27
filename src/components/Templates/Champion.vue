@@ -1,6 +1,7 @@
 <template lang="pug">
   .champion-template
     tft-header
+    champion-deck-favorite.ma-1
     champion-deck-origin.ma-1
     champion-deck-class.ma-1
     .champion-space
@@ -24,12 +25,14 @@ import DeckOrigin from "@/components/Organisms/ChampionDeckOrigin.vue";
 import DeckClass from "@/components/Organisms/ChampionDeckClass.vue";
 import TFTHeader from "@/components/Organisms/Header.vue";
 import ChampionFooter from "@/components/Organisms/ChampionFooter.vue";
+import DeckFavorite from '@/components/Organisms/ChampionDeckFavorite.vue';
 
 @Component({
   name: "champion-template",
   components: {
     "champion-deck-origin": DeckOrigin,
     "champion-deck-class": DeckClass,
+    "champion-deck-favorite": DeckFavorite,
     "tft-header": TFTHeader,
     "champion-footer": ChampionFooter
   }
