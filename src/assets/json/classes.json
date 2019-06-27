@@ -2,7 +2,7 @@
     {
         "name": "Assassin",
         "img": "./img/Class/Assassin.png",
-        "bonus": [
+        "synergy": [
             {
                 "require": 3,
                 "bonus": "アサシンは戦闘開始時に最も遠い敵に飛びつき+150％のクリティカルダメージを与える"
@@ -16,7 +16,7 @@
     {
         "name": "Blademaster",
         "img": "./img/Class/Blademaster.png",
-        "bonus": [
+        "synergy": [
             {
                 "require": 2,
                 "bonus": "ブレードマスターは攻撃毎に35％の確率で追加攻撃を行う"
@@ -30,7 +30,7 @@
     {
         "name": "Brawler",
         "img": "./img/Class/Brawler.png",
-        "bonus": [
+        "synergy": [
             {
                 "require": 2,
                 "bonus": "ブロウラーは+300HPを得る"
@@ -44,7 +44,7 @@
     {
         "name": "Elementalist",
         "img": "./img/Class/Elementalist.png",
-        "bonus": [
+        "synergy": [
             {
                 "require": 1,
                 "bonus": "戦闘の開始時に小エレメンタルを召喚する"
@@ -58,7 +58,7 @@
     {
         "name": "Guardian",
         "img": "./img/Class/Guardian.png",
-        "bonus": [
+        "synergy": [
             {
                 "require": 2,
                 "bonus": "戦闘開始時に全てのガーディアンと隣接する味方ユニットのARが30上昇する"
@@ -68,7 +68,7 @@
     {
         "name": "Gunslinger",
         "img": "./img/Class/Gunslinger.png",
-        "bonus": [
+        "synergy": [
             {
                 "require": 2,
                 "bonus": "ガンスリンガーは攻撃後にランダムな敵に対して追加攻撃を行う場合がある"
@@ -82,7 +82,7 @@
     {
         "name": "Knight",
         "img": "./img/Class/Knight.png",
-        "bonus": [
+        "synergy": [
             {
                 "require": 2,
                 "bonus": "ナイトは通常攻撃による20ダメージをブロックする"
@@ -100,7 +100,7 @@
     {
         "name": "Ranger",
         "img": "./img/Class/Ranger.png",
-        "bonus": [
+        "synergy": [
             {
                 "require": 3,
                 "bonus": "レンジャーは攻撃時にASを2倍にする可能性がある"
@@ -110,7 +110,7 @@
     {
         "name": "Shapeshifter",
         "img": "./img/Class/Shapeshifter.png",
-        "bonus": [
+        "synergy": [
             {
                 "require": 3,
                 "bonus": "シェイプシフターは変身時に最大ヘルスが上昇する"
@@ -120,7 +120,7 @@
     {
         "name": "Sorcerer",
         "img": "./img/Class/Sorcerer.png",
-        "bonus": [
+        "synergy": [
             {
                 "require": 3,
                 "bonus": "味方が与えるAPダメージが上昇する"

@@ -25,7 +25,7 @@ import DeckOrigin from "@/components/Organisms/ChampionDeckOrigin.vue";
 import DeckClass from "@/components/Organisms/ChampionDeckClass.vue";
 import TFTHeader from "@/components/Organisms/Header.vue";
 import ChampionFooter from "@/components/Organisms/ChampionFooter.vue";
-import DeckFavorite from '@/components/Organisms/ChampionDeckFavorite.vue';
+import DeckFavorite from "@/components/Organisms/ChampionDeckFavorite.vue";
 
 @Component({
   name: "champion-template",

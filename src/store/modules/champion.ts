@@ -166,17 +166,27 @@ class ChampionModule extends VuexModule {
 
     const activeSynergy: Synergy[] = [];
     for (const originItem of originCount) {
-      const validSynergyList = originSynergy[originItem.origin].filter(
-        x => x.require <= originItem.count
-      );
-      if (validSynergyList.length === 0) continue;
-      const highestActiveSynergy = validSynergyList.reduce((pre, cur) =>
-        pre.require > cur.require ? pre : cur
-      );
+      const originSynegy = this.originList.find(
+        x => x.name === originItem.origin
+      )!;
+
+      const activeSynergyBonus = originSynegy.synergy.reduce<
+        | {
+            require: number;
+            bonus: string;
+          }
+        | undefined
+      >((pre, cur) => {
+        if (cur.require > originItem.count) return pre;
+        if (pre === undefined) return cur;
+        return pre.require < cur.require ? cur : pre;
+      }, undefined);
+
+      if (activeSynergyBonus === undefined) continue;
       activeSynergy.push({
         type: originItem.origin,
         count: originItem.count,
-        synergy: highestActiveSynergy.bonus
+        synergy: activeSynergyBonus.bonus
       });
     }
     this.SET_ACTIVE_ORIGIN_SYNERGY(activeSynergy);
@@ -184,17 +194,16 @@ class ChampionModule extends VuexModule {
 
   @Action({ rawError: true })
   public CalculateAndSetClassSynergy() {
-    const classCount: ClassCount[] = this.championPicked.reduce<ClassCount[]>(
+    const ClassCount: ClassCount[] = this.championPicked.reduce<ClassCount[]>(
       (acc, current) => {
-        current.class.forEach(currentClass => {
-          const element = acc.find(p => p.class === currentClass);
+        current.class.forEach(classItem => {
+          const element = acc.find(p => p.class === classItem);
           if (element) element.count++;
-          else {
+          else
             acc.push({
               count: 1,
-              class: currentClass
+              class: classItem
             });
-          }
         });
         return acc;
       },
@@ -202,21 +211,29 @@ class ChampionModule extends VuexModule {
     );
 
     const activeSynergy: Synergy[] = [];
-    for (const classItem of classCount) {
-      const validSynergyList = classSynergy[classItem.class].filter(
-        x => x.require <= classItem.count
-      );
-      if (validSynergyList.length === 0) continue;
-      const highestActiveSynergy = validSynergyList.reduce((pre, cur) =>
-        pre.require > cur.require ? pre : cur
-      );
+    for (const classItem of ClassCount) {
+      const classSynegy = this.classList.find(x => x.name === classItem.class)!;
+
+      const activeSynergyBonus = classSynegy.synergy.reduce<
+        | {
+            require: number;
+            bonus: string;
+          }
+        | undefined
+      >((pre, cur) => {
+        if (cur.require > classItem.count) return pre;
+        if (pre === undefined) return cur;
+        return pre.require < cur.require ? cur : pre;
+      }, undefined);
+
+      if (activeSynergyBonus === undefined) continue;
       activeSynergy.push({
         type: classItem.class,
         count: classItem.count,
-        synergy: highestActiveSynergy.bonus
+        synergy: activeSynergyBonus.bonus
       });
     }
-    this.SET_ACTIVE_CLASS_SYNERGY(activeSynergy);
+    this.SET_ACTIVE_ORIGIN_SYNERGY(activeSynergy);
   }
 
   @Action({ rawError: true })

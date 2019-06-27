@@ -16,9 +16,8 @@ import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import ChampionThumbnail from "@/components/Organisms/ChampionThumbnail.vue";
 import { Origin, Class } from "@/models/champion";
-import { imgPathOrigin, imgPathClass } from '@/static/path';
+import { imgPathOrigin, imgPathClass } from "@/static/path";
 import { champion } from "@/store/index";
-
 
 @Component({
   name: "deck-favorite",
@@ -29,19 +28,20 @@ import { champion } from "@/store/index";
 export default class DeckFavorite extends Vue {
   selectedOrigin: string[] = [];
   selectedClass: string[] = [];
-  get championOrigin():string[] 
-  {
+  get championOrigin(): string[] {
     return champion.originList.map(x => x.name);
   }
 
-    get championClass():string[] 
-  {
+  get championClass(): string[] {
     return champion.classList.map(x => x.name);
   }
 
-  toggleSelectOrigin(checkedOrigin: string){
+  toggleSelectOrigin(checkedOrigin: string) {
     const existList = this.selectedOrigin.some(o => o === checkedOrigin);
-    if(existList) this.selectedOrigin = this.selectedOrigin.filter(x => x !== checkedOrigin);
+    if (existList)
+      this.selectedOrigin = this.selectedOrigin.filter(
+        x => x !== checkedOrigin
+      );
     else this.selectedOrigin.push(checkedOrigin);
   }
   isOriginSelected(item: string): boolean {
@@ -52,9 +52,10 @@ export default class DeckFavorite extends Vue {
     return this.selectedClass.some(c => c === item);
   }
 
-  toggleSelectClass(checkedClass: string){
+  toggleSelectClass(checkedClass: string) {
     const existList = this.selectedClass.some(o => o === checkedClass);
-    if(existList) this.selectedClass = this.selectedClass.filter(x => x !== checkedClass);
+    if (existList)
+      this.selectedClass = this.selectedClass.filter(x => x !== checkedClass);
     else this.selectedClass.push(checkedClass);
   }
 }
