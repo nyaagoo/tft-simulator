@@ -1,6 +1,6 @@
 <template lang="pug">
   .deck-class
-    h1 class
+    h1 Class
     .champion-class-container
       .champion-class-wrapper(v-for="eachClass in championListEachClass" :key="eachClass.class")
         span.class-title {{ eachClass.class }}

@@ -1,6 +1,6 @@
 <template lang="pug">
   .deck-origin
-    h1 origin
+    h1 Origin
     .champion-origin-container
       .champion-origin-wrapper(v-for="origin in championListEachOrigin" :key="origin.origin")
         span.origin-title {{ origin.origin }}

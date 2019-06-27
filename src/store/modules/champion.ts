@@ -7,10 +7,8 @@ import {
   ChampionOrigin,
   Class,
   ClassCount,
-  classSynergy,
   Origin,
   OriginCount,
-  originSynergy,
   Synergy,
   FavoriteOriginClass
 } from "@/models/champion";
@@ -39,6 +37,10 @@ class ChampionModule extends VuexModule {
     ...item,
     name: Class[item.name as Class]
   }));
+
+  favoriteOriginList: string[] = [];
+  favoriteClassList: string[] = [];
+
   deckOrigin: ChampionOrigin[] = [];
   deckClass: ChampionClass[] = [];
   deckFavorite: FavoriteOriginClass = { origin: [], class: [] };
@@ -49,6 +51,16 @@ class ChampionModule extends VuexModule {
   // #endregion
 
   // #region MUTATION
+
+  @Mutation
+  public SET_FAVORITE_ORIGIN_LIST(list: string[]) {
+    this.favoriteOriginList = list;
+  }
+  @Mutation
+  public SET_FAVORITE_CLASS_LIST(list: string[]) {
+    this.favoriteClassList = list;
+  }
+
   @Mutation // counter
   public SET_CHAMPION_DECK_ORIGIN(championOrigin: ChampionOrigin[]) {
     this.deckOrigin = championOrigin;
@@ -233,7 +245,7 @@ class ChampionModule extends VuexModule {
         synergy: activeSynergyBonus.bonus
       });
     }
-    this.SET_ACTIVE_ORIGIN_SYNERGY(activeSynergy);
+    this.SET_ACTIVE_CLASS_SYNERGY(activeSynergy);
   }
 
   @Action({ rawError: true })
