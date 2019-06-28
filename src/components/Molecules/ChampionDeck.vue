@@ -22,7 +22,7 @@
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 import router from "@/router";
-import { Champion, costColor, Origin, Class } from "@/models/champion";
+import { Champion, costColor } from "@/models/champion";
 import { champion, setting } from "@/store/index";
 import { imgPathOrigin, imgPathClass } from "@/static/path";
 
@@ -32,11 +32,11 @@ import { imgPathOrigin, imgPathClass } from "@/static/path";
 })
 export default class ChampionDeck extends Vue {
   @Prop({ required: true }) champ!: Champion;
-  @Prop({ required: true }) originList!: Origin[];
-  @Prop({ required: true }) classList!: Class[];
+  @Prop({ required: true }) originList!: string[];
+  @Prop({ required: true }) classList!: string[];
   costColor: Map<number, string> = costColor;
-  imgPathOrigin: { [K in Origin]: string } = imgPathOrigin;
-  imgPathClass: { [K in Class]: string } = imgPathClass;
+  imgPathOrigin: { [key: string]: string } = imgPathOrigin;
+  imgPathClass: { [key: string]: string } = imgPathClass;
   get visibleOrigin() {
     return setting.visibleChampionOrigin;
   }

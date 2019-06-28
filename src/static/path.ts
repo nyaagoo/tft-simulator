@@ -1,6 +1,4 @@
-import { Origin, Class } from "@/models/champion";
-
-export const imgPathOrigin: { [K in Origin]: string } = {
+export const imgPathOrigin: { [key: string]: string } = {
   Demon: "./img/Origin/Demon.png",
   Dragon: "./img/Origin/Dragon.png",
   Exile: "./img/Origin/Exile.png",
@@ -16,7 +14,7 @@ export const imgPathOrigin: { [K in Origin]: string } = {
   Yordle: "./img/Origin/Yordle.png"
 };
 
-export const imgPathClass: { [K in Class]: string } = {
+export const imgPathClass: { [key: string]: string } = {
   Assassin: "./img/Class/Assassin.png",
   Blademaster: "./img/Class/Blademaster.png",
   Brawler: "./img/Class/Brawler.png",

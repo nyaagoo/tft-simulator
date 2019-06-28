@@ -21,8 +21,6 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import { Origin, Class } from "@/models/champion";
-import { imgPathOrigin, imgPathClass } from "@/static/path";
 import { champion } from "@/store/index";
 import ChampionDeckGroup from "@/components/Molecules/ChampionDeckGroup.vue";
 
