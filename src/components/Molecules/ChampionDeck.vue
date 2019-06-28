@@ -1,5 +1,5 @@
 <template lang="pug">
-  .champion-thumbnail(@click="championPick(champ)")
+  .champion-deck(@click="championPick(champ)")
     .champion-img-wrapper.pointer.mb-2
       img.champion-img(
         :class="{ 'grayscale': !isPicked(champ.id) }"
@@ -16,7 +16,6 @@
         img.champion-class(v-for="(_, index) in classList" width=20 height=20 :src="imgPathClass[classList[index]]" :alt="champ.name")
       .champion-cost-wrapper(v-if="visibleCost")
         span.champion-cost ${{ champ.cost }}
-
     p.ma-0.text-truncate {{ champ.name }}
 </template>
 <script lang="ts">
@@ -27,13 +26,13 @@ import { champion, setting } from "@/store/index";
 import { imgPathOrigin, imgPathClass } from "@/static/path";
 
 @Component({
-  name: "champion-thumbnail",
+  name: "champion-deck",
   components: {}
 })
 export default class components extends Vue {
   @Prop({ required: true }) champ!: Champion;
-  @Prop({ required: true }) originList!: Origin[];
-  @Prop({ required: true }) classList!: Class[];
+  @Prop({ required: true }) originList: Origin[] = [];
+  @Prop({ required: true }) classList: Class[] = [];
   costColor: Map<number, string> = costColor;
   imgPathOrigin: { [K in Origin]: string } = imgPathOrigin;
   imgPathClass: { [K in Class]: string } = imgPathClass;
@@ -55,7 +54,7 @@ export default class components extends Vue {
 }
 </script>
 <style lang="stylus" scoped>
-.champion-thumbnail
+.champion-deck
 p
   width 60px
 .champion-img

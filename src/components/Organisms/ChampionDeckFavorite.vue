@@ -9,19 +9,12 @@
       v-chip(v-for="(item, index) in championClass" :key="`favClass${index}`")(:outline="!isClassSelected(item.name)" color="info")(@click="toggleSelectClass(item.name)")
         img.mr-1(:src="item.img" heigth=16 width=16)
         span {{ item.name }}
-
-
     .champion-origin-container
-      .champion-origin-wrapper(v-for="origin in championListEachOrigin" :key="origin.origin")
-        span.origin-title {{ origin.origin }}
-        transition-group.champion-origin-inner(name="flip-list" tag="div")
-          .champion-wrapper(v-for="champ in origin.championList" :key="champ.name")
-            champion-thumbnail(:champ="champ" :originList="champ.origin" :classList="champ.class" )
-      .champion-origin-wrapper(v-for="eachClass in championListEachClass" :key="eachClass.class")
-        span.origin-title {{ eachClass.class }}
-        transition-group.champion-origin-inner(name="flip-list" tag="div")
-          .champion-wrapper(v-for="champ in eachClass.championList" :key="champ.name")
-            champion-thumbnail(:champ="champ" :originList="champ.origin" :classList="champ.class")
+      .origin-deck(v-for="origin in championListEachOrigin" :key="origin.origin")
+        champion-deck-group(:championList="origin.championList" :name="origin.class" borderColor="#AEEA00")
+      .class-deck(v-for="eachClass in championListEachClass" :key="eachClass.class")
+        champion-deck-group(:championList="eachClass.championList" :name="eachClass.class" borderColor="#AEEA00")
+
 
     
 
@@ -29,15 +22,16 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import ChampionThumbnail from "@/components/Organisms/ChampionThumbnail.vue";
+import ChampionDeck from "@/components/Molecules/ChampionDeck.vue";
 import { Origin, Class } from "@/models/champion";
 import { imgPathOrigin, imgPathClass } from "@/static/path";
 import { champion } from "@/store/index";
+import ChampionDeckGroup from "@/components/Molecules/ChampionDeckGroup.vue";
 
 @Component({
   name: "deck-favorite",
   components: {
-    "champion-thumbnail": ChampionThumbnail
+    "champion-deck-group": ChampionDeckGroup
   }
 })
 export default class DeckFavorite extends Vue {
@@ -117,28 +111,4 @@ export default class DeckFavorite extends Vue {
   flex-wrap wrap
   padding 8px
   margin 8px
-.origin-title
-  position absolute
-  top -10px
-  left 8px
-  background #303030
-  padding-left 4px
-  padding-right  4px
-.champion-origin-wrapper
-  position relative
-  border 1px solid #AEEA00
-  border-radius 8px
-  padding 8px
-  margin 8px
-.champion-container
-  width 100px
-.champion-wrapper
-  padding 4px
-.champion-origin-inner
-  display flex
-  flex-wrap wrap
-.flip-list-item
-  display inline-block
-.flip-list-move
-  transition transform 0.4s
 </style>
