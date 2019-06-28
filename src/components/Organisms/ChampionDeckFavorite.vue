@@ -2,11 +2,11 @@
   .deck-favorite
     h1 Favorite
     .origin-chips
-      v-chip(v-for="(item, index) in championOrigin" :key="`favOrigin${index}`")(:outline="!isOriginSelected(item.name)" color="#00B8D4")(@click="toggleSelectOrigin(item.name)")
+      v-chip(v-for="(item, index) in championOrigin" :key="`favOrigin${index}`")(:outline="!isOriginSelected(item.id)" color="#00B8D4")(@click="toggleSelectOrigin(item.id)")
         img.mr-1(:src="item.img" heigth=16 width=16)
         span {{ item.name }}
     .class-chips
-      v-chip(v-for="(item, index) in championClass" :key="`favClass${index}`")(:outline="!isClassSelected(item.name)" color="info")(@click="toggleSelectClass(item.name)")
+      v-chip(v-for="(item, index) in championClass" :key="`favClass${index}`")(:outline="!isClassSelected(item.id)" color="info")(@click="toggleSelectClass(item.id)")
         img.mr-1(:src="item.img" heigth=16 width=16)
         span {{ item.name }}
     .champion-origin-container
@@ -62,10 +62,10 @@ export default class DeckFavorite extends Vue {
     champion.SET_FAVORITE_CLASS_LIST(list);
   }
   get originList(): string[] {
-    return champion.originList.map(x => x.name);
+    return Object.keys(champion.originList);
   }
   get classList(): string[] {
-    return champion.classList.map(x => x.name);
+    return Object.keys(champion.classList);
   }
   isOriginSelected(item: string): boolean {
     return this.favoriteOriginList.some(o => o === item);

@@ -18,13 +18,14 @@ import {
   Mutation,
   VuexModule
 } from "vuex-module-decorators";
+import { OriginID, ClassID, ClassOriginData } from "@/static/path";
 
 @Module({ dynamic: true, store, name: "champion", namespaced: true })
 class ChampionModule extends VuexModule {
   // #region STATE
   readonly championList = championList;
-  readonly originList = originList;
-  readonly classList = classList;
+  readonly originList: { [K in OriginID]: ClassOriginData } = originList;
+  readonly classList: { [K in ClassID]: ClassOriginData } = classList;
 
   favoriteOriginList: string[] = [];
   favoriteClassList: string[] = [];
@@ -165,9 +166,7 @@ class ChampionModule extends VuexModule {
 
     const activeSynergy: Synergy[] = [];
     for (const originItem of originCount) {
-      const originSynegy = this.originList.find(
-        x => x.name === originItem.origin
-      )!;
+      const originSynegy = this.originList[originItem.origin as OriginID];
 
       const activeSynergyBonus = originSynegy.synergy.reduce<
         | {
@@ -211,7 +210,7 @@ class ChampionModule extends VuexModule {
 
     const activeSynergy: Synergy[] = [];
     for (const classItem of ClassCount) {
-      const classSynegy = this.classList.find(x => x.name === classItem.class)!;
+      const classSynegy = this.classList[classItem.class as ClassID];
 
       const activeSynergyBonus = classSynegy.synergy.reduce<
         | {
