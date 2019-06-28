@@ -1,5 +1,5 @@
 <template lang="pug">
-  .champion-thumbnail(@click="championPick(champ)")
+  .champion-deck(@click="championPick(champ)")
     .champion-img-wrapper.pointer.mb-2
       img.champion-img(
         :class="{ 'grayscale': !isPicked(champ.id) }"
@@ -27,10 +27,10 @@ import { champion, setting } from "@/store/index";
 import { imgPathOrigin, imgPathClass } from "@/static/path";
 
 @Component({
-  name: "champion-thumbnail",
+  name: "champion-deck",
   components: {}
 })
-export default class components extends Vue {
+export default class ChampionDeck extends Vue {
   @Prop({ required: true }) champ!: Champion;
   @Prop({ required: true }) originList!: Origin[];
   @Prop({ required: true }) classList!: Class[];
@@ -55,7 +55,7 @@ export default class components extends Vue {
 }
 </script>
 <style lang="stylus" scoped>
-.champion-thumbnail
+.champion-deck
 p
   width 60px
 .champion-img

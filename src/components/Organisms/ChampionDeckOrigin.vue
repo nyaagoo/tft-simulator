@@ -2,23 +2,20 @@
   .deck-origin
     h1 Origin
     .champion-origin-container
-      .champion-origin-wrapper(v-for="origin in championListEachOrigin" :key="origin.origin")
-        span.origin-title {{ origin.origin }}
-        transition-group.champion-origin-inner(name="flip-list" tag="div")
-          .champion-wrapper(v-for="champ in origin.championList" :key="champ.name")
-            champion-thumbnail(:champ="champ" :originList="champ.origin" :classList="champ.class" )
+      .champion-decks(v-for="origin in championListEachOrigin" :key="origin.origin")
+        champion-deck-group(:championList="origin.championList" :groupName="origin.origin", borderColor="#00B8D4")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { ChampionOrigin, costColor } from "@/models/champion";
 import { champion } from "@/store/index";
-import ChampionThumbnail from "@/components/Organisms/ChampionThumbnail.vue";
+import ChampionDeckGroup from "@/components/Molecules/ChampionDeckGroup.vue";
 
 @Component({
   name: "deck-origin",
   components: {
-    "champion-thumbnail": ChampionThumbnail
+    "champion-deck-group": ChampionDeckGroup
   }
 })
 export default class DeckOrigin extends Vue {
@@ -42,28 +39,4 @@ export default class DeckOrigin extends Vue {
   flex-wrap wrap
   padding 8px
   margin 8px
-.origin-title
-  position absolute
-  top -10px
-  left 8px
-  background #303030
-  padding-left 4px
-  padding-right  4px
-.champion-origin-wrapper
-  position relative
-  border 1px solid #00B8D4
-  border-radius 8px
-  padding 8px
-  margin 8px
-.champion-container
-  width 100px
-.champion-wrapper
-  padding 4px
-.champion-origin-inner
-  display flex
-  flex-wrap wrap
-.flip-list-item
-  display inline-block
-.flip-list-move
-  transition transform 0.4s
 </style>
