@@ -1,3 +1,5 @@
+import { OriginID, ClassID } from "./type";
+
 export interface Champion {
   id: number;
   name: string;
@@ -14,23 +16,13 @@ export interface Champion {
   magicRegist: number;
 }
 
-export type ChampionOrigin = { origin: string; championList: Champion[] };
+export type ChampionOrigin = { origin: OriginID; championList: Champion[] };
 
-export type ChampionClass = { class: string; championList: Champion[] };
+export type ChampionClass = { class: ClassID; championList: Champion[] };
 
 export type FavoriteOriginClass = {
   origin: ChampionOrigin[];
   class: ChampionClass[];
-};
-
-export type OriginCount = {
-  count: number;
-  origin: string;
-};
-
-export type ClassCount = {
-  count: number;
-  class: string;
 };
 
 export type Synergy = {
@@ -46,3 +38,31 @@ export const costColor: Map<number, string> = new Map([
   [4, "#b931ac"],
   [5, "#da8d3a"]
 ]);
+
+export type ChampionData = {
+  id: number;
+  name: string;
+  ruby: string;
+  image: string;
+  // TODO: champion.jsonにスキルデータが入力されていないものがいるため、一時的にoptionalにしている
+  skill?: {
+    name: string;
+    description: string;
+    cost: number;
+    img: string;
+    leveltip: {
+      label: string;
+      effects: string[] | number[];
+    }[];
+  };
+  origin: OriginID[];
+  class: ClassID[];
+  cost: number;
+  hp: number;
+  dps: number;
+  attackSpeed: number;
+  damage: number;
+  range: number;
+  armor: number;
+  magicRegist: number;
+};

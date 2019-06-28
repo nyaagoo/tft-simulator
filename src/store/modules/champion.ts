@@ -5,10 +5,9 @@ import {
   Champion,
   ChampionClass,
   ChampionOrigin,
-  ClassCount,
-  OriginCount,
   Synergy,
-  FavoriteOriginClass
+  FavoriteOriginClass,
+  ChampionData
 } from "@/models/champion";
 import store from "@/store/store";
 import {
@@ -18,12 +17,22 @@ import {
   Mutation,
   VuexModule
 } from "vuex-module-decorators";
-import { OriginID, ClassID, ClassOriginData } from "@/static/path";
+import {
+  ClassID,
+  ClassOriginData,
+  OriginID,
+  OriginCount,
+  ClassCount
+} from "@/models/type";
 
 @Module({ dynamic: true, store, name: "champion", namespaced: true })
 class ChampionModule extends VuexModule {
   // #region STATE
-  readonly championList = championList;
+  readonly championList: ChampionData[] = championList.map(x => ({
+    ...x,
+    origin: x.origin.map(o => o as OriginID),
+    class: x.class.map(o => o as ClassID)
+  }));
   readonly originList: { [K in OriginID]: ClassOriginData } = originList;
   readonly classList: { [K in ClassID]: ClassOriginData } = classList;
 

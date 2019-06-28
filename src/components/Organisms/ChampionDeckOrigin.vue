@@ -25,7 +25,7 @@ export default class DeckOrigin extends Vue {
     champion.SeparateChampionDeckOrigin();
   }
 
-  get championListEachOrigin() {
+  get championListEachOrigin(): ChampionOrigin[] {
     return champion.deckOrigin;
   }
 }

@@ -14,9 +14,6 @@
         champion-deck-group(:championList="eachOrigin.championList" :groupName="eachOrigin.origin", borderColor="#AEEA00")
       .champion-decks(v-for="eachClass in championListEachClass" :key="eachClass.class")
         champion-deck-group(:championList="eachClass.championList" :groupName="eachClass.class", borderColor="#AEEA00")
-
-    
-
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
