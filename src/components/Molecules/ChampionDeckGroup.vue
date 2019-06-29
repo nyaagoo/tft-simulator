@@ -1,6 +1,8 @@
 <template lang="pug">
-  .champion-deck-group(:style="{'borderColor': borderColor}")
-    span.class-title {{ groupName }}
+  .champion-deck-group.px-3(:style="{'borderColor': borderColor}")
+    .class-title
+      span {{ groupDescription.name }}
+      span.synergy-description.mx-1(v-for="(item, index) in groupDescription.synergy" :key="`${groupDescription.id}${index}`") ({{item.require}})
     transition-group.champion-origin-inner(name="flip-list" tag="div")
       .champion-wrapper(v-for="champion in championList" :key="champion.name")
         champion-deck(:champ="champion" :originList="champion.origin" :classList="champion.class")
@@ -10,6 +12,7 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 import router from "@/router";
 import { Champion } from "@/models/champion";
 import ChampionDeck from "@/components/Molecules/ChampionDeck.vue";
+import { ClassOriginData } from "@/models/type";
 
 @Component({
   name: "champion-deck-group",
@@ -19,7 +22,7 @@ import ChampionDeck from "@/components/Molecules/ChampionDeck.vue";
 })
 export default class ChampionDeckGroup extends Vue {
   @Prop({ required: true }) championList!: Champion[];
-  @Prop({ required: true }) groupName!: string[];
+  @Prop({ required: true }) groupDescription!: ClassOriginData;
   @Prop({ required: true }) borderColor!: string;
 }
 </script>
@@ -33,11 +36,11 @@ export default class ChampionDeckGroup extends Vue {
   padding 8px
   margin 8px
 .class-title
+  font-size 0.8rem
   position absolute
   top -10px
+  left 12px
   background #303030
-  padding-left 4px
-  padding-right  4px
 .champion-container
   width 100px
 .champion-wrapper

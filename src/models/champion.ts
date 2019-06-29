@@ -1,4 +1,4 @@
-import { OriginID, ClassID } from "./type";
+import { OriginID, ClassID, ClassOriginData } from "./type";
 
 export interface Champion {
   id: number;
@@ -16,9 +16,15 @@ export interface Champion {
   magicRegist: number;
 }
 
-export type ChampionOrigin = { origin: OriginID; championList: Champion[] };
+export type ChampionOrigin = {
+  origin: ClassOriginData;
+  championList: Champion[];
+};
 
-export type ChampionClass = { class: ClassID; championList: Champion[] };
+export type ChampionClass = {
+  class: ClassOriginData;
+  championList: Champion[];
+};
 
 export type FavoriteOriginClass = {
   origin: ChampionOrigin[];

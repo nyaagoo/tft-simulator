@@ -11,9 +11,9 @@
         span {{ item.name }}
     .champion-origin-container
       .champion-decks(v-for="eachOrigin in championListEachOrigin" :key="eachOrigin.origin")
-        champion-deck-group(:championList="eachOrigin.championList" :groupName="eachOrigin.origin", borderColor="#AEEA00")
+        champion-deck-group(:championList="eachOrigin.championList" :groupDescription="eachOrigin.origin", borderColor="#AEEA00")
       .champion-decks(v-for="eachClass in championListEachClass" :key="eachClass.class")
-        champion-deck-group(:championList="eachClass.championList" :groupName="eachClass.class", borderColor="#AEEA00")
+        champion-deck-group(:championList="eachClass.championList" :groupDescription="eachClass.class", borderColor="#AEEA00")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -30,13 +30,13 @@ import ChampionDeckGroup from "@/components/Molecules/ChampionDeckGroup.vue";
 export default class DeckFavorite extends Vue {
   get championListEachOrigin() {
     return champion.deckOrigin.filter(deck =>
-      champion.favoriteOriginList.includes(deck.origin)
+      champion.favoriteOriginList.includes(deck.origin.id)
     );
   }
 
   get championListEachClass() {
     return champion.deckClass.filter(deck =>
-      champion.favoriteClassList.includes(deck.class)
+      champion.favoriteClassList.includes(deck.class.id)
     );
   }
 

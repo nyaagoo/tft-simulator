@@ -3,7 +3,7 @@
     h1 Origin
     .champion-origin-container
       .champion-decks(v-for="origin in championListEachOrigin" :key="origin.origin")
-        champion-deck-group(:championList="origin.championList" :groupName="origin.origin", borderColor="#00B8D4")
+        champion-deck-group(:championList="origin.championList" :groupDescription="origin.origin", borderColor="#00B8D4")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";

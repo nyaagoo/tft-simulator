@@ -94,11 +94,11 @@ class ChampionModule extends VuexModule {
     const eachOrigin = this.championList.reduce<ChampionOrigin[]>(
       (acc, current) => {
         current.origin.forEach(currentOrigin => {
-          const element = acc.find(p => p.origin === currentOrigin);
+          const element = acc.find(p => p.origin.id === currentOrigin);
           if (element) element.championList.push(current);
           else
             acc.push({
-              origin: currentOrigin,
+              origin: this.originList[currentOrigin],
               championList: [current]
             });
         });
@@ -114,11 +114,11 @@ class ChampionModule extends VuexModule {
     const eachClass = this.championList.reduce<ChampionClass[]>(
       (acc, current) => {
         current.class.forEach(currentClass => {
-          const element = acc.find(p => p.class === currentClass);
+          const element = acc.find(p => p.class.id === currentClass);
           if (element) element.championList.push(current);
           else
             acc.push({
-              class: currentClass,
+              class: this.classList[currentClass],
               championList: [current]
             });
         });
