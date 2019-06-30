@@ -32,29 +32,12 @@ import { item } from "@/store/index";
   components: {}
 })
 export default class ItemBuildSheet extends Vue {
-  buildItemEachBasicItem: BuildFromBasicItem[] = [];
-
   created() {
-    this.buildItemEachBasicItem = item.buildItemList.reduce<
-      BuildFromBasicItem[]
-    >((acc, current) => {
-      current.recipe.forEach(recipeItemId => {
-        const basicItem = acc.find(x => x.basicItem.id === recipeItemId);
-        if (basicItem) {
-          if (basicItem.buildItem.some(item => item.name === current.name))
-            return;
-          basicItem.buildItem.push(current);
-        } else {
-          const basicItem = item.basicItemList.find(
-            basicItem => basicItem.id === recipeItemId
-          );
-          acc.push({ basicItem: basicItem!, buildItem: [current] });
-        }
-      });
-      return acc;
-    }, []);
-    // eslint-disable-next-line no-console
-    console.log(this.buildItemEachBasicItem);
+    item.separateBuildItem();
+  }
+
+  get buildItemEachBasicItem(): BuildFromBasicItem[] {
+    return item.buildItemEachBasicItem;
   }
 
   pickAnotherBasicItemSrc(anBasicItemId: number, recipe: number[]): string {
@@ -70,7 +53,6 @@ export default class ItemBuildSheet extends Vue {
   grid-template-columns repeat(auto-fill,minmax(360px, 1fr));
   max-width 1720px
   margin 0 auto
-
 .basic-item-container
   border 1px solid #88ffff
   border-radius 4px

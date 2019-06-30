@@ -46,7 +46,7 @@
     "img": "./img/Origin/Glacial.png",
     "synergy": [
       {
-        "require": 1,
+        "require": 2,
         "bonus": "グレイシャルの攻撃は20％の確率で2秒間のスタンを与える"
       },
       {
@@ -111,7 +111,7 @@
       },
       {
         "require": 4,
-        "bonus": "全てのニンジャの攻撃力が60%上昇する"
+        "bonus": "全てのニンジャの攻撃力が80%上昇する"
       }
     ]
   },
@@ -143,11 +143,11 @@
     "img": "./img/Origin/Wild.png",
     "synergy": [
       {
-        "require": 3,
+        "require": 2,
         "bonus": "ワイルドは攻撃毎にフューリースタックを得て攻撃速度が上昇する"
       },
       {
-        "require": 6,
+        "require": 4,
         "bonus": "すべての味方は攻撃毎にフューリースタックを得て攻撃速度が上昇する"
       }
     ]
