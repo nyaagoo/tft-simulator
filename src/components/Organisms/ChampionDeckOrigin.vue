@@ -2,16 +2,14 @@
   .deck-origin
     h1 Origin
     .champion-origin-container
-      .origin-deck(v-for="origin in championListEachOrigin" :key="origin.origin")
-        champion-deck-group(:championList="origin.championList" :name="origin.origin" borderColor="#00C853")
-
+      .champion-decks(v-for="origin in championListEachOrigin" :key="origin.origin")
+        champion-deck-group(:championList="origin.championList" :groupDescription="origin.origin", borderColor="#00B8D4")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { ChampionOrigin, costColor } from "@/models/champion";
 import { champion } from "@/store/index";
-import ChampionDeck from "@/components/Molecules/ChampionDeck.vue";
 import ChampionDeckGroup from "@/components/Molecules/ChampionDeckGroup.vue";
 
 @Component({
@@ -27,7 +25,7 @@ export default class DeckOrigin extends Vue {
     champion.SeparateChampionDeckOrigin();
   }
 
-  get championListEachOrigin() {
+  get championListEachOrigin(): ChampionOrigin[] {
     return champion.deckOrigin;
   }
 }

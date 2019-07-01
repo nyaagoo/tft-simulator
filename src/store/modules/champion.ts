@@ -5,12 +5,9 @@ import {
   Champion,
   ChampionClass,
   ChampionOrigin,
-  Class,
-  ClassCount,
-  Origin,
-  OriginCount,
   Synergy,
-  FavoriteOriginClass
+  FavoriteOriginClass,
+  ChampionData
 } from "@/models/champion";
 import store from "@/store/store";
 import {
@@ -20,27 +17,27 @@ import {
   Mutation,
   VuexModule
 } from "vuex-module-decorators";
+import {
+  ClassID,
+  ClassOriginData,
+  OriginID,
+  OriginCount,
+  ClassCount
+} from "@/models/type";
 
 @Module({ dynamic: true, store, name: "champion", namespaced: true })
 class ChampionModule extends VuexModule {
   // #region STATE
-  readonly championList = championList.map(champ => ({
-    ...champ,
-    origin: champ.origin.map(o => Origin[o as Origin]),
-    class: champ.class.map(c => Class[c as Class])
+  readonly championList: ChampionData[] = championList.map(x => ({
+    ...x,
+    origin: x.origin.map(o => o as OriginID),
+    class: x.class.map(o => o as ClassID)
   }));
-  readonly originList = originList.map(item => ({
-    ...item,
-    name: Origin[item.name as Origin]
-  }));
-  readonly classList = classList.map(item => ({
-    ...item,
-    name: Class[item.name as Class]
-  }));
+  readonly originList: { [K in OriginID]: ClassOriginData } = originList;
+  readonly classList: { [K in ClassID]: ClassOriginData } = classList;
 
   favoriteOriginList: string[] = [];
   favoriteClassList: string[] = [];
-
   deckOrigin: ChampionOrigin[] = [];
   deckClass: ChampionClass[] = [];
   deckFavorite: FavoriteOriginClass = { origin: [], class: [] };
@@ -97,11 +94,11 @@ class ChampionModule extends VuexModule {
     const eachOrigin = this.championList.reduce<ChampionOrigin[]>(
       (acc, current) => {
         current.origin.forEach(currentOrigin => {
-          const element = acc.find(p => p.origin === currentOrigin);
+          const element = acc.find(p => p.origin.id === currentOrigin);
           if (element) element.championList.push(current);
           else
             acc.push({
-              origin: currentOrigin,
+              origin: this.originList[currentOrigin],
               championList: [current]
             });
         });
@@ -117,11 +114,11 @@ class ChampionModule extends VuexModule {
     const eachClass = this.championList.reduce<ChampionClass[]>(
       (acc, current) => {
         current.class.forEach(currentClass => {
-          const element = acc.find(p => p.class === currentClass);
+          const element = acc.find(p => p.class.id === currentClass);
           if (element) element.championList.push(current);
           else
             acc.push({
-              class: currentClass,
+              class: this.classList[currentClass],
               championList: [current]
             });
         });
@@ -178,9 +175,7 @@ class ChampionModule extends VuexModule {
 
     const activeSynergy: Synergy[] = [];
     for (const originItem of originCount) {
-      const originSynegy = this.originList.find(
-        x => x.name === originItem.origin
-      )!;
+      const originSynegy = this.originList[originItem.origin as OriginID];
 
       const activeSynergyBonus = originSynegy.synergy.reduce<
         | {
@@ -224,7 +219,7 @@ class ChampionModule extends VuexModule {
 
     const activeSynergy: Synergy[] = [];
     for (const classItem of ClassCount) {
-      const classSynegy = this.classList.find(x => x.name === classItem.class)!;
+      const classSynegy = this.classList[classItem.class as ClassID];
 
       const activeSynergyBonus = classSynegy.synergy.reduce<
         | {

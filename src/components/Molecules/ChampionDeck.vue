@@ -8,12 +8,12 @@
         :alt="champ.name")
       .champion-origin-wrapper(v-if="visibleOrigin")
         img.champion-origin(
-          v-for="(_, index) in originList"
+          v-for="(o, index) in originList"
           width=20 height=20
-          :src="imgPathOrigin[originList[index]]"
+          :src="originAllList[o].img"
           :alt="champ.name")
       .champion-class-wrapper(v-if="visibleClass")
-        img.champion-class(v-for="(_, index) in classList" width=20 height=20 :src="imgPathClass[classList[index]]" :alt="champ.name")
+        img.champion-class(v-for="(c, index) in classList" width=20 height=20 :src="classAllList[c].img" :alt="champ.name")
       .champion-cost-wrapper(v-if="visibleCost")
         span.champion-cost ${{ champ.cost }}
     p.ma-0.text-truncate {{ champ.name }}
@@ -21,21 +21,18 @@
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 import router from "@/router";
-import { Champion, costColor, Origin, Class } from "@/models/champion";
+import { Champion, costColor } from "@/models/champion";
 import { champion, setting } from "@/store/index";
-import { imgPathOrigin, imgPathClass } from "@/static/path";
 
 @Component({
   name: "champion-deck",
   components: {}
 })
-export default class components extends Vue {
+export default class ChampionDeck extends Vue {
   @Prop({ required: true }) champ!: Champion;
-  @Prop({ required: true }) originList: Origin[] = [];
-  @Prop({ required: true }) classList: Class[] = [];
+  @Prop({ required: true }) originList!: string[];
+  @Prop({ required: true }) classList!: string[];
   costColor: Map<number, string> = costColor;
-  imgPathOrigin: { [K in Origin]: string } = imgPathOrigin;
-  imgPathClass: { [K in Class]: string } = imgPathClass;
   get visibleOrigin() {
     return setting.visibleChampionOrigin;
   }
@@ -50,6 +47,12 @@ export default class components extends Vue {
   }
   isPicked(id: number): boolean {
     return champion.championPicked.some(picked => picked.id === id);
+  }
+  get originAllList() {
+    return champion.originList;
+  }
+  get classAllList() {
+    return champion.classList;
   }
 }
 </script>

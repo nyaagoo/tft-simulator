@@ -1,168 +1,181 @@
-[
-    {
-        "name": "Demon",
-        "img": "./img/Origin/Demon.png",
-        "synergy": [
-            {
-                "require": 2,
-                "bonus": "デーモンの攻撃は相手の30％の確率で相手のマナを無くし、同量のTrueダメージを与える"
-            },
-            {
-                "require": 4,
-                "bonus": "デーモンの攻撃は相手の50％の確率で相手のマナを無くし、同量のTrueダメージを与える"
-            },
-            {
-                "require": 6,
-                "bonus": "デーモンの攻撃は相手の70％の確率で相手のマナを無くし、同量のTrueダメージを与える"
-            }
-        ]
-    },
-    {
-        "name": "Dragon",
-        "img": "./img/Origin/Dragon.png",
-        "synergy": [
-            {
-                "require": 2,
-                "bonus": "ドラゴンは魔法ダメージを受けない"
-            }
-        ]
-    },
-    {
-        "name": "Exile",
-        "img": "./img/Origin/Exile.png",
-        "synergy": [
-            {
-                "require": 1,
-                "bonus": "近くに他のチャンピオンがいない場合、最大ヘルスの割合に応じたシールドを得る"
-            }
-        ]
-    },
-    {
-        "name": "Glacial",
-        "img": "./img/Origin/Glacial.png",
-        "synergy": [
-            {
-                "require": 1,
-                "bonus": "グレイシャルの攻撃は25％の確率で2秒間のスタンを与える"
-            },
-            {
-                "require": 4,
-                "bonus": "グレイシャルの攻撃は35％の確率で2秒間のスタンを与える"
-            },
-            {
-                "require": 6,
-                "bonus": "グレイシャルの攻撃は45％の確率で2秒間のスタンを与える"
-            }
-        ]
-    },
-    {
-        "name": "Robot",
-        "img": "./img/Origin/Robot.png",
-        "synergy": [
-            {
-                "require": 1,
-                "bonus": "ロボットはマナが最大の状態で戦闘開始する"
-            }
-        ]
-    },
-    {
-        "name": "Imperial",
-        "img": "./img/Origin/Imperial.png",
-        "synergy": [
-            {
-                "require": 2,
-                "bonus": "ランダムなインペリアル1体はダブルダメージを与える"
-            },
-            {
-                "require": 4,
-                "bonus": "すべてのインペリアルはダブルダメージを与える"
-            }
-        ]
-    },
-    {
-        "name": "Noble",
-        "img": "./img/Origin/Noble.png",
-        "synergy": [
-            {
-                "require": 3,
-                "bonus": "ランダムな味方1体はARが100上昇し攻撃毎に35HPを回復する"
-            },
-            {
-                "require": 6,
-                "bonus": "すべての味方はARが100上昇し攻撃毎に35HPを回復する"
-            }
-        ]
-    },
-    {
-        "name": "Ninja",
-        "img": "./img/Origin/Ninja.png",
-        "synergy": [
-            {
-                "require": 1,
-                "bonus": "ニンジャの攻撃力が40%上昇する"
-            },
-            {
-                "require": 4,
-                "bonus": "全てのニンジャの攻撃力が60%上昇する"
-            }
-        ]
-    },
-    {
-        "name": "Pirate",
-        "img": "./img/Origin/Pirate.png",
-        "synergy": [
-            {
-                "require": 3,
-                "bonus": "他のプレイヤーと戦闘後、最大4の追加ゴールドを得る"
-            }
-        ]
-    },
-    {
-        "name": "Phantom",
-        "img": "./img/Origin/Phantom.png",
-        "synergy": [
-            {
-                "require": 3,
-                "bonus": "戦闘開始時にランダムな敵を呪い、HPを100に設定する"
-            }
-        ]
-    },
-    {
-        "name": "Wild",
-        "img": "./img/Origin/Wild.png",
-        "synergy": [
-            {
-                "require": 3,
-                "bonus": "ワイルドは攻撃毎にフューリースタックを得て攻撃速度が上昇する"
-            },
-            {
-                "require": 6,
-                "bonus": "すべての味方は攻撃毎にフューリースタックを得て攻撃速度が上昇する"
-            }
-        ]
-    },
-    {
-        "name": "Void",
-        "img": "./img/Origin/Void.png",
-        "synergy": [
-            {
-                "require": 3,
-                "bonus": "基本攻撃が敵のARの50%を無視するようになる"
-            }
-        ]
-    },
-    {
-        "name": "Yordle",
-        "img": "./img/Origin/Yordle.png",
-        "synergy": [
-            {
-                "require": 3,
-                "bonus": "味方ヨードルは20％の確率で攻撃を回避する"
-            },
-            {
-                "require": 6,
-                "bonus": "味方ヨードルは50％の確率で攻撃を回避する"
-            }
-        ]
-    }
-]
+{
+  "Demon": {
+    "id": "Demon",
+    "name": "デーモン",
+    "img": "./img/Origin/Demon.png",
+    "synergy": [
+      {
+        "require": 2,
+        "bonus": "攻撃により,一定確率で敵のすべてのマナを焼き尽くし（マナバーン）、そのマナと同量の確定ダメージを与える（発動確立 30%）"
+      },
+      {
+        "require": 4,
+        "bonus": "攻撃により,一定確率で敵のすべてのマナを焼き尽くし（マナバーン）、そのマナと同量の確定ダメージを与える（発動確立 50%）"
+      },
+      {
+        "require": 6,
+        "bonus": "攻撃により,一定確率で敵のすべてのマナを焼き尽くし（マナバーン）、そのマナと同量の確定ダメージを与える（発動確立 70%）"
+      }
+    ]
+  },
+  "Dragon": {
+    "id": "Dragon",
+    "name": "ドラゴン",
+    "img": "./img/Origin/Dragon.png",
+    "synergy": [
+      {
+        "require": 2,
+        "bonus": "ドラゴンは魔法ダメージを受けない"
+      }
+    ]
+  },
+  "Exile": {
+    "id": "Exile",
+    "name": "エグザイル",
+    "img": "./img/Origin/Exile.png",
+    "synergy": [
+      {
+        "require": 1,
+        "bonus": "近くに他のチャンピオンがいない場合、最大ヘルスの割合に応じたシールドを得る"
+      }
+    ]
+  },
+  "Glacial": {
+    "id": "Glacial",
+    "name": "グレイシャル",
+    "img": "./img/Origin/Glacial.png",
+    "synergy": [
+      {
+        "require": 2,
+        "bonus": "グレイシャルの攻撃は20％の確率で2秒間のスタンを与える"
+      },
+      {
+        "require": 4,
+        "bonus": "グレイシャルの攻撃は30％の確率で2秒間のスタンを与える"
+      },
+      {
+        "require": 6,
+        "bonus": "グレイシャルの攻撃は45％の確率で2秒間のスタンを与える"
+      }
+    ]
+  },
+  "Robot": {
+    "id": "Robot",
+    "name": "ロボット",
+    "img": "./img/Origin/Robot.png",
+    "synergy": [
+      {
+        "require": 1,
+        "bonus": "ロボットはマナが最大の状態で戦闘開始する"
+      }
+    ]
+  },
+  "Imperial": {
+    "id": "Imperial",
+    "name": "インペリアル",
+    "img": "./img/Origin/Imperial.png",
+    "synergy": [
+      {
+        "require": 2,
+        "bonus": "ランダムなインペリアル1体はダブルダメージを与える"
+      },
+      {
+        "require": 4,
+        "bonus": "すべてのインペリアルはダブルダメージを与える"
+      }
+    ]
+  },
+  "Noble": {
+    "id": "Noble",
+    "name": "ノーブル",
+    "img": "./img/Origin/Noble.png",
+    "synergy": [
+      {
+        "require": 3,
+        "bonus": "ランダムな味方1体はARが100上昇し攻撃毎に35HPを回復する"
+      },
+      {
+        "require": 6,
+        "bonus": "すべての味方はARが100上昇し攻撃毎に35HPを回復する"
+      }
+    ]
+  },
+  "Ninja": {
+    "id": "Ninja",
+    "name": "ニンジャ",
+    "img": "./img/Origin/Ninja.png",
+    "synergy": [
+      {
+        "require": 1,
+        "bonus": "ニンジャの攻撃力が40%上昇する"
+      },
+      {
+        "require": 4,
+        "bonus": "全てのニンジャの攻撃力が80%上昇する"
+      }
+    ]
+  },
+  "Pirate": {
+    "id": "Pirate",
+    "name": "パイレーツ",
+    "img": "./img/Origin/Pirate.png",
+    "synergy": [
+      {
+        "require": 3,
+        "bonus": "他のプレイヤーと戦闘後、最大4の追加ゴールドを得る"
+      }
+    ]
+  },
+  "Phantom": {
+    "id": "Phantom",
+    "name": "ファントム",
+    "img": "./img/Origin/Phantom.png",
+    "synergy": [
+      {
+        "require": 2,
+        "bonus": "戦闘開始時にランダムな敵を呪い、HPを100に設定する"
+      }
+    ]
+  },
+  "Wild": {
+    "id": "Wild",
+    "name": "ワイルド",
+    "img": "./img/Origin/Wild.png",
+    "synergy": [
+      {
+        "require": 2,
+        "bonus": "ワイルドは攻撃毎にフューリースタックを得て攻撃速度が上昇する"
+      },
+      {
+        "require": 4,
+        "bonus": "すべての味方は攻撃毎にフューリースタックを得て攻撃速度が上昇する"
+      }
+    ]
+  },
+  "Void": {
+    "id": "Void",
+    "name": "ボイド",
+    "img": "./img/Origin/Void.png",
+    "synergy": [
+      {
+        "require": 3,
+        "bonus": "基本攻撃が敵のARの50%を無視するようになる"
+      }
+    ]
+  },
+  "Yordle": {
+    "id": "Yordle",
+    "name": "ヨードル",
+    "img": "./img/Origin/Yordle.png",
+    "synergy": [
+      {
+        "require": 3,
+        "bonus": "味方ヨードルは20％の確率で攻撃を回避する"
+      },
+      {
+        "require": 6,
+        "bonus": "味方ヨードルは50％の確率で攻撃を回避する"
+      }
+    ]
+  }
+}

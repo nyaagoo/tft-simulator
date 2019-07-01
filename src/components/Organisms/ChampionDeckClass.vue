@@ -2,15 +2,14 @@
   .deck-class
     h1 Class
     .champion-class-container
-      .class-decks(v-for="eachClass in championListEachClass" :key="eachClass.class")
-        champion-deck-group(:championList="eachClass.championList" :name="eachClass.class" borderColor="#00C853")
+      .champion-decks(v-for="eachClass in championListEachClass" :key="eachClass.class")
+        champion-deck-group(:championList="eachClass.championList" :groupDescription="eachClass.class", borderColor="#00C853")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { ChampionClass, costColor } from "@/models/champion";
 import { champion } from "@/store/index";
-import ChampionDeck from "@/components/Molecules/ChampionDeck.vue";
 import ChampionDeckGroup from "@/components/Molecules/ChampionDeckGroup.vue";
 
 @Component({

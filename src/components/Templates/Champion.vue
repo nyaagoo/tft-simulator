@@ -12,13 +12,6 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import {
-  ChampionOrigin,
-  ChampionClass,
-  costColor,
-  originSynergy,
-  classSynergy
-} from "@/models/champion";
 import router from "@/router";
 import { champion } from "@/store/index";
 import DeckOrigin from "@/components/Organisms/ChampionDeckOrigin.vue";
@@ -37,15 +30,7 @@ import DeckFavorite from "@/components/Organisms/ChampionDeckFavorite.vue";
     "champion-footer": ChampionFooter
   }
 })
-export default class ChampionTemplate extends Vue {
-  championListEachClass: ChampionClass[] = [];
-  costColor: Map<number, string> = costColor;
-
-  mounted() {
-    champion.SeparateChampionDeckClass();
-    this.championListEachClass = champion.deckClass;
-  }
-}
+export default class ChampionTemplate extends Vue {}
 </script>
 <style lang="stylus" scoped>
 .champion-template

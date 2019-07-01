@@ -1,6 +1,7 @@
 <template lang="pug">
   .item-template
     tft-header
+    item-combine-simulator
     item-build-sheed
 </template>
 <script lang="ts">
@@ -8,12 +9,14 @@ import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import TFTHeader from "@/components/Organisms/Header.vue";
 import ItemBuildSheet from "@/components/Organisms/ItemBuildSheet.vue";
+import ItemCombineSimulator from "@/components/Organisms/ItemCombineTable.vue";
 
 @Component({
   name: "item-template",
   components: {
     "tft-header": TFTHeader,
-    "item-build-sheed": ItemBuildSheet
+    "item-build-sheed": ItemBuildSheet,
+    "item-combine-simulator": ItemCombineSimulator
   }
 })
 export default class ItemTemplate extends Vue {}

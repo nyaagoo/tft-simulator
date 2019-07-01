@@ -2,29 +2,22 @@
   .deck-favorite
     h1 Favorite
     .origin-chips
-      v-chip(v-for="(item, index) in championOrigin" :key="`favOrigin${index}`")(:outline="!isOriginSelected(item.name)" color="#00B8D4")(@click="toggleSelectOrigin(item.name)")
+      v-chip(v-for="(item, index) in championOrigin" :key="`favOrigin${index}`")(:outline="!isOriginSelected(item.id)" color="#00B8D4")(@click="toggleSelectOrigin(item.id)")
         img.mr-1(:src="item.img" heigth=16 width=16)
         span {{ item.name }}
     .class-chips
-      v-chip(v-for="(item, index) in championClass" :key="`favClass${index}`")(:outline="!isClassSelected(item.name)" color="info")(@click="toggleSelectClass(item.name)")
+      v-chip(v-for="(item, index) in championClass" :key="`favClass${index}`")(:outline="!isClassSelected(item.id)" color="info")(@click="toggleSelectClass(item.id)")
         img.mr-1(:src="item.img" heigth=16 width=16)
         span {{ item.name }}
     .champion-origin-container
-      .origin-deck(v-for="origin in championListEachOrigin" :key="origin.origin")
-        champion-deck-group(:championList="origin.championList" :name="origin.class" borderColor="#AEEA00")
-      .class-deck(v-for="eachClass in championListEachClass" :key="eachClass.class")
-        champion-deck-group(:championList="eachClass.championList" :name="eachClass.class" borderColor="#AEEA00")
-
-
-    
-
+      .champion-decks(v-for="eachOrigin in championListEachOrigin" :key="eachOrigin.origin")
+        champion-deck-group(:championList="eachOrigin.championList" :groupDescription="eachOrigin.origin", borderColor="#AEEA00")
+      .champion-decks(v-for="eachClass in championListEachClass" :key="eachClass.class")
+        champion-deck-group(:championList="eachClass.championList" :groupDescription="eachClass.class", borderColor="#AEEA00")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import ChampionDeck from "@/components/Molecules/ChampionDeck.vue";
-import { Origin, Class } from "@/models/champion";
-import { imgPathOrigin, imgPathClass } from "@/static/path";
 import { champion } from "@/store/index";
 import ChampionDeckGroup from "@/components/Molecules/ChampionDeckGroup.vue";
 
@@ -37,13 +30,13 @@ import ChampionDeckGroup from "@/components/Molecules/ChampionDeckGroup.vue";
 export default class DeckFavorite extends Vue {
   get championListEachOrigin() {
     return champion.deckOrigin.filter(deck =>
-      champion.favoriteOriginList.includes(deck.origin)
+      champion.favoriteOriginList.includes(deck.origin.id)
     );
   }
 
   get championListEachClass() {
     return champion.deckClass.filter(deck =>
-      champion.favoriteClassList.includes(deck.class)
+      champion.favoriteClassList.includes(deck.class.id)
     );
   }
 
@@ -66,10 +59,10 @@ export default class DeckFavorite extends Vue {
     champion.SET_FAVORITE_CLASS_LIST(list);
   }
   get originList(): string[] {
-    return champion.originList.map(x => x.name);
+    return Object.keys(champion.originList);
   }
   get classList(): string[] {
-    return champion.classList.map(x => x.name);
+    return Object.keys(champion.classList);
   }
   isOriginSelected(item: string): boolean {
     return this.favoriteOriginList.some(o => o === item);

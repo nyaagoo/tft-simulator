@@ -1,130 +1,140 @@
-[
-    {
-        "name": "Assassin",
-        "img": "./img/Class/Assassin.png",
-        "synergy": [
-            {
-                "require": 3,
-                "bonus": "アサシンは戦闘開始時に最も遠い敵に飛びつき+150％のクリティカルダメージを与える"
-            },
-            {
-                "require": 6,
-                "bonus": "アサシンは戦闘開始時に最も遠い敵に飛びつき+350％のクリティカルダメージを与える"
-            }
-        ]
-    },
-    {
-        "name": "Blademaster",
-        "img": "./img/Class/Blademaster.png",
-        "synergy": [
-            {
-                "require": 2,
-                "bonus": "ブレードマスターは攻撃毎に35％の確率で追加攻撃を行う"
-            },
-            {
-                "require": 4,
-                "bonus": "ブレードマスターは攻撃毎に35％の確率で2回追加攻撃を行う"
-            }
-        ]
-    },
-    {
-        "name": "Brawler",
-        "img": "./img/Class/Brawler.png",
-        "synergy": [
-            {
-                "require": 2,
-                "bonus": "ブロウラーは+300HPを得る"
-            },
-            {
-                "require": 4,
-                "bonus": "ブロウラーは+700HPを得る"
-            }
-        ]
-    },
-    {
-        "name": "Elementalist",
-        "img": "./img/Class/Elementalist.png",
-        "synergy": [
-            {
-                "require": 1,
-                "bonus": "戦闘の開始時に小エレメンタルを召喚する"
-            },
-            {
-                "require": 2,
-                "bonus": "戦闘の開始時に大エレメンタルを召喚する"
-            }
-        ]
-    },
-    {
-        "name": "Guardian",
-        "img": "./img/Class/Guardian.png",
-        "synergy": [
-            {
-                "require": 2,
-                "bonus": "戦闘開始時に全てのガーディアンと隣接する味方ユニットのARが30上昇する"
-            }
-        ]
-    },
-    {
-        "name": "Gunslinger",
-        "img": "./img/Class/Gunslinger.png",
-        "synergy": [
-            {
-                "require": 2,
-                "bonus": "ガンスリンガーは攻撃後にランダムな敵に対して追加攻撃を行う場合がある"
-            },
-            {
-                "require": 4,
-                "bonus": "ガンスリンガーは攻撃後に全ての射程内の敵に対して追加攻撃を行う場合がある"
-            }
-        ]
-    },
-    {
-        "name": "Knight",
-        "img": "./img/Class/Knight.png",
-        "synergy": [
-            {
-                "require": 2,
-                "bonus": "ナイトは通常攻撃による20ダメージをブロックする"
-            },
-            {
-                "require": 4,
-                "bonus": "ナイトは通常攻撃による40ダメージをブロックする"
-            },
-            {
-                "require": 6,
-                "bonus": "ナイトは通常攻撃による80ダメージをブロックする"
-            }
-        ]
-    },
-    {
-        "name": "Ranger",
-        "img": "./img/Class/Ranger.png",
-        "synergy": [
-            {
-                "require": 3,
-                "bonus": "レンジャーは攻撃時にASを2倍にする可能性がある"
-            }
-        ]
-    },
-    {
-        "name": "Shapeshifter",
-        "img": "./img/Class/Shapeshifter.png",
-        "synergy": [
-            {
-                "require": 3,
-                "bonus": "シェイプシフターは変身時に最大ヘルスが上昇する"
-            }
-        ]
-    },
-    {
-        "name": "Sorcerer",
-        "img": "./img/Class/Sorcerer.png",
-        "synergy": [
-            {
-                "require": 3,
-                "bonus": "味方が与えるAPダメージが上昇する"
-            }
-        ]
-    }
-]
+{
+  "Assassin": {
+    "id": "Assassin",
+    "name": "アサシン",
+    "img": "./img/Class/Assassin.png",
+    "synergy": [
+      {
+        "require": 3,
+        "bonus": "アサシンは戦闘開始時に最も遠い敵に飛びつき+150％のクリティカルダメージを与える"
+      },
+      {
+        "require": 6,
+        "bonus": "アサシンは戦闘開始時に最も遠い敵に飛びつき+350％のクリティカルダメージを与える"
+      }
+    ]
+  },
+  "Blademaster": {
+    "id": "Blademaster",
+    "name": "ブレードマスター",
+    "img": "./img/Class/Blademaster.png",
+    "synergy": [
+      {
+        "require": 3,
+        "bonus": "ブレードマスターは攻撃毎に35％の確率で1回追加攻撃を行う"
+      },
+      {
+        "require": 6,
+        "bonus": "ブレードマスターは攻撃毎に35％の確率で2回追加攻撃を行う"
+      }
+    ]
+  },
+  "Brawler": {
+    "id": "Brawler",
+    "name": "ブローラー",
+    "img": "./img/Class/Brawler.png",
+    "synergy": [
+      {
+        "require": 2,
+        "bonus": "ブロウラーは+300HPを得る"
+      },
+      {
+        "require": 4,
+        "bonus": "ブロウラーは+700HPを得る"
+      }
+    ]
+  },
+  "Elementalist": {
+    "id": "Elementalist",
+    "name": "エレメンタリスト",
+    "img": "./img/Class/Elementalist.png",
+    "synergy": [
+      {
+        "require": 3,
+        "bonus": "戦闘の開始時にエレメンタルを召喚する"
+      }
+    ]
+  },
+  "Guardian": {
+    "id": "Guardian",
+    "name": "ガーディアン",
+    "img": "./img/Class/Guardian.png",
+    "synergy": [
+      {
+        "require": 2,
+        "bonus": "戦闘開始時に全てのガーディアンと隣接する味方ユニットのARが30上昇する"
+      }
+    ]
+  },
+  "Gunslinger": {
+    "id": "Gunslinger",
+    "name": "ガンスリンガー",
+    "img": "./img/Class/Gunslinger.png",
+    "synergy": [
+      {
+        "require": 2,
+        "bonus": "ガンスリンガーは攻撃後にランダムな敵に対して追加攻撃を行う場合がある"
+      },
+      {
+        "require": 4,
+        "bonus": "ガンスリンガーは攻撃後に全ての射程内の敵に対して追加攻撃を行う場合がある"
+      }
+    ]
+  },
+  "Knight": {
+    "id": "Knight",
+    "name": "ナイト",
+    "img": "./img/Class/Knight.png",
+    "synergy": [
+      {
+        "require": 2,
+        "bonus": "ナイトは通常攻撃による20ダメージをブロックする"
+      },
+      {
+        "require": 4,
+        "bonus": "ナイトは通常攻撃による40ダメージをブロックする"
+      },
+      {
+        "require": 6,
+        "bonus": "ナイトは通常攻撃による80ダメージをブロックする"
+      }
+    ]
+  },
+  "Ranger": {
+    "id": "Ranger",
+    "name": "レンジャー",
+    "img": "./img/Class/Ranger.png",
+    "synergy": [
+      {
+        "require": 3,
+        "bonus": "レンジャーは攻撃時にASを2倍にする可能性がある"
+      }
+    ]
+  },
+  "Shapeshifter": {
+    "id": "Shapeshifter",
+    "name": "シェイプシフター",
+    "img": "./img/Class/Shapeshifter.png",
+    "synergy": [
+      {
+        "require": 3,
+        "bonus": "シェイプシフターは変身時に最大ヘルスが100%上昇する"
+      }
+    ]
+  },
+  "Sorcerer": {
+    "id": "Sorcerer",
+    "name": "ソーサラー",
+    "img": "./img/Class/Sorcerer.png",
+    "synergy": [
+      {
+        "require": 3,
+        "bonus": "味方が与えるAPダメージが35%上昇する"
+      },
+      {
+        "require": 6,
+        "bonus": "味方が与えるAPダメージが100%上昇する"
+      }
+    ]
+  }
+}
