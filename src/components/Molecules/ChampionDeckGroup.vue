@@ -2,7 +2,8 @@
   .champion-deck-group.px-3(:style="{'borderColor': borderColor}")
     .class-title
       span {{ groupDescription.name }}
-      span.synergy-description.mx-1(v-for="(item, index) in groupDescription.synergy" :key="`${groupDescription.id}${index}`") ({{item.require}})
+      span.tooltip-container.synergy-description.mx-1(v-for="(item, index) in groupDescription.synergy" :key="`${groupDescription.id}${index}`") ({{item.require}})
+        span.tooltip {{item.bonus}}}
     transition-group.champion-origin-inner(name="flip-list" tag="div")
       .champion-wrapper(v-for="champion in championList" :key="champion.name")
         champion-deck(:champ="champion" :originList="champion.origin" :classList="champion.class")
@@ -58,4 +59,19 @@ export default class ChampionDeckGroup extends Vue {
   display inline-block
 .flip-list-move
   transition transform 0.4s
+.tooltip-container .tooltip
+  visibility hidden
+  width 400px
+  background-color black
+  color #fff
+  text-align center
+  padding 5px 0
+  border-radius 6px
+  position absolute
+  z-index 1
+  bottom 100%
+  left 50%
+  margin-left -200px
+.tooltip-container:hover .tooltip
+  visibility visible
 </style>

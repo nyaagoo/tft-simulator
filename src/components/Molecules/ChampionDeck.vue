@@ -16,8 +16,7 @@
         img.champion-class(v-for="(c, index) in classList" width=20 height=20 :src="classAllList[c].img" :alt="champ.name")
       .champion-cost-wrapper(v-if="visibleCost")
         span.champion-cost ${{ champ.cost }}
-
-    p.ma-0.text-truncate {{ champ.name }}
+    p.ma-0.text-truncate.name {{ champ.ruby }}
 </template>
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
@@ -91,4 +90,6 @@ p
   position absolute
   bottom 0
   right 4px
+.name
+  font-size 10px
 </style>
