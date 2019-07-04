@@ -1,6 +1,6 @@
 <template lang="pug">
   .deck-class
-    h1 Class
+    h1 クラス
     .champion-class-container
       .champion-decks.pa-2(v-for="eachClass in championListEachClass" :key="eachClass.class")
         champion-deck-group(:championList="eachClass.championList" :groupDescription="eachClass.class", borderColor="#00C853")

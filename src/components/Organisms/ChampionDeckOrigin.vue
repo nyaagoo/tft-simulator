@@ -1,6 +1,6 @@
 <template lang="pug">
   .deck-origin
-    h1 Origin
+    h1 オリジン
     .champion-origin-container
       .champion-decks.pa-2(v-for="origin in championListEachOrigin" :key="origin.origin")
         champion-deck-group(:championList="origin.championList" :groupDescription="origin.origin", borderColor="#00B8D4")

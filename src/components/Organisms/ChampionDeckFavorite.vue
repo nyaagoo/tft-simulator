@@ -1,6 +1,6 @@
 <template lang="pug">
   .deck-favorite
-    h1 Favorite
+    h1 ブックマーク
     .origin-chips
       v-chip(v-for="(item, index) in championOrigin" :key="`favOrigin${index}`")(:outline="!isOriginSelected(item.id)" color="#00B8D4")(@click="toggleSelectOrigin(item.id)")
         img.mr-1(:src="item.img" heigth=16 width=16)

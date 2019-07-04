@@ -13,7 +13,7 @@
             v-card
               v-list
                 v-list-tile
-                  v-subheader サムネイル
+                  v-subheader 表示
                 v-list-tile
                   v-list-tile-action
                     v-switch(v-model="visibleOriginIcon" @change="toggleVisibleOrigin()")
@@ -26,12 +26,10 @@
                   v-list-tile-action
                     v-switch(v-model="visibleCostIcon" @change="toggleVisibleCost()")
                   v-list-tile-title Cost
-              v-card-actions
-                v-spacer
+                v-list-tile
+                  v-subheader ソート
                 v-btn(color='primary' flat outline @click="sortChampionCost()") Cost
                 v-btn(color='primary' flat outline @click="sortChampionName()") Name
-                v-btn(color='primary' flat outline @click="saveSetting()") Save
-
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
