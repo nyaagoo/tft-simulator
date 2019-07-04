@@ -64,6 +64,7 @@ export default class ChampionFooterOpen extends Vue {
   border-radius: 24px;
 .synergy-container
   font-size 14px
+  color #ffffffdd
   padding 8px
   min-height 240px
   background: #212121;
@@ -85,11 +86,17 @@ export default class ChampionFooterOpen extends Vue {
   outline-style solid
   outline-width 3px
   outline-offset -3px
-  height 48px
-  width 48px
+  height 64px
+  width 64px
+  @media screen and (max-width: 960px)
+    height 48px
+    width 48px
 .champion-img-undefined
-  height 48px
-  width 48px
+  height 64px
+  width 64px
+  @media screen and (max-width: 960px)
+    height 48px
+    width 48px
 .toggle-footer-btn
   position absolute
   top -50px
@@ -100,6 +107,8 @@ export default class ChampionFooterOpen extends Vue {
   text-align left
   padding 1px
 .type-chip-origin
+  font-size 11px
+  font-weight bold
   text-align center
   color #222222
   flex 0 0 80px
@@ -108,6 +117,8 @@ export default class ChampionFooterOpen extends Vue {
   border 1px solid #E1F5FE
   border-radius 8px
 .type-chip-class
+  font-size 11px
+  font-weight bold
   text-align center
   color #222222
   flex 0 0 80px

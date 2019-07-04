@@ -191,7 +191,7 @@ class ChampionModule extends VuexModule {
 
       if (activeSynergyBonus === undefined) continue;
       activeSynergy.push({
-        type: originItem.origin,
+        type: originSynegy.name,
         count: originItem.count,
         synergy: activeSynergyBonus.bonus
       });
@@ -235,7 +235,7 @@ class ChampionModule extends VuexModule {
 
       if (activeSynergyBonus === undefined) continue;
       activeSynergy.push({
-        type: classItem.class,
+        type: classSynegy.name,
         count: classItem.count,
         synergy: activeSynergyBonus.bonus
       });
