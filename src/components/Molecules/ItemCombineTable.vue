@@ -4,8 +4,8 @@
       .first-row-item-check
         span.hold-item-title 所持アイテム
         .hold-item(style="width:150px" v-for="aa in basicItemList")
-          img.ml-2(:class="{grayscale: !isGrayFilterBasicItemColumn(aa.id)}" :src="aa.img" height=48 width=48)(@click="ToggleCheckedItemColumn(aa.id)")
-          img.ml-2(v-if="HasSameItem(aa.id)" :class="{grayscale: !isGrayFilterBasicItemRow(aa.id)}" :src="aa.img" height=36 width=36)(@click="ToggleCheckedItemRow(aa.id)")
+          img.pointer.ml-2(:class="{grayscale: !isGrayFilterBasicItemColumn(aa.id)}" :src="aa.img" height=48 width=48)(@click="ToggleCheckedItemColumn(aa.id)")
+          img.pointer.ml-2(v-if="HasSameItem(aa.id)" :class="{grayscale: !isGrayFilterBasicItemRow(aa.id)}" :src="aa.img" height=36 width=36)(@click="ToggleCheckedItemRow(aa.id)")
           span.fdjasiuo(v-else style="height:36px; width:36px")
     .combine-table-container.ma-4
       .combine-table-row

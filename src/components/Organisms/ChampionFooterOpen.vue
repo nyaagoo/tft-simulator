@@ -5,7 +5,7 @@
         .champion-thumbnail-container.mx-3
           .champion-thumbnail-wrapper
             .champion-thumbnail(v-for="champion in championPicked" :key="`champion${champion.id}`" @click="removeChampion(champion)")
-              img.champion-img(:style="{ 'outline-color': `${costColor.get(champion.cost)}` }")(:src="champion.image" :alt="champion.name")
+              img.champion-img.pointer(:style="{ 'outline-color': `${costColor.get(champion.cost)}` }")(:src="champion.image" :alt="champion.name")
             .champion-thumbnail(v-for="index in (10 - championPicked.length)" :key="`index${index}`")
               img.champion-img-undefined(src="@/assets/Champion/Undefined.png" :alt="index")
       v-flex(xs12 md7 lg8 grow shrink)
