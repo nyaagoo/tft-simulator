@@ -1,20 +1,7 @@
 <template lang="pug">
   .champion-footer
-    .champion-thumbnail-container(:class="{'thumbnail-container-collapse': !isOpen}")
-      .champion-thumbnail(v-for="champion in championPicked" :key="`champion${champion.id}`" @click="removeChampion(champion)")
-        img.champion-img(:style="{ 'outline-color': `${costColor.get(champion.cost)}` }")(:src="champion.image" :alt="champion.name")
-      .champion-thumbnail(v-for="index in (10 - championPicked.length)" :key="`index${index}`")
-        img.champion-img-undefined(src="@/assets/Champion/Undefined.png" :alt="index")
-    .synergy-container(v-if="isOpen")
-      ul
-        li.synergy-list(v-for="synergy in activeOriginSynergy" :key="activeOriginSynergy.type")
-          .synergy-item-wrapper
-            .type-chip-origin {{synergy.type}}
-            span {{synergy.synergy}}
-        li.synergy-list(v-for="synergy in activeClassSynergy" :key="activeClassSynergy.type")
-          .synergy-item-wrapper
-            .type-chip-class {{synergy.type}}
-            span {{synergy.synergy}}
+    footer-close(v-if="!isOpen")
+    footer-open(v-else)
     .toggle-footer-btn
       v-btn(color="primary" dark @click="toggleFooter") Active Synergy
 
@@ -24,30 +11,20 @@ import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { champion } from "@/store/index";
 import { Champion, costColor, Synergy } from "@/models/champion";
+import ChampionFooterClose from "@/ccoomponents/Organisms/ChampionFooterClose.vue";
+import ChampionFooterOpen from '@/components/Organisms/ChampionFooterOpen.vue';
+const aa = import("@/components/Organisms/ChampionFooterClose.vue"),
 
 @Component({
   name: "champion-footer",
-  components: {}
+  components: {
+    "footer-close": () => import("@/components/Organisms/ChampionFooterClose.vue"),
+    "footer-open": () => import("@/components/Organisms/ChampionFooterOpen.vue")
+  }
 })
 export default class ChampionFooter extends Vue {
   costColor: Map<number, string> = costColor;
   isOpen: boolean = false;
-
-  get championPicked(): Champion[] {
-    return champion.championPicked;
-  }
-
-  get activeOriginSynergy(): Synergy[] {
-    return champion.activeOriginSynergy;
-  }
-
-  get activeClassSynergy(): Synergy[] {
-    return champion.activeClassSynergy;
-  }
-
-  removeChampion(targetChampion: Champion) {
-    champion.RemoveChampionPicked(targetChampion);
-  }
 
   toggleFooter() {
     if (this.isOpen) this.closeFooter();
