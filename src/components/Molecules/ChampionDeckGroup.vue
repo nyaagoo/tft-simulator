@@ -35,7 +35,6 @@ export default class ChampionDeckGroup extends Vue {
   border 1px solid
   border-radius 8px
   padding 8px
-  margin 8px
 .class-title
   font-size 0.8rem
   position absolute

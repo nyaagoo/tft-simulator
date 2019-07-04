@@ -2,7 +2,7 @@
   .deck-origin
     h1 Origin
     .champion-origin-container
-      .champion-decks(v-for="origin in championListEachOrigin" :key="origin.origin")
+      .champion-decks.pa-2(v-for="origin in championListEachOrigin" :key="origin.origin")
         champion-deck-group(:championList="origin.championList" :groupDescription="origin.origin", borderColor="#00B8D4")
 </template>
 <script lang="ts">
@@ -38,5 +38,4 @@ export default class DeckOrigin extends Vue {
   display flex
   flex-wrap wrap
   padding 8px
-  margin 8px
 </style>

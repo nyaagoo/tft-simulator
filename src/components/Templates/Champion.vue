@@ -6,7 +6,7 @@
     champion-deck-class.ma-1
     .champion-space
     .champion-pick
-      champion-footer
+      champion-footer.pa-2
 
 </template>
 
@@ -36,14 +36,15 @@ export default class ChampionTemplate extends Vue {}
 .champion-template
   margin auto
   height calc(100vh - 64px)
-  width 100vw
   display flex
   flex-wrap wrap
   align-items flex-start
   overflow-y auto
+  overflow-x hidden
 .champion-space
   height 320px
 .champion-pick
   position absolute
-  bottom 0px
+  width 100%
+  bottom 0
 </style>

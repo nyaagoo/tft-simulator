@@ -2,7 +2,7 @@
   .deck-class
     h1 Class
     .champion-class-container
-      .champion-decks(v-for="eachClass in championListEachClass" :key="eachClass.class")
+      .champion-decks.pa-2(v-for="eachClass in championListEachClass" :key="eachClass.class")
         champion-deck-group(:championList="eachClass.championList" :groupDescription="eachClass.class", borderColor="#00C853")
 </template>
 <script lang="ts">

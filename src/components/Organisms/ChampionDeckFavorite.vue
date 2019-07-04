@@ -10,9 +10,9 @@
         img.mr-1(:src="item.img" heigth=16 width=16)
         span {{ item.name }}
     .champion-origin-container
-      .champion-decks(v-for="eachOrigin in championListEachOrigin" :key="eachOrigin.origin")
+      .champion-decks.pa-2(v-for="eachOrigin in championListEachOrigin" :key="eachOrigin.origin")
         champion-deck-group(:championList="eachOrigin.championList" :groupDescription="eachOrigin.origin", borderColor="#AEEA00")
-      .champion-decks(v-for="eachClass in championListEachClass" :key="eachClass.class")
+      .champion-decks.pa-2(v-for="eachClass in championListEachClass" :key="eachClass.class")
         champion-deck-group(:championList="eachClass.championList" :groupDescription="eachClass.class", borderColor="#AEEA00")
 </template>
 <script lang="ts">

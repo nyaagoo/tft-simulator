@@ -12,13 +12,13 @@ import router from "@/router";
 import { champion } from "@/store/index";
 import { Champion, costColor, Synergy } from "@/models/champion";
 import ChampionFooterClose from "@/ccoomponents/Organisms/ChampionFooterClose.vue";
-import ChampionFooterOpen from '@/components/Organisms/ChampionFooterOpen.vue';
-const aa = import("@/components/Organisms/ChampionFooterClose.vue"),
+import ChampionFooterOpen from "@/components/Organisms/ChampionFooterOpen.vue";
 
 @Component({
   name: "champion-footer",
   components: {
-    "footer-close": () => import("@/components/Organisms/ChampionFooterClose.vue"),
+    "footer-close": () =>
+      import("@/components/Organisms/ChampionFooterClose.vue"),
     "footer-open": () => import("@/components/Organisms/ChampionFooterOpen.vue")
   }
 })
@@ -41,70 +41,12 @@ export default class ChampionFooter extends Vue {
 <style lang="stylus" scoped>
 .champion-footer
   text-align left
-  width 100vw
+  width 100%
   display flex
   flex-wrap wrap
   font-size .9rem
-.champion-thumbnail-container
-  display flex
-  flex 1 1 336px
-  flex-wrap wrap
-  justify-content center
-  padding 8px
-  box-sizing: content-box;
-  margin: 4px 16px;
-  background #263238
-.thumbnail-container-collapse
-  flex 0 0 90vw
-  justify-content center
-  align-items center
-  padding 0
-  margin auto
-  background transparent
-.synergy-container
-  flex 10000 1 600px
-  min-width 600px
-  padding 8px
-  height 200px
-  margin: 4px 40px 4px 16px;
-  box-sizing border-box
-  background #263238
-.champion-thumbnail
-  padding 8px
-.champion-img
-  outline-style solid
-  outline-width 3px
-  outline-offset -3px
-  height 48px
-  width 48px
-.champion-img-undefined
-  height 48px
-  width 48px
 .toggle-footer-btn
   position absolute
   top -50px
   left calc(50vw - 85px)
-.synergy-list
-  line-height 1.7
-.synergy-item-wrapper
-  display flex
-  text-align center
-  height 20px
-  padding 1px
-  span
-    margin-left 8px
-.type-chip-origin
-  color #222222
-  width 80px
-  background #00B8D4
-  border 1px solid #E1F5FE
-  border-radius 8px
-.type-chip-class
-  color #222222
-  width 80px
-  background #00C853
-  border 1px solid #F9FBE7
-  border-radius 8px
-ul
-  list-style none
 </style>

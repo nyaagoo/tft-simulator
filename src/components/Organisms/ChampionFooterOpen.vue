@@ -1,23 +1,24 @@
 <template lang="pug">
   .footer-open
     v-layout(row wrap)
-      v-flex(xs12 md4)
-        .champion-thumbnail-container.ma-4
-          .champion-thumbnail(v-for="champion in championPicked" :key="`champion${champion.id}`" @click="removeChampion(champion)")
-            img.champion-img(:style="{ 'outline-color': `${costColor.get(champion.cost)}` }")(:src="champion.image" :alt="champion.name")
-          .champion-thumbnail(v-for="index in (10 - championPicked.length)" :key="`index${index}`")
-            img.champion-img-undefined(src="@/assets/Champion/Undefined.png" :alt="index")
-      v-flex(xs12 md8 grow)
-        .synergy-container.ma-4
+      v-flex(xs12 md5 lg4)
+        .champion-thumbnail-container.mx-3
+          .champion-thumbnail-wrapper
+            .champion-thumbnail(v-for="champion in championPicked" :key="`champion${champion.id}`" @click="removeChampion(champion)")
+              img.champion-img(:style="{ 'outline-color': `${costColor.get(champion.cost)}` }")(:src="champion.image" :alt="champion.name")
+            .champion-thumbnail(v-for="index in (10 - championPicked.length)" :key="`index${index}`")
+              img.champion-img-undefined(src="@/assets/Champion/Undefined.png" :alt="index")
+      v-flex(xs12 md7 lg8 grow shrink)
+        .synergy-container.mx-3
           ul
-            li.synergy-list(v-for="synergy in activeOriginSynergy" :key="activeOriginSynergy.type")
+            li.synergy-list.pa-1(v-for="synergy in activeOriginSynergy" :key="activeOriginSynergy.type")
               .synergy-item-wrapper
-                .type-chip-origin {{synergy.type}}
-                span {{synergy.synergy}}
-            li.synergy-list(v-for="synergy in activeClassSynergy" :key="activeClassSynergy.type")
+                span.type-chip-origin {{synergy.type}}
+                span.synegy-description.pl-2 {{synergy.synergy}}
+            li.synergy-list.pa-1(v-for="synergy in activeClassSynergy" :key="activeClassSynergy.type")
               .synergy-item-wrapper
-                .type-chip-class {{synergy.type}}
-                span {{synergy.synergy}}
+                span.type-chip-class {{synergy.type}}
+                span.synegy-description.pl-2 {{synergy.synergy}}
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -47,7 +48,6 @@ export default class ChampionFooterOpen extends Vue {
   removeChampion(targetChampion: Champion) {
     champion.RemoveChampionPicked(targetChampion);
   }
-
 }
 </script>
 <style lang="stylus" scoped>
@@ -58,27 +58,27 @@ export default class ChampionFooterOpen extends Vue {
   width 100vw
   display flex
   flex-wrap wrap
-  font-size .9rem
 .champion-thumbnail-container
-  display flex
-  flex-wrap wrap
-  justify-content center
-  padding 8px
-  background #263238
-.thumbnail-container-collapse
-  flex 0 0 90vw
-  justify-content center
-  align-items center
-  padding 0
-  margin auto
-  background transparent
+  background: #212121;
+  border: 2px solid #757575;
+  border-radius: 24px;
 .synergy-container
-  flex 10000 1 600px
-  min-width 600px
+  font-size 14px
   padding 8px
-  height 200px
-  box-sizing border-box
-  background #263238
+  min-height 240px
+  background: #212121;
+  border: 2px solid #757575;
+  border-radius: 24px;
+.champion-thumbnail-wrapper
+  display grid
+  grid-template-columns repeat(5, 80px)
+  grid-template-rows repeat(2, 120px)
+  align-items center
+  justify-content center
+  @media screen and (max-width: 960px)
+    display flex
+    flex-wrap wrap
+    background transparent
 .champion-thumbnail
   padding 8px
 .champion-img
@@ -94,27 +94,29 @@ export default class ChampionFooterOpen extends Vue {
   position absolute
   top -50px
   left calc(50vw - 85px)
-.synergy-list
-  line-height 1.7
 .synergy-item-wrapper
   display flex
-  text-align center
-  height 20px
+  align-items center
+  text-align left
   padding 1px
-  span
-    margin-left 8px
 .type-chip-origin
+  text-align center
   color #222222
-  width 80px
+  flex 0 0 80px
+  height 20px
   background #00B8D4
   border 1px solid #E1F5FE
   border-radius 8px
 .type-chip-class
+  text-align center
   color #222222
-  width 80px
+  flex 0 0 80px
+  height 20px
   background #00C853
   border 1px solid #F9FBE7
   border-radius 8px
+.synegy-description
+  flex 1 1 auto
 ul
   list-style none
 </style>
