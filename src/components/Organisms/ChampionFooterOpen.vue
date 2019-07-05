@@ -6,7 +6,7 @@
           .champion-thumbnail(v-for="champion in championPicked" :key="`champion${champion.id}`" @click="removeChampion(champion)")
             img.champion-img(:style="{ 'outline-color': `${costColor.get(champion.cost)}` }")(:src="champion.image" :alt="champion.name")
           .champion-thumbnail(v-for="index in (10 - championPicked.length)" :key="`index${index}`")
-            img.champion-img-undefined(src="@/assets/Champion/Undefined.png" :alt="index")
+            img.champion-img-undefined(src="/img/Champion/Undefined.png" :alt="index")
       v-flex(xs12 md8 grow)
         .synergy-container.ma-4
           ul

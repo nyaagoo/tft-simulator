@@ -13,8 +13,6 @@ import { champion } from "@/store/index";
 import { Champion, costColor, Synergy } from "@/models/champion";
 import ChampionFooterClose from "@/ccoomponents/Organisms/ChampionFooterClose.vue";
 import ChampionFooterOpen from '@/components/Organisms/ChampionFooterOpen.vue';
-const aa = import("@/components/Organisms/ChampionFooterClose.vue"),
-
 @Component({
   name: "champion-footer",
   components: {
