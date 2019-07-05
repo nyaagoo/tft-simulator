@@ -3,11 +3,11 @@
     h1 ブックマーク
     .origin-chips
       v-chip(v-for="(item, index) in championOrigin" :key="`favOrigin${index}`")(:outline="!isOriginSelected(item.id)" color="#00B8D4")(@click="toggleSelectOrigin(item.id)")
-        img.mr-1(:src="item.img" heigth=16 width=16)
+        i.icon-origin.mr-1(:class="`icon-${item.id.toLowerCase()}-s`")
         span {{ item.name }}
     .class-chips
       v-chip(v-for="(item, index) in championClass" :key="`favClass${index}`")(:outline="!isClassSelected(item.id)" color="info")(@click="toggleSelectClass(item.id)")
-        img.mr-1(:src="item.img" heigth=16 width=16)
+        i.icon-class.mr-1(:class="`icon-${item.id.toLowerCase()}-s`")
         span {{ item.name }}
     .champion-origin-container
       .champion-decks.pa-2(v-for="eachOrigin in championListEachOrigin" :key="eachOrigin.origin")

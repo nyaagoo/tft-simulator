@@ -11,9 +11,6 @@ import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { champion } from "@/store/index";
 import { Champion, costColor, Synergy } from "@/models/champion";
-import ChampionFooterClose from "@/ccoomponents/Organisms/ChampionFooterClose.vue";
-import ChampionFooterOpen from "@/components/Organisms/ChampionFooterOpen.vue";
-
 @Component({
   name: "champion-footer",
   components: {

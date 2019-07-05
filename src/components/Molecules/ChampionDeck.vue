@@ -7,13 +7,9 @@
         :src="champ.image"
         :alt="champ.name")
       .champion-origin-wrapper(v-if="visibleOrigin")
-        img.champion-origin(
-          v-for="(o, index) in originList"
-          width=20 height=20
-          :src="originAllList[o].img"
-          :alt="champ.name")
+        i.icon-origin(v-for="(o, index) in originList" :class="`icon-${o.toLowerCase()}-s`")
       .champion-class-wrapper(v-if="visibleClass")
-        img.champion-class(v-for="(c, index) in classList" width=20 height=20 :src="classAllList[c].img" :alt="champ.name")
+        i.icon-class(v-for="(c, index) in classList" :class="`icon-${c.toLowerCase()}-s`")
       .champion-cost-wrapper(v-if="visibleCost")
         span.champion-cost ${{ champ.cost }}
     p.ma-0.text-truncate.name {{ champ.ruby }}
@@ -75,15 +71,11 @@ p
 .champion-origin-wrapper
   position absolute
   display flex
-  height 20px
-  width 20px
   top 0
   left 0
 .champion-class-wrapper
   position absolute
   display flex
-  height 20px
-  width 20px
   bottom 0
   left 0
 .champion-cost-wrapper
