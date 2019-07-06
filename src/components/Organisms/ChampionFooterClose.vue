@@ -2,7 +2,7 @@
   .footer-close
     .champion-thumbnail(v-for="champion in championPicked" :key="`champion${champion.id}`" @click="removeChampion(champion)")
       img.champion-img.pointer(:style="{ 'outline-color': `${costColor.get(champion.cost)}` }")(:src="champion.image" :alt="champion.name")
-    .champion-thumbnail(v-for="index in (10 - championPicked.length)" :key="`index${index}`")
+    .champion-thumbnail(v-for="index in (maxCount - championPicked.length)" :key="`index${index}`")
       img.champion-img-undefined(src="/img/Champion/Undefined.png" :alt="index")
 </template>
 <script lang="ts">
@@ -17,6 +17,9 @@ import { Champion, costColor, Synergy } from "@/models/champion";
 })
 export default class ChampionFooterClose extends Vue {
   costColor: Map<number, string> = costColor;
+  get maxCount(): number {
+    return champion.maxCountPickChampion;
+  }
   get championPicked(): Champion[] {
     return champion.championPicked;
   }

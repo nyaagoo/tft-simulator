@@ -43,6 +43,7 @@ export default class ChampionFooter extends Vue {
   flex-wrap wrap
   font-size .9rem
 .toggle-footer-btn
+  display flex
   position absolute
   top -50px
   left calc(50vw - 85px)

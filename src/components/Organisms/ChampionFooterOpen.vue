@@ -3,10 +3,11 @@
     v-layout(row wrap)
       v-flex(xs12 md5 lg4)
         .champion-thumbnail-container.mx-3
+          pick-counter
           .champion-thumbnail-wrapper
             .champion-thumbnail(v-for="champion in championPicked" :key="`champion${champion.id}`" @click="removeChampion(champion)")
               img.champion-img.pointer(:style="{ 'outline-color': `${costColor.get(champion.cost)}` }")(:src="champion.image" :alt="champion.name")
-            .champion-thumbnail(v-for="index in (10 - championPicked.length)" :key="`index${index}`")
+            .champion-thumbnail(v-for="index in (maxCount - championPicked.length)" :key="`index${index}`")
               img.champion-img-undefined(src="/img/Champion/Undefined.png" :alt="index")
       v-flex(xs12 md7 lg8 grow shrink)
         .synergy-container.mx-3
@@ -25,16 +26,23 @@ import { Component, Vue } from "vue-property-decorator";
 import { champion } from "@/store/index";
 import { Champion, costColor, Synergy } from "@/models/champion";
 import router from "@/router";
+import PickCoutenr from "@/components/Organisms/ChampionPickCounter.vue";
 
 @Component({
   name: "footer-open",
-  components: {}
+  components: {
+    "pick-counter": PickCoutenr
+  }
 })
 export default class ChampionFooterOpen extends Vue {
   costColor: Map<number, string> = costColor;
 
   get championPicked(): Champion[] {
     return champion.championPicked;
+  }
+
+  get maxCount(): number {
+    return champion.maxCountPickChampion;
   }
 
   get activeOriginSynergy(): Synergy[] {
@@ -73,7 +81,7 @@ export default class ChampionFooterOpen extends Vue {
 .champion-thumbnail-wrapper
   display grid
   grid-template-columns repeat(5, 80px)
-  grid-template-rows repeat(2, 120px)
+  grid-template-rows repeat(2, 94px)
   align-items center
   justify-content center
   @media screen and (max-width: 960px)

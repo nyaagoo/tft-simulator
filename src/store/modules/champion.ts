@@ -44,6 +44,7 @@ class ChampionModule extends VuexModule {
   championPicked: Champion[] = [];
   activeOriginSynergy: Synergy[] = [];
   activeClassSynergy: Synergy[] = [];
+  maxCountPickChampion: number = 10;
 
   // #endregion
 
@@ -57,22 +58,26 @@ class ChampionModule extends VuexModule {
   public SET_FAVORITE_CLASS_LIST(list: string[]) {
     this.favoriteClassList = list;
   }
-
   @Mutation // counter
   public SET_CHAMPION_DECK_ORIGIN(championOrigin: ChampionOrigin[]) {
     this.deckOrigin = championOrigin;
   }
-
   @Mutation
   public SET_CHAMPION_DECK_CLASS(championClass: ChampionClass[]) {
     this.deckClass = championClass;
   }
-
   @Mutation
   public SET_CHAMPION_PICKED(championList: Champion[]) {
     this.championPicked = championList;
   }
-
+  @Mutation
+  public SET_CHAMPION_PICKED_LENGTH(length: number) {
+    this.championPicked.splice(length);
+  }
+  @Mutation
+  public SET_MAX_COUNT_PICK_CHAMPION(count: number) {
+    this.maxCountPickChampion = count;
+  }
   @Mutation
   public SET_ACTIVE_ORIGIN_SYNERGY(synergyList: Synergy[]) {
     this.activeOriginSynergy = synergyList;
@@ -140,7 +145,7 @@ class ChampionModule extends VuexModule {
   }
   @Action({ rawError: true })
   public AddChampionPicked(champion: Champion) {
-    if (this.championPicked.length >= 10) return;
+    if (this.championPicked.length >= this.maxCountPickChampion) return;
     const temporary = [...this.championPicked];
     temporary.push(champion);
     this.SET_CHAMPION_PICKED(temporary);
@@ -293,6 +298,11 @@ class ChampionModule extends VuexModule {
       })
     );
     this.SET_CHAMPION_DECK_CLASS(copyDeckClass);
+  }
+
+  @Action({ rawError: true })
+  public resetPickChampion() {
+    this.SET_CHAMPION_PICKED([]);
   }
 
   // #endregion
