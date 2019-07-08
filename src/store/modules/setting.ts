@@ -13,27 +13,35 @@ class SettingModule extends VuexModule {
   visibleChampionOrigin: boolean = true;
   visibleChampionClass: boolean = true;
   visibleChampionCost: boolean = true;
+
+  showDrawer: boolean = true;
   // #endregion
 
   // #region MUTATION
-  @Mutation // counter
+  @Mutation
   public SET_VISIBLE_CHAMPION_ORIGIN(visibility: boolean) {
     this.visibleChampionOrigin = visibility;
   }
-  @Mutation // counter
+  @Mutation
   public SET_VISIBLE_CHAMPION_CLASS(visibility: boolean) {
     this.visibleChampionClass = visibility;
   }
-  @Mutation // counter
+  @Mutation
   public SET_VISIBLE_CHAMPION_COST(visibility: boolean) {
     this.visibleChampionCost = visibility;
+  }
+  @Mutation
+  public SET_DRAWER(isShow: boolean) {
+    this.showDrawer = isShow;
   }
 
   // #endregion
 
   // #region ACTION
   @Action({ rawError: true })
-  public decrement() {}
+  public toggleDrawer() {
+    this.SET_DRAWER(!this.showDrawer);
+  }
 
   // #endregion
 }

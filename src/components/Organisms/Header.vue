@@ -1,35 +1,35 @@
 <template lang="pug">
   .tft-header
-    v-toolbar(app)
-        v-toolbar-title.white--text TFT Simulator
-        v-spacer
-        v-toolbar-items
-          v-btn(flat @click="transitPageChampion()") Champion
-          v-btn(flat @click="transitPageItem()") Item
-          v-menu(v-model="menu", :close-on-content-click="false", :nudge-width="200", offset-x)
-            template(v-slot:activator="{ on }")
-              v-btn(dark, v-on="on")
-                v-icon settings
-            v-card
-              v-list
-                v-list-tile
-                  v-subheader 表示
-                v-list-tile
-                  v-list-tile-action
-                    v-switch(v-model="visibleOriginIcon" @change="toggleVisibleOrigin()")
-                  v-list-tile-title Origin
-                v-list-tile
-                  v-list-tile-action
-                    v-switch(v-model="visibleClassIcon" @change="toggleVisibleClass()")
-                  v-list-tile-title Class
-                v-list-tile
-                  v-list-tile-action
-                    v-switch(v-model="visibleCostIcon" @change="toggleVisibleCost()")
-                  v-list-tile-title Cost
-                v-list-tile
-                  v-subheader ソート
-                v-btn(color='primary' flat outline @click="sortChampionCost()") Cost
-                v-btn(color='primary' flat outline @click="sortChampionName()") Name
+    v-toolbar(app fixed clipped-left dense)
+      v-toolbar-side-icon(@click.stop="toggleDrawer()")
+      v-icon.mx-3 fab fa-youtube
+      v-toolbar-title.white--text TFT Simulator
+      v-spacer
+      v-toolbar-items
+        v-menu(v-model="menu", :close-on-content-click="false", :nudge-width="200", offset-x)
+          template(v-slot:activator="{ on }")
+            v-btn(dark, v-on="on")
+              v-icon settings
+          v-card
+            v-list
+              v-list-tile
+                v-subheader 表示
+              v-list-tile
+                v-list-tile-action
+                  v-switch(v-model="visibleOriginIcon" @change="toggleVisibleOrigin()")
+                v-list-tile-title Origin
+              v-list-tile
+                v-list-tile-action
+                  v-switch(v-model="visibleClassIcon" @change="toggleVisibleClass()")
+                v-list-tile-title Class
+              v-list-tile
+                v-list-tile-action
+                  v-switch(v-model="visibleCostIcon" @change="toggleVisibleCost()")
+                v-list-tile-title Cost
+              v-list-tile
+                v-subheader ソート
+              v-btn(color='primary' flat outline @click="sortChampionCost()") Cost
+              v-btn(color='primary' flat outline @click="sortChampionName()") Name
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -46,6 +46,9 @@ export default class TFTHeader extends Vue {
   visibleClassIcon: boolean = setting.visibleChampionClass;
   visibleCostIcon: boolean = setting.visibleChampionCost;
 
+  toggleDrawer() {
+    setting.toggleDrawer();
+  }
   toggleVisibleOrigin() {
     setting.SET_VISIBLE_CHAMPION_ORIGIN(this.visibleOriginIcon);
   }
@@ -54,12 +57,6 @@ export default class TFTHeader extends Vue {
   }
   toggleVisibleCost() {
     setting.SET_VISIBLE_CHAMPION_COST(this.visibleCostIcon);
-  }
-  transitPageChampion() {
-    router.push("/");
-  }
-  transitPageItem() {
-    router.push("/item");
   }
   saveSetting() {
     setting.SET_VISIBLE_CHAMPION_COST(true);

@@ -1,6 +1,7 @@
 <template lang="pug">
   .champion-template
     tft-header
+    tft-drawer
     champion-deck-favorite.ma-1
     champion-deck-origin.ma-1
     champion-deck-class.ma-1
@@ -16,7 +17,8 @@ import router from "@/router";
 import { champion } from "@/store/index";
 import DeckOrigin from "@/components/Organisms/ChampionDeckOrigin.vue";
 import DeckClass from "@/components/Organisms/ChampionDeckClass.vue";
-import TFTHeader from "@/components/Organisms/Header.vue";
+import Header from "@/components/Organisms/Header.vue";
+import Drawer from "@/components/Organisms/Drawer.vue";
 import ChampionFooter from "@/components/Organisms/ChampionFooter.vue";
 import DeckFavorite from "@/components/Organisms/ChampionDeckFavorite.vue";
 
@@ -26,7 +28,8 @@ import DeckFavorite from "@/components/Organisms/ChampionDeckFavorite.vue";
     "champion-deck-origin": DeckOrigin,
     "champion-deck-class": DeckClass,
     "champion-deck-favorite": DeckFavorite,
-    "tft-header": TFTHeader,
+    "tft-header": Header,
+    "tft-drawer": Drawer,
     "champion-footer": ChampionFooter
   }
 })
