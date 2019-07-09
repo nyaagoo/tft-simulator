@@ -38,7 +38,7 @@ export default class ChampionTemplate extends Vue {}
 <style lang="stylus" scoped>
 .champion-template
   margin auto
-  height calc(100vh - 64px)
+  height calc(100vh - 48px)
   display flex
   flex-wrap wrap
   align-items flex-start

@@ -27,6 +27,10 @@ export default class ItemTemplate extends Vue {}
 <style lang="stylus" scoped>
 .item-template
   margin auto
-  height calc(100vh - 64px)
+  height calc(100vh - 48px)
+  display flex
+  flex-wrap wrap
+  align-items flex-start
   overflow-y auto
+  overflow-x hidden
 </style>

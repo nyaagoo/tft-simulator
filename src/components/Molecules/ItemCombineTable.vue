@@ -1,21 +1,21 @@
 <template lang="pug">
-  .combine-table.test-delete-plz
+  .combine-table
     .conbine-table-description
-      .first-row-item-check
+      .first-row-item-check.mt-3.mx-0
         span.hold-item-title 所持アイテム
-        .hold-item(style="width:150px" v-for="aa in basicItemList")
-          img.pointer.ml-2(:class="{grayscale: !isGrayFilterBasicItemColumn(aa.id)}" :src="aa.img" height=48 width=48)(@click="ToggleCheckedItemColumn(aa.id)")
-          img.pointer.ml-2(v-if="HasSameItem(aa.id)" :class="{grayscale: !isGrayFilterBasicItemRow(aa.id)}" :src="aa.img" height=36 width=36)(@click="ToggleCheckedItemRow(aa.id)")
-          span.fdjasiuo(v-else style="height:36px; width:36px")
+        .hold-item(v-for="item in basicItemList")
+          img.main-img.pointer(:class="{grayscale: !isGrayFilterBasicItemColumn(item.id)}" :src="item.img")(@click="ToggleCheckedItemColumn(item.id)")
+          span.sub-img-wrapper
+            img.sub-img.pointer(v-if="HasSameItem(item.id)" :class="{grayscale: !isGrayFilterBasicItemRow(item.id)}" :src="item.img")(@click="ToggleCheckedItemRow(item.id)")
     .combine-table-container.ma-4
       .combine-table-row
         .first-row-item
-          img.ml-2(v-for="aa in basicItemList")(:class="{grayscale: !isGrayFilterBasicItemColumn(aa.id)}" :src="aa.img" height=48 width=48)
-        .row-item.mb-2(v-for="(row, rowIndex) in buildItemEachBasicItem")
-          img.mr-2.test-delete-plz(:class="{grayscale: !isGrayFilterBasicItemColumn(row.basicItem.id)}" :src="row.basicItem.img" height=48 width=48)
+          img.main-img.pointer(v-for="item in basicItemList")(:class="{grayscale: !isGrayFilterBasicItemColumn(item.id)}" :src="item.img" @click="ToggleCheckedItemColumn(item.id)")
+        .row-item(v-for="(row, rowIndex) in buildItemEachBasicItem")
+          img.main-img.pointer(:class="{grayscale: !isGrayFilterBasicItemColumn(row.basicItem.id)}" :src="row.basicItem.img" @click="ToggleCheckedItemColumn(row.basicItem.id)")
           .combine-table-column
-            .column-item.ml-2(style="height: 48px" v-for="(column, columnIndex) in row.buildItem" v-if="columnIndex <= rowIndex")
-              img(:class="{grayscale: !canBuildItem(column.recipe)}" :src="column.img" height=48 width=48)
+            .column-item(v-for="(column, columnIndex) in row.buildItem" v-if="columnIndex <= rowIndex")
+              img.main-img(:class="{grayscale: !canBuildItem(column.recipe)}" :src="column.img")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -95,8 +95,11 @@ export default class CombineTable extends Vue {
 .combine-table-container
   display flex
   justify-content center
+  @media screen and (max-width: 600px)
+    overflow-x auto
+    justify-content flex-start
 .first-row-item-check
-  width 640px
+  width 560px
   margin auto
   display grid
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -108,29 +111,53 @@ export default class CombineTable extends Vue {
   position relative
   border-radius 8px
 .first-row-item
-  padding 0 0 16px 56px
+  padding 0 0 8px 56px
   display flex
+  @media screen and (max-width: 600px)
+    padding 0 0 8px 44px
 .row-item
   display flex
+  margin-bottom 8px
 .combine-table-column
   display flex
 .grayscale
   filter: grayscale(100%);
-.fdjasiuo
+.column-item
+  height 48px
+  @media screen and (max-width: 600px)
+    height 36px
+.main-img
+  height 48px
+  width 48px
+  margin-left 8px
+  @media screen and (max-width: 600px)
+    height 36px
+    width 36px
+.sub-img
+  height 36px
+  width 36px
+  @media screen and (max-width: 600px)
+    height 24px
+    width 24px
+.sub-img-wrapper
   height 36px
   width 36px
   display inline-block
   margin-left 8px
+  @media screen and (max-width: 600px)
+    height 24px
+    margin-left 2px
 .hold-item-title
   font-size 0.8rem
   position absolute
-  top -12px
+  top -10px
   left 12px
   background #424242
   border-top-right-radius 10px
   border-top-left-radius 10px
   width 100px
 .conbine-table-description
-  width 640px
+  display flex
+  justify-content center
   margin auto
 </style>

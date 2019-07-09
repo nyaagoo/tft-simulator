@@ -49,6 +49,7 @@ export default class ItemBuildSheet extends Vue {
 </script>
 <style lang="stylus" scoped>
 .item-build-sheet
+  width 100%
   display grid
   grid-template-columns repeat(auto-fill,minmax(360px, 1fr));
   max-width 1720px

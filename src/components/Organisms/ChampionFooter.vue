@@ -37,14 +37,14 @@ export default class ChampionFooter extends Vue {
 </script>
 <style lang="stylus" scoped>
 .champion-footer
+  display flex
+  justify-content center
   text-align left
   width 100%
-  display flex
   flex-wrap wrap
   font-size .9rem
 .toggle-footer-btn
   display flex
   position absolute
   top -50px
-  left calc(50vw - 85px)
 </style>

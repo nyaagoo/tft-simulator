@@ -1,6 +1,7 @@
 <template lang="pug">
-  .item-combine-simulator
-    span(style="font-size:30px; border-bottom:2px solid red") Item Builder
+  .item-combine-simulator.card-container
+    .card-container-title
+      h3 Item Builder
     combine-table
 </template>
 <script lang="ts">
