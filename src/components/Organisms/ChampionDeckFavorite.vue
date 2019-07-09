@@ -1,19 +1,21 @@
 <template lang="pug">
-  .deck-favorite
-    h1 ブックマーク
-    .origin-chips
-      v-chip(v-for="(item, index) in championOrigin" :key="`favOrigin${index}`")(:outline="!isOriginSelected(item.id)" color="#00B8D4")(@click="toggleSelectOrigin(item.id)")
-        i.icon-origin.mr-1(:class="`icon-${item.id.toLowerCase()}-s`")
-        span {{ item.name }}
-    .class-chips
-      v-chip(v-for="(item, index) in championClass" :key="`favClass${index}`")(:outline="!isClassSelected(item.id)" color="info")(@click="toggleSelectClass(item.id)")
-        i.icon-class.mr-1(:class="`icon-${item.id.toLowerCase()}-s`")
-        span {{ item.name }}
-    .champion-origin-container
-      .champion-decks.pa-2(v-for="eachOrigin in championListEachOrigin" :key="eachOrigin.origin")
-        champion-deck-group(:championList="eachOrigin.championList" :groupDescription="eachOrigin.origin", borderColor="#AEEA00")
-      .champion-decks.pa-2(v-for="eachClass in championListEachClass" :key="eachClass.class")
-        champion-deck-group(:championList="eachClass.championList" :groupDescription="eachClass.class", borderColor="#AEEA00")
+  .card-container
+    .card-container-title
+      h3 ブックマーク
+    .deck-favorite
+      .origin-chips
+        v-chip(v-for="(item, index) in championOrigin" :key="`favOrigin${index}`")(:outline="!isOriginSelected(item.id)" color="#00B8D4")(@click="toggleSelectOrigin(item.id)")
+          i.icon-origin.mr-1(:class="`icon-${item.id.toLowerCase()}-s`")
+          span {{ item.name }}
+      .class-chips
+        v-chip(v-for="(item, index) in championClass" :key="`favClass${index}`")(:outline="!isClassSelected(item.id)" color="info")(@click="toggleSelectClass(item.id)")
+          i.icon-class.mr-1(:class="`icon-${item.id.toLowerCase()}-s`")
+          span {{ item.name }}
+      .champion-origin-container
+        .champion-decks.pa-2(v-for="eachOrigin in championListEachOrigin" :key="eachOrigin.origin")
+          champion-deck-group(:championList="eachOrigin.championList" :groupDescription="eachOrigin.origin", borderColor="#AEEA00")
+        .champion-decks.pa-2(v-for="eachClass in championListEachClass" :key="eachClass.class")
+          champion-deck-group(:championList="eachClass.championList" :groupDescription="eachClass.class", borderColor="#AEEA00")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -33,13 +35,11 @@ export default class DeckFavorite extends Vue {
       champion.favoriteOriginList.includes(deck.origin.id)
     );
   }
-
   get championListEachClass() {
     return champion.deckClass.filter(deck =>
       champion.favoriteClassList.includes(deck.class.id)
     );
   }
-
   get championOrigin() {
     return champion.originList;
   }
@@ -70,7 +70,6 @@ export default class DeckFavorite extends Vue {
   isClassSelected(item: string): boolean {
     return this.favoriteClassList.some(c => c === item);
   }
-
   toggleSelectOrigin(checkedOrigin: string) {
     const existList = this.favoriteOriginList.some(o => o === checkedOrigin);
     if (existList)
@@ -91,9 +90,12 @@ export default class DeckFavorite extends Vue {
 }
 </script>
 <style lang="stylus" scoped>
+.card-container-title
+  background #AEEA00
+.card-container
+  border-left 4px solid #AEEA00
 .deck-favorite
   margin auto
-  width 100vw
   .origin-chips
   .class-chips
     display flex

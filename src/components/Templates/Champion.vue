@@ -2,9 +2,9 @@
   .champion-template
     tft-header
     tft-drawer
-    champion-deck-favorite.ma-1
-    champion-deck-origin.ma-1
-    champion-deck-class.ma-1
+    champion-deck-favorite
+    champion-deck-origin
+    champion-deck-class
     .champion-space
     .champion-pick
       champion-footer.pa-2

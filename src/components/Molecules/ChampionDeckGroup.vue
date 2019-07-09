@@ -40,7 +40,7 @@ export default class ChampionDeckGroup extends Vue {
   position absolute
   top -10px
   left 12px
-  background #303030
+  background #424242
 .champion-container
   width 100px
 .champion-wrapper

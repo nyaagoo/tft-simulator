@@ -1,6 +1,7 @@
 <template lang="pug">
-  .deck-class
-    h1 クラス
+  .deck-class.card-container
+    .card-container-title
+      h3 クラス
     .champion-class-container
       .champion-decks.pa-2(v-for="eachClass in championListEachClass" :key="eachClass.class")
         champion-deck-group(:championList="eachClass.championList" :groupDescription="eachClass.class", borderColor="#00C853")
@@ -30,9 +31,10 @@ export default class DeckClass extends Vue {
 }
 </script>
 <style lang="stylus" scoped>
-.deck-class
-  margin auto
-  width 100vw
+.card-container-title
+  background #00C853
+.card-container
+  border-left 4px solid #00C853
 .champion-class-container
   display flex
   flex-wrap wrap
