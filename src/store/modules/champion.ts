@@ -7,7 +7,7 @@ import {
   ChampionOrigin,
   Synergy,
   FavoriteOriginClass,
-  ChampionData
+  ChampionDetail
 } from "@/models/champion";
 import store from "@/store/store";
 import {
@@ -28,7 +28,7 @@ import {
 @Module({ dynamic: true, store, name: "champion", namespaced: true })
 class ChampionModule extends VuexModule {
   // #region STATE
-  readonly championList: ChampionData[] = championList.map(x => ({
+  readonly championList: ChampionDetail[] = championList.map(x => ({
     ...x,
     origin: x.origin.map(o => o as OriginID),
     class: x.class.map(o => o as ClassID)

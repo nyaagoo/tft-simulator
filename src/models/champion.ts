@@ -1,21 +1,5 @@
 import { OriginID, ClassID, ClassOriginData } from "./type";
 
-export interface Champion {
-  id: number;
-  name: string;
-  image: string;
-  origin: string[];
-  class: string[];
-  cost: number;
-  hp: number;
-  dps: number;
-  attackSpeed: number;
-  damage: number;
-  range: number;
-  armor: number;
-  magicRegist: number;
-}
-
 export type ChampionOrigin = {
   origin: ClassOriginData;
   championList: Champion[];
@@ -45,7 +29,7 @@ export const costColor: Map<number, string> = new Map([
   [5, "#da8d3a"]
 ]);
 
-export type ChampionData = {
+export type ChampionDetail = {
   id: number;
   name: string;
   ruby: string;
@@ -64,11 +48,13 @@ export type ChampionData = {
   origin: OriginID[];
   class: ClassID[];
   cost: number;
-  hp: number;
-  dps: number;
+  hp: number[];
+  dps: number[];
   attackSpeed: number;
-  damage: number;
+  damage: number[];
   range: number;
   armor: number;
   magicRegist: number;
 };
+
+export type Champion = Omit<ChampionDetail, "ruby" | "skill">;

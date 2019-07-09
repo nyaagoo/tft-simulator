@@ -14,7 +14,7 @@
           "label": "ダメージ",
           "effects": [
             350,
-            575,
+            600,
             850
           ]
         }
@@ -26,12 +26,24 @@
     "class": [
       "Blademaster"
     ],
-    "cost": 2,
-    "hp": 600,
-    "dps": 36,
-    "attackSpeed": 0.55,
-    "damage": 65,
-    "range": 180,
+    "cost": 3,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      42,
+      76,
+      152
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      65,
+      117,
+      234
+    ],
+    "range": 1,
     "armor": 25,
     "magicRegist": 20
   },
@@ -63,11 +75,23 @@
       "Sorcerer"
     ],
     "cost": 2,
-    "hp": 450,
-    "dps": 28,
+    "hp": [
+      450,
+      810,
+      1620
+    ],
+    "dps": [
+      28,
+      50,
+      99
+    ],
     "attackSpeed": 0.55,
-    "damage": 50,
-    "range": 660,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 3,
     "armor": 20,
     "magicRegist": 20
   },
@@ -99,11 +123,23 @@
       "Assassin"
     ],
     "cost": 4,
-    "hp": 600,
-    "dps": 49,
-    "attackSpeed": 0.7,
-    "damage": 70,
-    "range": 180,
+    "hp": [
+      700,
+      1260,
+      2520
+    ],
+    "dps": [
+      53,
+      95,
+      189
+    ],
+    "attackSpeed": 0.75,
+    "damage": [
+      70,
+      126,
+      252
+    ],
+    "range": 1,
     "armor": 20,
     "magicRegist": 20
   },
@@ -151,11 +187,23 @@
       "Elementalist"
     ],
     "cost": 5,
-    "hp": 650,
-    "dps": 24,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      24,
+      43,
+      86
+    ],
     "attackSpeed": 0.6,
-    "damage": 40,
-    "range": 890,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 3,
     "armor": 20,
     "magicRegist": 20
   },
@@ -195,11 +243,23 @@
       "Ranger"
     ],
     "cost": 3,
-    "hp": 550,
-    "dps": 42,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      42,
+      76,
+      151
+    ],
     "attackSpeed": 0.7,
-    "damage": 60,
-    "range": 960,
+    "damage": [
+      60,
+      108,
+      216
+    ],
+    "range": 4,
     "armor": 20,
     "magicRegist": 20
   },
@@ -239,11 +299,23 @@
       "Sorcerer"
     ],
     "cost": 4,
-    "hp": 600,
-    "dps": 24,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      24,
+      43,
+      86
+    ],
     "attackSpeed": 0.6,
-    "damage": 40,
-    "range": 720,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 3,
     "armor": 20,
     "magicRegist": 20
   },
@@ -283,11 +355,23 @@
       "Brawler"
     ],
     "cost": 2,
-    "hp": 600,
-    "dps": 25,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      25,
+      45,
+      90
+    ],
     "attackSpeed": 0.5,
-    "damage": 50,
-    "range": 180,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
     "armor": 35,
     "magicRegist": 20
   },
@@ -327,11 +411,23 @@
       "Elementalist"
     ],
     "cost": 4,
-    "hp": 700,
-    "dps": 36,
+    "hp": [
+      700,
+      1260,
+      2520
+    ],
+    "dps": [
+      36,
+      65,
+      130
+    ],
     "attackSpeed": 0.6,
-    "damage": 60,
-    "range": 660,
+    "damage": [
+      60,
+      108,
+      216
+    ],
+    "range": 3,
     "armor": 25,
     "magicRegist": 20
   },
@@ -371,11 +467,23 @@
       "Guardian"
     ],
     "cost": 2,
-    "hp": 750,
-    "dps": 24,
+    "hp": [
+      750,
+      1350,
+      2700
+    ],
+    "dps": [
+      24,
+      43,
+      86
+    ],
     "attackSpeed": 0.6,
-    "damage": 40,
-    "range": 180,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 1,
     "armor": 25,
     "magicRegist": 20
   },
@@ -431,11 +539,23 @@
       "Brawler"
     ],
     "cost": 4,
-    "hp": 1100,
-    "dps": 39,
+    "hp": [
+      1100,
+      2000,
+      4000
+    ],
+    "dps": [
+      39,
+      69,
+      139
+    ],
     "attackSpeed": 0.55,
-    "damage": 70,
-    "range": 180,
+    "damage": [
+      70,
+      126,
+      252
+    ],
+    "range": 1,
     "armor": 20,
     "magicRegist": 20
   },
@@ -483,11 +603,23 @@
       "Knight"
     ],
     "cost": 1,
-    "hp": 650,
-    "dps": 25,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      25,
+      45,
+      90
+    ],
     "attackSpeed": 0.5,
-    "damage": 50,
-    "range": 180,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
     "armor": 25,
     "magicRegist": 20
   },
@@ -527,11 +659,23 @@
       "Blademaster"
     ],
     "cost": 4,
-    "hp": 700,
-    "dps": 49,
+    "hp": [
+      700,
+      1260,
+      2520
+    ],
+    "dps": [
+      49,
+      88,
+      176
+    ],
     "attackSpeed": 0.65,
-    "damage": 75,
-    "range": 660,
+    "damage": [
+      75,
+      135,
+      270
+    ],
+    "range": 3,
     "armor": 25,
     "magicRegist": 20
   },
@@ -579,11 +723,23 @@
       "Shapeshifter"
     ],
     "cost": 2,
-    "hp": 500,
-    "dps": 24,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      24,
+      43,
+      86
+    ],
     "attackSpeed": 0.6,
-    "damage": 40,
-    "range": 420,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 2,
     "armor": 25,
     "magicRegist": 20
   },
@@ -639,11 +795,23 @@
       "Assassin"
     ],
     "cost": 3,
-    "hp": 550,
-    "dps": 30,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      30,
+      54,
+      108
+    ],
     "attackSpeed": 0.6,
-    "damage": 50,
-    "range": 180,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
     "armor": 20,
     "magicRegist": 20
   },
@@ -691,11 +859,23 @@
       "Blademaster"
     ],
     "cost": 1,
-    "hp": 400,
-    "dps": 28,
+    "hp": [
+      400,
+      720,
+      1440
+    ],
+    "dps": [
+      28,
+      50,
+      101
+    ],
     "attackSpeed": 0.7,
-    "damage": 40,
-    "range": 180,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 1,
     "armor": 25,
     "magicRegist": 20
   },
@@ -728,11 +908,23 @@
       "Gunslinger"
     ],
     "cost": 3,
-    "hp": 600,
-    "dps": 33,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      33,
+      59,
+      119
+    ],
     "attackSpeed": 0.6,
-    "damage": 55,
-    "range": 180,
+    "damage": [
+      55,
+      99,
+      198
+    ],
+    "range": 1,
     "armor": 20,
     "magicRegist": 20
   },
@@ -780,11 +972,23 @@
       "Knight"
     ],
     "cost": 1,
-    "hp": 600,
-    "dps": 30,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      30,
+      54,
+      109
+    ],
     "attackSpeed": 0.55,
-    "damage": 55,
-    "range": 180,
+    "damage": [
+      55,
+      99,
+      198
+    ],
+    "range": 1,
     "armor": 35,
     "magicRegist": 20
   },
@@ -857,11 +1061,23 @@
       "Shapeshifter"
     ],
     "cost": 4,
-    "hp": 850,
-    "dps": 31,
+    "hp": [
+      850,
+      1530,
+      3060
+    ],
+    "dps": [
+      31,
+      57,
+      113
+    ],
     "attackSpeed": 0.7,
-    "damage": 45,
-    "range": 420,
+    "damage": [
+      45,
+      81,
+      162
+    ],
+    "range": 2,
     "armor": 35,
     "magicRegist": 20
   },
@@ -893,11 +1109,23 @@
       "Gunslinger"
     ],
     "cost": 1,
-    "hp": 500,
-    "dps": 28,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      28,
+      50,
+      99
+    ],
     "attackSpeed": 0.5,
-    "damage": 55,
-    "range": 180,
+    "damage": [
+      55,
+      99,
+      198
+    ],
+    "range": 1,
     "armor": 20,
     "magicRegist": 20
   },
@@ -937,11 +1165,23 @@
       "Sorcerer"
     ],
     "cost": 5,
-    "hp": 850,
-    "dps": 42,
+    "hp": [
+      850,
+      1530,
+      3060
+    ],
+    "dps": [
+      42,
+      76,
+      152
+    ],
     "attackSpeed": 0.65,
-    "damage": 65,
-    "range": 660,
+    "damage": [
+      65,
+      117,
+      234
+    ],
+    "range": 3,
     "armor": 25,
     "magicRegist": 20
   },
@@ -957,11 +1197,23 @@
       "Sorcerer"
     ],
     "cost": 1,
-    "hp": 550,
-    "dps": 29,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      29,
+      53,
+      105
+    ],
     "attackSpeed": 0.65,
-    "damage": 45,
-    "range": 180,
+    "damage": [
+      45,
+      81,
+      162
+    ],
+    "range": 1,
     "armor": 25,
     "magicRegist": 20
   },
@@ -977,11 +1229,23 @@
       "Assassin"
     ],
     "cost": 3,
-    "hp": 450,
-    "dps": 30,
+    "hp": [
+      450,
+      810,
+      1620
+    ],
+    "dps": [
+      30,
+      54,
+      108
+    ],
     "attackSpeed": 0.6,
-    "damage": 50,
-    "range": 180,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
     "armor": 20,
     "magicRegist": 20
   },
@@ -997,11 +1261,23 @@
       "Knight"
     ],
     "cost": 5,
-    "hp": 800,
-    "dps": 66,
+    "hp": [
+      800,
+      1440,
+      2880
+    ],
+    "dps": [
+      66,
+      119,
+      238
+    ],
     "attackSpeed": 1.1,
-    "damage": 60,
-    "range": 660,
+    "damage": [
+      60,
+      108,
+      216
+    ],
+    "range": 3,
     "armor": 35,
     "magicRegist": 20
   },
@@ -1018,11 +1294,23 @@
       "Elementalist"
     ],
     "cost": 3,
-    "hp": 550,
-    "dps": 36,
-    "attackSpeed": 0.6,
-    "damage": 60,
-    "range": 420,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      46,
+      82,
+      164
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      70,
+      126,
+      252
+    ],
+    "range": 2,
     "armor": 20,
     "magicRegist": 20
   },
@@ -1038,11 +1326,23 @@
       "Assassin"
     ],
     "cost": 1,
-    "hp": 500,
-    "dps": 30,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      30,
+      54,
+      108
+    ],
     "attackSpeed": 0.6,
-    "damage": 50,
-    "range": 180,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
     "armor": 20,
     "magicRegist": 20
   },
@@ -1058,11 +1358,23 @@
       "Ranger"
     ],
     "cost": 4,
-    "hp": 600,
-    "dps": 39,
-    "attackSpeed": 0.7,
-    "damage": 55,
-    "range": 660,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      36,
+      64,
+      129
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      55,
+      99,
+      198
+    ],
+    "range": 3,
     "armor": 20,
     "magicRegist": 20
   },
@@ -1078,11 +1390,23 @@
       "Guardian"
     ],
     "cost": 4,
-    "hp": 750,
-    "dps": 25,
+    "hp": [
+      750,
+      1350,
+      2700
+    ],
+    "dps": [
+      25,
+      45,
+      89
+    ],
     "attackSpeed": 0.55,
-    "damage": 45,
-    "range": 180,
+    "damage": [
+      45,
+      81,
+      162
+    ],
+    "range": 1,
     "armor": 55,
     "magicRegist": 20
   },
@@ -1097,12 +1421,24 @@
     "class": [
       "Elementalist"
     ],
-    "cost": 1,
-    "hp": 450,
-    "dps": 24,
+    "cost": 2,
+    "hp": [
+      450,
+      810,
+      1620
+    ],
+    "dps": [
+      24,
+      43,
+      86
+    ],
     "attackSpeed": 0.6,
-    "damage": 40,
-    "range": 660,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 2,
     "armor": 20,
     "magicRegist": 20
   },
@@ -1118,11 +1454,23 @@
       "Gunslinger"
     ],
     "cost": 2,
-    "hp": 600,
-    "dps": 36,
-    "attackSpeed": 0.6,
-    "damage": 60,
-    "range": 660,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      42,
+      76,
+      152
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      65,
+      117,
+      234
+    ],
+    "range": 3,
     "armor": 25,
     "magicRegist": 20
   },
@@ -1138,11 +1486,23 @@
       "Sorcerer"
     ],
     "cost": 2,
-    "hp": 500,
-    "dps": 30,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      30,
+      54,
+      108
+    ],
     "attackSpeed": 0.6,
-    "damage": 50,
-    "range": 420,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 2,
     "armor": 25,
     "magicRegist": 20
   },
@@ -1158,11 +1518,23 @@
       "Gunslinger"
     ],
     "cost": 5,
-    "hp": 650,
-    "dps": 56,
-    "attackSpeed": 0.75,
-    "damage": 75,
-    "range": 660,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      64,
+      115,
+      230
+    ],
+    "attackSpeed": 0.85,
+    "damage": [
+      75,
+      135,
+      270
+    ],
+    "range": 3,
     "armor": 20,
     "magicRegist": 20
   },
@@ -1178,11 +1550,23 @@
       "Knight"
     ],
     "cost": 1,
-    "hp": 500,
-    "dps": 25,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      25,
+      45,
+      90
+    ],
     "attackSpeed": 0.5,
-    "damage": 50,
-    "range": 180,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
     "armor": 35,
     "magicRegist": 20
   },
@@ -1198,11 +1582,23 @@
       "Sorcerer"
     ],
     "cost": 3,
-    "hp": 600,
-    "dps": 30,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      30,
+      54,
+      108
+    ],
     "attackSpeed": 0.6,
-    "damage": 50,
-    "range": 420,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 2,
     "armor": 20,
     "magicRegist": 20
   },
@@ -1218,11 +1614,23 @@
       "Shapeshifter"
     ],
     "cost": 1,
-    "hp": 500,
-    "dps": 33,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      33,
+      59,
+      117
+    ],
     "attackSpeed": 0.65,
-    "damage": 50,
-    "range": 660,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 3,
     "armor": 20,
     "magicRegist": 20
   },
@@ -1238,11 +1646,23 @@
       "Knight"
     ],
     "cost": 3,
-    "hp": 750,
-    "dps": 25,
+    "hp": [
+      800,
+      1350,
+      2700
+    ],
+    "dps": [
+      25,
+      45,
+      90
+    ],
     "attackSpeed": 0.5,
-    "damage": 50,
-    "range": 180,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
     "armor": 30,
     "magicRegist": 20
   },
@@ -1258,11 +1678,23 @@
       "Assassin"
     ],
     "cost": 2,
-    "hp": 600,
-    "dps": 33,
-    "attackSpeed": 0.55,
-    "damage": 60,
-    "range": 180,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      36,
+      65,
+      130
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      60,
+      108,
+      216
+    ],
+    "range": 1,
     "armor": 25,
     "magicRegist": 20
   },
@@ -1278,11 +1710,23 @@
       "Brawler"
     ],
     "cost": 2,
-    "hp": 650,
-    "dps": 26,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      26,
+      47,
+      94
+    ],
     "attackSpeed": 0.65,
-    "damage": 40,
-    "range": 180,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 1,
     "armor": 20,
     "magicRegist": 20
   },
@@ -1298,11 +1742,23 @@
       "Assassin"
     ],
     "cost": 3,
-    "hp": 550,
-    "dps": 30,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      30,
+      54,
+      109
+    ],
     "attackSpeed": 0.55,
-    "damage": 55,
-    "range": 180,
+    "damage": [
+      55,
+      99,
+      198
+    ],
+    "range": 1,
     "armor": 20,
     "magicRegist": 20
   },
@@ -1318,11 +1774,23 @@
       "Knight"
     ],
     "cost": 4,
-    "hp": 850,
-    "dps": 25,
+    "hp": [
+      850,
+      1530,
+      3060
+    ],
+    "dps": [
+      25,
+      45,
+      89
+    ],
     "attackSpeed": 0.55,
-    "damage": 45,
-    "range": 180,
+    "damage": [
+      45,
+      81,
+      162
+    ],
+    "range": 1,
     "armor": 35,
     "magicRegist": 25
   },
@@ -1338,11 +1806,23 @@
       "Blademaster"
     ],
     "cost": 2,
-    "hp": 650,
-    "dps": 33,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      39,
+      70,
+      140
+    ],
     "attackSpeed": 0.6,
-    "damage": 55,
-    "range": 180,
+    "damage": [
+      65,
+      117,
+      234
+    ],
+    "range": 1,
     "armor": 30,
     "magicRegist": 20
   },
@@ -1358,11 +1838,23 @@
       "Shapeshifter"
     ],
     "cost": 3,
-    "hp": 550,
-    "dps": 33,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      33,
+      59,
+      117
+    ],
     "attackSpeed": 0.65,
-    "damage": 50,
-    "range": 180,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
     "armor": 20,
     "magicRegist": 20
   },
@@ -1379,11 +1871,23 @@
       "Shapeshifter"
     ],
     "cost": 5,
-    "hp": 850,
-    "dps": 42,
+    "hp": [
+      850,
+      1530,
+      3060
+    ],
+    "dps": [
+      42,
+      76,
+      152
+    ],
     "attackSpeed": 0.65,
-    "damage": 65,
-    "range": 420,
+    "damage": [
+      65,
+      117,
+      234
+    ],
+    "range": 2,
     "armor": 25,
     "magicRegist": 20
   },
@@ -1399,11 +1903,23 @@
       "Gunslinger"
     ],
     "cost": 1,
-    "hp": 500,
-    "dps": 33,
-    "attackSpeed": 0.65,
-    "damage": 50,
-    "range": 890,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      35,
+      63,
+      126
+    ],
+    "attackSpeed": 0.7,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 4,
     "armor": 20,
     "magicRegist": 20
   },
@@ -1419,11 +1935,23 @@
       "Ranger"
     ],
     "cost": 2,
-    "hp": 500,
-    "dps": 35,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      35,
+      63,
+      126
+    ],
     "attackSpeed": 0.7,
-    "damage": 50,
-    "range": 890,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 4,
     "armor": 25,
     "magicRegist": 20
   },
@@ -1439,11 +1967,23 @@
       "Ranger"
     ],
     "cost": 1,
-    "hp": 550,
-    "dps": 27,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      27,
+      49,
+      97
+    ],
     "attackSpeed": 0.6,
-    "damage": 45,
-    "range": 660,
+    "damage": [
+      45,
+      81,
+      162
+    ],
+    "range": 3,
     "armor": 25,
     "magicRegist": 20
   },
@@ -1459,11 +1999,23 @@
       "Sorcerer"
     ],
     "cost": 3,
-    "hp": 450,
-    "dps": 25,
+    "hp": [
+      450,
+      810,
+      1620
+    ],
+    "dps": [
+      25,
+      45,
+      89
+    ],
     "attackSpeed": 0.55,
-    "damage": 45,
-    "range": 660,
+    "damage": [
+      45,
+      81,
+      162
+    ],
+    "range": 3,
     "armor": 20,
     "magicRegist": 20
   },
@@ -1478,12 +2030,24 @@
     "class": [
       "Brawler"
     ],
-    "cost": 2,
-    "hp": 650,
-    "dps": 38,
-    "attackSpeed": 0.5,
-    "damage": 75,
-    "range": 180,
+    "cost": 3,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      41,
+      74,
+      149
+    ],
+    "attackSpeed": 0.55,
+    "damage": [
+      75,
+      135,
+      270
+    ],
+    "range": 1,
     "armor": 35,
     "magicRegist": 20
   },
@@ -1499,11 +2063,23 @@
       "Brawler"
     ],
     "cost": 1,
-    "hp": 600,
-    "dps": 30,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      30,
+      54,
+      108
+    ],
     "attackSpeed": 0.6,
-    "damage": 50,
-    "range": 180,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
     "armor": 30,
     "magicRegist": 20
   },
@@ -1519,11 +2095,23 @@
       "Blademaster"
     ],
     "cost": 5,
-    "hp": 650,
-    "dps": 65,
+    "hp": [
+      700,
+      1260,
+      2520
+    ],
+    "dps": [
+      65,
+      117,
+      234
+    ],
     "attackSpeed": 1,
-    "damage": 65,
-    "range": 180,
+    "damage": [
+      65,
+      117,
+      234
+    ],
+    "range": 1,
     "armor": 35,
     "magicRegist": 20
   },
@@ -1539,11 +2127,23 @@
       "Assassin"
     ],
     "cost": 2,
-    "hp": 500,
-    "dps": 33,
-    "attackSpeed": 0.6,
-    "damage": 55,
-    "range": 180,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      39,
+      70,
+      140
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      60,
+      108,
+      216
+    ],
+    "range": 1,
     "armor": 25,
     "magicRegist": 20
   }
