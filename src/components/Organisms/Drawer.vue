@@ -4,7 +4,8 @@
         v-list(dense='')
           v-list-tile(@click="transitPageChampion()")
             v-list-tile-action
-              v-icon subtitles
+              icon-base(width="30" height="30")
+                icon-add
             v-list-tile-content
               v-list-tile-title シナジーシミュレータ
           v-list-tile(@click="transitPageItem()")
@@ -18,10 +19,15 @@
 import { Component, Vue } from "vue-property-decorator";
 import { setting } from "@/store/index";
 import router from "@/router";
+import IconBase from "@/components/Icon/IconBase.vue";
+import IconAdd from "@/components/Icon/IconAdd.vue";
 
 @Component({
   name: "drawer",
-  components: {}
+  components: {
+    "icon-base": IconBase,
+    "icon-add": IconAdd
+  }
 })
 export default class Drawer extends Vue {
   get drawer(): boolean {
