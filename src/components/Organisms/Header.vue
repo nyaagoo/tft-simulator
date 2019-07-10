@@ -1,15 +1,17 @@
 <template lang="pug">
   .tft-header
     v-toolbar(app fixed clipped-left dense)
-      v-toolbar-side-icon(@click.stop="toggleDrawer()")
-      v-icon.mx-3 fab fa-youtube
+      v-btn(icon @click.stop="toggleDrawer()")
+        icon-base
+          icon-menu
       v-toolbar-title.white--text TFT Simulator
       v-spacer
       v-toolbar-items
         v-menu(v-model="menu", :close-on-content-click="false", :nudge-width="200", offset-x)
           template(v-slot:activator="{ on }")
             v-btn(dark, v-on="on")
-              v-icon settings
+              icon-base
+                icon-setting
           v-card
             v-list
               v-list-tile
@@ -35,10 +37,17 @@
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { setting, champion } from "@/store/index";
+import IconBase from "@/components/Icon/IconBase.vue";
+import IconSetting from "@/components/Icon/IconSetting.vue";
+import IconMenu from "@/components/Icon/IconMenu.vue";
 
 @Component({
   name: "tft-header",
-  components: {}
+  components: {
+    "icon-base": IconBase,
+    "icon-setting": IconSetting,
+    "icon-menu": IconMenu
+  }
 })
 export default class TFTHeader extends Vue {
   menu: boolean = false;

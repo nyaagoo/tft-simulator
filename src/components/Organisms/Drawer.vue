@@ -1,27 +1,35 @@
 <template lang="pug">
   .drawer
-    v-navigation-drawer(app fixed clipped v-model="drawer")
-        v-list(dense='')
+    v-navigation-drawer(v-model="drawer" app fixed clipped)
+        v-list(dense)
           v-list-tile(@click="transitPageChampion()")
             v-list-tile-action
-              v-icon subtitles
+              icon-base
+                icon-subtitle
             v-list-tile-content
               v-list-tile-title シナジーシミュレータ
           v-list-tile(@click="transitPageItem()")
             v-list-tile-action
-              v-icon view_module
+              icon-base
+                icon-view-module
             v-list-tile-content
               v-list-tile-title アイテムビルダー
-          // v-subheader.mt-3.grey--text.text--darken-1 Champion
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { setting } from "@/store/index";
 import router from "@/router";
+import IconBase from "@/components/Icon/IconBase.vue";
+import IconSubtitle from "@/components/Icon/IconSubtitle.vue";
+import IconViewModule from "@/components/Icon/IconViewModule.vue";
 
 @Component({
   name: "drawer",
-  components: {}
+  components: {
+    "icon-base": IconBase,
+    "icon-subtitle": IconSubtitle,
+    "icon-view-module": IconViewModule
+  }
 })
 export default class Drawer extends Vue {
   get drawer(): boolean {

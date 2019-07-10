@@ -5,11 +5,8 @@ import router from "./router";
 import store from "./store/store";
 import Vuetify from "vuetify";
 import "@/style/style.styl";
-import "material-design-icons-iconfont/dist/material-design-icons.css";
 
-Vue.use(Vuetify, {
-  iconfont: "md"
-});
+Vue.use(Vuetify, {});
 new Vue({
   router,
   store,

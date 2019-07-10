@@ -2,19 +2,28 @@
   .pick-counter
     span.mr-3 {{ pickCount }} / {{ maxCount }}
     v-btn(flat icon small outline color="info" @click="decrementMaxCount()")
-      v-icon remove
+      icon-base(color="#2196f3")
+        icon-remove
     v-btn(flat icon small outline color="info" @click="incrementMaxCount()")
-      v-icon add
+      icon-base(color="#2196f3")
+        icon-add
     v-btn(color="error" dark outline @click="resetPickChampion()") CLERA
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { champion } from "@/store/index";
 import router from "@/router";
+import IconBase from "@/components/Icon/IconBase.vue";
+import IconAdd from "@/components/Icon/IconAdd.vue";
+import IconRemove from "@/components/Icon/IconRemove.vue";
 
 @Component({
   name: "pick-counter",
-  components: {}
+  components: {
+    "icon-base": IconBase,
+    "icon-add": IconAdd,
+    "icon-remove": IconRemove
+  }
 })
 export default class PickCoutenr extends Vue {
   get pickCount(): number {
