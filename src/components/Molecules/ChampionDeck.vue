@@ -1,11 +1,8 @@
 <template lang="pug">
   .champion-deck(@click="championPick(champ)")
     .champion-img-wrapper.pointer.mb-2
-      img.champion-img(
-        :class="{ 'grayscale': !isPicked(champ.id) }"
-        :style="{ 'outline-color': `${costColor.get(champ.cost)}` }"
-        :src="champ.image"
-        :alt="champ.name")
+
+      i.icon-champion.champion-img(:class="[`icon-${champ.name.toLowerCase()}`, {'grayscale': !isPicked(champ.id)}]" :style="{ 'outline-color': `${costColor.get(champ.cost)}`}")
       .champion-origin-wrapper(v-if="visibleOrigin")
         i.icon-origin(v-for="(o, index) in originList" :class="`icon-${o.toLowerCase()}-s`")
       .champion-class-wrapper(v-if="visibleClass")
@@ -55,13 +52,13 @@ export default class ChampionDeck extends Vue {
 <style lang="stylus" scoped>
 .champion-deck
 p
-  width 60px
+  width 64px
 .champion-img
   outline-style solid
   outline-width 3px
   outline-offset -3px
-  heigth 60px
-  width 60px
+  heigth 64px
+  width 64px
 .champion-img-wrapper
   height 60px
   width 60px

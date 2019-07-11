@@ -265,7 +265,7 @@
   },
   {
     "id": 6,
-    "name": "Aurelion-Sol",
+    "name": "AurelionSol",
     "ruby": "オレリオン・ソル",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/AurelionSol.png",
     "skill": {
@@ -1508,7 +1508,7 @@
   },
   {
     "id": 31,
-    "name": "Miss-Fortune",
+    "name": "MissFortune",
     "ruby": "ミス・フォーチュン",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/MissFortune.png",
     "origin": [
