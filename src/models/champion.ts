@@ -30,9 +30,8 @@ export const costColor: Map<number, string> = new Map([
 ]);
 
 export type ChampionDetail = {
-  id: number;
+  id: string;
   name: string;
-  ruby: string;
   image: string;
   // TODO: champion.jsonにスキルデータが入力されていないものがいるため、一時的にoptionalにしている
   skill?: {
@@ -45,8 +44,8 @@ export type ChampionDetail = {
       effects: string[] | number[];
     }[];
   };
-  origin: OriginID[];
-  class: ClassID[];
+  origin: OriginID[] | string[];
+  class: ClassID[] | string[];
   cost: number;
   hp: number[];
   dps: number[];

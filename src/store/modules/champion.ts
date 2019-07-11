@@ -27,12 +27,13 @@ import {
 
 @Module({ dynamic: true, store, name: "champion", namespaced: true })
 class ChampionModule extends VuexModule {
-  // #region STATE
-  readonly championList: ChampionDetail[] = championList.map(x => ({
-    ...x,
-    origin: x.origin.map(o => o as OriginID),
-    class: x.class.map(o => o as ClassID)
-  }));
+  constructor() {
+    super(champion);
+  }
+  readonly championList: {
+    [K in keyof typeof championList]: ChampionDetail
+  } = championList;
+
   readonly originList: { [K in OriginID]: ClassOriginData } = originList;
   readonly classList: { [K in ClassID]: ClassOriginData } = classList;
 
@@ -52,6 +53,7 @@ class ChampionModule extends VuexModule {
 
   @Mutation
   public SET_FAVORITE_ORIGIN_LIST(list: string[]) {
+    // #regio
     this.favoriteOriginList = list;
   }
   @Mutation
@@ -96,21 +98,26 @@ class ChampionModule extends VuexModule {
   // #region ACTION
   @Action({ rawError: true })
   public SeparateChampionDeckOrigin() {
-    const eachOrigin = this.championList.reduce<ChampionOrigin[]>(
-      (acc, current) => {
-        current.origin.forEach(currentOrigin => {
-          const element = acc.find(p => p.origin.id === currentOrigin);
-          if (element) element.championList.push(current);
-          else
-            acc.push({
-              origin: this.originList[currentOrigin],
-              championList: [current]
-            });
-        });
-        return acc;
-      },
-      []
-    );
+    // const eachOrigin: ChampionOrigin[] =
+    for (const className of Object.keys(this.originList)) {
+      for (const champion of Object.values(this.championList)) {
+        if(champion.class.includes(className.toString()))
+        console.log("hello);
+      }
+    }
+
+    this.championList.reduce<ChampionOrigin[]>((acc, current) => {
+      current.origin.forEach(currentOrigin => {
+        const element = acc.find(p => p.origin.id === currentOrigin);
+        if (element) element.championList.push(current);
+        else
+          acc.push({
+            origin: this.originList[currentOrigin],
+            championList: [current]
+          });
+      });
+      return acc;
+    }, []);
     this.SET_CHAMPION_DECK_ORIGIN(eachOrigin);
   }
 
