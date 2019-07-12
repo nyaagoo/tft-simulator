@@ -1,8 +1,7 @@
-[
-  {
-    "id": 1,
-    "name": "Aatrox",
-    "ruby": "エイトロックス",
+{
+  "Aatrox":{
+    "id": "Aatrox",
+    "name": "エイトロックス",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Aatrox.png",
     "skill": {
       "name": "ダーキンブレード",
@@ -47,10 +46,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 2,
-    "name": "Ahri",
-    "ruby": "アーリ",
+  "Ahri":{
+    "id": "Ahri",
+    "name": "アーリ",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ahri.png",
     "skill": {
       "name": "幻惑のオーブ",
@@ -95,10 +93,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 3,
-    "name": "Akali",
-    "ruby": "アカリ",
+  "Akali":{
+    "id": "Akali",
+    "name": "アカリ",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Akali.png",
     "skill": {
       "name": "五連苦無",
@@ -143,10 +140,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 4,
-    "name": "Anivia",
-    "ruby": "アニビア",
+  "Anivia":{
+    "id": "Anivia",
+    "name": "アニビア",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Anivia.png",
     "skill": {
       "name": "ブリザード",
@@ -207,10 +203,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 5,
-    "name": "Ashe",
-    "ruby": "アッシュ",
+  "Ashe":{
+    "id": "Ashe",
+    "name": "アッシュ",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ashe.png",
     "skill": {
       "name": "クリスタルアロー",
@@ -263,10 +258,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 6,
-    "name": "Aurelion-Sol",
-    "ruby": "オレリオン・ソル",
+  "AurelionSol":{
+    "id": "AurelionSol",
+    "name": "オレリオン・ソル",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/AurelionSol.png",
     "skill": {
       "name": "星炎の息吹",
@@ -319,10 +313,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 7,
-    "name": "Blitzcrank",
-    "ruby": "ブリッツクランク",
+  "Blitzcrank":{
+    "id": "Blitzcrank",
+    "name": "ブリッツクランク",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Blitzcrank.png",
     "skill": {
       "name": "ロケットグラブ",
@@ -375,10 +368,9 @@
     "armor": 35,
     "magicRegist": 20
   },
-  {
-    "id": 8,
-    "name": "Brand",
-    "ruby": "ブランド",
+  "Brand":{
+    "id": "Brand",
+    "name": "ブランド",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Brand.png",
     "skill": {
       "name": "業火",
@@ -431,10 +423,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 9,
-    "name": "Braum",
-    "ruby": "ブラウム",
+  "Braum": {
+    "id": "Braum",
+    "name": "ブラウム",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Braum.png",
     "skill": {
       "name": "不破の盾",
@@ -487,10 +478,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 10,
-    "name": "ChoGath",
-    "ruby": "チョガス",
+  "ChoGath": {
+    "id": "ChoGath",
+    "name": "チョガス",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Chogath.png",
     "skill": {
       "name": "ラプチャー",
@@ -559,10 +549,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 11,
-    "name": "Darius",
-    "ruby": "ダリウス",
+  "Darius": {
+    "id": "Darius",
+    "name": "ダリウス",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Darius.png",
     "skill": {
       "name": "皆殺しの斧",
@@ -623,10 +612,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 12,
-    "name": "Draven",
-    "ruby": "ドレイブン",
+  "Draven":{
+    "id": "Draven",
+    "name": "ドレイブン",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Draven.png",
     "skill": {
       "name": "回転斬斧",
@@ -679,10 +667,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 13,
-    "name": "Elise",
-    "ruby": "エリス",
+  "Elise": {
+    "id": "Elise",
+    "name": "エリス",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Elise.png",
     "skill": {
       "name": "蜘蛛形態",
@@ -743,10 +730,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 14,
-    "name": "Evelynn",
-    "ruby": "イブリン",
+  "Evelynn": {
+    "id": "Evelynn",
+    "name": "イブリン",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Evelynn.png",
     "skill": {
       "name": "ラストカレス",
@@ -815,10 +801,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 15,
-    "name": "Fiora",
-    "ruby": "フィオラ",
+  "Fiora": {
+    "id": "Fiora",
+    "name": "フィオラ",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Fiora.png",
     "skill": {
       "name": "リポスト",
@@ -879,10 +864,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 16,
-    "name": "Gangplank",
-    "ruby": "ガングプランク",
+  "Gangplank": {
+    "id": "Gangplank",
+    "name": "ガングプランク",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gangplank.png",
     "skill": {
       "name": "火薬樽",
@@ -928,10 +912,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 17,
-    "name": "Garen",
-    "ruby": "ガレン",
+  "Garen": {
+    "id": "Garen",
+    "name": "ガレン",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Garen.png",
     "skill": {
       "name": "ジャッジメント",
@@ -992,10 +975,9 @@
     "armor": 35,
     "magicRegist": 20
   },
-  {
-    "id": 18,
-    "name": "Gnar",
-    "ruby": "ナー",
+  "Gnar": {
+    "id": "Gnar",
+    "name": "ナー",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gnar.png",
     "skill": {
       "name": "ナー！",
@@ -1081,10 +1063,9 @@
     "armor": 35,
     "magicRegist": 20
   },
-  {
-    "id": 19,
-    "name": "Graves",
-    "ruby": "グレイブス",
+  "Graves": {
+    "id": "Graves",
+    "name": "グレイブス",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Graves.png",
     "skill": {
       "name": "散弾（自動効果）",
@@ -1129,10 +1110,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 20,
-    "name": "Karthus",
-    "ruby": "カーサス",
+  "Karthus": {
+    "id": "Karthus",
+    "name": "カーサス",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Karthus.png",
     "skill": {
       "name": "鎮魂歌",
@@ -1185,10 +1165,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 21,
-    "name": "Kassadin",
-    "ruby": "カサディン",
+  "Kassadin": {
+    "id": "Kassadin",
+    "name": "カサディン",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kassadin.png",
     "origin": [
       "Void"
@@ -1217,10 +1196,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 22,
-    "name": "Katarina",
-    "ruby": "カタリナ",
+  "Katarina": {
+    "id": "Katarina",
+    "name": "カタリナ",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Katarina.png",
     "origin": [
       "Imperial"
@@ -1249,10 +1227,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 23,
-    "name": "Kayle",
-    "ruby": "ケイル",
+  "Kayle": {
+    "id": "Kayle",
+    "name": "ケイル",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kayle.png",
     "origin": [
       "Noble"
@@ -1281,10 +1258,9 @@
     "armor": 35,
     "magicRegist": 20
   },
-  {
-    "id": 24,
-    "name": "Kennen",
-    "ruby": "ケネン",
+  "Kennen": {
+    "id": "Kennen",
+    "name": "ケネン",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kennen.png",
     "origin": [
       "Ninja",
@@ -1314,10 +1290,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 25,
-    "name": "KhaZix",
-    "ruby": "カジックス",
+  "KhaZix": {
+    "id": "KhaZix",
+    "name": "カジックス",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Khazix.png",
     "origin": [
       "Void"
@@ -1346,10 +1321,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 26,
-    "name": "Kindred",
-    "ruby": "キンドレッド",
+  "Kindred": {
+    "id": "Kindred",
+    "name": "キンドレッド",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kindred.png",
     "origin": [
       "Phantom"
@@ -1378,10 +1352,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 27,
-    "name": "Leona",
-    "ruby": "レオナ",
+  "Leona": {
+    "id": "Leona",
+    "name": "レオナ",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Leona.png",
     "origin": [
       "Noble"
@@ -1410,10 +1383,9 @@
     "armor": 55,
     "magicRegist": 20
   },
-  {
-    "id": 28,
-    "name": "Lissandra",
-    "ruby": "リサンドラ",
+  "Lissandra": {
+    "id": "Lissandra",
+    "name": "リサンドラ",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lissandra.png",
     "origin": [
       "Glacial"
@@ -1442,10 +1414,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 29,
-    "name": "Lucian",
-    "ruby": "ルシアン",
+  "Lucian": {
+    "id": "Lucian",
+    "name": "ルシアン",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lucian.png",
     "origin": [
       "Noble"
@@ -1474,10 +1445,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 30,
-    "name": "Lulu",
-    "ruby": "ルル",
+  "Lulu": {
+    "id": "Lulu",
+    "name": "ルル",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lulu.png",
     "origin": [
       "Yordle"
@@ -1506,10 +1476,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 31,
-    "name": "Miss-Fortune",
-    "ruby": "ミス・フォーチュン",
+  "MissFortune": {
+    "id": "MissFortune",
+    "name": "ミス・フォーチュン",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/MissFortune.png",
     "origin": [
       "Pirate"
@@ -1538,10 +1507,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 32,
-    "name": "Mordekaiser",
-    "ruby": "モルデカイザー",
+  "Mordekaiser": {
+    "id": "Mordekaiser",
+    "name": "モルデカイザー",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Mordekaiser.png",
     "origin": [
       "Phantom"
@@ -1570,10 +1538,9 @@
     "armor": 35,
     "magicRegist": 20
   },
-  {
-    "id": 33,
-    "name": "Morgana",
-    "ruby": "モルガナ",
+  "Morgana": {
+    "id": "Morgana",
+    "name": "モルガナ",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Morgana.png",
     "origin": [
       "Demon"
@@ -1602,10 +1569,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 34,
-    "name": "Nidalee",
-    "ruby": "ニダリー",
+  "Nidalee": {
+    "id": "Nidalee",
+    "name": "ニダリー",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Nidalee.png",
     "origin": [
       "Wild"
@@ -1634,10 +1600,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 35,
-    "name": "Poppy",
-    "ruby": "ポッピー",
+  "Poppy": {
+    "id": "Poppy",
+    "name": "ポッピー",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Poppy.png",
     "origin": [
       "Yordle"
@@ -1666,10 +1631,9 @@
     "armor": 30,
     "magicRegist": 20
   },
-  {
-    "id": 36,
-    "name": "Pyke",
-    "ruby": "パイク",
+  "Pyke": {
+    "id": "Pyke",
+    "name": "パイク",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Pyke.png",
     "origin": [
       "Pirate"
@@ -1698,10 +1662,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 37,
-    "name": "RekSai",
-    "ruby": "レクサイ",
+  "RekSai": {
+    "id": "RekSai",
+    "name": "レクサイ",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/RekSai.png",
     "origin": [
       "Void"
@@ -1730,10 +1693,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 38,
-    "name": "Rengar",
-    "ruby": "レンガー",
+  "Rengar": {
+    "id": "Rengar",
+    "name": "レンガー",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Rengar.png",
     "origin": [
       "Wild"
@@ -1762,10 +1724,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 39,
-    "name": "Sejuani",
-    "ruby": "セジュアニ",
+  "Sejuani": {
+    "id": "Sejuani",
+    "name": "セジュアニ",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Sejuani.png",
     "origin": [
       "Glacial"
@@ -1794,10 +1755,9 @@
     "armor": 35,
     "magicRegist": 25
   },
-  {
-    "id": 40,
-    "name": "Shen",
-    "ruby": "シェン",
+  "Shen": {
+    "id": "Shen",
+    "name": "シェン",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shen.png",
     "origin": [
       "Ninja"
@@ -1826,10 +1786,9 @@
     "armor": 30,
     "magicRegist": 20
   },
-  {
-    "id": 41,
-    "name": "Shyvana",
-    "ruby": "シヴァーナ",
+  "Shyvana": {
+    "id": "Shyvana",
+    "name": "シヴァーナ",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shyvana.png",
     "origin": [
       "Dragon"
@@ -1858,10 +1817,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 42,
-    "name": "Swain",
-    "ruby": "スウェイン",
+  "Swain": {
+    "id": "Swain",
+    "name": "スウェイン",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Swain.png",
     "origin": [
       "Imperial",
@@ -1891,10 +1849,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 43,
-    "name": "Tristana",
-    "ruby": "トリスターナ",
+  "Tristana": {
+    "id": "Tristana",
+    "name": "トリスターナ",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Tristana.png",
     "origin": [
       "Yordle"
@@ -1923,10 +1880,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 44,
-    "name": "Varus",
-    "ruby": "ヴァルス",
+  "Varus": {
+    "id": "Varus",
+    "name": "ヴァルス",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Varus.png",
     "origin": [
       "Demon"
@@ -1955,10 +1911,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 45,
-    "name": "Vayne",
-    "ruby": "ヴェイン",
+  "Vayne": {
+    "id": "Vayne",
+    "name": "ヴェイン",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Vayne.png",
     "origin": [
       "Noble"
@@ -1987,10 +1942,9 @@
     "armor": 25,
     "magicRegist": 20
   },
-  {
-    "id": 46,
-    "name": "Veigar",
-    "ruby": "ヴェイガー",
+  "Veigar": {
+    "id": "Veigar",
+    "name": "ヴェイガー",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Veigar.png",
     "origin": [
       "Yordle"
@@ -2019,10 +1973,9 @@
     "armor": 20,
     "magicRegist": 20
   },
-  {
-    "id": 47,
-    "name": "Volibear",
-    "ruby": "ボリベア",
+  "Volibear": {
+    "id": "Volibear",
+    "name": "ボリベア",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Volibear.png",
     "origin": [
       "Glacial"
@@ -2051,10 +2004,9 @@
     "armor": 35,
     "magicRegist": 20
   },
-  {
-    "id": 48,
-    "name": "Warwick",
-    "ruby": "ワーウィック",
+  "Warwick": {
+    "id": "Warwick",
+    "name": "ワーウィック",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Warwick.png",
     "origin": [
       "Wild"
@@ -2083,10 +2035,9 @@
     "armor": 30,
     "magicRegist": 20
   },
-  {
-    "id": 49,
-    "name": "Yasuo",
-    "ruby": "ヤスオ",
+  "Yasuo": {
+    "id": "Yasuo",
+    "name": "ヤスオ",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Yasuo.png",
     "origin": [
       "Exile"
@@ -2115,10 +2066,9 @@
     "armor": 35,
     "magicRegist": 20
   },
-  {
-    "id": 50,
-    "name": "Zed",
-    "ruby": "ゼド",
+  "Zed": {
+    "id": "Zed",
+    "name": "ゼド",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Zed.png",
     "origin": [
       "Ninja"
@@ -2147,4 +2097,4 @@
     "armor": 25,
     "magicRegist": 20
   }
-]
+}

@@ -17,24 +17,16 @@ import {
   Mutation,
   VuexModule
 } from "vuex-module-decorators";
-import {
-  ClassID,
-  ClassOriginData,
-  OriginID,
-  OriginCount,
-  ClassCount
-} from "@/models/type";
+import { ClassOriginData, OriginCount, ClassCount } from "@/models/type";
 
+type championId = keyof typeof championList;
+type originId = keyof typeof originList;
+type classId = keyof typeof classList;
 @Module({ dynamic: true, store, name: "champion", namespaced: true })
 class ChampionModule extends VuexModule {
-  // #region STATE
-  readonly championList: ChampionDetail[] = championList.map(x => ({
-    ...x,
-    origin: x.origin.map(o => o as OriginID),
-    class: x.class.map(o => o as ClassID)
-  }));
-  readonly originList: { [K in OriginID]: ClassOriginData } = originList;
-  readonly classList: { [K in ClassID]: ClassOriginData } = classList;
+  readonly championList = championList;
+  readonly originList = originList;
+  readonly classList = classList;
 
   favoriteOriginList: string[] = [];
   favoriteClassList: string[] = [];
@@ -52,6 +44,7 @@ class ChampionModule extends VuexModule {
 
   @Mutation
   public SET_FAVORITE_ORIGIN_LIST(list: string[]) {
+    // #regio
     this.favoriteOriginList = list;
   }
   @Mutation
@@ -96,41 +89,51 @@ class ChampionModule extends VuexModule {
   // #region ACTION
   @Action({ rawError: true })
   public SeparateChampionDeckOrigin() {
-    const eachOrigin = this.championList.reduce<ChampionOrigin[]>(
-      (acc, current) => {
-        current.origin.forEach(currentOrigin => {
-          const element = acc.find(p => p.origin.id === currentOrigin);
-          if (element) element.championList.push(current);
-          else
-            acc.push({
-              origin: this.originList[currentOrigin],
-              championList: [current]
+    const eachOrigin: ChampionOrigin[] = [];
+    for (const originName of Object.keys(this.originList)) {
+      for (const champion of Object.values(this.championList)) {
+        if (champion.origin.includes(originName.toString())) {
+          if (
+            eachOrigin.some(
+              x => x.origin === this.originList[originName as originId]
+            )
+          ) {
+            eachOrigin
+              .find(x => x.origin === this.originList[originName as originId])!
+              .championList.push(champion);
+          } else
+            eachOrigin.push({
+              origin: this.originList[originName as originId],
+              championList: [champion]
             });
-        });
-        return acc;
-      },
-      []
-    );
+        }
+      }
+    }
     this.SET_CHAMPION_DECK_ORIGIN(eachOrigin);
   }
 
   @Action({ rawError: true })
   public SeparateChampionDeckClass() {
-    const eachClass = this.championList.reduce<ChampionClass[]>(
-      (acc, current) => {
-        current.class.forEach(currentClass => {
-          const element = acc.find(p => p.class.id === currentClass);
-          if (element) element.championList.push(current);
-          else
-            acc.push({
-              class: this.classList[currentClass],
-              championList: [current]
+    const eachClass: ChampionClass[] = [];
+    for (const className of Object.keys(this.classList)) {
+      for (const champion of Object.values(this.championList)) {
+        if (champion.class.includes(className.toString())) {
+          if (
+            eachClass.some(
+              x => x.class === this.classList[className as classId]
+            )
+          ) {
+            eachClass
+              .find(x => x.class === this.classList[className as classId])!
+              .championList.push(champion);
+          } else
+            eachClass.push({
+              class: this.classList[className as classId],
+              championList: [champion]
             });
-        });
-        return acc;
-      },
-      []
-    );
+        }
+      }
+    }
     this.SET_CHAMPION_DECK_CLASS(eachClass);
   }
 
@@ -180,7 +183,7 @@ class ChampionModule extends VuexModule {
 
     const activeSynergy: Synergy[] = [];
     for (const originItem of originCount) {
-      const originSynegy = this.originList[originItem.origin as OriginID];
+      const originSynegy = this.originList[originItem.origin as originId];
 
       const activeSynergyBonus = originSynegy.synergy.reduce<
         | {
@@ -206,6 +209,7 @@ class ChampionModule extends VuexModule {
 
   @Action({ rawError: true })
   public CalculateAndSetClassSynergy() {
+    const aa = Object.values(this.championList).find(x => x.name === "日本");
     const ClassCount: ClassCount[] = this.championPicked.reduce<ClassCount[]>(
       (acc, current) => {
         current.class.forEach(classItem => {
@@ -224,7 +228,7 @@ class ChampionModule extends VuexModule {
 
     const activeSynergy: Synergy[] = [];
     for (const classItem of ClassCount) {
-      const classSynegy = this.classList[classItem.class as ClassID];
+      const classSynegy = this.classList[classItem.class as classId];
 
       const activeSynergyBonus = classSynegy.synergy.reduce<
         | {
