@@ -1,8 +1,7 @@
 <template lang="pug">
   .champion-deck(@click="championPick(champ)")
     .champion-img-wrapper.pointer.mb-2
-
-      i.icon-champion.champion-img(:class="[`icon-${champ.name.toLowerCase()}`, {'grayscale': !isPicked(champ.id)}]" :style="{ 'outline-color': `${costColor.get(champ.cost)}`}")
+      i.icon-champion.champion-img(:class="[`icon-${champ.id.toLowerCase()}`, {'grayscale': !isPicked(champ.id)}]" :style="{ 'outline-color': `${costColor.get(champ.cost)}`}")
       .champion-origin-wrapper(v-if="visibleOrigin")
         i.icon-origin(v-for="(o, index) in originList" :class="`icon-${o.toLowerCase()}-s`")
       .champion-class-wrapper(v-if="visibleClass")
@@ -38,7 +37,7 @@ export default class ChampionDeck extends Vue {
   championPick(c: Champion) {
     champion.ToggleChampionPicked(c);
   }
-  isPicked(id: number): boolean {
+  isPicked(id: string): boolean {
     return champion.championPicked.some(picked => picked.id === id);
   }
   get originAllList() {

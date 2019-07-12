@@ -1,4 +1,4 @@
-import { OriginID, ClassID, ClassOriginData } from "./type";
+import { ClassOriginData } from "./type";
 
 export type ChampionOrigin = {
   origin: ClassOriginData;
@@ -44,8 +44,8 @@ export type ChampionDetail = {
       effects: string[] | number[];
     }[];
   };
-  origin: OriginID[] | string[];
-  class: ClassID[] | string[];
+  origin: string[];
+  class: string[];
   cost: number;
   hp: number[];
   dps: number[];
