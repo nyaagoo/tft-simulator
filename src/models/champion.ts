@@ -56,4 +56,20 @@ export type ChampionDetail = {
   magicRegist: number;
 };
 
+export type ChampionLevelStatus = {
+  id: string;
+  name: string;
+  image: string;
+  origin: string[];
+  class: string[];
+  cost: number;
+  hp: number;
+  dps: number;
+  attackSpeed: number;
+  damage: number;
+  range: number;
+  armor: number;
+  magicRegist: number;
+};
+
 export type Champion = Omit<ChampionDetail, "ruby" | "skill">;

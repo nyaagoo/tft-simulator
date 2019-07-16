@@ -14,6 +14,12 @@
                 icon-view-module
             v-list-tile-content
               v-list-tile-title アイテムビルダー
+          v-list-tile(@click="transitChampionTable()")
+            v-list-tile-action
+              icon-base
+                icon-view-module
+            v-list-tile-content
+              v-list-tile-title チャンピオンデータ
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -44,6 +50,9 @@ export default class Drawer extends Vue {
   }
   transitPageItem() {
     router.push("/item");
+  }
+  transitChampionTable() {
+    router.push("/table");
   }
 }
 </script>
