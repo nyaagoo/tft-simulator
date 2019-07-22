@@ -6,19 +6,10 @@
       v-card.champion-table-card
         .search-option-container
           .table-level-search
-            .level-select
-              span.pointer( @click="selectLevel(1)")
-                icon-base(width=36 height=36 color="#8f8" iconName="level1")
-                  icon-star(v-if="selectedLevel >= 1")
-                  icon-star-border(v-else)
-              span.pointer( @click="selectLevel(2)")
-                icon-base(width=36 height=36 color="#8f8" iconName="level2" @click="selectLevel(2)")
-                  icon-star(v-if="selectedLevel >= 2")
-                  icon-star-border(v-else)
-              span.pointer( @click="selectLevel(3)")
-                icon-base(width=36 height=36 color="#8f8" iconName="level3" @click="selectLevel(3)")
-                  icon-star(v-if="selectedLevel >= 3")
-                  icon-star-border(v-else)
+            .level-select.text-xs-center
+              v-rating(v-model='rating' :length="3")
+                template(v-slot:item='props')
+                  v-icon(:color="props.isFilled ? genColor(props.index) : 'grey lighten-1'", large, @click='props.click') star_rate
             .search-wrapper
               v-text-field(v-model="search", label='Search', single-line, hide-details)
           .origin-class-select
@@ -32,40 +23,25 @@
               .class-select
                 .class-item.pointer(v-for="classItem in classList" :key="classItem.id" :class="{'class-item-selected': isClassSelected(classItem.id)}" @click="toggleSelectClass(classItem.id)")
                   i.icon-class(:class="`icon-${classItem.id.toLowerCase()}`")
-        table.champion-table.ma-3
-          thead
-            tr.table-row
-              td
-              td
-              td オリジン
-              td クラス
-              td コスト
-              td HP
-              td DPS
-              td ダメージ
-              td 攻撃速度
-              td 物理防御
-              td 魔法防御
-              td 射程
-          tbody
-            tr.table-row(v-for="champion in championList" :key="champion.id")
-              td.data-img
-                img.data-img.my-1(:src="champion.image" :alt="champion.id")
-              td.data-name {{ champion.name }}
-              td.data-origin
-                span(v-for="originId in champion.origin" :key="originId")
-                  i.icon-origin(:class="[`icon-${originId.toLowerCase()}`]")
-              td.data-class
-                span(v-for="classId in champion.class" :key="classId")
-                  i.icon-class(:class="[`icon-${classId.toLowerCase()}`]")
-              td.data-cost ${{ champion.cost }}
-              td.data-hp {{ champion.hp }}
-              td.data-dps {{ champion.dps }}
-              td.data-dmg {{ champion.damage }}
-              td.data-as {{ champion.attackSpeed }}
-              td.data-armor {{ champion.armor }}
-              td.data-mr {{ champion.magicRegist }}
-              td.data-range {{ champion.range }}
+        v-data-table.elevation-1(:headers='headers', :items="championList")
+          template(v-slot:items='props')
+            td.data-imag
+              img.data-img.my-1(:src="props.item.image" :alt="props.item.id")
+            td.data-origin
+              span(v-for="originId in props.item.origin" :key="originId")
+                i.icon-origin(:class="[`icon-${originId.toLowerCase()}`]")
+            td.data-class
+              span(v-for="classId in props.item.class" :key="classId")
+                i.icon-class(:class="[`icon-${classId.toLowerCase()}`]")
+            td {{ props.item.cost }}
+            td {{ props.item.hp }}
+            td {{ props.item.dps }}
+            td {{ props.item.damage }}
+            td {{ props.item.attackSpeed }}
+            td {{ props.item.armor }}
+            td {{ props.item.magicRegist }}
+            td {{ props.item.range }}
+
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -86,7 +62,30 @@ import IconStarBorder from "@/components/Icon/IconStarBorder.vue";
   }
 })
 export default class ChampionDataTable extends Vue {
-  rating: number = 3;
+  rating: number = 1;
+  colors: string[] = ["green", "purple", "orange"];
+
+  headers = [
+    {
+      text: "",
+      align: "left",
+      sortable: false,
+      value: "name"
+    },
+    { text: "オリジン", value: "origin" },
+    { text: "クラス", value: "class" },
+    { text: "コスト", value: "cost" },
+    { text: "HP", value: "hp" },
+    { text: "DPS", value: "dps" },
+    { text: "ダメージ", value: "damage" },
+    { text: "攻撃速度", value: "attackSpeed" },
+    { text: "物理防御", value: "armor" },
+    { text: "魔法防御", value: "magicRegist" },
+    { text: "射程", value: "range" }
+  ];
+  genColor(i: number): string {
+    return this.colors[i];
+  }
 
   get search(): string {
     return championTable.searchWord;
