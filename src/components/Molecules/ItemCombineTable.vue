@@ -23,7 +23,6 @@ import router from "@/router";
 import { item } from "@/store/index";
 import {
   BuildItem,
-  BasicItemName,
   BasicItem,
   BuildFromBasicItem
 } from "@/models/item";
@@ -40,13 +39,6 @@ export default class CombineTable extends Vue {
 
   get buildItemEachBasicItem(): BuildFromBasicItem[] {
     return item.buildItemEachBasicItem;
-  }
-
-  buildItem(row: number, column: number): string {
-    const item2 = item.buildItemList.find(
-      x => JSON.stringify(x.recipe) === JSON.stringify([row, column])
-    );
-    return item2!.name;
   }
 
   ToggleCheckedItemRow(id: number) {

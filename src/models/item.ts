@@ -1,26 +1,17 @@
-export type BasicItemName =
-  | "BFソード"
-  | "リカーブボウ"
-  | "ムダニデカイロッド"
-  | "女神の涙"
-  | "チェインベスト"
-  | "ジャイアントベルト"
-  | "ネガトロンクローク"
-  | "ヘラ";
-
 export type BasicItem = {
-  id: number;
+  number: number;
+  id: string;
   name: string;
   description: string;
   img: string;
 };
 
 export type BuildItem = {
-  id: number;
+  id: string;
   name: string;
   description: string;
   img: string;
-  recipe: number[];
+  recipe: string[];
 };
 
 export type BuildFromBasicItem = {
