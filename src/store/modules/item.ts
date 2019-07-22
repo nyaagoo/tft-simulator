@@ -16,8 +16,8 @@ export type BuildItemIdList = keyof typeof buildItemList;
 @Module({ dynamic: true, store, name: "item", namespaced: true })
 class ItemModule extends VuexModule {
   // #region STATE
-  readonly basicItemList: {[K in BasicItemIdList]: BasicItem} = basicItemList;
-  readonly buildItemList: {[K in BuildItemIdList]: BuildItem} = buildItemList;
+  readonly basicItemList: { [K in BasicItemIdList]: BasicItem } = basicItemList;
+  readonly buildItemList: { [K in BuildItemIdList]: BuildItem } = buildItemList;
 
   buildItemEachBasicItem: BuildFromBasicItem[] = [];
   // #endregion
@@ -33,9 +33,9 @@ class ItemModule extends VuexModule {
   // #region ACTION
   @Action({ rawError: true })
   public separateBuildItem() {
-    const buildItemEachBasicItem: BuildFromBasicItem[] = Object.values(this.buildItemList).reduce<
-      BuildFromBasicItem[]
-    >((acc, current) => {
+    const buildItemEachBasicItem: BuildFromBasicItem[] = Object.values(
+      this.buildItemList
+    ).reduce<BuildFromBasicItem[]>((acc, current) => {
       current.recipe.forEach(recipeItemId => {
         const basicItem = acc.find(x => x.basicItem.id === recipeItemId);
         if (basicItem) {

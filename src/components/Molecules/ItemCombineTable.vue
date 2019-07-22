@@ -21,11 +21,7 @@
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { item } from "@/store/index";
-import {
-  BuildItem,
-  BasicItem,
-  BuildFromBasicItem
-} from "@/models/item";
+import { BuildItem, BasicItem, BuildFromBasicItem } from "@/models/item";
 
 @Component({
   name: "combine-table",
