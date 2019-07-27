@@ -1,7 +1,8 @@
 const path = require("path");
 const SpritesmithPlugin = require("webpack-spritesmith");
-const templateFunction = data => {
-  const shared = '.icon-A\n  background-image url("/I")\n  display inline-block'
+const templateFunctionCurry = sizeSettingList => data => {
+  let stringBuilder = "";
+  stringBuilder = '.icon-A\n  background-image url("/I")\n  display inline-block\n'
     .replace(
       "A",
       data.sprites[0].image
@@ -13,64 +14,37 @@ const templateFunction = data => {
     .replace("I", data.sprites[0].image);
   const spriteHeight = parseInt(data.spritesheet.px.height);
   const spriteWidth = parseInt(data.spritesheet.px.width);
-  const scaleSmall = 0.5;
-  const perSprite = data.sprites
+  stringBuilder += data.sprites
     .map(sprite => {
-      return (
-        ".icon-N\n  width Wpx\n  height Hpx\n  background-position Xpx Ypx"
-          .replace("N", sprite.name.toLowerCase())
-          .replace("W", sprite.width)
-          .replace("H", sprite.height)
-          .replace("X", sprite.offset_x)
-          .replace("Y", sprite.offset_y) +
-        "\n.icon-N-s\n  width Wpx\n  height Hpx\n  background-position Xpx Ypx\n  background-size: Apx Bpx;"
-          .replace("N", sprite.name.toLowerCase())
-          .replace("W", sprite.width * scaleSmall)
-          .replace("H", sprite.height * scaleSmall)
-          .replace("X", sprite.offset_x * scaleSmall)
-          .replace("Y", sprite.offset_y * scaleSmall)
-          .replace("A", spriteWidth * scaleSmall)
-          .replace("B", spriteHeight * scaleSmall)
-      );
+      return ".icon-N\n  width Wpx\n  height Hpx\n  background-position Xpx Ypx\n"
+        .replace("N", sprite.name.toLowerCase())
+        .replace("W", sprite.width)
+        .replace("H", sprite.height)
+        .replace("X", sprite.offset_x)
+        .replace("Y", sprite.offset_y);
     })
-    .join("\n");
-  return shared + "\n" + perSprite;
-};
-const templateFunction2 = data => {
-  const shared = '.icon-A\n  background-image url("/I")\n  display inline-block'
-    .replace(
-      "A",
-      data.sprites[0].image
-        .split("/")
-        .pop()
-        .split("-")
-        .shift()
-    )
-    .replace("I", data.sprites[0].image);
-  const spriteHeight = parseInt(data.spritesheet.px.height);
-  const spriteWidth = parseInt(data.spritesheet.px.width);
-  const scaleSmall = 3 / 4;
-  const perSprite = data.sprites
-    .map(sprite => {
-      return (
-        ".icon-N\n  width Wpx\n  height Hpx\n  background-position Xpx Ypx"
+    .join("");
+
+  for (const setting of sizeSettingList) {
+    const perSprite = data.sprites
+      .map(sprite => {
+        const scaledHeight = Number(setting.size) / sprite.height;
+        const scaleWidth = Number(setting.size) / sprite.width;
+        return ".icon-N-C\n  width Wpx\n  height Hpx\n  background-position Xpx Ypx\n  background-size: Apx Bpx"
           .replace("N", sprite.name.toLowerCase())
-          .replace("W", sprite.width)
-          .replace("H", sprite.height)
-          .replace("X", sprite.offset_x)
-          .replace("Y", sprite.offset_y) +
-        "\n.icon-N-s\n  width Wpx\n  height Hpx\n  background-position Xpx Ypx\n  background-size: Apx Bpx;"
-          .replace("N", sprite.name.toLowerCase())
-          .replace("W", sprite.width * scaleSmall)
-          .replace("H", sprite.height * scaleSmall)
-          .replace("X", sprite.offset_x * scaleSmall)
-          .replace("Y", sprite.offset_y * scaleSmall)
-          .replace("A", spriteWidth * scaleSmall)
-          .replace("B", spriteHeight * scaleSmall)
-      );
-    })
-    .join("\n");
-  return shared + "\n" + perSprite;
+          .replace("W", sprite.width * scaleWidth)
+          .replace("H", sprite.height * scaledHeight)
+          .replace("X", sprite.offset_x * scaleWidth)
+          .replace("Y", sprite.offset_y * scaledHeight)
+          .replace("A", spriteWidth * scaleWidth)
+          .replace("B", spriteHeight * scaledHeight)
+          .replace("C", setting.suffix);
+      })
+      .join("\n");
+    stringBuilder += "\n" + perSprite;
+  }
+
+  return stringBuilder;
 };
 module.exports = {
   configureWebpack: {
@@ -81,7 +55,9 @@ module.exports = {
           glob: "*.png"
         },
         customTemplates: {
-          function_based_template: templateFunction
+          function_based_template: templateFunctionCurry([
+            { size: 16, suffix: "s" }
+          ])
         },
         target: {
           image: path.resolve(__dirname, "public/img/class-sprite.png"),
@@ -102,7 +78,9 @@ module.exports = {
           glob: "*.png"
         },
         customTemplates: {
-          function_based_template: templateFunction
+          function_based_template: templateFunctionCurry([
+            { size: 16, suffix: "s" }
+          ])
         },
         target: {
           image: path.resolve(__dirname, "public/img/origin-sprite.png"),
