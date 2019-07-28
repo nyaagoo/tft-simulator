@@ -1,25 +1,25 @@
 <template lang="pug">
   .drawer
     v-navigation-drawer(v-model="drawer" app fixed clipped)
-        v-list(dense)
-          v-list-tile(@click="transitPageChampion()")
-            v-list-tile-action
-              icon-base
+        v-list(rounded)
+          v-list-item(@click="transitPageChampion()")
+            v-list-item-icon.mr-3
+              icon-base(width=28 height=28)
                 icon-subtitle
-            v-list-tile-content
-              v-list-tile-title シナジーシミュレータ
-          v-list-tile(@click="transitPageItem()")
-            v-list-tile-action
-              icon-base
+            v-list-item-content
+              v-list-item-title シナジーシミュレータ
+          v-list-item(@click="transitPageItem()")
+            v-list-item-icon.mr-3
+              icon-base(width=28 height=28)
                 icon-view-module
-            v-list-tile-content
-              v-list-tile-title アイテムビルダー
-          v-list-tile(@click="transitChampionTable()")
-            v-list-tile-action
-              icon-base
+            v-list-item-content
+              v-list-item-title アイテムビルダー
+          v-list-item(@click="transitChampionTable()")
+            v-list-item-icon.mr-3
+              icon-base(width=28 height=28)
                 icon-view-module
-            v-list-tile-content
-              v-list-tile-title チャンピオンデータ
+            v-list-item-content
+              v-list-item-title チャンピオンデータ
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";

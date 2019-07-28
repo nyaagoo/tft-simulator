@@ -1,6 +1,6 @@
 <template lang="pug">
   .tft-header
-    v-toolbar(app fixed clipped-left dense)
+    v-app-bar(app dark fixed clipped-left dense)
       v-btn(icon @click.stop="toggleDrawer()")
         icon-base
           icon-menu
@@ -30,8 +30,8 @@
                 v-list-tile-title Cost
               v-list-tile
                 v-subheader ソート
-              v-btn(color='primary' flat outline @click="sortChampionCost()") Cost
-              v-btn(color='primary' flat outline @click="sortChampionName()") Name
+              v-btn(color='primary' flat outlined @click="sortChampionCost()") Cost
+              v-btn(color='primary' flat outlined @click="sortChampionName()") Name
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";

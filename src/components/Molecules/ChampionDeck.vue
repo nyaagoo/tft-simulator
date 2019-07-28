@@ -8,7 +8,7 @@
         i.icon-class(v-for="(c, index) in classList" :class="`icon-${c.toLowerCase()}-s`")
       .champion-cost-wrapper(v-if="visibleCost")
         span.champion-cost ${{ champ.cost }}
-    p.ma-0.text-truncate.name {{ champ.ruby }}
+    p.ma-0.text-truncate.name {{ champ.name }}
 </template>
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";

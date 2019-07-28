@@ -23,24 +23,18 @@
               .class-select
                 .class-item.pointer(v-for="classItem in classList" :key="classItem.id" :class="{'class-item-selected': isClassSelected(classItem.id)}" @click="toggleSelectClass(classItem.id)")
                   i.icon-class(:class="`icon-${classItem.id.toLowerCase()}`")
-        v-data-table.elevation-1(:headers='headers', :items="championList")
-          template(v-slot:items='props')
-            td.data-imag
-              img.data-img.my-1(:src="props.item.image" :alt="props.item.id")
-            td.data-origin
-              span(v-for="originId in props.item.origin" :key="originId")
+        v-data-table.elevation-1(:headers='headers', :items="championList" multi-sort)
+          template(v-slot:item.image="{ item }")
+            .data-imag
+              img.data-img.my-1(:src="item.image" :alt="item.id")
+          template(v-slot:item.origin="{ item }")
+            .data-origin
+              span(v-for="originId in item.origin" :key="originId")
                 i.icon-origin(:class="[`icon-${originId.toLowerCase()}`]")
-            td.data-class
-              span(v-for="classId in props.item.class" :key="classId")
+          template(v-slot:item.class="{ item }")
+            .data-class
+              span(v-for="classId in item.class" :key="classId")
                 i.icon-class(:class="[`icon-${classId.toLowerCase()}`]")
-            td {{ props.item.cost }}
-            td {{ props.item.hp }}
-            td {{ props.item.dps }}
-            td {{ props.item.damage }}
-            td {{ props.item.attackSpeed }}
-            td {{ props.item.armor }}
-            td {{ props.item.magicRegist }}
-            td {{ props.item.range }}
 
 </template>
 <script lang="ts">
@@ -66,6 +60,12 @@ export default class ChampionDataTable extends Vue {
   colors: string[] = ["green", "purple", "orange"];
 
   headers = [
+    {
+      text: "",
+      align: "left",
+      sortable: false,
+      value: "image"
+    },
     {
       text: "",
       align: "left",
