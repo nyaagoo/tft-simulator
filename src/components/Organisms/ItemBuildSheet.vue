@@ -19,9 +19,13 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import { BuildItem, BasicItem, BuildFromBasicItem } from "@/models/item";
+import {
+  BuildItem,
+  BasicItem,
+  BuildFromBasicItem,
+  BasicItemIdList
+} from "@/models/item";
 import { item } from "@/store/index";
-import { BasicItemIdList } from "../../store/modules/item";
 
 @Component({
   name: "item-build-sheet",

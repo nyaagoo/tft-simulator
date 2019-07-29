@@ -1,3 +1,4 @@
+import { BuildItemIdList, BasicItemIdList } from "./../../models/item";
 import basicItemList from "@/assets/json/basicItems.json";
 import buildItemList from "@/assets/json/buildItems.json";
 import {
@@ -10,15 +11,13 @@ import {
 import store from "@/store/store";
 import { BasicItem, BuildItem, BuildFromBasicItem } from "@/models/item";
 
-export type BasicItemIdList = keyof typeof basicItemList;
-export type BuildItemIdList = keyof typeof buildItemList;
-
 @Module({ dynamic: true, store, name: "item", namespaced: true })
 class ItemModule extends VuexModule {
   // #region STATE
   readonly basicItemList: { [K in BasicItemIdList]: BasicItem } = basicItemList;
   readonly buildItemList: { [K in BuildItemIdList]: BuildItem } = buildItemList;
 
+  itemPool: BasicItem[] = [];
   buildItemEachBasicItem: BuildFromBasicItem[] = [];
   // #endregion
 
@@ -26,6 +25,11 @@ class ItemModule extends VuexModule {
   @Mutation
   public SET_BUILD_ITEM_EACH_BASIC_ITEM(list: BuildFromBasicItem[]) {
     this.buildItemEachBasicItem = list;
+  }
+
+  @Mutation
+  public SET_ITEM_POOL(basicItemList: BasicItem[]) {
+    this.itemPool = basicItemList;
   }
 
   // #endregion
@@ -67,11 +71,19 @@ class ItemModule extends VuexModule {
       else if (pre.basicItem.id < cur.basicItem.id) return -1;
       return 0;
     });
-
     this.SET_BUILD_ITEM_EACH_BASIC_ITEM(buildItemEachBasicItem);
+  }
 
-    // eslint-disable-next-line no-console
-    console.log(this.buildItemEachBasicItem);
+  @Action({ rawError: true })
+  public addItemPool(basicItem: BasicItem) {
+    this.SET_ITEM_POOL([...this.itemPool, basicItem]);
+  }
+
+  @Action({ rawError: true })
+  public removeItemPool(basicItem: BasicItem) {
+    const itemPool2 = [...this.itemPool];
+    itemPool2.splice(itemPool2.findIndex(x => x === basicItem), 1);
+    this.SET_ITEM_POOL(itemPool2);
   }
 
   // #endregion

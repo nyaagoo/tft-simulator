@@ -1,18 +1,13 @@
 <template lang="pug">
   .combine-table
     .conbine-table-description
-      .first-row-item-check.mt-3.mx-0
-        span.hold-item-title 所持アイテム
-        .hold-item(v-for="item in basicItemList")
-          img.main-img.pointer(:class="{grayscale: !isGrayFilterBasicItemColumn(item.id)}" :src="item.img")(@click="ToggleCheckedItemColumn(item.id)")
-          span.sub-img-wrapper
-            img.sub-img.pointer(v-if="HasSameItem(item.id)" :class="{grayscale: !isGrayFilterBasicItemRow(item.id)}" :src="item.img")(@click="ToggleCheckedItemRow(item.id)")
+      item-pool
     .combine-table-container.ma-4
       .combine-table-row
         .first-row-item
-          img.main-img.pointer(v-for="item in basicItemList")(:class="{grayscale: !isGrayFilterBasicItemColumn(item.id)}" :src="item.img" @click="ToggleCheckedItemColumn(item.id)")
+          img.main-img.pointer(v-for="item in basicItemList")(:class="{grayscale: !isGrayFilterBasicItem(item.id)}" :src="item.img" @click="ToggleCheckedItemColumn(item)")
         .row-item(v-for="(row, rowIndex) in buildItemEachBasicItem")
-          img.main-img.pointer(:class="{grayscale: !isGrayFilterBasicItemColumn(row.basicItem.id)}" :src="row.basicItem.img" @click="ToggleCheckedItemColumn(row.basicItem.id)")
+          img.main-img.pointer(:class="{grayscale: !isGrayFilterBasicItem(row.basicItem.id)}" :src="row.basicItem.img" @click="ToggleCheckedItemColumn(row.basicItem)")
           .combine-table-column
             .column-item(v-for="(column, columnIndex) in row.buildItem" v-if="columnIndex <= rowIndex")
               img.main-img(:class="{grayscale: !canBuildItem(column.recipe)}" :src="column.img")
@@ -22,60 +17,39 @@ import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { item } from "@/store/index";
 import { BuildItem, BasicItem, BuildFromBasicItem } from "@/models/item";
+import ItemPool from "@/components/Organisms/ItemPool.vue";
 
 @Component({
   name: "combine-table",
-  components: {}
+  components: {
+    "item-pool": ItemPool
+  }
 })
 export default class CombineTable extends Vue {
   basicItemList = item.basicItemList;
   buildItemList = item.buildItemList;
-  checkedBasicItemIdRow: number[] = [];
-  checkedBasicItemIdColumn: number[] = [];
 
   get buildItemEachBasicItem(): BuildFromBasicItem[] {
     return item.buildItemEachBasicItem;
   }
 
-  ToggleCheckedItemRow(id: number) {
-    const existList = this.checkedBasicItemIdRow.some(c => c === id);
-    if (existList) {
-      this.checkedBasicItemIdRow = this.checkedBasicItemIdRow.filter(
-        x => x !== id
-      );
-    } else {
-      this.checkedBasicItemIdRow.push(id);
-    }
+  get itemPool(): BasicItem[] {
+    return item.itemPool;
   }
 
-  HasSameItem(id: number) {
-    return this.checkedBasicItemIdColumn.some(c => c === id);
+  ToggleCheckedItemColumn(basicItem: BasicItem) {
+    const existList = this.itemPool.some(c => c.id === basicItem.id);
+    if (existList) item.removeItemPool(basicItem);
+    else item.addItemPool(basicItem);
   }
 
-  ToggleCheckedItemColumn(id: number) {
-    const existList = this.checkedBasicItemIdColumn.some(c => c === id);
-    if (existList) {
-      this.checkedBasicItemIdColumn = this.checkedBasicItemIdColumn.filter(
-        x => x !== id
-      );
-    } else {
-      this.checkedBasicItemIdColumn.push(id);
-    }
-  }
-
-  canBuildItem(recipe: number[]): boolean {
+  canBuildItem(recipe: string[]): boolean {
     if (recipe[0] === recipe[1])
-      return (
-        this.checkedBasicItemIdColumn.includes(recipe[0]) &&
-        this.checkedBasicItemIdRow.includes(recipe[0])
-      );
-    else return recipe.every(x => this.checkedBasicItemIdColumn.includes(x));
+      return this.itemPool.filter(x => x.id === recipe[0]).length >= 2;
+    else return recipe.every(x => this.itemPool.some(y => y.id === x));
   }
-  isGrayFilterBasicItemRow(id: number): boolean {
-    return this.checkedBasicItemIdRow.some(x => x === id);
-  }
-  isGrayFilterBasicItemColumn(id: number): boolean {
-    return this.checkedBasicItemIdColumn.some(x => x === id);
+  isGrayFilterBasicItem(id: string): boolean {
+    return this.itemPool.some(x => x.id === id);
   }
 }
 </script>
