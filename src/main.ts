@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store/store";
 import Vuetify from "vuetify/lib";
 import "@/style/style.styl";
-import "material-design-icons-iconfont/dist/material-design-icons.css";
+import "@mdi/font/css/materialdesignicons.css";
 
 Vue.config.productionTip = false;
 
@@ -15,7 +15,7 @@ Vue.use(Vuetify, {
 */
 const opts = {
   dark: true,
-  iconfont: "md"
+  iconfont: "mdi"
 };
 
 Vue.use(Vuetify);

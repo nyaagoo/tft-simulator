@@ -3,13 +3,13 @@
     .card-container
       .card-container-title
         h3 ブックマーク
-      v-card.champion-table-card
+      v-card.champion-table-card.pa-5(flat)
         .search-option-container
           .table-level-search
             .level-select.text-xs-center
-              v-rating(v-model='rating' :length="3")
+              v-rating(v-model='selectedLevel' :length="3")
                 template(v-slot:item='props')
-                  v-icon(:color="props.isFilled ? genColor(props.index) : 'grey lighten-1'", large, @click='props.click') star_rate
+                  v-icon(:color="props.isFilled ? genColor(props.index) : 'grey lighten-1'", large, @click='props.click') mdi-star
             .search-wrapper
               v-text-field(v-model="search", label='Search', single-line, hide-details)
           .origin-class-select
@@ -23,7 +23,7 @@
               .class-select
                 .class-item.pointer(v-for="classItem in classList" :key="classItem.id" :class="{'class-item-selected': isClassSelected(classItem.id)}" @click="toggleSelectClass(classItem.id)")
                   i.icon-class(:class="`icon-${classItem.id.toLowerCase()}`")
-        v-data-table.elevation-1(:headers='headers', :items="championList" multi-sort)
+        v-data-table.elevation-1(:headers='headers', :items="championList" multi-sort hide-default-footer items-per-page=60)
           template(v-slot:item.image="{ item }")
             .data-imag
               img.data-img.my-1(:src="item.image" :alt="item.id")
@@ -67,10 +67,10 @@ export default class ChampionDataTable extends Vue {
       value: "image"
     },
     {
-      text: "",
+      text: "名前",
       align: "left",
-      sortable: false,
-      value: "name"
+      value: "name",
+      width: "200px"
     },
     { text: "オリジン", value: "origin" },
     { text: "クラス", value: "class" },
@@ -96,6 +96,9 @@ export default class ChampionDataTable extends Vue {
 
   get selectedLevel(): number {
     return championTable.selectLevel;
+  }
+  set selectedLevel(level: number) {
+    championTable.SelectChampionLevel(level);
   }
 
   get originList() {
