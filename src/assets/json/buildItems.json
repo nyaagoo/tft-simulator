@@ -30,7 +30,7 @@
   "TheBloodthirster": {
     "id": "TheBloodthirster",
     "name": "ブラッドサースター",
-    "description": "35%のライフスティール",
+    "description": "通常攻撃に50%のライフスティール",
     "recipe": ["BFSword", "NegatronCloak"],
     "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3080.png"
   },
@@ -58,28 +58,28 @@
   "Thornmail": {
     "id": "Thornmail",
     "name": "ソーンメイル",
-    "description": "攻撃毎に25%の反射ダメージ",
+    "description": "物理攻撃に対して100%の反射ダメージ",
     "recipe": ["ChainVest", "ChainVest"],
     "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3075.png"
   },
   "RedBuff": {
     "id": "RedBuff",
     "name": "赤バフ",
-    "description": "攻撃毎に対象最大HPの2.5%のダメージ 回復阻害",
+    "description": "通常攻撃が、対象の最大HPの13%のダメージを5秒間かけて与え、回復阻害効果を付与する。",
     "recipe": ["ChainVest", "GiantsBelt"],
     "img": "./../img/Item/RedBuff.png"
   },
   "LocketOfTheIronSolari": {
     "id": "LocketOfTheIronSolari",
     "name": "ソラリのロケット",
-    "description": "戦闘開始時、周囲のユニットに200のシールド付与",
+    "description": "ラウンド開始時に、装備者およびその左右それぞれ2マス以内にいる味方にシールドを付与",
     "recipe": ["ChainVest", "NeedlesslyLargeRod"],
     "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3190.png"
   },
   "SwordBreaker": {
     "id": "SwordBreaker",
     "name": "ソードブレイカー",
-    "description": "攻撃時、敵の装備を解除するチャンスがあります",
+    "description": "攻撃時、敵の装備を4秒間解除する可能性がある",
     "recipe": ["ChainVest", "NegatronCloak"],
     "img": "./../img/Item/SwordBreaker.png"
   },
@@ -100,21 +100,21 @@
   "FrozenHeart": {
     "id": "FrozenHeart",
     "name": "フローズンハート",
-    "description": "周囲の敵の攻撃速度を20%低下",
+    "description": "周囲の敵の攻撃速度を25%低下させる",
     "recipe": ["ChainVest", "TearOfTheGoddess"],
     "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3110.png"
   },
   "WarmogsArmor": {
     "id": "WarmogsArmor",
     "name": "ワーモグアーマー",
-    "description": "毎秒最大HPの5%を回復",
+    "description": "毎秒最大HPの6%を回復",
     "recipe": ["GiantsBelt", "GiantsBelt"],
     "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3083.png"
   },
   "Morellonomicon": {
     "id": "Morellonomicon",
     "name": "モレロノミコン",
-    "description": "スキルが1秒毎に対象最大HPの2.5%の炎上ダメージを与える",
+    "description": "スキルが1秒毎に対象最大HPの3%の炎上ダメージを与える",
     "recipe": ["GiantsBelt", "NeedlesslyLargeRod"],
     "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3165.png"
   },
@@ -142,7 +142,7 @@
   "Redemption": {
     "id": "Redemption",
     "name": "リデンプション",
-    "description": "装備したユニットの死亡時、周囲の味方すべての1000HP回復",
+    "description": "装備したユニットのHPが25%を下回った場合、周囲の味方すべての1000HP回復",
     "recipe": ["GiantsBelt", "TearOfTheGoddess"],
     "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3107.png"
   },
@@ -156,14 +156,14 @@
   "IonicSpark": {
     "id": "IonicSpark",
     "name": "アイオニックスパーク",
-    "description": "装備ユニットがスキル攻撃すると敵が100ダメージを受ける",
+    "description": "相手はスキルを使用するたびに200の確定ダメージを与える",
     "recipe": ["NeedlesslyLargeRod", "NegatronCloak"],
     "img": "./../img/Item/IonicSpark.png"
   },
   "GuinsoosRageblade": {
     "id": "GuinsoosRageblade",
     "name": "グインソーレイジブレード",
-    "description": "攻撃速度が命中ごとに3%ずつ無限に上昇",
+    "description": "攻撃速度が命中ごとに4%ずつ無限に上昇",
     "recipe": ["NeedlesslyLargeRod", "RecurveBow"],
     "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3124.png"
   },
@@ -184,7 +184,7 @@
   "DragonsClaw": {
     "id": "DragonsClaw",
     "name": "ドラゴンクロー",
-    "description": "魔法ダメージへの耐性が33%増加",
+    "description": "魔法ダメージへの耐性が83%増加",
     "recipe": ["NegatronCloak", "NegatronCloak"],
     "img": "./../img/Item/DragonsClaw.png"
   },
@@ -198,7 +198,7 @@
   "RunaansHurricane": {
     "id": "RunaansHurricane",
     "name": "ルナーンハリケーン",
-    "description": "攻撃時2体を50%のダメージで追加攻撃",
+    "description": "攻撃時、追加で1体を25%のダメージで攻撃する。通常攻撃時の効果は適用される",
     "recipe": ["NegatronCloak", "Spatula"],
     "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3085.png"
   },
@@ -226,15 +226,22 @@
   "StattikShiv": {
     "id": "StattikShiv",
     "name": "スタティック シヴ",
-    "description": "攻撃3回毎に100の魔法ダメージ",
+    "description": "攻撃3回毎に3体の対象に100の魔法ダメージ",
     "recipe": ["RecurveBow", "TearOfTheGoddess"],
     "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3087.png"
+  },
+  "ForceOfNature": {
+    "id": "ForceOfNature",
+    "name": "自然の力",
+    "description": "ユニット召喚数を+1",
+    "recipe": ["Spatula", "Spatula"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/4401.png"
   },
   "Darkin": {
     "id": "Darkin",
     "name": "ダーキン",
     "description": "ユニットにデーモン付与",
-    "recipe": ["TearOfTheGoddess", "Spatula"],
+    "recipe": ["Spatula", "TearOfTheGoddess"],
     "img": "./../img/Item/Darkin.png"
   },
   "SeraphsEmbrace": {
@@ -243,12 +250,5 @@
     "description": "スキル攻撃のたびに20マナを回復",
     "recipe": ["TearOfTheGoddess", "TearOfTheGoddess"],
     "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3040.png"
-  },
-  "ForceOfNature": {
-    "id": "ForceOfNature",
-    "name": "自然の力",
-    "description": "ユニット召喚数を+1",
-    "recipe": ["Spatula", "Spatula"],
-    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/4401.png"
   }
 }
