@@ -1,6 +1,6 @@
 const path = require("path");
 const SpritesmithPlugin = require("webpack-spritesmith");
-const templateFunctionCurry = sizeSettingList => data => {
+const spriteCurryFunction = sizeSettingList => data => {
   let stringBuilder = "";
   stringBuilder = '.icon-A\n  background-image url("/I")\n  display inline-block\n'
     .replace(
@@ -46,30 +46,74 @@ const templateFunctionCurry = sizeSettingList => data => {
 
   return stringBuilder;
 };
+
+const spriteFunction16s = spriteCurryFunction([{ size: 16, suffix: "s" }]);
+const spriteFunction48s = spriteCurryFunction([{ size: 48, suffix: "s" }]);
+
 module.exports = {
   configureWebpack: {
     plugins: [
+      new SpritesmithPlugin({
+        src: {
+          cwd: path.resolve(__dirname, "src/ico/champion"),
+          glob: "*.jpg"
+        },
+        customTemplates: {
+          function_based_template_48s: spriteFunction48s
+        },
+        target: {
+          image: path.resolve(__dirname, "src/ico/sprite/champion-sprite.jpg"),
+          css: [
+            [
+              path.resolve(__dirname, "src/style/sprite-champion.styl"),
+              { format: "function_based_template_48s" }
+            ]
+          ]
+        },
+        apiOptions: {
+          cssImageRef: "img/sprite/champion-sprite.jpg"
+        }
+      }),
+      new SpritesmithPlugin({
+        src: {
+          cwd: path.resolve(__dirname, "src/ico/skill"),
+          glob: "*.jpg"
+        },
+        customTemplates: {
+          function_based_template_48s: spriteFunction48s
+        },
+        target: {
+          image: path.resolve(__dirname, "src/ico/sprite/skill-sprite.jpg"),
+          css: [
+            [
+              path.resolve(__dirname, "src/style/sprite-skill.styl"),
+              { format: "function_based_template_48s" }
+            ]
+          ]
+        },
+        apiOptions: {
+          cssImageRef: "img/sprite/skill-sprite.jpg"
+        }
+      }),
       new SpritesmithPlugin({
         src: {
           cwd: path.resolve(__dirname, "src/ico/class"),
           glob: "*.png"
         },
         customTemplates: {
-          function_based_template: templateFunctionCurry([
-            { size: 16, suffix: "s" }
-          ])
+          function_based_template_16: spriteFunction16s
         },
         target: {
-          image: path.resolve(__dirname, "public/img/class-sprite.png"),
+          image: path.resolve(__dirname, "src/ico/sprite/class-sprite.png"),
           css: [
             [
               path.resolve(__dirname, "src/style/sprite-class.styl"),
-              { format: "function_based_template" }
+              { format: "function_based_template_16" }
             ]
           ]
         },
         apiOptions: {
-          cssImageRef: "img/class-sprite.png"
+          cssImageRef: "img/sprite/class-sprite.png"
         }
       }),
       new SpritesmithPlugin({
@@ -78,45 +122,21 @@ module.exports = {
           glob: "*.png"
         },
         customTemplates: {
-          function_based_template: templateFunctionCurry([
-            { size: 16, suffix: "s" }
-          ])
+          function_based_template_16: spriteFunction16s
         },
         target: {
-          image: path.resolve(__dirname, "public/img/origin-sprite.png"),
+          image: path.resolve(__dirname, "src/ico/sprite/origin-sprite.png"),
           css: [
             [
               path.resolve(__dirname, "src/style/sprite-origin.styl"),
-              { format: "function_based_template" }
+              { format: "function_based_template_16" }
             ]
           ]
         },
         apiOptions: {
-          cssImageRef: "img/origin-sprite.png"
+          cssImageRef: "img/sprite/origin-sprite.png"
         }
       })
-      /*
-      new SpritesmithPlugin({
-        src: {
-          cwd: path.resolve(__dirname, "src/ico/champion"),
-          glob: "*.jpg"
-        },
-        customTemplates: {
-          function_based_template: templateFunction2
-        },
-        target: {
-          image: path.resolve(__dirname, "public/img/champion-sprite.jpg"),
-          css: [
-            [
-              path.resolve(__dirname, "src/style/sprite-champion.styl"),
-              { format: "function_based_template" }
-            ]
-          ]
-        },
-        apiOptions: {
-          cssImageRef: "img/champion-sprite.png"
-        }
-      })*/
     ],
     resolve: {
       modules: ["node_modules"]
