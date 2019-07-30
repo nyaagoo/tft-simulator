@@ -48,7 +48,10 @@ const spriteCurryFunction = sizeSettingList => data => {
 };
 
 const spriteFunction16s = spriteCurryFunction([{ size: 16, suffix: "s" }]);
-const spriteFunction48s = spriteCurryFunction([{ size: 48, suffix: "s" }]);
+const spriteFunction48s = spriteCurryFunction([
+  { size: 36, suffix: "s" },
+  { size: 48, suffix: "m" }
+]);
 
 module.exports = {
   configureWebpack: {

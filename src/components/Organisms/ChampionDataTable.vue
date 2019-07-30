@@ -25,8 +25,7 @@
                   i.icon-class(:class="`icon-${classItem.id.toLowerCase()}`")
         v-data-table.elevation-1(:headers='headers', :items="championList" multi-sort hide-default-footer items-per-page=60)
           template(v-slot:item.image="{ item }")
-            .data-imag
-              img.data-img.my-1(:src="item.image" :alt="item.id")
+            i.icon-champion.mr-1.vertical-bottom(:class="`icon-${item.id.toLowerCase()}-s`")
           template(v-slot:item.origin="{ item }")
             .data-origin
               span(v-for="originId in item.origin" :key="originId")
@@ -35,6 +34,8 @@
             .data-class
               span(v-for="classId in item.class" :key="classId")
                 i.icon-class(:class="[`icon-${classId.toLowerCase()}`]")
+          template(v-slot:item.skill="{ item }")
+            i.icon-skill.mr-1.vertical-bottom(:class="`icon-${item.skill.id.toLowerCase()}-s`")
 
 </template>
 <script lang="ts">
@@ -81,7 +82,8 @@ export default class ChampionDataTable extends Vue {
     { text: "攻撃速度", value: "attackSpeed" },
     { text: "物理防御", value: "armor" },
     { text: "魔法防御", value: "magicRegist" },
-    { text: "射程", value: "range" }
+    { text: "射程", value: "range" },
+    { text: "スキル", value: "skill" }
   ];
   genColor(i: number): string {
     return this.colors[i];
@@ -216,4 +218,6 @@ img
   vertical-align bottom
 .search-wrapper
   width 300px
+.vertical-bottom
+  vertical-align bottom
 </style>
