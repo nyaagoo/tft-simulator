@@ -14,7 +14,7 @@ class SettingModule extends VuexModule {
   visibleChampionClass: boolean = true;
   visibleChampionCost: boolean = true;
 
-  showDrawer: boolean = false;
+  showDrawer: boolean = true;
   // #endregion
 
   // #region MUTATION

@@ -2,8 +2,7 @@
   .tft-header
     v-app-bar(app dark fixed clipped-left dense)
       v-btn(icon @click.stop="toggleDrawer()")
-        icon-base
-          icon-menu
+        v-icon mdi-menu
       v-toolbar-title.white--text TFT Simulator
       v-spacer
       v-toolbar-items

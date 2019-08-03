@@ -2,7 +2,7 @@
   .champion-data-table
     .card-container
       .card-container-title
-        h3 ブックマーク
+        h3 チャンピオンデータ
       v-card.champion-table-card.pa-5(flat)
         .search-option-container
           .table-level-search
@@ -157,9 +157,11 @@ export default class ChampionDataTable extends Vue {
 }
 </script>
 <style lang="stylus" scoped>
-.champion-table
-  min-width 720px
+.champion-data-table
+  margin auto
+  overflow auto
 .champion-table-card
+  min-width 1200px
   margin 16px
 .table-level-search
   width 100%

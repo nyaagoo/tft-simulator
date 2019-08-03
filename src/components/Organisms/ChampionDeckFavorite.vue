@@ -2,12 +2,12 @@
   .card-container
     .card-container-title
       h3 ブックマーク
-    .deck-favorite
-      .origin-chips
+    .deck-favorite.pl-2
+      v-chip-group(multiple column)
         v-chip(v-for="(item, index) in championOrigin" :key="`favOrigin${index}`")(:outlined="!isOriginSelected(item.id)" color="#00B8D4")(@click="toggleSelectOrigin(item.id)")
           i.icon-origin.mr-1(:class="`icon-${item.id.toLowerCase()}-s`")
           span {{ item.name }}
-      .class-chips
+      v-chip-group(multiple column)
         v-chip(v-for="(item, index) in championClass" :key="`favClass${index}`")(:outlined="!isClassSelected(item.id)" color="info")(@click="toggleSelectClass(item.id)")
           i.icon-class.mr-1(:class="`icon-${item.id.toLowerCase()}-s`")
           span {{ item.name }}
@@ -96,11 +96,6 @@ export default class DeckFavorite extends Vue {
   border-left 4px solid #AEEA00
 .deck-favorite
   margin auto
-  .origin-chips
-  .class-chips
-    display flex
-    flex-wrap wrap
-    justify-content center
 .champion-origin-container
   display flex
   flex-wrap wrap

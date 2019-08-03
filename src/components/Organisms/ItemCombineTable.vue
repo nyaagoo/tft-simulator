@@ -1,7 +1,7 @@
 <template lang="pug">
   .item-combine-simulator.card-container
     .card-container-title
-      h3 Item Builder
+      h3 アイテムシミュレータ
     combine-table
 </template>
 <script lang="ts">
