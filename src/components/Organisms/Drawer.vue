@@ -4,20 +4,17 @@
         v-list(rounded)
           v-list-item(@click="transitPageChampion()")
             v-list-item-icon.mr-3
-              icon-base(width=28 height=28)
-                icon-subtitle
+              v-icon mdi-octagon-outline
             v-list-item-content
               v-list-item-title シナジーシミュレータ
           v-list-item(@click="transitPageItem()")
             v-list-item-icon.mr-3
-              icon-base(width=28 height=28)
-                icon-view-module
+              v-icon mdi-widgets
             v-list-item-content
               v-list-item-title アイテムビルダー
           v-list-item(@click="transitChampionTable()")
             v-list-item-icon.mr-3
-              icon-base(width=28 height=28)
-                icon-view-module
+              v-icon mdi-view-list
             v-list-item-content
               v-list-item-title チャンピオンデータ
 </template>

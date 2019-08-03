@@ -44,6 +44,7 @@ export default class ItemPool extends Vue {
 .item-pool
   display flex
   flex-wrap wrap
+  min-height 82px
   border 1px solid #88f
   border-radius 8px
   position relative

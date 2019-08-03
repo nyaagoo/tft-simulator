@@ -110,6 +110,7 @@ class ChampionModule extends VuexModule {
       }
     }
     this.SET_CHAMPION_DECK_ORIGIN(eachOrigin);
+    this.sortChampionOriginCost();
   }
 
   @Action({ rawError: true })
@@ -135,6 +136,7 @@ class ChampionModule extends VuexModule {
       }
     }
     this.SET_CHAMPION_DECK_CLASS(eachClass);
+    this.sortChampionClassCost();
   }
 
   @Action({ rawError: true })

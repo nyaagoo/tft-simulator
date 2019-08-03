@@ -7,31 +7,25 @@
       v-toolbar-title.white--text TFT Simulator
       v-spacer
       v-toolbar-items
-        v-menu(v-model="menu", :close-on-content-click="false", :nudge-width="200", offset-x)
+        v-menu(v-model="menu", :close-on-content-click="false", :nudge-width="300", offset-x)
           template(v-slot:activator="{ on }")
-            v-btn(dark, v-on="on")
-              icon-base
-                icon-setting
+            v-btn(v-on="on" outline icon)
+              v-icon mdi-settings
           v-card
             v-list
               v-list-tile
                 v-subheader 表示
               v-list-tile
-                v-list-tile-action
-                  v-switch(v-model="visibleOriginIcon" @change="toggleVisibleOrigin()")
-                v-list-tile-title Origin
+                v-switch.pl-30px(v-model="visibleOriginIcon" @change="toggleVisibleOrigin()" inset label="オリジン表示")
               v-list-tile
-                v-list-tile-action
-                  v-switch(v-model="visibleClassIcon" @change="toggleVisibleClass()")
-                v-list-tile-title Class
+                v-switch.pl-30px(v-model="visibleClassIcon" @change="toggleVisibleClass()" inset label="クラス表示")
               v-list-tile
-                v-list-tile-action
-                  v-switch(v-model="visibleCostIcon" @change="toggleVisibleCost()")
-                v-list-tile-title Cost
+                v-switch.pl-30px(v-model="visibleCostIcon" @change="toggleVisibleCost()" inset label="コスト表示")
               v-list-tile
-                v-subheader ソート
-              v-btn(color='primary' flat outlined @click="sortChampionCost()") Cost
-              v-btn(color='primary' flat outlined @click="sortChampionName()") Name
+                v-subheader チャンピオンソート
+                v-radio-group.pl-30px(v-model="column" column)
+                  v-radio(@change="sortChampionCost()" label="コスト順" value="cost")
+                  v-radio(@change="sortChampionName()" label="名前順" value="name")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -50,6 +44,7 @@ import IconMenu from "@/components/Icon/IconMenu.vue";
   }
 })
 export default class TFTHeader extends Vue {
+  column = "cost";
   menu: boolean = false;
   visibleOriginIcon: boolean = setting.visibleChampionOrigin;
   visibleClassIcon: boolean = setting.visibleChampionClass;
@@ -85,4 +80,6 @@ export default class TFTHeader extends Vue {
   display block
   text-decoration none
   color white
+.pl-30px
+  padding-left 30px
 </style>
