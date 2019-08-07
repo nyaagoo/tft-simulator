@@ -1021,7 +1021,7 @@
     "name": "ナー",
     "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gnar.png",
     "skill": {
-      "id": "Gnar",
+      "id": "Gnarr",
       "name": "ナー！",
       "description": "変身して体力と攻撃力が増加し、最も遠い位置にいる敵の背後までジャンプし、ダメージを与えて敵を後方に突き飛ばす。",
       "cost": 125,
