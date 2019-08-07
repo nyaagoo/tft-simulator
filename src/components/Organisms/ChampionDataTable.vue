@@ -1,9 +1,9 @@
 <template lang="pug">
-  .champion-data-table
-    .card-container
-      .card-container-title
-        h3 チャンピオンデータ
-      v-card.champion-table-card.pa-5(flat)
+  .champion-data-table.card-container
+    .card-container-title
+      h3 チャンピオンデータ
+    .champion-table-card-wrapper
+      .champion-table-card.pa-5
         .search-option-container
           .table-level-search
             .level-select.text-xs-center
@@ -157,8 +157,7 @@ export default class ChampionDataTable extends Vue {
 }
 </script>
 <style lang="stylus" scoped>
-.champion-data-table
-  margin auto
+.champion-table-card-wrapper
   overflow auto
 .champion-table-card
   min-width 1200px
