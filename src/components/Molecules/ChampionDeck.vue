@@ -1,7 +1,7 @@
 <template lang="pug">
   .champion-deck(@click="championPick(champ)")
-    .champion-img-wrapper.pointer.mb-2
-      i.icon-champion.champion-img(:class="[`icon-${champ.id.toLowerCase()}`, {'grayscale': !isPicked(champ.id)}]" :style="{ 'outline-color': `${costColor.get(champ.cost)}`}")
+    .champion-img-wrapper.pointer.mb-2(:class="[{'grayscale': !isPicked(champ.id)}]")
+      i.icon-champion.champion-img(:class="[`icon-${champ.id.toLowerCase()}`]" :style="{ 'outline-color': `${costColor.get(champ.cost)}`}")
       .champion-origin-wrapper(v-if="visibleOrigin")
         i.icon-origin(v-for="(o, index) in originList" :class="`icon-${o.toLowerCase()}-s`")
       .champion-class-wrapper(v-if="visibleClass")
@@ -61,9 +61,27 @@ p
 .champion-img-wrapper
   height 60px
   width 60px
-  position: relative;
+  position relative
+  transition 0.25s ease
 .grayscale
-  filter: grayscale(100%);
+  filter grayscale(100%)
+.champion-img-wrapper:hover
+  cursor pointer
+  opacity .6
+  filter grayscale(0%)
+.champion-img-wrapper::after
+  content url(/img/icon/remove_circle.png)
+  position absolute
+  top 12px
+  left 14px
+  opacity 0
+  transition opacity 0.25s ease
+  filter invert(100%)
+.champion-img-wrapper.grayscale::after
+  content url(/img/icon/add_circle.png)
+  filter invert(100%)
+.champion-img-wrapper:hover::after
+  opacity 1
 .champion-origin-wrapper
   position absolute
   display flex
