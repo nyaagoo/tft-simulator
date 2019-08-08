@@ -6,7 +6,6 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import router from "@/router";
 import Header from "@/components/Organisms/Header.vue";
 import Drawer from "@/components/Organisms/Drawer.vue";
 import ChampionDataTable from "@/components/Organisms/ChampionDataTable.vue";

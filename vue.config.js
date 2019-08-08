@@ -1,57 +1,25 @@
 const path = require("path");
 const SpritesmithPlugin = require("webpack-spritesmith");
-const spriteCurryFunction = sizeSettingList => data => {
+
+const spriteTemplate = setting => data => {
+  // setting: {suffix: string}
+  const iconTotalCount = data.sprites.length;
   let stringBuilder = "";
-  stringBuilder = '.icon-A\n  background-image url("/I")\n  display inline-block\n'
-    .replace(
-      "A",
-      data.sprites[0].image
-        .split("/")
-        .pop()
-        .split("-")
-        .shift()
-    )
-    .replace("I", data.sprites[0].image);
-  const spriteHeight = parseInt(data.spritesheet.px.height);
-  const spriteWidth = parseInt(data.spritesheet.px.width);
+  stringBuilder += '.icon-A\n  height Hpx\n  width Wpx\n  max-width 100%\n  background-image url("/I")\n  background-size 100%\n'
+    .replace("A", setting.suffix)
+    .replace("I", data.sprites[0].image)
+    .replace("H", data.sprites[0].height)
+    .replace("W", data.sprites[0].width);
+
   stringBuilder += data.sprites
-    .map(sprite => {
-      return ".icon-N\n  width Wpx\n  height Hpx\n  background-position Xpx Ypx\n"
+    .map((sprite, index) => {
+      return ".icon-N\n  background-position 0 Y%\n"
         .replace("N", sprite.name.toLowerCase())
-        .replace("W", sprite.width)
-        .replace("H", sprite.height)
-        .replace("X", sprite.offset_x)
-        .replace("Y", sprite.offset_y);
+        .replace("Y", 100 / (iconTotalCount - 1) * index);
     })
     .join("");
-
-  for (const setting of sizeSettingList) {
-    const perSprite = data.sprites
-      .map(sprite => {
-        const scaledHeight = Number(setting.size) / sprite.height;
-        const scaleWidth = Number(setting.size) / sprite.width;
-        return ".icon-N-C\n  width Wpx\n  height Hpx\n  background-position Xpx Ypx\n  background-size: Apx Bpx"
-          .replace("N", sprite.name.toLowerCase())
-          .replace("W", sprite.width * scaleWidth)
-          .replace("H", sprite.height * scaledHeight)
-          .replace("X", sprite.offset_x * scaleWidth)
-          .replace("Y", sprite.offset_y * scaledHeight)
-          .replace("A", spriteWidth * scaleWidth)
-          .replace("B", spriteHeight * scaledHeight)
-          .replace("C", setting.suffix);
-      })
-      .join("\n");
-    stringBuilder += "\n" + perSprite;
-  }
-
   return stringBuilder;
 };
-
-const spriteFunction16s = spriteCurryFunction([{ size: 16, suffix: "s" }]);
-const spriteFunction48s = spriteCurryFunction([
-  { size: 36, suffix: "s" },
-  { size: 48, suffix: "m" }
-]);
 
 module.exports = {
   configureWebpack: {
@@ -62,19 +30,22 @@ module.exports = {
           glob: "*.jpg"
         },
         customTemplates: {
-          function_based_template_48s: spriteFunction48s
+          spriteFunctionChampion: spriteTemplate({suffix:"champion"})
         },
         target: {
           image: path.resolve(__dirname, "src/ico/sprite/champion-sprite.jpg"),
           css: [
             [
               path.resolve(__dirname, "src/style/sprite-champion.styl"),
-              { format: "function_based_template_48s" }
+              { format: "spriteFunctionChampion" }
             ]
           ]
         },
         apiOptions: {
           cssImageRef: "img/sprite/champion-sprite.jpg"
+        },
+        spritesmithOptions: {
+          algorithm: "top-down"
         }
       }),
       new SpritesmithPlugin({
@@ -83,19 +54,22 @@ module.exports = {
           glob: "*.jpg"
         },
         customTemplates: {
-          function_based_template_48s: spriteFunction48s
+          spriteFunctionSkill: spriteTemplate({suffix:"skill"})
         },
         target: {
           image: path.resolve(__dirname, "src/ico/sprite/skill-sprite.jpg"),
           css: [
             [
               path.resolve(__dirname, "src/style/sprite-skill.styl"),
-              { format: "function_based_template_48s" }
+              { format: "spriteFunctionSkill" }
             ]
           ]
         },
         apiOptions: {
           cssImageRef: "img/sprite/skill-sprite.jpg"
+        },
+        spritesmithOptions: {
+          algorithm: "top-down"
         }
       }),
       new SpritesmithPlugin({
@@ -104,19 +78,22 @@ module.exports = {
           glob: "*.png"
         },
         customTemplates: {
-          function_based_template_16: spriteFunction16s
+          spriteFunctionClass: spriteTemplate({suffix:"class"})
         },
         target: {
           image: path.resolve(__dirname, "src/ico/sprite/class-sprite.png"),
           css: [
             [
               path.resolve(__dirname, "src/style/sprite-class.styl"),
-              { format: "function_based_template_16" }
+              { format: "spriteFunctionClass" }
             ]
           ]
         },
         apiOptions: {
           cssImageRef: "img/sprite/class-sprite.png"
+        },
+        spritesmithOptions: {
+          algorithm: "top-down"
         }
       }),
       new SpritesmithPlugin({
@@ -125,19 +102,22 @@ module.exports = {
           glob: "*.png"
         },
         customTemplates: {
-          function_based_template_16: spriteFunction16s
+          spriteFunctionOrigin: spriteTemplate({suffix:"origin"})
         },
         target: {
           image: path.resolve(__dirname, "src/ico/sprite/origin-sprite.png"),
           css: [
             [
               path.resolve(__dirname, "src/style/sprite-origin.styl"),
-              { format: "function_based_template_16" }
+              { format: "spriteFunctionOrigin" }
             ]
           ]
         },
         apiOptions: {
           cssImageRef: "img/sprite/origin-sprite.png"
+        },
+        spritesmithOptions: {
+          algorithm: "top-down"
         }
       })
     ],

@@ -1,11 +1,11 @@
 <template lang="pug">
   .champion-deck(@click="championPick(champ)")
     .champion-img-wrapper.pointer.mb-2(:class="[{'grayscale': !isPicked(champ.id)}]")
-      i.icon-champion.champion-img(:class="[`icon-${champ.id.toLowerCase()}`]" :style="{ 'outline-color': `${costColor.get(champ.cost)}`}")
+      img.icon-champion.champion-img(:class="[`icon-${champ.id.toLowerCase()}`]" :style="{ 'outline-color': `${costColor.get(champ.cost)}`}")
       .champion-origin-wrapper(v-if="visibleOrigin")
-        i.icon-origin(v-for="(o, index) in originList" :class="`icon-${o.toLowerCase()}-s`")
+        img.icon-origin(v-for="(o, index) in originList" :class="`icon-${o.toLowerCase()}-s`")
       .champion-class-wrapper(v-if="visibleClass")
-        i.icon-class(v-for="(c, index) in classList" :class="`icon-${c.toLowerCase()}-s`")
+        img.icon-class(v-for="(c, index) in classList" :class="`icon-${c.toLowerCase()}-s`")
       .champion-cost-wrapper(v-if="visibleCost")
         span.champion-cost ${{ champ.cost }}
     p.ma-0.text-truncate.name {{ champ.name }}
@@ -56,11 +56,9 @@ p
   outline-style solid
   outline-width 3px
   outline-offset -3px
-  heigth 64px
-  width 64px
 .champion-img-wrapper
-  height 60px
-  width 60px
+  height 64px
+  width 64px
   position relative
   transition 0.25s ease
 .grayscale
