@@ -5,7 +5,7 @@ const spriteTemplate = setting => data => {
   // setting: {suffix: string}
   const iconTotalCount = data.sprites.length;
   let stringBuilder = "";
-  stringBuilder += '.icon-A\n  height Hpx\n  width Wpx\n  max-width 100%\n  background-image url("/I")\n  background-size 100%\n'
+  stringBuilder += '.icon-A\n  height Hpx\n  width Wpx\n  display: inline-block\n  max-width 100%\n  background-image url("/I")\n  background-size 100%\n'
     .replace("A", setting.suffix)
     .replace("I", data.sprites[0].image)
     .replace("H", data.sprites[0].height)

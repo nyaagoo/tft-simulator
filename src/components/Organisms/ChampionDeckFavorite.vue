@@ -5,11 +5,11 @@
     .deck-favorite.pl-2
       v-chip-group(multiple column)
         v-chip(v-for="(item, index) in championOrigin" :key="`favOrigin${index}`")(:outlined="!isOriginSelected(item.id)" color="#00B8D4")(@click="toggleSelectOrigin(item.id)")
-          i.icon-origin.mr-1(:class="`icon-${item.id.toLowerCase()}-s`")
+          i.icon-origin.mr-1(:class="`icon-${item.id.toLowerCase()}`")
           span {{ item.name }}
       v-chip-group(multiple column)
         v-chip(v-for="(item, index) in championClass" :key="`favClass${index}`")(:outlined="!isClassSelected(item.id)" color="info")(@click="toggleSelectClass(item.id)")
-          i.icon-class.mr-1(:class="`icon-${item.id.toLowerCase()}-s`")
+          i.icon-class.mr-1(:class="`icon-${item.id.toLowerCase()}`")
           span {{ item.name }}
       .champion-origin-container
         .champion-decks.pa-2(v-for="eachOrigin in championListEachOrigin" :key="eachOrigin.origin")

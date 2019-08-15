@@ -25,7 +25,7 @@
                   i.icon-class(:class="`icon-${classItem.id.toLowerCase()}`")
         v-data-table.elevation-1(:headers='headers', :items="championList" multi-sort hide-default-footer items-per-page=60)
           template(v-slot:item.image="{ item }")
-            i.icon-champion.mr-1.vertical-bottom(:class="`icon-${item.id.toLowerCase()}-s`")
+            i.icon-champion.mr-1.vertical-bottom(:class="`icon-${item.id.toLowerCase()}`")
           template(v-slot:item.origin="{ item }")
             .data-origin
               span(v-for="originId in item.origin" :key="originId")
@@ -35,7 +35,7 @@
               span(v-for="classId in item.class" :key="classId")
                 i.icon-class(:class="[`icon-${classId.toLowerCase()}`]")
           template(v-slot:item.skill="{ item }")
-            i.icon-skill.mr-1.vertical-bottom(:class="`icon-${item.skill.id.toLowerCase()}-s`")
+            i.icon-skill.mr-1.vertical-bottom(:class="`icon-${item.skill.id.toLowerCase()}`")
 
 </template>
 <script lang="ts">
@@ -170,6 +170,16 @@ export default class ChampionDataTable extends Vue {
 .origin-class-select
   display flex
   text-align left
+.icon-champion
+  height 40px
+  width 40px
+.icon-skill
+  height 40px
+  width 40px
+.icon-origin
+.icon-class
+  height 32px
+  width 32px
 .origin-select-wrapper > p
   margin 0
   padding 0
