@@ -6,9 +6,9 @@
           pick-counter
           .champion-thumbnail-wrapper
             .champion-thumbnail(v-for="champion in championPicked" :key="`champion${champion.id}`" @click="removeChampion(champion)")
-              img.champion-img.pointer(:style="{ 'outline-color': `${costColor.get(champion.cost)}` }")(:src="champion.image" :alt="champion.name")
+              champion-deck(:champ="champion" :originList="champion.origin" :classList="champion.class" :isDisplayDetail="false")
             .champion-thumbnail(v-for="index in (maxCount - championPicked.length)" :key="`index${index}`")
-              img.champion-img-undefined(src="/img/Champion/Undefined.png" :alt="index")
+              i.icon-champion.icon-undefined
       v-flex(xs12 md7 lg8 grow shrink)
         .synergy-container.mx-3
           ul.pl-1
@@ -27,11 +27,13 @@ import { champion } from "@/store/index";
 import { Champion, costColor, Synergy } from "@/models/champion";
 import router from "@/router";
 import PickCoutenr from "@/components/Organisms/ChampionPickCounter.vue";
+import ChampionDeck from "@/components/Molecules/ChampionDeck.vue";
 
 @Component({
   name: "footer-open",
   components: {
-    "pick-counter": PickCoutenr
+    "pick-counter": PickCoutenr,
+    "champion-deck": ChampionDeck
   }
 })
 export default class ChampionFooterOpen extends Vue {

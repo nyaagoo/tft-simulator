@@ -6,14 +6,14 @@
         span.tooltip {{item.bonus}}}
     transition-group.champion-origin-inner(name="flip-list" tag="div")
       .champion-wrapper(v-for="champion in championList" :key="champion.name")
-        champion-deck(:champ="champion" :originList="champion.origin" :classList="champion.class")
+        champion-deck(:champ="champion" :originList="champion.origin" :classList="champion.class" :isDisplayDetail="true")
 </template>
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 import router from "@/router";
 import { Champion } from "@/models/champion";
-import ChampionDeck from "@/components/Molecules/ChampionDeck.vue";
 import { ClassOriginData } from "@/models/type";
+import ChampionDeck from "@/components/Molecules/ChampionDeck.vue";
 
 @Component({
   name: "champion-deck-group",

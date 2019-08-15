@@ -1,9 +1,9 @@
 <template lang="pug">
   .footer-close
-    .champion-thumbnail(v-for="champion in championPicked" :key="`champion${champion.id}`" @click="removeChampion(champion)")
-      img.champion-img.pointer(:style="{ 'outline-color': `${costColor.get(champion.cost)}` }")(:src="champion.image" :alt="champion.name")
+    .champion-thumbnail.champion-img-wrapper(v-for="champion in championPicked" :key="`champion${champion.id}`" @click="removeChampion(champion)")
+      i.icon-champion.outline(:class="[`icon-${champion.id.toLowerCase()}`]" :style="{ 'outline-color': `${costColor.get(champion.cost)}` }")
     .champion-thumbnail(v-for="index in (maxCount - championPicked.length)" :key="`index${index}`")
-      img.champion-img-undefined(src="/img/Champion/Undefined.png" :alt="index")
+      i.icon-champion.icon-undefined
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -36,13 +36,27 @@ export default class ChampionFooterClose extends Vue {
   margin auto
 .champion-thumbnail
   padding 8px
-.champion-img
+.icon-champion
+  height 48px
+  width 48px
+.outline
   outline-style solid
   outline-width 3px
   outline-offset -3px
-  height 48px
-  width 48px
-.champion-img-undefined
-  height 48px
-  width 48px
+.champion-img-wrapper
+  position relative
+  transition .25s ease
+.champion-img-wrapper:hover
+  cursor pointer
+  filter grayscale(20%)
+.champion-img-wrapper::after
+  content url('/img/icon/remove_circle.png')
+  position absolute
+  top 12px
+  left 14px
+  opacity 0
+  transition opacity .25s ease
+  filter invert(100%)
+.champion-img-wrapper:hover::after
+  opacity 1
 </style>
