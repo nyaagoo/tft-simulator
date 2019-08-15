@@ -5,12 +5,12 @@
     .combine-table-container.ma-4
       .combine-table-row
         .first-row-item
-          img.main-img.pointer(v-for="item in basicItemList")(:class="{grayscale: !isGrayFilterBasicItem(item.id)}" :src="item.img" @click="ToggleCheckedItemColumn(item)")
+          i.icon-item.pointer(v-for="item in basicItemList")(:class="[{grayscale: !isGrayFilterBasicItem(item.id)},`icon-${(item.id).toLowerCase()}`]" @click="ToggleCheckedItemColumn(item)")
         .row-item(v-for="(row, rowIndex) in buildItemEachBasicItem")
-          img.main-img.pointer(:class="{grayscale: !isGrayFilterBasicItem(row.basicItem.id)}" :src="row.basicItem.img" @click="ToggleCheckedItemColumn(row.basicItem)")
+          i.icon-item.pointer(:class="[{grayscale: !isGrayFilterBasicItem(row.basicItem.id)}, `icon-${(row.basicItem.id).toLowerCase()}`]" @click="ToggleCheckedItemColumn(row.basicItem)")
           .combine-table-column
             .column-item(v-for="(column, columnIndex) in row.buildItem" v-if="columnIndex <= rowIndex")
-              img.main-img(:class="{grayscale: !canBuildItem(column.recipe)}" :src="column.img")
+              i.icon-item(:class="[{grayscale: !canBuildItem(column.recipe)},`icon-${(column.id).toLowerCase()}`]")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -76,7 +76,7 @@ export default class CombineTable extends Vue {
   height 48px
   @media screen and (max-width: 600px)
     height 36px
-.main-img
+.icon-item
   height 48px
   width 48px
   margin-left 8px

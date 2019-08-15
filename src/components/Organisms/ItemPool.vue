@@ -1,10 +1,10 @@
 <template lang="pug">
   .item-pool-container
     .basic-item-list.pa-3
-      img.item-img.pointer(v-for="item in basicItemList" :src="item.img" @click="addItemPool(item)")
+      i.icon-item.pointer(v-for="item in basicItemList" :class="`icon-${(item.id).toLowerCase()}`" @click="addItemPool(item)")
     .item-pool.pa-3
       span.item-pool-title アイテムプール
-      img.item-img.pointer(v-for="item in itemPool" :src="item.img" @click="removeItemPool(item)")
+      i.icon-item.pointer(v-for="item in itemPool" :class="`icon-${(item.id).toLowerCase()}`" @click="removeItemPool(item)")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -51,7 +51,7 @@ export default class ItemPool extends Vue {
   width 474px
   @media screen and (max-width: 600px)
     width 378px
-.item-img
+.icon-item
   height 48px
   width 48px
   margin 4px

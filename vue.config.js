@@ -74,6 +74,30 @@ module.exports = {
       }),
       new SpritesmithPlugin({
         src: {
+          cwd: path.resolve(__dirname, "src/ico/item"),
+          glob: "*.jpg"
+        },
+        customTemplates: {
+          spriteFunctionItem: spriteTemplate({suffix:"item"})
+        },
+        target: {
+          image: path.resolve(__dirname, "src/ico/sprite/item-sprite.jpg"),
+          css: [
+            [
+              path.resolve(__dirname, "src/style/sprite-item.styl"),
+              { format: "spriteFunctionItem" }
+            ]
+          ]
+        },
+        apiOptions: {
+          cssImageRef: "img/sprite/item-sprite.jpg"
+        },
+        spritesmithOptions: {
+          algorithm: "top-down"
+        }
+      }),
+      new SpritesmithPlugin({
+        src: {
           cwd: path.resolve(__dirname, "src/ico/class"),
           glob: "*.png"
         },

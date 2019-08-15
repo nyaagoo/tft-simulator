@@ -2,16 +2,16 @@
   .item-build-sheet
     .basic-item-container.ma-2(v-for="item in buildItemEachBasicItem" :key="item.name")
       .basic-item
-        img(heght=48 width=48 :src="item.basicItem.img")
+        i.icon-item(:class="`icon-${(item.basicItem.id).toLowerCase()}`")
         .item-description.ml-2.my-auto
           p.item-name.ma-0 {{ item.basicItem.name }}
           p.item-description.ma-0 {{item.basicItem.description}}
       v-divider
       li.item-container.pa-1.pl-2(v-for="item2 in item.buildItem" :key="item2.name")
         span.char.mr-2 +
-        img(heght=36 width=36 :src="pickAnotherBasicItemSrc(item.basicItem.id, item2.recipe, item2)")
+        i.icon-item.icon-item-mini(:class="`icon-${pickAnotherBasicItemSrc(item.basicItem.id, item2.recipe, item2).toLowerCase()}`")
         span.char.mx-2 = 
-        img(heght=36 width=36 :src="item2.img")
+        i.icon-item.icon-item-mini( :class="`icon-${(item2.id).toLowerCase()}`")
         .item-description.ml-2.my-auto
           p.item-name.ma-0(v-if="false") {{ item2.name }}
           p.item-description.ma-0 {{ item2.description}}
@@ -47,7 +47,7 @@ export default class ItemBuildSheet extends Vue {
   ): string {
     const i = recipe.findIndex(x => x !== anBasicItemId);
     const anotherBasicId = [...recipe].splice(i, 1)[0];
-    return item.basicItemList[anotherBasicId as BasicItemIdList].img;
+    return item.basicItemList[anotherBasicId as BasicItemIdList].id;
   }
 }
 </script>
@@ -69,6 +69,15 @@ export default class ItemBuildSheet extends Vue {
 .basic-item {
   display: flex;
   height: 48px;
+}
+
+.icon-item {
+  height: 48px;
+  width: 48px;
+}
+.icon-item-mini {
+  height: 36px;
+  width: 36px;
 }
 
 .item-container {
