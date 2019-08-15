@@ -14,9 +14,8 @@ import Drawer from "@/components/Organisms/Drawer.vue";
   components: {
     "tft-header": Header,
     "tft-drawer": Drawer
-    }
+  }
 })
 export default class FavoriteTeamsTemplate extends Vue {}
 </script>
-<style lang="stylus" scoped>
-</style>
+<style lang="stylus" scoped></style>

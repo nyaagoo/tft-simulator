@@ -59,7 +59,7 @@ export default class ItemPool extends Vue {
     height 36px
     width 36px
 .item-pool-title
-  font-size 0.8rem
+  font-size .8rem
   position absolute
   top -10px
   left 12px

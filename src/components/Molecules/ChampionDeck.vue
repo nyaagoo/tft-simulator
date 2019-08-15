@@ -49,20 +49,18 @@ export default class ChampionDeck extends Vue {
 }
 </script>
 <style lang="stylus" scoped>
-.champion-deck
-p
+.champion-deck, p
   width 64px
 .champion-img
   outline-style solid
   outline-width 3px
   outline-offset -3px
-.icon-origin
-.icon-class
+.icon-origin, .icon-class
   height 24px
   width 24px
 .champion-img-wrapper
   position relative
-  transition 0.25s ease
+  transition .25s ease
 .grayscale
   filter grayscale(100%)
 .champion-img-wrapper:hover
@@ -70,15 +68,15 @@ p
   opacity .6
   filter grayscale(0%)
 .champion-img-wrapper::after
-  content url(/img/icon/remove_circle.png)
+  content url('/img/icon/remove_circle.png')
   position absolute
   top 12px
   left 14px
   opacity 0
-  transition opacity 0.25s ease
+  transition opacity .25s ease
   filter invert(100%)
 .champion-img-wrapper.grayscale::after
-  content url(/img/icon/add_circle.png)
+  content url('/img/icon/add_circle.png')
   filter invert(100%)
 .champion-img-wrapper:hover::after
   opacity 1

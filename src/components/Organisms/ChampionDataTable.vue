@@ -176,8 +176,7 @@ export default class ChampionDataTable extends Vue {
 .icon-skill
   height 40px
   width 40px
-.icon-origin
-.icon-class
+.icon-origin, .icon-class
   height 32px
   width 32px
 .origin-select-wrapper > p
@@ -203,9 +202,7 @@ export default class ChampionDataTable extends Vue {
   border-radius 8px
 .class-item-selected
   background #00c853
-
-.class-item + .class-item
-.origin-item + .origin-item
+.class-item + .class-item, .origin-item + .origin-item
   margin-left 4px
 .table-header
   border-bottom 1px solid #ffffff80
@@ -224,7 +221,7 @@ table > tr > td
   height 36px
   width 36px
 .level-select
-  margin-top: 20px;
+  margin-top 20px
 img
   vertical-align bottom
 .search-wrapper

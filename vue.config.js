@@ -15,7 +15,7 @@ const spriteTemplate = setting => data => {
     .map((sprite, index) => {
       return ".icon-N\n  background-position 0 Y%\n"
         .replace("N", sprite.name.toLowerCase())
-        .replace("Y", 100 / (iconTotalCount - 1) * index);
+        .replace("Y", (100 / (iconTotalCount - 1)) * index);
     })
     .join("");
   return stringBuilder;
@@ -30,7 +30,7 @@ module.exports = {
           glob: "*.jpg"
         },
         customTemplates: {
-          spriteFunctionChampion: spriteTemplate({suffix:"champion"})
+          spriteFunctionChampion: spriteTemplate({ suffix: "champion" })
         },
         target: {
           image: path.resolve(__dirname, "src/ico/sprite/champion-sprite.jpg"),
@@ -54,7 +54,7 @@ module.exports = {
           glob: "*.jpg"
         },
         customTemplates: {
-          spriteFunctionSkill: spriteTemplate({suffix:"skill"})
+          spriteFunctionSkill: spriteTemplate({ suffix: "skill" })
         },
         target: {
           image: path.resolve(__dirname, "src/ico/sprite/skill-sprite.jpg"),
@@ -78,7 +78,7 @@ module.exports = {
           glob: "*.jpg"
         },
         customTemplates: {
-          spriteFunctionItem: spriteTemplate({suffix:"item"})
+          spriteFunctionItem: spriteTemplate({ suffix: "item" })
         },
         target: {
           image: path.resolve(__dirname, "src/ico/sprite/item-sprite.jpg"),
@@ -102,7 +102,7 @@ module.exports = {
           glob: "*.png"
         },
         customTemplates: {
-          spriteFunctionClass: spriteTemplate({suffix:"class"})
+          spriteFunctionClass: spriteTemplate({ suffix: "class" })
         },
         target: {
           image: path.resolve(__dirname, "src/ico/sprite/class-sprite.png"),
@@ -126,7 +126,7 @@ module.exports = {
           glob: "*.png"
         },
         customTemplates: {
-          spriteFunctionOrigin: spriteTemplate({suffix:"origin"})
+          spriteFunctionOrigin: spriteTemplate({ suffix: "origin" })
         },
         target: {
           image: path.resolve(__dirname, "src/ico/sprite/origin-sprite.png"),

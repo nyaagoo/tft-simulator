@@ -71,7 +71,7 @@ export default class CombineTable extends Vue {
 .combine-table-column
   display flex
 .grayscale
-  filter: grayscale(100%);
+  filter grayscale(100%)
 .column-item
   height 48px
   @media screen and (max-width: 600px)

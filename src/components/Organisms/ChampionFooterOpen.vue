@@ -67,17 +67,17 @@ export default class ChampionFooterOpen extends Vue {
   display flex
   flex-wrap wrap
 .champion-thumbnail-container
-  background: #212121;
-  border: 2px solid #757575;
-  border-radius: 24px;
+  background #212121
+  border 2px solid #757575
+  border-radius 24px
 .synergy-container
   font-size 14px
   color #ffffffdd
   padding 8px
   min-height 240px
-  background: #212121;
-  border: 2px solid #757575;
-  border-radius: 24px;
+  background #212121
+  border 2px solid #757575
+  border-radius 24px
 .champion-thumbnail-wrapper
   display grid
   grid-template-columns repeat(5, 80px)

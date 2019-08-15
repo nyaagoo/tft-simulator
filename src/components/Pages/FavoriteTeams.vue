@@ -11,5 +11,4 @@ import router from "@/router";
 })
 export default class FavoriteTeamsPage extends Vue {}
 </script>
-<style lang="stylus" scoped>
-</style>
+<style lang="stylus" scoped></style>

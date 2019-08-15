@@ -36,7 +36,7 @@ export default class ChampionDeckGroup extends Vue {
   border-radius 8px
   padding 8px
 .class-title
-  font-size 0.8rem
+  font-size .8rem
   position absolute
   top -10px
   left 12px
@@ -57,7 +57,7 @@ export default class ChampionDeckGroup extends Vue {
 .flip-list-item
   display inline-block
 .flip-list-move
-  transition transform 0.4s
+  transition transform .4s
 .tooltip-container .tooltip
   visibility hidden
   width 400px

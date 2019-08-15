@@ -52,52 +52,38 @@ export default class ItemBuildSheet extends Vue {
 }
 </script>
 <style lang="stylus" scoped>
-.item-build-sheet {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  max-width: 1720px;
-  margin: 0 auto;
-}
-
-.basic-item-container {
-  border: 1px solid #88ffff;
-  border-radius: 4px;
-  text-align: left;
-}
-
-.basic-item {
-  display: flex;
-  height: 48px;
-}
-
-.icon-item {
-  height: 48px;
-  width: 48px;
-}
-.icon-item-mini {
-  height: 36px;
-  width: 36px;
-}
-
-.item-container {
-  display: flex;
-  align-items: center;
-
-  .char {
-    font-size: 20px;
-  }
-}
-
-.item-container:nth-child(2n) {
-  background: #424242;
-}
-
-.item-name {
-  font-size: 12px;
-}
-
-.item-description {
-  font-size: 12px;
-}
+.item-build-sheet
+  width 100%
+  display grid
+  grid-template-columns repeat(auto-fill, minmax(360px, 1fr))
+  max-width 1720px
+  margin 0 auto
+.basic-item-container
+  border 1px solid #88ffff
+  border-radius 4px
+  text-align left
+  display flex
+  flex-direction column
+  justify-content space-between
+.basic-item
+  display flex
+  height 48px
+.icon-item
+  height 48px
+  width 48px
+.icon-item-mini
+  height 36px
+  width 36px
+  flex 0 0 36px
+.item-container
+  display flex
+  align-items center
+  .char
+    font-size 20px
+.item-container:nth-child(2n)
+  background #424242
+.item-name
+  font-size 12px
+.item-description
+  font-size 12px
 </style>
