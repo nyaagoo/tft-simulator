@@ -54,15 +54,15 @@ export default class TFTHeader extends Vue {
   }
   toggleVisibleOrigin() {
     setting.SET_VISIBLE_CHAMPION_ORIGIN(this.visibleOriginIcon);
+    setting.SaveSetting();
   }
   toggleVisibleClass() {
     setting.SET_VISIBLE_CHAMPION_CLASS(this.visibleClassIcon);
+    setting.SaveSetting();
   }
   toggleVisibleCost() {
     setting.SET_VISIBLE_CHAMPION_COST(this.visibleCostIcon);
-  }
-  saveSetting() {
-    setting.SET_VISIBLE_CHAMPION_COST(true);
+    setting.SaveSetting();
   }
   sortChampionCost() {
     champion.sortChampionOriginCost();

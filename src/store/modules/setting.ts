@@ -43,6 +43,33 @@ class SettingModule extends VuexModule {
     this.SET_DRAWER(!this.showDrawer);
   }
 
+  @Action({ rawError: true })
+  public SaveSetting() {
+    const setting = {
+      visibleClass: this.visibleChampionClass,
+      visibleOrigin: this.visibleChampionOrigin,
+      visibleCost: this.visibleChampionCost
+    };
+    const json = JSON.stringify(setting);
+    localStorage.setItem("visibility", json);
+  }
+
+  @Action({ rawError: true })
+  public LoadSetting() {
+    const visibility = localStorage.getItem("visibility");
+    if (!visibility) return;
+
+    const setting: {
+      visibleClass: boolean;
+      visibleOrigin: boolean;
+      visibleCost: boolean;
+    } = JSON.parse(visibility);
+
+    this.SET_VISIBLE_CHAMPION_ORIGIN(setting.visibleOrigin);
+    this.SET_VISIBLE_CHAMPION_CLASS(setting.visibleClass);
+    this.SET_VISIBLE_CHAMPION_COST(setting.visibleCost);
+  }
+
   // #endregion
 }
 export const setting = getModule(SettingModule);
