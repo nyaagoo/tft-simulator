@@ -3,18 +3,15 @@
     v-navigation-drawer(v-model="drawer" app fixed clipped)
         v-list(rounded)
           v-list-item(@click="transitPageChampion()")
-            v-list-item-icon.mr-3
-              v-icon mdi-octagon-outline
+            v-icon.mr-3 mdi-octagon-outline
             v-list-item-content
               v-list-item-title シナジーシミュレータ
           v-list-item(@click="transitPageItem()")
-            v-list-item-icon.mr-3
-              v-icon mdi-widgets
+            v-icon.mr-3 mdi-widgets
             v-list-item-content
               v-list-item-title アイテムビルダー
           v-list-item(@click="transitChampionTable()")
-            v-list-item-icon.mr-3
-              v-icon mdi-view-list
+            v-icon.mr-3 mdi-view-list
             v-list-item-content
               v-list-item-title チャンピオンデータ
 </template>

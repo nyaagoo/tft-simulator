@@ -12,10 +12,10 @@
           i.icon-class.mr-1(:class="`icon-${item.id.toLowerCase()}`")
           span {{ item.name }}
       .champion-origin-container
-        .champion-decks.pa-2(v-for="eachOrigin in championListEachOrigin" :key="eachOrigin.origin")
-          champion-deck-group(:championList="eachOrigin.championList" :synergy="eachOrigin.origin", borderColor="#AEEA00", synergyType="origin")
-        .champion-decks.pa-2(v-for="eachClass in championListEachClass" :key="eachClass.class")
-          champion-deck-group(:championList="eachClass.championList" :synergy="eachClass.class", borderColor="#AEEA00", synergyType="class")
+        .champion-decks.pa-2(v-for="originItem in championListEachOrigin" :key="originItem.origin.id")
+          champion-deck-group(:championList="originItem.championList" :synergy="originItem.origin", borderColor="#AEEA00", synergyType="origin")
+        .champion-decks.pa-2(v-for="classItem in championListEachClass" :key="classItem.class.id")
+          champion-deck-group(:championList="classItem.championList" :synergy="classItem.class", borderColor="#AEEA00", synergyType="class")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";

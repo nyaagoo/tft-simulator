@@ -2,7 +2,7 @@
   .synergy-tooltip
     .header
       i.vertical-bottom(:class="[`icon-${synergyType.toLowerCase()}`, `icon-${synergy.id.toLowerCase()}`]")
-      span.synergy-type-txt {{ synergy.id }}
+      span.synergy-type-txt {{ synergy.name }}
     p(v-for="(effect, index) in synergy.effect" :key="`effect${index}`") ({{ effect.require }}) {{ effect.bonus }}
 </template>
 <script lang="ts">
@@ -22,8 +22,7 @@ export default class SynergyTooltip extends Vue {
 <style lang="stylus" scoped>
 .synergy-tooltip
   width 440px
-.icon-origin,
-.icon-class
+.icon-origin, .icon-class
   height 28px
   width 28px
   padding-left 16px
