@@ -13,9 +13,9 @@
           span {{ item.name }}
       .champion-origin-container
         .champion-decks.pa-2(v-for="eachOrigin in championListEachOrigin" :key="eachOrigin.origin")
-          champion-deck-group(:championList="eachOrigin.championList" :groupDescription="eachOrigin.origin", borderColor="#AEEA00")
+          champion-deck-group(:championList="eachOrigin.championList" :synergy="eachOrigin.origin", borderColor="#AEEA00", synergyType="origin")
         .champion-decks.pa-2(v-for="eachClass in championListEachClass" :key="eachClass.class")
-          champion-deck-group(:championList="eachClass.championList" :groupDescription="eachClass.class", borderColor="#AEEA00")
+          champion-deck-group(:championList="eachClass.championList" :synergy="eachClass.class", borderColor="#AEEA00", synergyType="class")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";

@@ -5,7 +5,7 @@ import {
   Champion,
   ChampionClass,
   ChampionOrigin,
-  Synergy,
+  ActiveSynergy,
   FavoriteOriginClass,
   ChampionDetail
 } from "@/models/champion";
@@ -17,7 +17,7 @@ import {
   Mutation,
   VuexModule
 } from "vuex-module-decorators";
-import { ClassOriginData, OriginCount, ClassCount } from "@/models/type";
+import { Synergy, OriginCount, ClassCount } from "@/models/type";
 
 type championId = keyof typeof championList;
 type originId = keyof typeof originList;
@@ -34,8 +34,8 @@ class ChampionModule extends VuexModule {
   deckClass: ChampionClass[] = [];
   deckFavorite: FavoriteOriginClass = { origin: [], class: [] };
   championPicked: Champion[] = [];
-  activeOriginSynergy: Synergy[] = [];
-  activeClassSynergy: Synergy[] = [];
+  activeOriginSynergy: ActiveSynergy[] = [];
+  activeClassSynergy: ActiveSynergy[] = [];
   maxCountPickChampion: number = 10;
 
   // #endregion
@@ -72,11 +72,11 @@ class ChampionModule extends VuexModule {
     this.maxCountPickChampion = count;
   }
   @Mutation
-  public SET_ACTIVE_ORIGIN_SYNERGY(synergyList: Synergy[]) {
+  public SET_ACTIVE_ORIGIN_SYNERGY(synergyList: ActiveSynergy[]) {
     this.activeOriginSynergy = synergyList;
   }
   @Mutation
-  public SET_ACTIVE_CLASS_SYNERGY(synergyList: Synergy[]) {
+  public SET_ACTIVE_CLASS_SYNERGY(synergyList: ActiveSynergy[]) {
     this.activeClassSynergy = synergyList;
   }
   @Mutation
@@ -183,11 +183,11 @@ class ChampionModule extends VuexModule {
       return acc;
     }, []);
 
-    const activeSynergy: Synergy[] = [];
+    const activeSynergy: ActiveSynergy[] = [];
     for (const originItem of originCount) {
       const originSynegy = this.originList[originItem.origin as originId];
 
-      const activeSynergyBonus = originSynegy.synergy.reduce<
+      const activeSynergyBonus = originSynegy.effect.reduce<
         | {
             require: number;
             bonus: string;
@@ -228,11 +228,11 @@ class ChampionModule extends VuexModule {
       []
     );
 
-    const activeSynergy: Synergy[] = [];
+    const activeSynergy: ActiveSynergy[] = [];
     for (const classItem of ClassCount) {
       const classSynegy = this.classList[classItem.class as classId];
 
-      const activeSynergyBonus = classSynegy.synergy.reduce<
+      const activeSynergyBonus = classSynegy.effect.reduce<
         | {
             require: number;
             bonus: string;

@@ -4,7 +4,7 @@
       h3 クラス
     .champion-class-container
       .champion-decks.pa-2(v-for="eachClass in championListEachClass" :key="eachClass.class")
-        champion-deck-group(:championList="eachClass.championList" :groupDescription="eachClass.class", borderColor="#00C853")
+        champion-deck-group(:championList="eachClass.championList" :synergy="eachClass.class", borderColor="#00C853", synergyType="class")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";

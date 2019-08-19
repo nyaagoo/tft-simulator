@@ -4,7 +4,7 @@
         h3 オリジン
       .champion-origin-container
         .champion-decks.pa-2(v-for="origin in championListEachOrigin" :key="origin.origin")
-          champion-deck-group(:championList="origin.championList" :groupDescription="origin.origin", borderColor="#00B8D4")
+          champion-deck-group(:championList="origin.championList" :synergy="origin.origin", borderColor="#00B8D4", synergyType="origin")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";

@@ -10,7 +10,7 @@
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { champion } from "@/store/index";
-import { Champion, costColor, Synergy } from "@/models/champion";
+import { Champion, costColor } from "@/models/champion";
 @Component({
   name: "champion-footer",
   components: {

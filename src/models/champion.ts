@@ -1,12 +1,12 @@
-import { ClassOriginData } from "./type";
+import { Synergy } from "./type";
 
 export type ChampionOrigin = {
-  origin: ClassOriginData;
+  origin: Synergy;
   championList: Champion[];
 };
 
 export type ChampionClass = {
-  class: ClassOriginData;
+  class: Synergy;
   championList: Champion[];
 };
 
@@ -15,7 +15,7 @@ export type FavoriteOriginClass = {
   class: ChampionClass[];
 };
 
-export type Synergy = {
+export type ActiveSynergy = {
   type: string;
   count: number;
   synergy: string;
@@ -33,8 +33,7 @@ export type ChampionDetail = {
   id: string;
   name: string;
   image: string;
-  // TODO: champion.jsonにスキルデータが入力されていないものがいるため、一時的にoptionalにしている
-  skill?: {
+  skill: {
     name: string;
     description: string;
     cost: number;

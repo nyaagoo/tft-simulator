@@ -3,7 +3,7 @@
     "id": "Assassin",
     "name": "アサシン",
     "img": "./img/Class/Assassin.png",
-    "synergy": [
+    "effect": [
       {
         "require": 3,
         "bonus": "アサシンは戦闘開始時に最も遠い敵に飛びつき+125％のクリティカルダメージを与える"
@@ -18,7 +18,7 @@
     "id": "Blademaster",
     "name": "ブレードマスター",
     "img": "./img/Class/Blademaster.png",
-    "synergy": [
+    "effect": [
       {
         "require": 3,
         "bonus": "ブレードマスターは攻撃毎に35％の確率で1回追加攻撃を行う"
@@ -37,7 +37,7 @@
     "id": "Brawler",
     "name": "ブローラー",
     "img": "./img/Class/Brawler.png",
-    "synergy": [
+    "effect": [
       {
         "require": 2,
         "bonus": "ブロウラーは+300HPを得る"
@@ -56,7 +56,7 @@
     "id": "Elementalist",
     "name": "エレメンタリスト",
     "img": "./img/Class/Elementalist.png",
-    "synergy": [
+    "effect": [
       {
         "require": 3,
         "bonus": "戦闘の開始時にエレメンタルを召喚する"
@@ -67,7 +67,7 @@
     "id": "Guardian",
     "name": "ガーディアン",
     "img": "./img/Class/Guardian.png",
-    "synergy": [
+    "effect": [
       {
         "require": 2,
         "bonus": "戦闘開始時に隣接する味方ユニットの物理防御が50上昇する（スタック上限無し）、ただしガーディアン自身に効果は適用されない"
@@ -78,7 +78,7 @@
     "id": "Gunslinger",
     "name": "ガンスリンガー",
     "img": "./img/Class/Gunslinger.png",
-    "synergy": [
+    "effect": [
       {
         "require": 2,
         "bonus": "ガンスリンガーが一定確率で追加攻撃を1回行うようになる"
@@ -97,7 +97,7 @@
     "id": "Knight",
     "name": "ナイト",
     "img": "./img/Class/Knight.png",
-    "synergy": [
+    "effect": [
       {
         "require": 2,
         "bonus": "チームがすべてのダメージを 15 無視する"
@@ -116,7 +116,7 @@
     "id": "Ranger",
     "name": "レンジャー",
     "img": "./img/Class/Ranger.png",
-    "synergy": [
+    "effect": [
       {
         "require": 3,
         "bonus": "レンジャーは攻撃時にASを2倍にする可能性がある"
@@ -127,7 +127,7 @@
     "id": "Shapeshifter",
     "name": "シェイプシフター",
     "img": "./img/Class/Shapeshifter.png",
-    "synergy": [
+    "effect": [
       {
         "require": 3,
         "bonus": "シェイプシフターは変身時に最大ヘルスが60%上昇する"
@@ -142,7 +142,7 @@
     "id": "Sorcerer",
     "name": "ソーサラー",
     "img": "./img/Class/Sorcerer.png",
-    "synergy": [
+    "effect": [
       {
         "require": 3,
         "bonus": "味方が与えるAPダメージが45%上昇する"

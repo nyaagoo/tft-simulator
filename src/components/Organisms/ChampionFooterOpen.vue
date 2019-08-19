@@ -24,7 +24,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { champion } from "@/store/index";
-import { Champion, costColor, Synergy } from "@/models/champion";
+import { Champion, costColor, ActiveSynergy } from "@/models/champion";
 import router from "@/router";
 import PickCoutenr from "@/components/Organisms/ChampionPickCounter.vue";
 import ChampionDeck from "@/components/Molecules/ChampionDeck.vue";
@@ -47,11 +47,11 @@ export default class ChampionFooterOpen extends Vue {
     return champion.maxCountPickChampion;
   }
 
-  get activeOriginSynergy(): Synergy[] {
+  get activeOriginSynergy(): ActiveSynergy[] {
     return champion.activeOriginSynergy;
   }
 
-  get activeClassSynergy(): Synergy[] {
+  get activeClassSynergy(): ActiveSynergy[] {
     return champion.activeClassSynergy;
   }
 

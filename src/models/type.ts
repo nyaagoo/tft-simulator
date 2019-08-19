@@ -1,8 +1,8 @@
-export type ClassOriginData = {
+export type Synergy = {
   id: string;
   name: string;
   img: string;
-  synergy: {
+  effect: {
     require: number;
     bonus: string;
   }[];
