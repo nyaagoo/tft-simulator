@@ -1,8 +1,9 @@
-@import "./sprite-class";
-@import "./sprite-origin";
-@import "./sprite-champion";
-@import "./sprite-skill";
-@import "./sprite-item";
+@import './sprite-class'
+@import './sprite-origin'
+@import './sprite-champion'
+@import './sprite-skill'
+@import './sprite-item'
+
 p
   color azure
 span
@@ -29,17 +30,19 @@ html
   margin auto
   margin-bottom -16px
   height 48px
-  max-width: calc(100% - 80px);
+  max-width calc(100% - 80px)
   background #00B8D4
   border-radius 8px
   > h3
-    font-size:28px
+    font-size 28px
+    overflow hidden
+    white-space nowrap
+    text-overflow ellipsis
 // 個別に指定する項目
 .card-container-title
   background #00B8D4
 .card-container
   border-left 4px solid #00B8D4
-
 // 個別に指定する項目
 .class-color
   background #00B8D4

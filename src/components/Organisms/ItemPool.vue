@@ -1,10 +1,10 @@
 <template lang="pug">
   .item-pool-container
     .basic-item-list.pa-3
-      i.icon-item.pointer(v-for="item in basicItemList" :class="`icon-${(item.id).toLowerCase()}`" @click="addItemPool(item)")
+      i.icon-item.pointer.overlay.add(v-for="item in basicItemList" :class="`icon-${(item.id).toLowerCase()}`" @click="addItemPool(item)")
     .item-pool.pa-3
       span.item-pool-title アイテムプール
-      i.icon-item.pointer(v-for="item in itemPool" :class="`icon-${(item.id).toLowerCase()}`" @click="removeItemPool(item)")
+      i.icon-item.pointer.overlay(v-for="item in itemPool" :class="`icon-${(item.id).toLowerCase()}`" @click="removeItemPool(item)")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -41,6 +41,9 @@ export default class ItemPool extends Vue {
     width 400px
 .basic-item-list
   display flex
+  width 474px
+  @media screen and (max-width: 600px)
+    width 378px
 .item-pool
   display flex
   flex-wrap wrap
@@ -65,4 +68,25 @@ export default class ItemPool extends Vue {
   left 12px
   background #424242
   width 100px
+.icon-item
+  position relative
+.overlay:hover
+  cursor pointer
+  filter grayscale(0%)
+.overlay::after
+  content url('/img/icon/remove_circle.png')
+  position absolute
+  top 6px
+  left 6px
+  opacity 0
+  transition opacity .25s ease
+  filter invert(100%)
+  @media screen and (max-width: 600px)
+    top 0
+    left 0
+.overlay.add::after
+  content url('/img/icon/add_circle.png')
+  filter invert(100%)
+.overlay:hover::after
+  opacity .8
 </style>

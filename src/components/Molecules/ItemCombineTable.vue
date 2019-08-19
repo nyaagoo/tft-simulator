@@ -5,9 +5,9 @@
     .combine-table-container.ma-4
       .combine-table-row
         .first-row-item
-          i.icon-item.pointer(v-for="item in basicItemList")(:class="[{grayscale: !isGrayFilterBasicItem(item.id)},`icon-${(item.id).toLowerCase()}`]" @click="ToggleCheckedItemColumn(item)")
+          i.icon-item.pointer.overlay(v-for="item in basicItemList")(:class="[{grayscale: !isGrayFilterBasicItem(item.id)},`icon-${(item.id).toLowerCase()}`]" @click="ToggleCheckedItemColumn(item)")
         .row-item(v-for="(row, rowIndex) in buildItemEachBasicItem")
-          i.icon-item.pointer(:class="[{grayscale: !isGrayFilterBasicItem(row.basicItem.id)}, `icon-${(row.basicItem.id).toLowerCase()}`]" @click="ToggleCheckedItemColumn(row.basicItem)")
+          i.icon-item.pointer.overlay(:class="[{grayscale: !isGrayFilterBasicItem(row.basicItem.id)}, `icon-${(row.basicItem.id).toLowerCase()}`]" @click="ToggleCheckedItemColumn(row.basicItem)")
           .combine-table-column
             .column-item(v-for="(column, columnIndex) in row.buildItem" v-if="columnIndex <= rowIndex")
               i.icon-item(:class="[{grayscale: !canBuildItem(column.recipe)},`icon-${(column.id).toLowerCase()}`]")
@@ -87,4 +87,25 @@ export default class CombineTable extends Vue {
   display flex
   justify-content center
   margin auto
+.icon-item
+  position relative
+.overlay:hover
+  cursor pointer
+  filter grayscale(0%)
+.overlay::after
+  content url('/img/icon/remove_circle.png')
+  position absolute
+  top 6px
+  left 6px
+  opacity 0
+  transition opacity .25s ease
+  filter invert(100%)
+  @media screen and (max-width: 600px)
+    top 0
+    left 0
+.overlay.grayscale::after
+  content url('/img/icon/add_circle.png')
+  filter invert(100%)
+.overlay:hover::after
+  opacity .8
 </style>
