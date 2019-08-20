@@ -1,17 +1,28 @@
 <template lang="pug">
   .champion-table-page
-    champion-table-template
+    tft-header
+    tft-drawer
+    champion-data-table
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import router from "@/router";
-import ChampionTableTemplate from "@/components/Templates/ChampionTable.vue";
+import Header from "@/components/Organisms/Header.vue";
+import Drawer from "@/components/Organisms/Drawer.vue";
+import ChampionDataTable from "@/components/Organisms/ChampionDataTable.vue";
+
 @Component({
   name: "champion-table-page",
   components: {
-    "champion-table-template": ChampionTableTemplate
+    "tft-header": Header,
+    "tft-drawer": Drawer,
+    "champion-data-table": ChampionDataTable
   }
 })
 export default class ChampionTablePage extends Vue {}
 </script>
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+.champion-table-page
+  margin 0 auto
+  height calc(100vh - 48px)
+  overflow-y auto
+</style>
