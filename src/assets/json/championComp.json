@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "name": "Hello Draven",
+    "comment": "this is comment",
+    "patch": {
+      "create": "9.14",
+      "valid": "9.14b"
+    },
+    "synergy": {
+      "origin": [
+        { "class": "Demon", "count": 1 },
+        { "class": "Dragon", "count": 1 }
+      ],
+      "class": [
+        { "class": "Assassin", "count": 1 },
+        { "class": "Knight", "count": 1 }
+      ]
+    },
+    "championList": [
+      {
+        "id": "Draven",
+        "item": ["InfinityEdge", "GuardianAngel", ""],
+        "location": 1
+      },
+      {
+        "id": "Elise",
+        "item": ["ZekesHerald", "TheBloodthirster", ""],
+        "location": 2
+      },
+      {
+        "id": "Elise",
+        "item": ["ZekesHerald", "TheBloodthirster", ""],
+        "location": 2
+      },
+      {
+        "id": "Elise",
+        "item": ["ZekesHerald", "TheBloodthirster", ""],
+        "location": 2
+      },
+      {
+        "id": "Elise",
+        "item": ["ZekesHerald", "TheBloodthirster", ""],
+        "location": 2
+      },
+      {
+        "id": "Elise",
+        "item": ["ZekesHerald", "TheBloodthirster", ""],
+        "location": 2
+      },
+      {
+        "id": "Elise",
+        "item": ["ZekesHerald", "TheBloodthirster", ""],
+        "location": 2
+      },
+      {
+        "id": "Elise",
+        "item": ["ZekesHerald", "TheBloodthirster", ""],
+        "location": 2
+      },
+      {
+        "id": "Elise",
+        "item": ["ZekesHerald", "TheBloodthirster", ""],
+        "location": 2
+      },
+      {
+        "id": "Elise",
+        "item": ["ZekesHerald", "TheBloodthirster", ""],
+        "location": 2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Hello Great Evelynn",
+    "comment": "this is comment",
+    "patch": {
+      "create": "9.14",
+      "valid": "9.14b"
+    },
+    "championList": [
+      {
+        "id": "Evelynn",
+        "item": ["YoumuusGhostblade", "", ""],
+        "location": 12
+      },
+      {
+        "id": "Fiora",
+        "item": ["", "", ""],
+        "location": 13
+      }
+    ]
+  }
+]

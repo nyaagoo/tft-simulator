@@ -14,6 +14,10 @@
             v-icon.mr-3 mdi-view-list
             v-list-item-content
               v-list-item-title チャンピオンデータ
+          v-list-item(@click="transitComposition()")
+            v-icon.mr-3 mdi-view-list
+            v-list-item-content
+              v-list-item-title チャンピオン編成
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -47,6 +51,9 @@ export default class Drawer extends Vue {
   }
   transitChampionTable() {
     router.push("/table");
+  }
+  transitComposition() {
+    router.push("/composition");
   }
 }
 </script>

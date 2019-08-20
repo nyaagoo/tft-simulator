@@ -22,6 +22,11 @@ export default new Router({
       path: "/table",
       name: "table",
       component: () => import("@/components/Pages/ChampionTable.vue")
+    },
+    {
+      path: "/composition",
+      name: "composition",
+      component: () => import("@/components/Pages/Composition.vue")
     }
   ]
 });

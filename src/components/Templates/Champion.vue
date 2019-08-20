@@ -5,7 +5,6 @@
     champion-deck-favorite
     champion-deck-origin
     champion-deck-class
-    .champion-space
     .champion-pick
       champion-footer.pa-2
 
@@ -44,8 +43,7 @@ export default class ChampionTemplate extends Vue {}
   align-items flex-start
   overflow-y auto
   overflow-x hidden
-.champion-space
-  height 320px
+  padding-bottom 300px
 .champion-pick
   position absolute
   width 100%
