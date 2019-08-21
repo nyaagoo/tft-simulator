@@ -14,7 +14,6 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import { champion } from "@/store/index";
 import DeckOrigin from "@/components/Organisms/ChampionDeckOrigin.vue";
 import DeckClass from "@/components/Organisms/ChampionDeckClass.vue";
 import Header from "@/components/Organisms/Header.vue";

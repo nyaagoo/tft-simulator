@@ -20,7 +20,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import { champion } from "@/store/index";
+import { championDeck } from "@/store/index";
 import ChampionDeckGroup from "@/components/Molecules/ChampionDeckGroup.vue";
 
 @Component({
@@ -31,38 +31,38 @@ import ChampionDeckGroup from "@/components/Molecules/ChampionDeckGroup.vue";
 })
 export default class DeckFavorite extends Vue {
   get championListEachOrigin() {
-    return champion.deckOrigin.filter(deck =>
-      champion.favoriteOriginList.includes(deck.origin.id)
+    return championDeck.deckOrigin.filter(deck =>
+      championDeck.favoriteOriginList.includes(deck.origin.id)
     );
   }
   get championListEachClass() {
-    return champion.deckClass.filter(deck =>
-      champion.favoriteClassList.includes(deck.class.id)
+    return championDeck.deckClass.filter(deck =>
+      championDeck.favoriteClassList.includes(deck.class.id)
     );
   }
   get championOrigin() {
-    return champion.originList;
+    return championDeck.originList;
   }
   get championClass() {
-    return champion.classList;
+    return championDeck.classList;
   }
   get favoriteOriginList(): string[] {
-    return champion.favoriteOriginList;
+    return championDeck.favoriteOriginList;
   }
   set favoriteOriginList(list: string[]) {
-    champion.SET_FAVORITE_ORIGIN_LIST(list);
+    championDeck.SET_FAVORITE_ORIGIN_LIST(list);
   }
   get favoriteClassList(): string[] {
-    return champion.favoriteClassList;
+    return championDeck.favoriteClassList;
   }
   set favoriteClassList(list: string[]) {
-    champion.SET_FAVORITE_CLASS_LIST(list);
+    championDeck.SET_FAVORITE_CLASS_LIST(list);
   }
   get originList(): string[] {
-    return Object.keys(champion.originList);
+    return Object.keys(championDeck.originList);
   }
   get classList(): string[] {
-    return Object.keys(champion.classList);
+    return Object.keys(championDeck.classList);
   }
   isOriginSelected(item: string): boolean {
     return this.favoriteOriginList.some(o => o === item);

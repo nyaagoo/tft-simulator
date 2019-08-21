@@ -29,7 +29,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import { setting, champion } from "@/store/index";
+import { setting, championDeck } from "@/store/index";
 import IconBase from "@/components/Icon/IconBase.vue";
 import IconSetting from "@/components/Icon/IconSetting.vue";
 import IconMenu from "@/components/Icon/IconMenu.vue";
@@ -65,12 +65,12 @@ export default class TFTHeader extends Vue {
     setting.SaveSetting();
   }
   sortChampionCost() {
-    champion.sortChampionOriginCost();
-    champion.sortChampionClassCost();
+    championDeck.sortChampionOriginCost();
+    championDeck.sortChampionClassCost();
   }
   sortChampionName() {
-    champion.sortChampionOriginName();
-    champion.sortChampionClassName();
+    championDeck.sortChampionOriginName();
+    championDeck.sortChampionClassName();
   }
 }
 </script>

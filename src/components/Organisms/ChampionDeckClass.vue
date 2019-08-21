@@ -10,7 +10,7 @@
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { ChampionClass, costColor } from "@/models/champion";
-import { champion } from "@/store/index";
+import { championDeck } from "@/store/index";
 import ChampionDeckGroup from "@/components/Molecules/ChampionDeckGroup.vue";
 
 @Component({
@@ -23,10 +23,10 @@ export default class DeckClass extends Vue {
   costColor: Map<number, string> = costColor;
 
   mounted() {
-    champion.SeparateChampionDeckClass();
+    championDeck.SeparateChampionDeckClass();
   }
   get championListEachClass(): ChampionClass[] {
-    return champion.deckClass;
+    return championDeck.deckClass;
   }
 }
 </script>

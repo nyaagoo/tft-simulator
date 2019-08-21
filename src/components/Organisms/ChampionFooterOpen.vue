@@ -23,7 +23,7 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { champion } from "@/store/index";
+import { championPick } from "@/store/index";
 import { Champion, costColor, ActiveSynergy } from "@/models/champion";
 import router from "@/router";
 import PickCoutenr from "@/components/Organisms/ChampionPickCounter.vue";
@@ -40,23 +40,23 @@ export default class ChampionFooterOpen extends Vue {
   costColor: Map<number, string> = costColor;
 
   get championPicked(): Champion[] {
-    return champion.championPicked;
+    return championPick.championPicked;
   }
 
   get maxCount(): number {
-    return champion.maxCountPickChampion;
+    return championPick.maxCountPickChampion;
   }
 
   get activeOriginSynergy(): ActiveSynergy[] {
-    return champion.activeOriginSynergy;
+    return championPick.activeOriginSynergy;
   }
 
   get activeClassSynergy(): ActiveSynergy[] {
-    return champion.activeClassSynergy;
+    return championPick.activeClassSynergy;
   }
 
   removeChampion(targetChampion: Champion) {
-    champion.RemoveChampionPicked(targetChampion);
+    championPick.RemoveChampionPicked(targetChampion);
   }
 }
 </script>

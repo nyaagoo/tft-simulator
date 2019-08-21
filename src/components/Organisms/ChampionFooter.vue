@@ -9,7 +9,6 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import { champion } from "@/store/index";
 import { Champion, costColor } from "@/models/champion";
 @Component({
   name: "champion-footer",
