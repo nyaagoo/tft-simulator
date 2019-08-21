@@ -8,23 +8,19 @@
       v-toolbar-items
         v-menu(v-model="menu", :close-on-content-click="false", :nudge-width="300", offset-x)
           template(v-slot:activator="{ on }")
-            v-btn(v-on="on" outline icon)
+            v-btn(v-on="on" icon)
               v-icon mdi-settings
           v-card
             v-list
-              v-list-tile
-                v-subheader 表示
-              v-list-tile
-                v-switch.pl-30px(v-model="visibleOriginIcon" @change="toggleVisibleOrigin()" inset label="オリジン表示")
-              v-list-tile
-                v-switch.pl-30px(v-model="visibleClassIcon" @change="toggleVisibleClass()" inset label="クラス表示")
-              v-list-tile
-                v-switch.pl-30px(v-model="visibleCostIcon" @change="toggleVisibleCost()" inset label="コスト表示")
-              v-list-tile
-                v-subheader チャンピオンソート
-                v-radio-group.pl-30px(v-model="column" column)
-                  v-radio(@change="sortChampionCost()" label="コスト順" value="cost")
-                  v-radio(@change="sortChampionName()" label="名前順" value="name")
+              v-subheader 表示
+              v-switch.pl-30px(v-model="visibleOriginIcon" @change="toggleVisibleOrigin()" inset label="オリジンアイコン")
+              v-switch.pl-30px(v-model="visibleClassIcon" @change="toggleVisibleClass()" inset label="クラスアイコン")
+              v-switch.pl-30px(v-model="visibleCostIcon" @change="toggleVisibleCost()" inset label="コスト")
+              v-divider.mx-5
+              v-subheader チャンピオンソート
+              v-radio-group.pl-30px(v-model="column" column)
+                v-radio(@change="sortChampionCost()" label="コスト順" value="cost")
+                v-radio(@change="sortChampionName()" label="名前順" value="name")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";

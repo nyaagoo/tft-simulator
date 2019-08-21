@@ -1,13 +1,13 @@
 <template lang="pug">
-  .pick-counter
+  .pick-counter.mt-1
     span.mr-3 {{ pickCount }} / {{ maxCount }}
-    v-btn(flat icon small outlined color="info" @click="decrementMaxCount()")
+    v-btn(text small outlined color="info" @click="decrementMaxCount()")
       icon-base(color="#2196f3")
         icon-remove
-    v-btn(flat icon small outlined color="info" @click="incrementMaxCount()")
+    v-btn(text small outlined color="info" @click="incrementMaxCount()")
       icon-base(color="#2196f3")
         icon-add
-    v-btn(color="error" dark outlined @click="resetPickChampion()") CLERA
+    v-btn.ml-4(color="error" dark outlined @click="resetPickChampion()") CLERA
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";

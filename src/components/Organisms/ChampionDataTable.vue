@@ -23,7 +23,7 @@
               .class-select
                 .class-item.pointer(v-for="classItem in classList" :key="classItem.id" :class="{'class-item-selected': isClassSelected(classItem.id)}" @click="toggleSelectClass(classItem.id)")
                   i.icon-class(:class="`icon-${classItem.id.toLowerCase()}`")
-        v-data-table.elevation-1(:headers='headers', :items="championList" multi-sort hide-default-footer items-per-page=60)
+        v-data-table.elevation-1(:headers='headers' :items="championList" multi-sort hide-default-footer :items-per-page="60")
           template(v-slot:item.image="{ item }")
             i.icon-champion.mr-1.vertical-bottom(:class="`icon-${item.id.toLowerCase()}`")
           template(v-slot:item.origin="{ item }")

@@ -5,7 +5,7 @@
         template(v-slot:activator="{ on }")
           span(v-on='on')
             span {{ synergy.name }}
-            span.tooltip-container.synergy-description.mx-1(v-for="item in synergy.effect" :key="`${synergy.id}`") ({{ item.require }})
+            span.tooltip-container.synergy-description.mx-1(v-for="(item,index) in synergy.effect" :key="`${synergy.id}${index}`") ({{ item.require }})
         synergy-tooltip(:synergy="synergy", :synergyType="synergyType")
     transition-group.champion-origin-inner(name="flip-list" tag="div")
       .champion-wrapper(v-for="champion in championList" :key="champion.name")
