@@ -2,11 +2,12 @@
   .champion-page
     tft-header
     tft-drawer
-    .champion-side-pick
-      champion-side-pick
-    champion-deck-favorite
-    champion-deck-origin
-    champion-deck-class
+    .content
+      .champion-side-pick
+        champion-side-pick
+      champion-deck-favorite
+      champion-deck-origin
+      champion-deck-class
     .champion-pick
       champion-footer.pa-2
 </template>
@@ -42,7 +43,6 @@ export default class ChampionPage extends Vue {
 <style lang="stylus" scoped>
 .champion-page
   margin 0 auto
-  margin-left 200px
   height calc(100vh - 48px)
   overflow-y auto
   padding-bottom 300px
@@ -50,8 +50,11 @@ export default class ChampionPage extends Vue {
   position absolute
   width 98%
   bottom 0
+  z-index 10
 .champion-side-pick
   position absolute
-  top 200px
+  top 40px
   left 0px
+.content
+  margin-left 200px
 </style>
