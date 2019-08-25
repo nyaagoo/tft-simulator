@@ -2,6 +2,8 @@
   .champion-page
     tft-header
     tft-drawer
+    .champion-side-pick
+      champion-side-pick
     champion-deck-favorite
     champion-deck-origin
     champion-deck-class
@@ -18,6 +20,7 @@ import Header from "@/components/Organisms/Header.vue";
 import Drawer from "@/components/Organisms/Drawer.vue";
 import ChampionFooter from "@/components/Organisms/ChampionFooter.vue";
 import DeckFavorite from "@/components/Organisms/ChampionDeckFavorite.vue";
+import ChampionSidePick from "@/components/Organisms/ChampionSidePick.vue";
 
 @Component({
   components: {
@@ -26,7 +29,8 @@ import DeckFavorite from "@/components/Organisms/ChampionDeckFavorite.vue";
     "champion-deck-favorite": DeckFavorite,
     "tft-header": Header,
     "tft-drawer": Drawer,
-    "champion-footer": ChampionFooter
+    "champion-footer": ChampionFooter,
+    "champion-side-pick": ChampionSidePick
   }
 })
 export default class ChampionPage extends Vue {
@@ -38,6 +42,7 @@ export default class ChampionPage extends Vue {
 <style lang="stylus" scoped>
 .champion-page
   margin 0 auto
+  margin-left 200px
   height calc(100vh - 48px)
   overflow-y auto
   padding-bottom 300px
@@ -45,4 +50,8 @@ export default class ChampionPage extends Vue {
   position absolute
   width 98%
   bottom 0
+.champion-side-pick
+  position absolute
+  top 200px
+  left 0px
 </style>

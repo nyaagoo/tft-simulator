@@ -15,16 +15,17 @@
             li.synergy-list.pa-1(v-for="synergy in activeOriginSynergy" :key="activeOriginSynergy.type")
               .synergy-item-wrapper
                 span.type-chip-origin {{synergy.type}}
-                span.synegy-description.pl-2 {{synergy.synergy}}
+                span.synegy-description.pl-2 {{synergy.bonus}}
             li.synergy-list.pa-1(v-for="synergy in activeClassSynergy" :key="activeClassSynergy.type")
               .synergy-item-wrapper
                 span.type-chip-class {{synergy.type}}
-                span.synegy-description.pl-2 {{synergy.synergy}}
+                span.synegy-description.pl-2 {{synergy.bonus}}
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { championPick } from "@/store/index";
-import { Champion, costColor, ActiveSynergy } from "@/models/champion";
+import { Champion, costColor } from "@/models/champion";
+import { ActiveSynergy } from "@/models/type";
 import router from "@/router";
 import PickCoutenr from "@/components/Organisms/ChampionPickCounter.vue";
 import ChampionDeck from "@/components/Molecules/ChampionDeck.vue";
@@ -48,11 +49,11 @@ export default class ChampionFooterOpen extends Vue {
   }
 
   get activeOriginSynergy(): ActiveSynergy[] {
-    return championPick.activeOriginSynergy;
+    return championPick.activeOriginSynergy.filter(x => x.isActive);
   }
 
   get activeClassSynergy(): ActiveSynergy[] {
-    return championPick.activeClassSynergy;
+    return championPick.activeClassSynergy.filter(x => x.isActive);
   }
 
   removeChampion(targetChampion: Champion) {

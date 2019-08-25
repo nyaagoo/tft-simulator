@@ -8,12 +8,16 @@ export type Synergy = {
   }[];
 };
 
-export type OriginCount = {
+export type SynergyCount = {
+  id: string;
   count: number;
-  origin: string;
 };
 
-export type ClassCount = {
+export type ActiveSynergy = {
+  id: string;
   count: number;
-  class: string;
+  type: string;
+  isActive: boolean;
+  bonus?: string;
+  data: Synergy;
 };
