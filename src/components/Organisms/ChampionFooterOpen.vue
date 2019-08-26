@@ -12,14 +12,14 @@
       v-flex(xs12 md7 lg8 grow shrink)
         .synergy-container.mx-3
           ul.pl-1
-            li.synergy-list.pa-1(v-for="synergy in activeOriginSynergy" :key="activeOriginSynergy.type")
+            li.synergy-list.pa-1(v-for="synergy in activeOriginSynergy" :key="synergy.id")
               .synergy-item-wrapper
-                span.type-chip-origin {{synergy.type}}
-                span.synegy-description.pl-2 {{synergy.bonus.effect}}
-            li.synergy-list.pa-1(v-for="synergy in activeClassSynergy" :key="activeClassSynergy.type")
+                span.type-chip-origin {{ synergy.data.name }}
+                span.synegy-description.pl-2 {{ synergy.bonus.effect }}
+            li.synergy-list.pa-1(v-for="synergy in activeClassSynergy" :key="synergy.id")
               .synergy-item-wrapper
-                span.type-chip-class {{synergy.type}}
-                span.synegy-description.pl-2 {{synergy.bonus.effect}}
+                span.type-chip-class {{ synergy.data.name }}
+                span.synegy-description.pl-2 {{ synergy.bonus.effect }}
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";

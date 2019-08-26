@@ -1,13 +1,13 @@
 <template lang="pug">
   .champion-side-pick
-    transition-group(name="list-complete" tag="div")
-      .active-origin.list-complete-item(v-for="item in activeOriginSynergy" :key="item.id")
+    transition-group(name="list-transition" tag="div")
+      .active-origin.list-transition-item(v-for="item in activeOriginSynergy" :key="item.id")
         active-synergy-item(:type="item.type" :synergy="item")
-      .active-class.list-complete-item(v-for="item in activeClassSynergy" :key="item.id")
+      .active-class.list-transition-item(v-for="item in activeClassSynergy" :key="item.id")
         active-synergy-item(:type="item.type" :synergy="item")
-      .inactive-origin.list-complete-item(v-for="item in inactiveOriginSynergy" :key="item.id")
+      .inactive-origin.list-transition-item(v-for="item in inactiveOriginSynergy" :key="item.id")
         inactive-synergy-item(:type="item.type" :synergy="item")
-      .inactive-class.list-complete-item(v-for="item in inactiveClassSynergy" :key="item.id")
+      .inactive-class.list-transition-item(v-for="item in inactiveClassSynergy" :key="item.id")
         inactive-synergy-item(:type="item.type" :synergy="item")
 </template>
 <script lang="ts">
@@ -45,11 +45,14 @@ export default class ChampionSideDeck extends Vue {
   width 240px
 .active-origin + .inactive-origin, .active-class + .inactive-class, .active-origin + .inactive-class, .active-class + .inactive-origin
   margin-top 40px
-.list-complete-item
+.list-transition-item
   transition all .3s
   display inline-block
-  margin-right 10px
-.list-complete-enter, .list-complete-leave-to
+.list-transition-move
+  transition transform .3s
+.list-transition-enter, .list-transition-leave-to
   opacity 0
   transform translateX(-30px)
+.list-transition-leave-active
+  position absolute
 </style>

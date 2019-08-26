@@ -80,6 +80,12 @@ class ChampionPickModule extends VuexModule {
   }
 
   @Action({ rawError: true })
+  public async CalculateChampionPicked() {
+    this.SET_ACTIVE_ORIGIN_SYNERGY(await this.CalculateOriginSynergy());
+    this.SET_ACTIVE_CLASS_SYNERGY(await this.CalculateClassSynergy());
+  }
+
+  @Action({ rawError: true })
   public async CalculateOriginSynergy(): Promise<ActiveSynergy[]> {
     const originCount = await this.CountChampionOrigin();
     const activeSynergy: ActiveSynergy[] = [];
