@@ -1,49 +1,48 @@
 <template lang="pug">
   .champion-side-pick
     transition-group(name="list-transition" tag="div")
-      .active-origin.list-transition-item(v-for="item in activeOriginSynergy" :key="item.id")
+      .active-synergy.list-transition-item(v-for="item in activeOriginSynergy" :key="item.id")
         active-synergy-item(:type="item.type" :synergy="item")
-      .active-class.list-transition-item(v-for="item in activeClassSynergy" :key="item.id")
+      .inactive-synergy.list-transition-item(v-for="item in inactiveOriginSynergy" :key="item.id")
         active-synergy-item(:type="item.type" :synergy="item")
-      .inactive-origin.list-transition-item(v-for="item in inactiveOriginSynergy" :key="item.id")
-        inactive-synergy-item(:type="item.type" :synergy="item")
-      .inactive-class.list-transition-item(v-for="item in inactiveClassSynergy" :key="item.id")
-        inactive-synergy-item(:type="item.type" :synergy="item")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { championPick } from "@/store/index";
 import { ActiveSynergy } from "@/models/type";
-import ActiveSynergyCountItem from "@/components/Organisms/SynergyCountItemActive.vue";
-import InactiveSynergyCountItem from "@/components/Organisms/SynergyCountItemInactive.vue";
-
+import SynergyCountItem from "@/components/Organisms/SynergyCountItem.vue";
 @Component({
   name: "champion-side-pick",
   components: {
-    "active-synergy-item": ActiveSynergyCountItem,
-    "inactive-synergy-item": InactiveSynergyCountItem
+    "active-synergy-item": SynergyCountItem
   }
 })
 export default class ChampionSideDeck extends Vue {
   get activeOriginSynergy(): ActiveSynergy[] {
-    return championPick.activeOriginSynergy.filter(x => x.isActive);
+    return [
+      ...championPick.activeOriginSynergy,
+      ...championPick.activeClassSynergy
+    ]
+      .filter(x => x.isActive)
+      .sort((a, b) =>
+        a.bonus!.tier === b.bonus!.tier ? 0 : a.bonus!.tier - b.bonus!.tier
+      );
   }
   get inactiveOriginSynergy(): ActiveSynergy[] {
-    return championPick.activeOriginSynergy.filter(x => !x.isActive);
-  }
-  get activeClassSynergy(): ActiveSynergy[] {
-    return championPick.activeClassSynergy.filter(x => x.isActive);
-  }
-  get inactiveClassSynergy(): ActiveSynergy[] {
-    return championPick.activeClassSynergy.filter(x => !x.isActive);
+    return [
+      ...championPick.activeOriginSynergy,
+      ...championPick.activeClassSynergy
+    ]
+      .filter(x => !x.isActive)
+      .sort((a, b) => (b.count === a.count ? 0 : b.count - a.count));
   }
 }
 </script>
 <style lang="stylus" scoped>
 .champion-side-pick
-  padding-left 20px
+  padding-left 8px
   width 240px
-.active-origin + .inactive-origin, .active-class + .inactive-class, .active-origin + .inactive-class, .active-class + .inactive-origin
+.active-synergy + .inactive-synergy
   margin-top 40px
 .list-transition-item
   transition all .3s

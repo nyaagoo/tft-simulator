@@ -3,7 +3,7 @@
     .class-title
       v-tooltip(top)
         template(v-slot:activator="{ on }")
-          span(v-on='on')
+          span(v-on="on")
             span {{ synergy.name }}
             span.tooltip-container.synergy-description.mx-1(v-for="(item,index) in synergy.effect" :key="`${synergy.id}${index}`") ({{ item.require }})
         synergy-tooltip(:synergy="synergy", :synergyType="synergyType")

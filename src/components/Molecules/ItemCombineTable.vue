@@ -5,7 +5,7 @@
     .combine-table-container.ma-4
       .combine-table-row
         .first-row-item
-          i.icon-item.pointer.overlay(v-for="item in basicItemList")(:class="[{grayscale: !isGrayFilterBasicItem(item.id)},`icon-${(item.id).toLowerCase()}`]" @click="ToggleCheckedItemColumn(item)")
+          i.icon-item.pointer.overlay(v-for="item in basicItemList" :class="[{grayscale: !isGrayFilterBasicItem(item.id)},`icon-${(item.id).toLowerCase()}`]" @click="ToggleCheckedItemColumn(item)")
         .row-item(v-for="(row, rowIndex) in buildItemEachBasicItem")
           i.icon-item.pointer.overlay(:class="[{grayscale: !isGrayFilterBasicItem(row.basicItem.id)}, `icon-${(row.basicItem.id).toLowerCase()}`]" @click="ToggleCheckedItemColumn(row.basicItem)")
           .combine-table-column

@@ -2,8 +2,8 @@
   .champion-page
     tft-header
     tft-drawer
-    .content
-      .champion-side-pick
+    .content(:class="[{'ml-0': !visibleSynegyViewer}]")
+      .champion-side-pick-container(v-if="visibleSynegyViewer")
         champion-side-pick
       champion-deck-favorite
       champion-deck-origin
@@ -36,7 +36,11 @@ import ChampionSidePick from "@/components/Organisms/ChampionSidePick.vue";
 })
 export default class ChampionPage extends Vue {
   created() {
-    setting.LoadSetting();
+    setting.loadSetting();
+  }
+
+  get visibleSynegyViewer(): boolean {
+    return setting.visibleSideSynergyViewer;
   }
 }
 </script>
@@ -51,10 +55,14 @@ export default class ChampionPage extends Vue {
   width 98%
   bottom 0
   z-index 10
-.champion-side-pick
+.champion-side-pick-container
   position absolute
+  height calc(90vh - 48px - 40px)
+  overflow-y auto
   top 40px
   left 0px
+.champion-side-pick-container::-webkit-scrollbar
+  display none
 .content
   margin-left 200px
 </style>

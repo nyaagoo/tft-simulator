@@ -12,7 +12,9 @@
               v-icon mdi-settings
           v-card
             v-list
-              v-subheader 表示
+              v-subheader サイドバー
+              v-switch.pl-30px(v-model="visibleSideSynergyViewer" @change="toggleVisibleSynergyViewer()" inset label="サイドシナジービュー")
+              v-subheader アイコン表示
               v-switch.pl-30px(v-model="visibleOriginIcon" @change="toggleVisibleOrigin()" inset label="オリジンアイコン")
               v-switch.pl-30px(v-model="visibleClassIcon" @change="toggleVisibleClass()" inset label="クラスアイコン")
               v-switch.pl-30px(v-model="visibleCostIcon" @change="toggleVisibleCost()" inset label="コスト")
@@ -41,6 +43,7 @@ import IconMenu from "@/components/Icon/IconMenu.vue";
 export default class TFTHeader extends Vue {
   column = "cost";
   menu: boolean = false;
+  visibleSideSynergyViewer: boolean = setting.visibleSideSynergyViewer;
   visibleOriginIcon: boolean = setting.visibleChampionOrigin;
   visibleClassIcon: boolean = setting.visibleChampionClass;
   visibleCostIcon: boolean = setting.visibleChampionCost;
@@ -48,17 +51,22 @@ export default class TFTHeader extends Vue {
   toggleDrawer() {
     setting.toggleDrawer();
   }
+
+  toggleVisibleSynergyViewer() {
+    setting.SET_VISIBLE_SIDE_SYNERGY_VIEWER(this.visibleSideSynergyViewer);
+    setting.saveSetting();
+  }
   toggleVisibleOrigin() {
     setting.SET_VISIBLE_CHAMPION_ORIGIN(this.visibleOriginIcon);
-    setting.SaveSetting();
+    setting.saveSetting();
   }
   toggleVisibleClass() {
     setting.SET_VISIBLE_CHAMPION_CLASS(this.visibleClassIcon);
-    setting.SaveSetting();
+    setting.saveSetting();
   }
   toggleVisibleCost() {
     setting.SET_VISIBLE_CHAMPION_COST(this.visibleCostIcon);
-    setting.SaveSetting();
+    setting.saveSetting();
   }
   sortChampionCost() {
     championDeck.sortChampionOriginCost();
