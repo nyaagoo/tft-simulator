@@ -15,11 +15,11 @@
             li.synergy-list.pa-1(v-for="synergy in activeOriginSynergy" :key="activeOriginSynergy.type")
               .synergy-item-wrapper
                 span.type-chip-origin {{synergy.type}}
-                span.synegy-description.pl-2 {{synergy.bonus}}
+                span.synegy-description.pl-2 {{synergy.bonus.effect}}
             li.synergy-list.pa-1(v-for="synergy in activeClassSynergy" :key="activeClassSynergy.type")
               .synergy-item-wrapper
                 span.type-chip-class {{synergy.type}}
-                span.synegy-description.pl-2 {{synergy.bonus}}
+                span.synegy-description.pl-2 {{synergy.bonus.effect}}
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";

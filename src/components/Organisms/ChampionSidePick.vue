@@ -1,13 +1,14 @@
 <template lang="pug">
   .champion-side-pick
-    .active-origin(v-for="item in activeOriginSynergy" key="item.synergy")
-      active-synergy-item(:type="item.type" :synergy="item")
-    .active-origin(v-for="item in activeClassSynergy" key="item.synergy")
-      active-synergy-item(:type="item.type" :synergy="item")
-    .inactive-origin(v-for="item in inactiveOriginSynergy" key="item.synergy")
-      inactive-synergy-item(:type="item.type" :synergy="item")
-    .inactive-origin(v-for="item in inactiveClassSynergy" key="item.synergy")
-      inactive-synergy-item(:type="item.type" :synergy="item")
+    transition-group(name="list-complete" tag="div")
+      .active-origin.list-complete-item(v-for="item in activeOriginSynergy" :key="item.id")
+        active-synergy-item(:type="item.type" :synergy="item")
+      .active-class.list-complete-item(v-for="item in activeClassSynergy" :key="item.id")
+        active-synergy-item(:type="item.type" :synergy="item")
+      .inactive-origin.list-complete-item(v-for="item in inactiveOriginSynergy" :key="item.id")
+        inactive-synergy-item(:type="item.type" :synergy="item")
+      .inactive-class.list-complete-item(v-for="item in inactiveClassSynergy" :key="item.id")
+        inactive-synergy-item(:type="item.type" :synergy="item")
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
@@ -42,6 +43,13 @@ export default class ChampionSideDeck extends Vue {
 .champion-side-pick
   padding-left 20px
   width 240px
-.active-origin + .inactive-origin
+.active-origin + .inactive-origin, .active-class + .inactive-class, .active-origin + .inactive-class, .active-class + .inactive-origin
   margin-top 40px
+.list-complete-item
+  transition all .3s
+  display inline-block
+  margin-right 10px
+.list-complete-enter, .list-complete-leave-to
+  opacity 0
+  transform translateX(-30px)
 </style>

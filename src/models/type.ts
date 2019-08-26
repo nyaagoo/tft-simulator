@@ -18,6 +18,9 @@ export type ActiveSynergy = {
   count: number;
   type: string;
   isActive: boolean;
-  bonus?: string;
+  bonus?: {
+    tier: number;
+    effect: string;
+  };
   data: Synergy;
 };

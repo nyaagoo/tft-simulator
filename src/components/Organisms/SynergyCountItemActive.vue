@@ -1,6 +1,6 @@
 <template lang="pug">
   .synergy-count-item
-    .hexagon
+    .hexagon(:class="`tier-${synergy.bonus.tier}`")
       .icon(:class="[`icon-${synergy.id.toLowerCase()}`, `icon-${type}`]")
     .champion-count {{ synergy.count }}
     .synergy-detail
@@ -84,4 +84,22 @@ export default class SynergyCountItemActive extends Vue {
   top 100%
   width 0
   border-top 10.39px solid #ca9372
+.tier-1
+  background-color #ffb93b
+.tier-1:before
+  border-bottom-color #ffb93b
+.tier-1:after
+  border-top-color #ffb93b
+.tier-2
+  background-color #92b1bd
+.tier-2:before
+  border-bottom-color #92b1bd
+.tier-2:after
+  border-top-color #92b1bd
+.tier-3
+  background-color #ca9372
+.tier-3:before
+  border-bottom-color #ca9372
+.tier-3:after
+  border-top-color #ca9372
 </style>

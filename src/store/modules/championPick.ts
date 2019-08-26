@@ -87,6 +87,7 @@ class ChampionPickModule extends VuexModule {
       const originSynergy = this.originList[originItem.id as originId];
       const activeSynergyBonus = originSynergy.effect.reduce<
         | {
+            tier: number;
             require: number;
             bonus: string;
           }
@@ -103,7 +104,10 @@ class ChampionPickModule extends VuexModule {
           count: originItem.count,
           type: "origin",
           isActive: true,
-          bonus: activeSynergyBonus.bonus,
+          bonus: {
+            tier: activeSynergyBonus.tier,
+            effect: activeSynergyBonus.bonus
+          },
           data: originSynergy
         });
       else
@@ -128,6 +132,7 @@ class ChampionPickModule extends VuexModule {
 
       const activeSynergyBonus = classSynergy.effect.reduce<
         | {
+            tier: number;
             require: number;
             bonus: string;
           }
@@ -144,7 +149,10 @@ class ChampionPickModule extends VuexModule {
           count: classItem.count,
           type: "class",
           isActive: true,
-          bonus: activeSynergyBonus.bonus,
+          bonus: {
+            tier: activeSynergyBonus.tier,
+            effect: activeSynergyBonus.bonus
+          },
           data: classSynergy
         });
       else
