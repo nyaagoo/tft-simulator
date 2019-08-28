@@ -15,12 +15,6 @@ export type FavoriteOriginClass = {
   class: ChampionClass[];
 };
 
-export type ActiveSynergy = {
-  type: string;
-  count: number;
-  synergy: string;
-};
-
 export const costColor: Map<number, string> = new Map([
   [1, "#bababa"],
   [2, "#94b6da"],

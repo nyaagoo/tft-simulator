@@ -1,7 +1,7 @@
 <template lang="pug">
   .champion-footer
-    footer-close(v-if="!isOpen")
-    footer-open(v-else)
+    transition(name="component-fade" mode="out-in")
+      component(:is="footerChoose()")
     .toggle-footer-btn
       v-btn(color="primary" dark @click="toggleFooter") Active Synergy
 
@@ -9,7 +9,6 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import { champion } from "@/store/index";
 import { Champion, costColor } from "@/models/champion";
 @Component({
   name: "champion-footer",
@@ -22,6 +21,10 @@ import { Champion, costColor } from "@/models/champion";
 export default class ChampionFooter extends Vue {
   costColor: Map<number, string> = costColor;
   isOpen: boolean = false;
+
+  footerChoose() {
+    return this.isOpen ? "footer-open" : "footer-close";
+  }
 
   toggleFooter() {
     if (this.isOpen) this.closeFooter();
@@ -47,4 +50,10 @@ export default class ChampionFooter extends Vue {
   display flex
   position absolute
   top -50px
+.component-fade-enter-active, .component-fade-leave-active
+  transition all .12s ease
+.component-fade-enter
+  transform translateY(250px)
+.component-fade-leave-to
+  transform translateY(250px)
 </style>

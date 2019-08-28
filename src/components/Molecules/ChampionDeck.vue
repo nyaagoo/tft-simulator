@@ -14,7 +14,7 @@
 import { Component, Vue, Prop } from "vue-property-decorator";
 import router from "@/router";
 import { Champion, costColor } from "@/models/champion";
-import { champion, setting } from "@/store/index";
+import { championPick, setting } from "@/store/index";
 
 @Component({
   name: "champion-deck",
@@ -36,16 +36,16 @@ export default class ChampionDeck extends Vue {
     return setting.visibleChampionCost;
   }
   championPick(c: Champion) {
-    champion.ToggleChampionPicked(c);
+    championPick.ToggleChampionPicked(c);
   }
   isPicked(id: string): boolean {
-    return champion.championPicked.some(picked => picked.id === id);
+    return championPick.championPicked.some(picked => picked.id === id);
   }
   get originAllList() {
-    return champion.originList;
+    return championPick.originList;
   }
   get classAllList() {
-    return champion.classList;
+    return championPick.classList;
   }
 }
 </script>

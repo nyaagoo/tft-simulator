@@ -11,7 +11,7 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { champion } from "@/store/index";
+import { championPick } from "@/store/index";
 import router from "@/router";
 import IconBase from "@/components/Icon/IconBase.vue";
 import IconAdd from "@/components/Icon/IconAdd.vue";
@@ -27,28 +27,31 @@ import IconRemove from "@/components/Icon/IconRemove.vue";
 })
 export default class PickCoutenr extends Vue {
   get pickCount(): number {
-    return champion.championPicked.length;
+    return championPick.championPicked.length;
   }
 
   get maxCount(): number {
-    return champion.maxCountPickChampion;
+    return championPick.maxCountPickChampion;
   }
 
   incrementMaxCount() {
-    if (10 <= champion.maxCountPickChampion) return;
-    const increment = champion.maxCountPickChampion + 1;
-    champion.SET_MAX_COUNT_PICK_CHAMPION(increment);
+    if (10 <= championPick.maxCountPickChampion) return;
+    const increment = championPick.maxCountPickChampion + 1;
+    championPick.SET_MAX_COUNT_PICK_CHAMPION(increment);
+    championPick.CalculateChampionPicked();
   }
 
   decrementMaxCount() {
-    if (champion.maxCountPickChampion <= 1) return;
-    const decrement = champion.maxCountPickChampion - 1;
-    champion.SET_MAX_COUNT_PICK_CHAMPION(decrement);
-    champion.SET_CHAMPION_PICKED_LENGTH(decrement);
+    if (championPick.maxCountPickChampion <= 1) return;
+    const decrement = championPick.maxCountPickChampion - 1;
+    championPick.SET_CHAMPION_PICKED_LENGTH(decrement);
+    championPick.SET_MAX_COUNT_PICK_CHAMPION(decrement);
+    championPick.CalculateChampionPicked();
   }
 
   resetPickChampion() {
-    champion.resetPickChampion();
+    championPick.resetPickChampion();
+    championPick.CalculateChampionPicked();
   }
 }
 </script>

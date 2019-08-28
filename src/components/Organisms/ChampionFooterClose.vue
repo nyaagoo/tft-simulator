@@ -8,7 +8,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import { champion } from "@/store/index";
+import { championPick } from "@/store/index";
 import { Champion, costColor } from "@/models/champion";
 
 @Component({
@@ -18,13 +18,13 @@ import { Champion, costColor } from "@/models/champion";
 export default class ChampionFooterClose extends Vue {
   costColor: Map<number, string> = costColor;
   get maxCount(): number {
-    return champion.maxCountPickChampion;
+    return championPick.maxCountPickChampion;
   }
   get championPicked(): Champion[] {
-    return champion.championPicked;
+    return championPick.championPicked;
   }
   removeChampion(targetChampion: Champion) {
-    champion.RemoveChampionPicked(targetChampion);
+    championPick.RemoveChampionPicked(targetChampion);
   }
 }
 </script>

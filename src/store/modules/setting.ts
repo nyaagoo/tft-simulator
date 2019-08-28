@@ -10,6 +10,7 @@ import store from "@/store/store";
 @Module({ dynamic: true, store, name: "setting", namespaced: true })
 class SettingModule extends VuexModule {
   // #region STATE
+  visibleSideSynergyViewer: boolean = true;
   visibleChampionOrigin: boolean = true;
   visibleChampionClass: boolean = true;
   visibleChampionCost: boolean = true;
@@ -18,6 +19,10 @@ class SettingModule extends VuexModule {
   // #endregion
 
   // #region MUTATION
+  @Mutation
+  public SET_VISIBLE_SIDE_SYNERGY_VIEWER(visibility: boolean) {
+    this.visibleSideSynergyViewer = visibility;
+  }
   @Mutation
   public SET_VISIBLE_CHAMPION_ORIGIN(visibility: boolean) {
     this.visibleChampionOrigin = visibility;
@@ -44,8 +49,9 @@ class SettingModule extends VuexModule {
   }
 
   @Action({ rawError: true })
-  public SaveSetting() {
+  public saveSetting() {
     const setting = {
+      visibleSynergyViewer: this.visibleSideSynergyViewer,
       visibleClass: this.visibleChampionClass,
       visibleOrigin: this.visibleChampionOrigin,
       visibleCost: this.visibleChampionCost
@@ -55,16 +61,18 @@ class SettingModule extends VuexModule {
   }
 
   @Action({ rawError: true })
-  public LoadSetting() {
+  public loadSetting() {
     const visibility = localStorage.getItem("visibility");
     if (!visibility) return;
 
     const setting: {
+      visibleSynergyViewer: boolean;
       visibleClass: boolean;
       visibleOrigin: boolean;
       visibleCost: boolean;
     } = JSON.parse(visibility);
 
+    this.SET_VISIBLE_SIDE_SYNERGY_VIEWER(setting.visibleSynergyViewer);
     this.SET_VISIBLE_CHAMPION_ORIGIN(setting.visibleOrigin);
     this.SET_VISIBLE_CHAMPION_CLASS(setting.visibleClass);
     this.SET_VISIBLE_CHAMPION_COST(setting.visibleCost);

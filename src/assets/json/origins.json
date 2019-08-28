@@ -5,14 +5,17 @@
     "img": "./img/Origin/Demon.png",
     "effect": [
       {
+        "tier": 3,
         "require": 2,
         "bonus": "攻撃により,一定確率で敵のすべてのマナを焼き尽くし（マナバーン）、そのマナと同量の確定ダメージを与える（発動確立 20%）"
       },
       {
+        "tier": 2,
         "require": 4,
         "bonus": "攻撃により,一定確率で敵のすべてのマナを焼き尽くし（マナバーン）、そのマナと同量の確定ダメージを与える（発動確立 35%）"
       },
       {
+        "tier": 1,
         "require": 6,
         "bonus": "攻撃により,一定確率で敵のすべてのマナを焼き尽くし（マナバーン）、そのマナと同量の確定ダメージを与える（発動確立 60%）"
       }
@@ -24,6 +27,7 @@
     "img": "./img/Origin/Dragon.png",
     "effect": [
       {
+        "tier": 1,
         "require": 2,
         "bonus": "ドラゴンは魔法耐性83%を得る"
       }
@@ -35,6 +39,7 @@
     "img": "./img/Origin/Exile.png",
     "effect": [
       {
+        "tier": 1,
         "require": 1,
         "bonus": "近くに他のチャンピオンがいない場合、最大ヘルスの割合に応じたシールドを得る"
       }
@@ -46,14 +51,17 @@
     "img": "./img/Origin/Glacial.png",
     "effect": [
       {
+        "tier": 3,
         "require": 2,
         "bonus": "グレイシャルの攻撃は20％の確率で2秒間のスタンを与える"
       },
       {
+        "tier": 2,
         "require": 4,
         "bonus": "グレイシャルの攻撃は30％の確率で2秒間のスタンを与える"
       },
       {
+        "tier": 1,
         "require": 6,
         "bonus": "グレイシャルの攻撃は45％の確率で2秒間のスタンを与える"
       }
@@ -65,6 +73,7 @@
     "img": "./img/Origin/Robot.png",
     "effect": [
       {
+        "tier": 1,
         "require": 1,
         "bonus": "ロボットはマナが最大の状態で戦闘開始する"
       }
@@ -76,10 +85,12 @@
     "img": "./img/Origin/Imperial.png",
     "effect": [
       {
+        "tier": 3,
         "require": 2,
         "bonus": "ランダムなインペリアル1体はダブルダメージを与える"
       },
       {
+        "tier": 1,
         "require": 4,
         "bonus": "すべてのインペリアルはダブルダメージを与える"
       }
@@ -91,10 +102,12 @@
     "img": "./img/Origin/Noble.png",
     "effect": [
       {
+        "tier": 3,
         "require": 3,
         "bonus": "ランダムな味方1体は物理防御と魔法防御が60上昇し攻撃毎に35HPを回復する"
       },
       {
+        "tier": 1,
         "require": 6,
         "bonus": "すべての味方は物理防御と魔法防御が60上昇し攻撃毎に35HPを回復する"
       }
@@ -106,10 +119,12 @@
     "img": "./img/Origin/Ninja.png",
     "effect": [
       {
+        "tier": 3,
         "require": 1,
         "bonus": "ニンジャの攻撃力と魔力が40上昇する"
       },
       {
+        "tier": 1,
         "require": 4,
         "bonus": "全てのニンジャの攻撃力と魔力が60上昇する"
       }
@@ -121,6 +136,7 @@
     "img": "./img/Origin/Pirate.png",
     "effect": [
       {
+        "tier": 1,
         "require": 3,
         "bonus": "他のプレイヤーと戦闘後、最大4の追加ゴールドを得る（ラウンド毎のゴールド平均値1.75）"
       }
@@ -132,6 +148,7 @@
     "img": "./img/Origin/Phantom.png",
     "effect": [
       {
+        "tier": 1,
         "require": 2,
         "bonus": "戦闘開始時にランダムな敵を呪い、HPを100に設定する"
       }
@@ -143,10 +160,12 @@
     "img": "./img/Origin/Wild.png",
     "effect": [
       {
+        "tier": 3,
         "require": 2,
         "bonus": "ワイルドは通常攻撃時にスタックを得る（最大5スタック）。1スタック毎に攻撃速度10%増加が上昇する"
       },
       {
+        "tier": 1,
         "require": 4,
         "bonus": "すべての味方は通常攻撃時にスタックを得る（最大5スタック）。1スタック毎に攻撃速度10%増加が上昇する"
       }
@@ -158,6 +177,7 @@
     "img": "./img/Origin/Void.png",
     "effect": [
       {
+        "tier": 1,
         "require": 3,
         "bonus": "ヴォイドユニットが確定ダメージを与えるようになる"
       }
@@ -169,10 +189,12 @@
     "img": "./img/Origin/Yordle.png",
     "effect": [
       {
+        "tier": 3,
         "require": 3,
         "bonus": "味方ヨードルは30％の確率で攻撃を回避する"
       },
       {
+        "tier": 1,
         "require": 6,
         "bonus": "味方ヨードルは55％の確率で攻撃を回避する"
       }

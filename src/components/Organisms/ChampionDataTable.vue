@@ -41,7 +41,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import { championTable, champion } from "@/store/index";
+import { championTable, championDeck } from "@/store/index";
 import IconBase from "@/components/Icon/IconBase.vue";
 import IconStar from "@/components/Icon/IconStar.vue";
 import IconAdd from "@/components/Icon/IconAdd.vue";
@@ -104,10 +104,10 @@ export default class ChampionDataTable extends Vue {
   }
 
   get originList() {
-    return Object.values(champion.originList);
+    return Object.values(championDeck.originList);
   }
   get classList() {
-    return Object.values(champion.classList);
+    return Object.values(championDeck.classList);
   }
 
   toggleSelectOrigin(originId: string) {
