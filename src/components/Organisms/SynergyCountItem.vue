@@ -1,15 +1,9 @@
 <template lang="pug">
   .synergy-count-item
-    v-tooltip(right v-if="synergy.isActive" )
-      template(v-slot:activator="{ on }")
-        span(v-on="on")
-          hexagon-icon(:tier="synergy.bonus.tier" :suffix="type" :name="synergy.id.toLowerCase()")
-      synergy-tooltip(:id="synergy.id" :name="synergy.data.name" :type="synergy.type", :effectList="synergy.data.effect")
-    v-tooltip(right v-else)
-      template(v-slot:activator="{ on }")
-        span(v-on="on")
-          hexagon-icon(tier="none" :suffix="type" :name="synergy.id.toLowerCase()")
-      synergy-tooltip(:id="synergy.id" :name="synergy.data.name" :type="synergy.type", :effectList="synergy.data.effect")
+    .active-synergy(v-if="synergy.isActive")
+      synergy-icon(:id="synergy.id" :name="synergy.data.name" :type="synergy.type" :tier="synergy.bonus.tier" :effectList="synergy.data.effect")
+    .inactive-synergy(v-else)
+      synergy-icon(:id="synergy.id" :name="synergy.data.name" :type="synergy.type" tier="none" :effectList="synergy.data.effect")
     .champion-count {{ synergy.count }}
     .synergy-detail
       .name.text-truncate {{ synergy.data.name }}
@@ -19,14 +13,12 @@
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 import { ActiveSynergy } from "@/models/type";
-import SynergyTooltip from "@/components/Molecules/SynergyTooltip.vue";
-import HexagonIcon from "@/components/Atoms/HexagonIcon.vue";
+import SynergyIcon from "@/components/Organisms/SynergyIcon.vue";
 
 @Component({
   name: "synergy-count-item",
   components: {
-    "synergy-tooltip": SynergyTooltip,
-    "hexagon-icon": HexagonIcon
+    "synergy-icon": SynergyIcon
   }
 })
 export default class SynergyCountItemActive extends Vue {

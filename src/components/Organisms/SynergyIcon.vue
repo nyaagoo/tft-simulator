@@ -1,19 +1,33 @@
 <template lang="pug">
-  .hexagon(:class="`tier-${tier}`")
-    .icon(:class="[`icon-${suffix}`, `icon-${name}`]")
+  .synergy-icon
+    v-tooltip(right)
+      template(v-slot:activator="{ on }")
+        span(v-on="on")
+          hexagon-icon(:tier="tier" :suffix="type" :name="id.toLowerCase()")
+      synergy-tooltip(:id="id" :name="name.toLowerCase()" :type="type", :effectList="effectList")
 </template>
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 import router from "@/router";
+import SynergyTooltip from "@/components/Molecules/SynergyTooltip.vue";
+import HexagonIcon from "@/components/Atoms/HexagonIcon.vue";
 
 @Component({
-  name: "hexagon-icon",
-  components: {}
+  name: "synergy-icon",
+  components: {
+    "hexagon-icon": HexagonIcon,
+    "synergy-tooltip": SynergyTooltip
+  }
 })
-export default class HexagonIcon extends Vue {
-  @Prop({ required: true }) suffix!: string;
+export default class SynergyIcon extends Vue {
+  @Prop({ required: true }) id!: string;
   @Prop({ required: true }) name!: string;
+  @Prop({ required: true }) type!: "origin" | "class";
   @Prop({ required: true }) tier!: number;
+  @Prop({ required: true }) effectList!: {
+    require: number;
+    bonus: string;
+  }[];
 }
 </script>
 <style lang="stylus" scoped>
