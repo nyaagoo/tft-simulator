@@ -7,8 +7,9 @@
         span S
       .synergy
         span {{ composition.synergy }}
-      .champion-list-container
-        i.icon-champion(v-for="champion in composition.championList" :key="champion.id" :class="`icon-${champion.id.toLowerCase()}`")
+      draggable(class="list-group" tag="div" v-model="composition.championList" v-bind="dragOptions" @start="drag = true" @end="drag = false")
+        transition-group.champion-list-container(type="transition" :name="!drag ? 'flip-list' : null")
+          .icon-list-item(v-for="(champion, index) in composition.championList" :key="champion.id") {{ champion.id }} {{ index }}
       .information
         p {{ composition.patch.create }}
         p {{ composition.patch.valid }}
@@ -17,13 +18,22 @@
 import { Component, Vue, Prop } from "vue-property-decorator";
 import router from "@/router";
 import { Composition } from "@/models/composition";
-
+import draggable from "vuedraggable";
 @Component({
   name: "comp",
-  components: {}
+  components: {
+    draggable: draggable
+  }
 })
 export default class CompositionItem extends Vue {
   @Prop({ required: true }) composition!: Composition;
+  drag: boolean = false;
+  dragOptions = {
+    animation: 200,
+    group: "description",
+    disabled: false,
+    ghostClass: "ghost"
+  };
 }
 </script>
 <style lang="stylus" scoped>
@@ -52,4 +62,10 @@ export default class CompositionItem extends Vue {
   flex 0 0 80px
 .icon-champion
   border-radius 100px
+.icon-list-item
+  height 64px
+  width 64px
+  background blue
+  border-radius 8px
+  margin 2px
 </style>

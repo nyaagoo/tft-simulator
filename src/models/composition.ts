@@ -1,11 +1,11 @@
-import { OriginCount, ClassCount } from "@/models/type";
+import { SynergyCount } from "@/models/type";
 export interface Composition {
   id: number;
   name: string;
   comment: string;
   synergy: {
-    origin: OriginCount[];
-    class: ClassCount[];
+    origin: SynergyCount[];
+    class: SynergyCount[];
   };
   patch: Patch;
   championList: ChampionList[];
