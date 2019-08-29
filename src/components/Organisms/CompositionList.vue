@@ -1,10 +1,6 @@
 <template lang="pug">
   .comp-list
-    v-btn.ml-4(outlined color="info" @click="saveComposition()")
-      v-icon mdi-file-download-outline
-    v-btn.ml-4(outlined color="info" @click="loadComposition()")
-      v-icon mdi-file-upload-outline
-    .composition-item-wrapper(v-for="item in compList" :key="item.id")
+    .composition-item-wrapper(v-for="(item, index) in compList" :key="`item.id${index}`")
       composition-item(:composition="item")
 </template>
 <script lang="ts">
@@ -24,15 +20,7 @@ export default class CompositionList extends Vue {
   get compList(): Composition[] {
     return composition.compositionList;
   }
-
   created() {
-    composition.LoadComposition();
-  }
-
-  saveComposition() {
-    composition.SaveComposition();
-  }
-  loadComposition() {
     composition.LoadComposition();
   }
 }

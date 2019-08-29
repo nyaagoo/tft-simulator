@@ -6,7 +6,8 @@
       .tier
         span S
       .synergy
-        span {{ composition.synergy }}
+        span.ml-1(v-for="synergy in activeSynergyList" :key="synergy.id")
+          synergy-icon(:id="synergy.id" :name="synergy.data.name" :type="synergy.type" :tier="synergy.bonus.tier" :effectList="synergy.data.effect")
       draggable(class="list-group" tag="div" v-model="composition.championList" v-bind="dragOptions" @start="drag = true" @end="drag = false")
         transition-group.champion-list-container(type="transition" :name="!drag ? 'flip-list' : null")
           .icon-champion(v-for="(champion, index) in composition.championList" :key="champion.champion.id" :class="[`icon-${champion.champion.id.toLowerCase()}`]")
@@ -19,10 +20,13 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 import router from "@/router";
 import { Composition } from "@/models/composition";
 import draggable from "vuedraggable";
+import { ActiveSynergy } from "@/models/type";
+import SynergyIcon from "@/components/Organisms/SynergyIcon.vue";
 @Component({
   name: "comp",
   components: {
-    draggable: draggable
+    draggable: draggable,
+    "synergy-icon": SynergyIcon
   }
 })
 export default class CompositionItem extends Vue {
@@ -34,6 +38,10 @@ export default class CompositionItem extends Vue {
     disabled: false,
     ghostClass: "ghost"
   };
+
+  get activeSynergyList(): ActiveSynergy[] {
+    return this.composition.synergy.filter(x => x.isActive);
+  }
 }
 </script>
 <style lang="stylus" scoped>
@@ -51,6 +59,7 @@ export default class CompositionItem extends Vue {
   flex 1 1 40px
 .synergy
   flex 1 1 120px
+  display flex
 .champion-list-container
   flex 1 1 800px
   display flex

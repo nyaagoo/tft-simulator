@@ -74,6 +74,7 @@ export default class PickCoutenr extends Vue {
     // eslint-disable-next-line no-console
     console.log(currentComposition);
     composition.ADD_COMPOSITION_LIST(currentComposition);
+    composition.SaveComposition();
   }
 }
 </script>
