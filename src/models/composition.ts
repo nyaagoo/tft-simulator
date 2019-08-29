@@ -1,18 +1,16 @@
-import { SynergyCount } from "@/models/type";
+import { Champion } from "./champion";
+import { ActiveSynergy } from "@/models/type";
 export interface Composition {
   id: number;
   name: string;
   comment: string;
-  synergy: {
-    origin: SynergyCount[];
-    class: SynergyCount[];
-  };
   patch: Patch;
-  championList: ChampionList[];
+  synergy: ActiveSynergy[];
+  championList: CompositionChampion[];
 }
 
-export type ChampionList = {
-  id: string;
+export type CompositionChampion = {
+  champion: Champion;
   item: string[];
   location: number;
 };

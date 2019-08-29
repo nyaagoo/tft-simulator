@@ -6,7 +6,7 @@
           span(v-on="on")
             span {{ synergy.name }}
             span.tooltip-container.synergy-description.mx-1(v-for="(item,index) in synergy.effect" :key="`${synergy.id}${index}`") ({{ item.require }})
-        synergy-tooltip(:synergy="synergy", :synergyType="synergyType")
+        synergy-tooltip(:id="synergy.id" :name="synergy.name" :type="synergyType", :effectList="synergy.effect")
     transition-group.champion-origin-inner(name="flip-list" tag="div")
       .champion-wrapper(v-for="champion in championList" :key="champion.name")
         champion-deck(:champ="champion" :originList="champion.origin" :classList="champion.class" :isDisplayDetail="true")

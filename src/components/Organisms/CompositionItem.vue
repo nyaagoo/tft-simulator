@@ -9,7 +9,7 @@
         span {{ composition.synergy }}
       draggable(class="list-group" tag="div" v-model="composition.championList" v-bind="dragOptions" @start="drag = true" @end="drag = false")
         transition-group.champion-list-container(type="transition" :name="!drag ? 'flip-list' : null")
-          .icon-list-item(v-for="(champion, index) in composition.championList" :key="champion.id") {{ champion.id }} {{ index }}
+          .icon-champion(v-for="(champion, index) in composition.championList" :key="champion.champion.id" :class="[`icon-${champion.champion.id.toLowerCase()}`]")
       .information
         p {{ composition.patch.create }}
         p {{ composition.patch.valid }}
