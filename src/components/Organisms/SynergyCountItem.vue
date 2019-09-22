@@ -50,9 +50,8 @@ export default class SynergyCountItemActive extends Vue {
   top -6px
   left 2px
   z-index 1
-  filter brightness(.3)
 .hexagon-inactive > .icon-class, .hexagon-inactive > .icon-origin
-  filter brightness(1)
+  filter brightness(.6)
 .active-origin
   display flex
   align-items center
