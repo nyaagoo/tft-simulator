@@ -1,6 +1,6 @@
-import championList from "@/assets/data/9.17/champions.json";
-import originList from "@/assets/data/9.17/origins.json";
-import classList from "@/assets/data/9.17/classes.json";
+import championList from "@/assets/data/9.18/champions.json";
+import originList from "@/assets/data/9.18/origins.json";
+import classList from "@/assets/data/9.18/classes.json";
 import {
   ChampionClass,
   ChampionOrigin,

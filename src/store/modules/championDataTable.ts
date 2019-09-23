@@ -1,5 +1,5 @@
 import { ChampionLevelStatus } from "./../../models/champion";
-import championList from "@/assets/data/9.17/champions.json";
+import championList from "@/assets/data/9.18/champions.json";
 import { ChampionDetail } from "@/models/champion";
 import store from "@/store/store";
 import {

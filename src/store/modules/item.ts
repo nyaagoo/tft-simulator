@@ -1,6 +1,6 @@
 import { BuildItemIdList, BasicItemIdList } from "./../../models/item";
-import basicItemList from "@/assets/data/9.17/basicItems.json";
-import buildItemList from "@/assets/data/9.17/buildItems.json";
+import basicItemList from "@/assets/data/9.18/basicItems.json";
+import buildItemList from "@/assets/data/9.18/buildItems.json";
 import {
   Mutation,
   Action,

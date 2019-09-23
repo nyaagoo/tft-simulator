@@ -1,0 +1,3366 @@
+{
+  "Aatrox": {
+    "id": "Aatrox",
+    "name": "エイトロックス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Aatrox.png",
+    "skill": {
+      "id": "TheDarkinBlade",
+      "name": "ダーキンブレード",
+      "description": "前方を切り裂き、範囲内にいる敵にダメージを与える。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            300,
+            600,
+            900
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Demon"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "cost": 3,
+    "hp": [
+      700,
+      1260,
+      2520
+    ],
+    "dps": [
+      42,
+      76,
+      152
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      65,
+      117,
+      234
+    ],
+    "range": 1,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  "Ahri": {
+    "id": "Ahri",
+    "name": "アーリ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ahri.png",
+    "skill": {
+      "id": "OrbOfDeception",
+      "name": "幻惑のオーブ",
+      "description": "自分の元に戻ってくるオーブを直線上に放ち、貫通した敵にダメージを与える。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            100,
+            200,
+            300
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Wild"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 2,
+    "hp": [
+      450,
+      810,
+      1620
+    ],
+    "dps": [
+      28,
+      50,
+      99
+    ],
+    "attackSpeed": 0.55,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 3,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Akali": {
+    "id": "Akali",
+    "name": "アカリ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Akali.png",
+    "skill": {
+      "id": "FivePointStrike",
+      "name": "五連苦無",
+      "description": "前方にくないを投げ、ダメージを与える。このスキルはクリティカル判定を持つ。",
+      "cost": 25,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            350,
+            500
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Ninja"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 4,
+    "hp": [
+      700,
+      1260,
+      2520
+    ],
+    "dps": [
+      60,
+      108,
+      216
+    ],
+    "attackSpeed": 0.75,
+    "damage": [
+      80,
+      144,
+      288
+    ],
+    "range": 1,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Anivia": {
+    "id": "Anivia",
+    "name": "アニビア",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Anivia.png",
+    "skill": {
+      "id": "GlacialStorm",
+      "name": "ブリザード",
+      "description": "巨大な吹雪を発生させ、範囲内の敵にダメージを与えて攻撃速度を低下させる。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "合計ダメージ",
+          "effects": [
+            700,
+            950,
+            1200
+          ]
+        },
+        {
+          "label": "低下攻撃速度",
+          "effects": [
+            "50%",
+            "70%",
+            "90%"
+          ]
+        },
+        {
+          "label": "継続時間",
+          "effects": [
+            "6s",
+            "6s",
+            "6s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Elementalist"
+    ],
+    "cost": 5,
+    "hp": [
+      700,
+      1260,
+      2520
+    ],
+    "dps": [
+      24,
+      43,
+      86
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 3,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Ashe": {
+    "id": "Ashe",
+    "name": "アッシュ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Ashe.png",
+    "skill": {
+      "id": "EnchantedCrystalArrow",
+      "name": "クリスタルアロー",
+      "description": "矢を発射し、最初に当たった敵にスタン効果とダメージを与える。距離が遠いほどスタンの効果時間が長くなる。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            400,
+            600
+          ]
+        },
+        {
+          "label": "スタン（スタン時間 × 対象との距離）",
+          "effects": [
+            "1s",
+            "1.5s",
+            "2s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Ranger"
+    ],
+    "cost": 3,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      45.5,
+      82,
+      164
+    ],
+    "attackSpeed": 0.7,
+    "damage": [
+      65,
+      117,
+      234
+    ],
+    "range": 4,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "AurelionSol": {
+    "id": "AurelionSol",
+    "name": "オレリオン・ソル",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/AurelionSol.png",
+    "skill": {
+      "id": "VoiceOfLight",
+      "name": "星炎の息吹",
+      "description": "直線状に巨大な炎を吐き、敵にダメージを与える。",
+      "cost": 125,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            250,
+            500,
+            750
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            "0.35s",
+            "0.35s",
+            "0.35s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Dragon"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 4,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      24,
+      43,
+      86
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 3,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Blitzcrank": {
+    "id": "Blitzcrank",
+    "name": "ブリッツクランク",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Blitzcrank.png",
+    "skill": {
+      "id": "RocketGrab",
+      "name": "ロケットグラブ",
+      "description": "自分から最も遠い敵を自分の元に引き寄せてノックアップさせる。",
+      "cost": 125,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            100,
+            450,
+            800
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            "2.5s",
+            "2.5s",
+            "2.5s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Robot"
+    ],
+    "class": [
+      "Brawler"
+    ],
+    "cost": 2,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      25,
+      45,
+      90
+    ],
+    "attackSpeed": 0.5,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
+    "armor": 35,
+    "magicRegist": 20
+  },
+  "Brand": {
+    "id": "Brand",
+    "name": "ブランド",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Brand.png",
+    "skill": {
+      "id": "Pyroclasm",
+      "name": "業火",
+      "description": "跳ねる火の玉を放ち、命中した敵にダメージを与える。",
+      "cost": 150,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            250,
+            450,
+            650
+          ]
+        },
+        {
+          "label": "バウンド回数",
+          "effects": [
+            4,
+            6,
+            20
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Demon"
+    ],
+    "class": [
+      "Elementalist"
+    ],
+    "cost": 4,
+    "hp": [
+      700,
+      1260,
+      2520
+    ],
+    "dps": [
+      36,
+      65,
+      130
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      60,
+      108,
+      216
+    ],
+    "range": 3,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  "Braum": {
+    "id": "Braum",
+    "name": "ブラウム",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Braum.png",
+    "skill": {
+      "id": "Unbreakable",
+      "name": "不破の盾",
+      "description": "受けるダメージの一定割合をブロックするバリアを発生させる。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ブロック割合",
+          "effects": [
+            "70%",
+            "80%",
+            "90%"
+          ]
+        },
+        {
+          "label": "効果時間",
+          "effects": [
+            "4s",
+            "4s",
+            "4s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Guardian"
+    ],
+    "cost": 2,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      24,
+      43,
+      86
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 1,
+    "armor": 75,
+    "magicRegist": 20
+  },
+  "Camille": {
+    "id": "Camille",
+    "name": "カミール",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Camille.png",
+    "skill": {
+      "id": "TheHextechUltimatum",
+      "name": "ヘクステック・アルティメイタム",
+      "description": "対象1体にスネアを付与し、さらに対象の敵ユニットを攻撃可能な位置にいる味方のターゲットをスキル対象に集める",
+      "cost": 125,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            325,
+            450
+          ]
+        },
+        {
+          "label": "スネア時間",
+          "effects": [
+            "4s",
+            "5s",
+            "6s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Hextech"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "cost": 1,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      33,
+      59,
+      119
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      55,
+      99,
+      198
+    ],
+    "range": 1,
+    "armor": 30,
+    "magicRegist": 20
+  },
+  "ChoGath": {
+    "id": "ChoGath",
+    "name": "チョ＝ガス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Chogath.png",
+    "skill": {
+      "id": "Rupture",
+      "name": "ラプチャー",
+      "description": "地面からトゲを発生させ、範囲内の敵にダメージを与えてスタンさせる。",
+      "cost": 150,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            175,
+            350,
+            525
+          ]
+        },
+        {
+          "label": "ノックアップ",
+          "effects": [
+            "1.5s",
+            "1.75s",
+            "2s"
+          ]
+        },
+        {
+          "label": "範囲",
+          "effects": [
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "label": "ディレイ",
+          "effects": [
+            "1.5s",
+            "1.5s",
+            "1.5s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Void"
+    ],
+    "class": [
+      "Brawler"
+    ],
+    "cost": 4,
+    "hp": [
+      1100,
+      2000,
+      4000
+    ],
+    "dps": [
+      42,
+      76,
+      151
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      70,
+      126,
+      252
+    ],
+    "range": 1,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Darius": {
+    "id": "Darius",
+    "name": "ダリウス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Darius.png",
+    "skill": {
+      "id": "Decimate",
+      "name": "皆殺しの斧",
+      "description": "斧を振り回して周囲の敵にダメージを与え、当たった敵の数に応じて体力を回復する。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            150,
+            200,
+            250
+          ]
+        },
+        {
+          "label": "回復量",
+          "effects": [
+            100,
+            150,
+            200
+          ]
+        },
+        {
+          "label": "ディレイ",
+          "effects": [
+            1.5,
+            1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Imperial"
+    ],
+    "class": [
+      "Knight"
+    ],
+    "cost": 1,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      25,
+      45,
+      90
+    ],
+    "attackSpeed": 0.5,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
+    "armor": 40,
+    "magicRegist": 20
+  },
+  "Draven": {
+    "id": "Draven",
+    "name": "ドレイヴン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Draven.png",
+    "skill": {
+      "id": "SpinningAxes",
+      "name": "回転斬斧",
+      "description": "次の通常攻撃に追加ダメージが付与される。斧をキャッチすると次の攻撃にも「回転斬斧」の効果がつく。「回転斬斧」は2回までスタックする。",
+      "cost": 0,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "効果時間",
+          "effects": [
+            8,
+            8,
+            8
+          ]
+        },
+        {
+          "label": "ダメージ倍率",
+          "effects": [
+            "150%",
+            "200%",
+            "250%"
+          ]
+        },
+        {
+          "label": "増加攻撃速度",
+          "effects": [
+            "30%",
+            "45%",
+            "60%"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Imperial"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "cost": 4,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      46,
+      82,
+      164
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      70,
+      126,
+      252
+    ],
+    "range": 3,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  "Elise": {
+    "id": "Elise",
+    "name": "エリス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Elise.png",
+    "skill": {
+      "id": "SpiderForm",
+      "name": "蜘蛛形態",
+      "description": "子蜘蛛を召喚して変身し、ライフスティールを獲得する。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ライフスティール",
+          "effects": [
+            "60%",
+            "90%",
+            "120%"
+          ]
+        },
+        {
+          "label": "召喚数",
+          "effects": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "label": "子蜘蛛HP",
+          "effects": [
+            500,
+            500,
+            500
+          ]
+        },
+        {
+          "label": "効果時間",
+          "effects": [
+            "60s",
+            "60s",
+            "60s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Demon"
+    ],
+    "class": [
+      "Shapeshifter"
+    ],
+    "cost": 2,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      27,
+      49,
+      97
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      45,
+      81,
+      162
+    ],
+    "range": 2,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  "Evelynn": {
+    "id": "Evelynn",
+    "name": "イブリン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Evelynn.png",
+    "skill": {
+      "id": "LastCaress",
+      "name": "ラストカレス",
+      "description": "最も近くの敵3体にダメージを与え、ワープで離脱する。残り体力の少ない敵に対してはダメージが増加する。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            300,
+            400
+          ]
+        },
+        {
+          "label": "クリティカル倍率",
+          "effects": [
+            "300%",
+            "400%",
+            "500%"
+          ]
+        },
+        {
+          "label": "ダメージ増加閾値",
+          "effects": [
+            "50%",
+            "50%",
+            "50%"
+          ]
+        },
+        {
+          "label": "ブリンク距離",
+          "effects": [
+            3,
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Demon"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 3,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      42,
+      76,
+      151
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      70,
+      126,
+      252
+    ],
+    "range": 1,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Fiora": {
+    "id": "Fiora",
+    "name": "フィオラ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Fiora.png",
+    "skill": {
+      "id": "Riposte",
+      "name": "リポスト",
+      "description": "ダメージやスキルの影響を受けなくなる。少ししてから最も近くの敵をスタンさせ、ダメージを与える。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            100,
+            250,
+            400
+          ]
+        },
+        {
+          "label": "スタン時間",
+          "effects": [
+            "1.5s",
+            "1.5s",
+            "1.5s"
+          ]
+        },
+        {
+          "label": "ブロック時間",
+          "effects": [
+            "1.5s",
+            "1.5s",
+            "1.5s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Noble"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "cost": 1,
+    "hp": [
+      400,
+      720,
+      1440
+    ],
+    "dps": [
+      28,
+      50,
+      101
+    ],
+    "attackSpeed": 0.7,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 1,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  "Gangplank": {
+    "id": "Gangplank",
+    "name": "ガングプランク",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gangplank.png",
+    "skill": {
+      "id": "PowderKegs",
+      "name": "火薬樽",
+      "description": "一定時間ごとに樽を作り出す。発動時に樽は爆発し、近くの敵にダメージを与える。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            150,
+            250,
+            350
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Pirate"
+    ],
+    "class": [
+      "Blademaster",
+      "Gunslinger"
+    ],
+    "cost": 3,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      33,
+      59,
+      119
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      55,
+      99,
+      198
+    ],
+    "range": 1,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Garen": {
+    "id": "Garen",
+    "name": "ガレン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Garen.png",
+    "skill": {
+      "id": "Judgement",
+      "name": "ジャッジメント",
+      "description": "剣を回転させて、周囲の敵にダメージを与える。回っている間はスキルダメージを受けない。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            50,
+            65,
+            80
+          ]
+        },
+        {
+          "label": "ダメージ回数",
+          "effects": [
+            9,
+            9,
+            9
+          ]
+        },
+        {
+          "label": "合計ダメージ",
+          "effects": [
+            450,
+            585,
+            810
+          ]
+        },
+        {
+          "label": "回転時間",
+          "effects": [
+            "4s",
+            "4s",
+            "4s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Noble"
+    ],
+    "class": [
+      "Knight"
+    ],
+    "cost": 1,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      25,
+      45,
+      90
+    ],
+    "attackSpeed": 0.5,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
+    "armor": 40,
+    "magicRegist": 20
+  },
+  "Gnar": {
+    "id": "Gnar",
+    "name": "ナー",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Gnar.png",
+    "skill": {
+      "id": "Gnarr",
+      "name": "ナー！",
+      "description": "変身して体力と攻撃力が増加し、最も遠い位置にいる敵の背後までジャンプし、ダメージを与えて敵を後方に突き飛ばす。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            300,
+            400
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            "2s",
+            "2s",
+            "2s"
+          ]
+        },
+        {
+          "label": "ノックバック距離",
+          "effects": [
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "label": "変身継続時間",
+          "effects": [
+            "60s",
+            "60s",
+            "60s"
+          ]
+        },
+        {
+          "label": "変身HP",
+          "effects": [
+            300,
+            600,
+            900
+          ]
+        },
+        {
+          "label": "変身後増加ダメージ",
+          "effects": [
+            50,
+            100,
+            150
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Wild",
+      "Yordle"
+    ],
+    "class": [
+      "Shapeshifter"
+    ],
+    "cost": 4,
+    "hp": [
+      850,
+      1530,
+      3060
+    ],
+    "dps": [
+      35,
+      63,
+      126
+    ],
+    "attackSpeed": 0.7,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 2,
+    "armor": 35,
+    "magicRegist": 20
+  },
+  "Graves": {
+    "id": "Graves",
+    "name": "グレイブス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Graves.png",
+    "skill": {
+      "id": "Buckshot",
+      "name": "散弾",
+      "description": "通常攻撃に追加ダメージが付与され、近くの敵に範囲ダメージを与える。",
+      "cost": 0,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ倍率",
+          "effects": [
+            "5%",
+            "10%",
+            "15%"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Pirate"
+    ],
+    "class": [
+      "Gunslinger"
+    ],
+    "cost": 1,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      30,
+      54,
+      109
+    ],
+    "attackSpeed": 0.55,
+    "damage": [
+      55,
+      99,
+      198
+    ],
+    "range": 1,
+    "armor": 30,
+    "magicRegist": 20
+  },
+  "Jayce": {
+    "id": "Jayce",
+    "name": "ジェイス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Jayce.png",
+    "skill": {
+      "id": "MeercuryCannon",
+      "name": "換装：マーキュリーキャノン",
+      "description": "敵ユニット1体をノックバックさせ、一時的に攻撃速度が増加し、以後は遠距離通常攻撃を行う",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            350,
+            500
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            "2.5s",
+            "4.25s",
+            "6s"
+          ]
+        },
+        {
+          "label": "攻撃回数",
+          "effects": [
+            3,
+            5,
+            7
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Hextech"
+    ],
+    "class": [
+      "Shapeshifter"
+    ],
+    "cost": 2,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      39,
+      70,
+      140
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      60,
+      108,
+      216
+    ],
+    "range": 1,
+    "armor": 35,
+    "magicRegist": 20
+  },
+  "Jinx": {
+    "id": "Jinx",
+    "name": "ジンクス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Jinx.png",
+    "skill": {
+      "id": "GetExcited",
+      "name": "超エキサイティン！",
+      "description": "1体敵を倒すと、攻撃速度ボーナスを獲得する。2体目を倒すと、通常攻撃が範囲ダメージを与えるようになる。",
+      "cost": 0,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            100,
+            200,
+            300
+          ]
+        },
+        {
+          "label": "増加攻撃速度",
+          "effects": [
+            "60%",
+            "80%",
+            "100%"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Hextech"
+    ],
+    "class": [
+      "Gunslinger"
+    ],
+    "cost": 4,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      49,
+      88,
+      176
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      75,
+      135,
+      270
+    ],
+    "range": 3,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Karthus": {
+    "id": "Karthus",
+    "name": "カーサス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Karthus.png",
+    "skill": {
+      "id": "Requiem",
+      "name": "鎮魂歌",
+      "description": "長い詠唱の後に、複数のランダムな敵にダメージを与える。",
+      "cost": 125,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            350,
+            600,
+            850
+          ]
+        },
+        {
+          "label": "対象数",
+          "effects": [
+            5,
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Phantom"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 5,
+    "hp": [
+      850,
+      1530,
+      3060
+    ],
+    "dps": [
+      42,
+      76,
+      152
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      65,
+      117,
+      234
+    ],
+    "range": 3,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  "Kassadin": {
+    "id": "Kassadin",
+    "name": "カサディン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kassadin.png",
+    "skill": {
+      "id": "NetherBlade",
+      "name": "ネザーブレード",
+      "description": "通常攻撃で敵からマナを奪い、シールドへと変換する。",
+      "cost": 0,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "シールド量",
+          "effects": [
+            20,
+            40,
+            60
+          ]
+        },
+        {
+          "label": "シールド継続時間",
+          "effects": [
+            "4s",
+            "4s",
+            "4s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Void"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 1,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      30,
+      54,
+      108
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  "Katarina": {
+    "id": "Katarina",
+    "name": "カタリナ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Katarina.png",
+    "skill": {
+      "id": "DeathLotus",
+      "name": "デスロータス",
+      "description": "詠唱後、周囲にいる複数の敵に対して短剣を放ってダメージを与え、その体力の回復量を低下させる。",
+      "cost": 85,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            40,
+            60,
+            80
+          ]
+        },
+        {
+          "label": "秒間攻撃回数",
+          "effects": [
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "label": "スキル継続時間",
+          "effects": [
+            "2.5s",
+            "2.5s",
+            "2.5s"
+          ]
+        },
+        {
+          "label": "重傷継続時間",
+          "effects": [
+            "3s",
+            "3s",
+            "3s"
+          ]
+        },
+        {
+          "label": "対象数",
+          "effects": [
+            4,
+            6,
+            8
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Imperial"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 3,
+    "hp": [
+      450,
+      810,
+      1620
+    ],
+    "dps": [
+      45,
+      81,
+      162
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      75,
+      135,
+      270
+    ],
+    "range": 1,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Kayle": {
+    "id": "Kayle",
+    "name": "ケイル",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kayle.png",
+    "skill": {
+      "id": "DivineJudgement",
+      "name": "聖なる審判",
+      "description": "最も弱い味方1体にシールドを付与し、ダメージを無効化する。",
+      "cost": 125,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            500,
+            800,
+            1100
+          ]
+        },
+        {
+          "label": "効果時間",
+          "effects": [
+            "2s",
+            "2.5s",
+            "3s"
+          ]
+        },
+        {
+          "label": "対象数",
+          "effects": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Noble"
+    ],
+    "class": [
+      "Knight"
+    ],
+    "cost": 5,
+    "hp": [
+      750,
+      1440,
+      2880
+    ],
+    "dps": [
+      60,
+      108,
+      216
+    ],
+    "attackSpeed": 1.0,
+    "damage": [
+      60,
+      108,
+      216
+    ],
+    "range": 3,
+    "armor": 40,
+    "magicRegist": 20
+  },
+  "Kennen": {
+    "id": "Kennen",
+    "name": "ケネン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kennen.png",
+    "skill": {
+      "id": "SlicingMaelstrom",
+      "name": "雷撃の大嵐",
+      "description": "周囲に嵐を呼び起こし、範囲内の敵にダメージを与えてスタンさせる。",
+      "cost": 0,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            225,
+            450,
+            675
+          ]
+        },
+        {
+          "label": "Tick",
+          "effects": [
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "label": "継続時間",
+          "effects": [
+            "3s",
+            "3s",
+            "3s"
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            "3s",
+            "3s",
+            "3s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Ninja",
+      "Yordle"
+    ],
+    "class": [
+      "Elementalist"
+    ],
+    "cost": 3,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      46,
+      82,
+      164
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      70,
+      126,
+      252
+    ],
+    "range": 2,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "KhaZix": {
+    "id": "KhaZix",
+    "name": "カ=ジックス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Khazix.png",
+    "skill": {
+      "id": "TasteTheirFear",
+      "name": "甘美なる恐怖",
+      "description": "最も近くにいる敵を切りつける。孤立している敵には追加ダメージを与える。",
+      "cost": 65,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            150,
+            250,
+            350
+          ]
+        },
+        {
+          "label": "ダメージ（孤立時）",
+          "effects": [
+            400,
+            600,
+            800
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Void"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 1,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      30,
+      54,
+      108
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Kindred": {
+    "id": "Kindred",
+    "name": "キンドレッド",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Kindred.png",
+    "skill": {
+      "id": "LambsRespite",
+      "name": "羊の執行猶予",
+      "description": "自身の周囲に展開した効果範囲内にいる味方は、死から免れる。",
+      "cost": 150,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "効果時間",
+          "effects": [
+            "4s",
+            "5s",
+            "6s"
+          ]
+        },
+        {
+          "label": "下限HP",
+          "effects": [
+            300,
+            600,
+            900
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Phantom"
+    ],
+    "class": [
+      "Ranger"
+    ],
+    "cost": 4,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      39,
+      70,
+      140
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      60,
+      108,
+      216
+    ],
+    "range": 3,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Leona": {
+    "id": "Leona",
+    "name": "レオナ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Leona.png",
+    "skill": {
+      "id": "SolarFlare",
+      "name": "ソーラーフレア",
+      "description": "太陽の光を降らせ、範囲内の敵にダメージとスロウ効果を与える。また、中心部にいる敵をスタンさせる。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            175,
+            250,
+            325
+          ]
+        },
+        {
+          "label": "効果時間",
+          "effects": [
+            "5s",
+            "7s",
+            "9s"
+          ]
+        },
+        {
+          "label": "ディレイ",
+          "effects": [
+            "0.625s",
+            "0.625s",
+            "0.625s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Noble"
+    ],
+    "class": [
+      "Guardian"
+    ],
+    "cost": 4,
+    "hp": [
+      750,
+      1350,
+      2700
+    ],
+    "dps": [
+      25,
+      45,
+      89
+    ],
+    "attackSpeed": 0.55,
+    "damage": [
+      45,
+      81,
+      162
+    ],
+    "range": 1,
+    "armor": 100,
+    "magicRegist": 20
+  },
+  "Lissandra": {
+    "id": "Lissandra",
+    "name": "リサンドラ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lissandra.png",
+    "skill": {
+      "id": "FrozenTomb",
+      "name": "フローズングレイブ",
+      "description": "対象を氷に閉じ込め、周囲の敵にダメージとスロウ効果を与える。体力が半分に満たない場合は自分自身が氷に入り、対象指定されなくなる。",
+      "cost": 85,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            175,
+            325,
+            475
+          ]
+        },
+        {
+          "label": "スタン時間",
+          "effects": [
+            "1.5s",
+            "1.5s",
+            "1.5s"
+          ]
+        },
+        {
+          "label": "スロー効果時間",
+          "effects": [
+            "3s",
+            "3s",
+            "3s"
+          ]
+        },
+        {
+          "label": "自身への効果時間",
+          "effects": [
+            "2s",
+            "2s",
+            "2s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Elementalist"
+    ],
+    "cost": 2,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      24,
+      43,
+      86
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 2,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Lucian": {
+    "id": "Lucian",
+    "name": "ルシアン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lucian.png",
+    "skill": {
+      "id": "RelentlessPursuit",
+      "name": "スライド",
+      "description": "安全地帯に向かってダッシュして、1体の敵を2回攻撃する。その際、1度目は攻撃力に応じたダメージを、2度目は魔力に応じたダメージを与える。",
+      "cost": 35,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            100,
+            225,
+            350
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Noble"
+    ],
+    "class": [
+      "Gunslinger"
+    ],
+    "cost": 2,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      42,
+      76,
+      152
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      65,
+      117,
+      234
+    ],
+    "range": 3,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  "Lulu": {
+    "id": "Lulu",
+    "name": "ルル",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Lulu.png",
+    "skill": {
+      "id": "WildGrowth",
+      "name": "おおきくなぁれ！",
+      "description": "味方に増加体力を付与し、周囲の敵をノックアップさせる。",
+      "cost": 150,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "増加HP",
+          "effects": [
+            300,
+            400,
+            500
+          ]
+        },
+        {
+          "label": "追加対象数",
+          "effects": [
+            0,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Yordle"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 2,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      30,
+      54,
+      108
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 2,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "MissFortune": {
+    "id": "MissFortune",
+    "name": "ミス・フォーチュン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/MissFortune.png",
+    "skill": {
+      "id": "BulletTime",
+      "name": "バレットタイム",
+      "description": "詠唱後、扇状に大量の銃弾を数回発射し、範囲内の敵にダメージを与える。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            900,
+            1300,
+            1700
+          ]
+        },
+        {
+          "label": "効果時間",
+          "effects": [
+            "3s",
+            "3s",
+            "3s"
+          ]
+        },
+        {
+          "label": "ウェーブ",
+          "effects": [
+            14,
+            14,
+            14
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Pirate"
+    ],
+    "class": [
+      "Gunslinger"
+    ],
+    "cost": 5,
+    "hp": [
+      700,
+      1260,
+      2520
+    ],
+    "dps": [
+      64,
+      115,
+      230
+    ],
+    "attackSpeed": 0.85,
+    "damage": [
+      75,
+      135,
+      270
+    ],
+    "range": 3,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Mordekaiser": {
+    "id": "Mordekaiser",
+    "name": "モルデカイザー",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Mordekaiser.png",
+    "skill": {
+      "id": "Obliterate",
+      "name": "滅魂の一撃",
+      "description": "メイスを前方に振り下ろし、直線上の敵2体にダメージを与える。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            325,
+            450
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Phantom"
+    ],
+    "class": [
+      "Knight"
+    ],
+    "cost": 1,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      25,
+      45,
+      90
+    ],
+    "attackSpeed": 0.5,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
+    "armor": 40,
+    "magicRegist": 20
+  },
+  "Morgana": {
+    "id": "Morgana",
+    "name": "モルガナ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Morgana.png",
+    "skill": {
+      "id": "SoulShackles",
+      "name": "魂の足枷",
+      "description": "周囲の敵に鎖を放ち、ダメージを与える。少ししてから、ヒットした敵が近くに残っている場合はスタンさせて再びダメージを与える。",
+      "cost": 150,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            175,
+            300,
+            425
+          ]
+        },
+        {
+          "label": "鎖の継続時間",
+          "effects": [
+            "3s",
+            "3s",
+            "3s"
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            "2s",
+            "4s",
+            "6s"
+          ]
+        },
+        {
+          "label": "スロー",
+          "effects": [
+            "20%",
+            "20%",
+            "20%"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Demon"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 3,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      30,
+      54,
+      108
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 2,
+    "armor": 30,
+    "magicRegist": 20
+  },
+  "Nidalee": {
+    "id": "Nidalee",
+    "name": "ニダリー",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Nidalee.png",
+    "skill": {
+      "id": "PrimalSurge",
+      "name": "高揚",
+      "description": "自身と、最も弱い味方を回復させる。その後、変身して攻撃力が増加する。",
+      "cost": 85,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "回復量",
+          "effects": [
+            150,
+            375,
+            600
+          ]
+        },
+        {
+          "label": "増加攻撃力",
+          "effects": [
+            20,
+            70,
+            120
+          ]
+        },
+        {
+          "label": "継続時間",
+          "effects": [
+            "60s",
+            "60s",
+            "60s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Wild"
+    ],
+    "class": [
+      "Shapeshifter"
+    ],
+    "cost": 1,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      33,
+      59,
+      117
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 3,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Pantheon": {
+    "id": "Pantheon",
+    "name": "パンテオン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Pantheon.png",
+    "skill": {
+      "id": "GrandStarfall",
+      "name": "偉大なる星路",
+      "description": "最も遠くの敵を目がけて落下し、その敵をスタンさせる。通過した場所にいるすべての敵に、対象の最大体力の一定割合を魔法ダメージとして与える。その際に、10秒間かけて対象の最大体力の20%を確定ダメージとして追加で与える。また、その対象に「重傷」を付与する。",
+      "cost": 200,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "スタン時間",
+          "effects": [
+            "2s",
+            "2s",
+            "2s"
+          ]
+        },
+        {
+          "label": "ダメージ",
+          "effects": [
+            "10%",
+            "20%",
+            "30%"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Dragon"
+    ],
+    "class": [
+      "Guardian"
+    ],
+    "cost": 5,
+    "hp": [
+      850,
+      1530,
+      3060
+    ],
+    "dps": [
+      56,
+      101,
+      203
+    ],
+    "attackSpeed": 0.75,
+    "damage": [
+      75,
+      135,
+      270
+    ],
+    "range": 1,
+    "armor": 80,
+    "magicRegist": 20
+  },
+  "Poppy": {
+    "id": "Poppy",
+    "name": "ポッピー",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Poppy.png",
+    "skill": {
+      "id": "KeepersVerdict",
+      "name": "守護者の鉄鎚",
+      "description": "ハンマーを振り下ろし、最も近くにいる敵をノックアップさせてダメージを与える。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            300,
+            500,
+            700
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            "2s",
+            "3s",
+            "4s"
+          ]
+        },
+        {
+          "label": "対象数",
+          "effects": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Yordle"
+    ],
+    "class": [
+      "Knight"
+    ],
+    "cost": 3,
+    "hp": [
+      800,
+      1350,
+      2700
+    ],
+    "dps": [
+      25,
+      45,
+      90
+    ],
+    "attackSpeed": 0.5,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
+    "armor": 30,
+    "magicRegist": 20
+  },
+  "Pyke": {
+    "id": "Pyke",
+    "name": "パイク",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Pyke.png",
+    "skill": {
+      "id": "PhantomUndertow",
+      "name": "亡者の引き波",
+      "description": "最も遠い位置にいる敵の背後までダッシュし、軌跡に残像を発生させる。残像はすり抜けた敵をスタンさせる。",
+      "cost": 125,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            150,
+            200,
+            250
+          ]
+        },
+        {
+          "label": "効果時間",
+          "effects": [
+            "1.5s",
+            "2s",
+            "2.5s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Pirate"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 2,
+    "hp": [
+      600,
+      1080,
+      2160
+    ],
+    "dps": [
+      36,
+      65,
+      130
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      60,
+      108,
+      216
+    ],
+    "range": 1,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  "RekSai": {
+    "id": "RekSai",
+    "name": "レク＝サイ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/RekSai.png",
+    "skill": {
+      "id": "Burrow",
+      "name": "潜伏",
+      "description": "しばらくの間地中に潜伏し、対象不可になって体力を回復する。地中から襲撃する際に、最も近い位置にいる敵にダメージを与えてノックアップさせる。",
+      "cost": 150,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            350,
+            500
+          ]
+        },
+        {
+          "label": "回復量",
+          "effects": [
+            150,
+            300,
+            500
+          ]
+        },
+        {
+          "label": "ノックアップ",
+          "effects": [
+            "1.75s",
+            "1.75s",
+            "1.75s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Void"
+    ],
+    "class": [
+      "Brawler"
+    ],
+    "cost": 2,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      33,
+      59,
+      117
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Rengar": {
+    "id": "Rengar",
+    "name": "レンガー",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Rengar.png",
+    "skill": {
+      "id": "Savagery",
+      "name": "逆上",
+      "description": "最も弱い敵のもとへジャンプして攻撃し、追加ダメージを与える。ダメージを与えると、攻撃速度とクリティカル率が増加する。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ倍率",
+          "effects": [
+            "210%",
+            "320%",
+            "430%"
+          ]
+        },
+        {
+          "label": "増加攻撃速度",
+          "effects": [
+            "30%",
+            "50%",
+            "70%"
+          ]
+        },
+        {
+          "label": "バフ継続時間",
+          "effects": [
+            "6s",
+            "6s",
+            "6s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Wild"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 3,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      42,
+      76,
+      151
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      70,
+      126,
+      252
+    ],
+    "range": 1,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Sejuani": {
+    "id": "Sejuani",
+    "name": "セジュアニ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Sejuani.png",
+    "skill": {
+      "id": "GlacialPrison",
+      "name": "グレイシャルプリズン",
+      "description": "巨大な氷の嵐を生み出し、少ししてから範囲内の敵をスタンさせる。",
+      "cost": 150,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            100,
+            175,
+            250
+          ]
+        },
+        {
+          "label": "効果時間",
+          "effects": [
+            "2s",
+            "4s",
+            "6s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Knight"
+    ],
+    "cost": 4,
+    "hp": [
+      850,
+      1530,
+      3060
+    ],
+    "dps": [
+      25,
+      45,
+      89
+    ],
+    "attackSpeed": 0.55,
+    "damage": [
+      45,
+      81,
+      162
+    ],
+    "range": 1,
+    "armor": 40,
+    "magicRegist": 25
+  },
+  "Shen": {
+    "id": "Shen",
+    "name": "シェン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shen.png",
+    "skill": {
+      "id": "SpiritsRefuge",
+      "name": "防人の帳",
+      "description": "自分の周囲に展開した効果範囲内にいる味方は、すべての通常攻撃を回避することができる。",
+      "cost": 150,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "効果時間",
+          "effects": [
+            "3s",
+            "4s",
+            "5s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Ninja"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "cost": 2,
+    "hp": [
+      700,
+      1260,
+      2520
+    ],
+    "dps": [
+      39,
+      70,
+      140
+    ],
+    "attackSpeed": 0.7,
+    "damage": [
+      65,
+      117,
+      234
+    ],
+    "range": 1,
+    "armor": 30,
+    "magicRegist": 20
+  },
+  "Shyvana": {
+    "id": "Shyvana",
+    "name": "シヴァーナ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Shyvana.png",
+    "skill": {
+      "id": "DragonsDescent",
+      "name": "龍族の血統",
+      "description": "ダッシュして変身し、攻撃力と射程距離が増加する。変身すると通常攻撃で敵を燃え上がらせるようになる。",
+      "cost": 85,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "増加攻撃力",
+          "effects": [
+            100,
+            150,
+            200
+          ]
+        },
+        {
+          "label": "炎上ダメージ",
+          "effects": [
+            200,
+            300,
+            400
+          ]
+        },
+        {
+          "label": "炎上時間",
+          "effects": [
+            "3s",
+            "3s",
+            "3s"
+          ]
+        },
+        {
+          "label": "変身時間",
+          "effects": [
+            "60s",
+            "60s",
+            "60s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Dragon"
+    ],
+    "class": [
+      "Shapeshifter"
+    ],
+    "cost": 3,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      33,
+      59,
+      117
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
+    "armor": 30,
+    "magicRegist": 20
+  },
+  "Swain": {
+    "id": "Swain",
+    "name": "スウェイン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Swain.png",
+    "skill": {
+      "id": "Demonflare",
+      "name": "悪魔の紅炎",
+      "description": "変身して、周囲の敵全員から体力を奪う。変身終了時にエネルギーを解放して、周囲の敵にダメージを与える。",
+      "cost": 100,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ / Tick",
+          "effects": [
+            50,
+            100,
+            150
+          ]
+        },
+        {
+          "label": "回復量 / Tick",
+          "effects": [
+            40,
+            70,
+            100
+          ]
+        },
+        {
+          "label": "爆発ダメージ",
+          "effects": [
+            300,
+            600,
+            900
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Imperial",
+      "Demon"
+    ],
+    "class": [
+      "Shapeshifter"
+    ],
+    "cost": 5,
+    "hp": [
+      850,
+      1530,
+      3060
+    ],
+    "dps": [
+      42,
+      76,
+      152
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      65,
+      117,
+      234
+    ],
+    "range": 2,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  "Tristana": {
+    "id": "Tristana",
+    "name": "トリスターナ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Tristana.png",
+    "skill": {
+      "id": "ExplosiveCharge",
+      "name": "ヨードルグレネード",
+      "description": "攻撃対象としている敵に爆弾を仕掛ける。爆弾は数回の通常攻撃で爆発し、周囲の敵にダメージを与える。",
+      "cost": 50,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "チャージダメージ",
+          "effects": [
+            150,
+            225,
+            300
+          ]
+        },
+        {
+          "label": "効果時間",
+          "effects": [
+            "4s",
+            "4s",
+            "4s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Yordle"
+    ],
+    "class": [
+      "Gunslinger"
+    ],
+    "cost": 1,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      35,
+      63,
+      126
+    ],
+    "attackSpeed": 0.7,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 4,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "TwistedFate": {
+    "id": "TwistedFate",
+    "name": "ツイステッド・フェイト",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/TwistedFate.png",
+    "skill": {
+      "id": "PickACard",
+      "name": "ドロー",
+      "description": "ランダムなカードを投げ、ゴールド：対象をスタンさせる／レッド：対象の周囲にダメージを与える／ブルー：自身と周囲の味方のマナを回復するのいずれかの効果を発動させる",
+      "cost": 50,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            150,
+            250,
+            350
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "マナ回復",
+          "effects": [
+            30,
+            50,
+            70
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Pirate"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 2,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      30,
+      54,
+      108
+    ],
+    "attackSpeed": 0.75,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 3,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Varus": {
+    "id": "Varus",
+    "name": "ヴァルス",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Varus.png",
+    "skill": {
+      "id": "PiercingArrow",
+      "name": "乾坤一擲",
+      "description": "弓を引き絞って一矢を放ち、直線上の敵全員にダメージを与える。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            300,
+            550,
+            800
+          ]
+        },
+        {
+          "label": "射程",
+          "effects": [
+            8,
+            8,
+            8
+          ]
+        },
+        {
+          "label": "詠唱時間",
+          "effects": [
+            "1.5s",
+            "1.5s",
+            "1.5s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Demon"
+    ],
+    "class": [
+      "Ranger"
+    ],
+    "cost": 2,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      35,
+      63,
+      126
+    ],
+    "attackSpeed": 0.7,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 4,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  "Vayne": {
+    "id": "Vayne",
+    "name": "ヴェイン",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Vayne.png",
+    "skill": {
+      "id": "SilverBolts",
+      "name": "シルバーボルト",
+      "description": "通常攻撃3回ごとに、敵の最大体力に応じた追加確定ダメージを与える。",
+      "cost": 0,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ割合",
+          "effects": [
+            "8%",
+            "12%",
+            "16%"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Noble"
+    ],
+    "class": [
+      "Ranger"
+    ],
+    "cost": 1,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      28,
+      50,
+      101
+    ],
+    "attackSpeed": 0.7,
+    "damage": [
+      40,
+      72,
+      144
+    ],
+    "range": 3,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  "Veigar": {
+    "id": "Veigar",
+    "name": "ベイガー",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Veigar.png",
+    "skill": {
+      "id": "PrimordialBurst",
+      "name": "メテオバースト",
+      "description": "敵1体に対して魔法エネルギーを放ち、ダメージを与える。敵のチャンピオンレベルが自分より低い場合、その敵は直ちにデスする。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            300,
+            550,
+            800
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Yordle"
+    ],
+    "class": [
+      "Sorcerer"
+    ],
+    "cost": 3,
+    "hp": [
+      500,
+      900,
+      1800
+    ],
+    "dps": [
+      25,
+      45,
+      89
+    ],
+    "attackSpeed": 0.55,
+    "damage": [
+      45,
+      81,
+      162
+    ],
+    "range": 3,
+    "armor": 20,
+    "magicRegist": 20
+  },
+  "Vi": {
+    "id": "Vi",
+    "name": "ヴァイ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Vi.png",
+    "skill": {
+      "id": "AssaultAndBattery",
+      "name": "自慢の拳",
+      "description": "最も遠い場所にいる敵をターゲットし、一直線に突っ込み、途中にいるすべての敵を横にノックバックさせてダメージを与え、到達後は敵をノックアップしてダメージを与える。",
+      "cost": 150,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            250,
+            450,
+            650
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            "2s",
+            "2.5s",
+            "3s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Hextech"
+    ],
+    "class": [
+      "Brawler"
+    ],
+    "cost": 3,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      39,
+      80,
+      140
+    ],
+    "attackSpeed": 0.65,
+    "damage": [
+      60,
+      108,
+      216
+    ],
+    "range": 1,
+    "armor": 25,
+    "magicRegist": 20
+  },
+  "Volibear": {
+    "id": "Volibear",
+    "name": "ボリベア",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Volibear.png",
+    "skill": {
+      "id": "ThunderClaws",
+      "name": "稲妻の爪",
+      "description": "通常攻撃が複数の敵に跳ね返って追加ダメージを与え、通常攻撃時効果を与える。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "最大反射数",
+          "effects": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "label": "反射ダメージ割合",
+          "effects": [
+            "80%",
+            "90%",
+            "100%"
+          ]
+        },
+        {
+          "label": "継続時間",
+          "effects": [
+            "20s",
+            "20s",
+            "20s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Brawler"
+    ],
+    "cost": 3,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      41,
+      74,
+      149
+    ],
+    "attackSpeed": 0.55,
+    "damage": [
+      75,
+      135,
+      270
+    ],
+    "range": 1,
+    "armor": 35,
+    "magicRegist": 20
+  },
+  "Warwick": {
+    "id": "Warwick",
+    "name": "ワーウィック",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Warwick.png",
+    "skill": {
+      "id": "InfiniteDuress",
+      "name": "絶狼牙連撃",
+      "description": "体力が最も低い敵に襲いかかり、スタン効果とダメージを与えながら、自身の体力を回復する。",
+      "cost": 150,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            150,
+            225,
+            300
+          ]
+        },
+        {
+          "label": "スタン",
+          "effects": [
+            "1.5s",
+            "1.5s",
+            "1.5s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Wild"
+    ],
+    "class": [
+      "Brawler"
+    ],
+    "cost": 1,
+    "hp": [
+      650,
+      1170,
+      2340
+    ],
+    "dps": [
+      30,
+      54,
+      108
+    ],
+    "attackSpeed": 0.6,
+    "damage": [
+      50,
+      90,
+      180
+    ],
+    "range": 1,
+    "armor": 30,
+    "magicRegist": 20
+  },
+  "Yasuo": {
+    "id": "Yasuo",
+    "name": "ヤスオ",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Yasuo.png",
+    "skill": {
+      "id": "SteelTempest",
+      "name": "抜刀",
+      "description": "前方に突きを放ち、直線状の敵2体にダメージを与える。3度目の発動時には竜巻を発生させ、直線上の敵にダメージを与えてノックアップさせる。",
+      "cost": 25,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            150,
+            350,
+            550
+          ]
+        },
+        {
+          "label": "ノックアップ",
+          "effects": [
+            "1.5s",
+            "1.5s",
+            "1.5s"
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Exile"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "cost": 5,
+    "hp": [
+      700,
+      1260,
+      2520
+    ],
+    "dps": [
+      75,
+      135,
+      270
+    ],
+    "attackSpeed": 1,
+    "damage": [
+      75,
+      135,
+      270
+    ],
+    "range": 1,
+    "armor": 35,
+    "magicRegist": 20
+  },
+  "Zed": {
+    "id": "Zed",
+    "name": "ゼド",
+    "image": "https://ddragon.leagueoflegends.com/cdn/9.12.1/img/champion/Zed.png",
+    "skill": {
+      "id": "DivineJudgement",
+      "name": "風魔手裏剣",
+      "description": "手裏剣を投げて直線上の敵にダメージを与える。",
+      "cost": 75,
+      "img": "",
+      "leveltip": [
+        {
+          "label": "ダメージ",
+          "effects": [
+            200,
+            350,
+            500
+          ]
+        }
+      ]
+    },
+    "origin": [
+      "Ninja"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "cost": 2,
+    "hp": [
+      550,
+      990,
+      1980
+    ],
+    "dps": [
+      46,
+      82,
+      164
+    ],
+    "attackSpeed": 0.7,
+    "damage": [
+      65,
+      117,
+      234
+    ],
+    "range": 1,
+    "armor": 25,
+    "magicRegist": 20
+  }
+}

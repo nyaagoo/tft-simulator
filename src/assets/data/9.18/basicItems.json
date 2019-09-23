@@ -1,0 +1,58 @@
+{
+  "BFSword": {
+    "number": 1,
+    "id": "BFSword",
+    "name": "BFソード",
+    "description": "攻撃力+15",
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/1038.png"
+  },
+  "ChainVest": {
+    "number": 2,
+    "id": "ChainVest",
+    "name": "チェインベスト",
+    "description": "物理防御力+20",
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/1031.png"
+  },
+  "GiantsBelt": {
+    "number": 3,
+    "id": "GiantsBelt",
+    "name": "ジャイアントベルト",
+    "description": "最大HP+200",
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/1011.png"
+  },
+  "NeedlesslyLargeRod": {
+    "number": 4,
+    "id": "NeedlesslyLargeRod",
+    "name": "ムダニデカイロッド",
+    "description": "魔法攻撃力+20%",
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/1058.png"
+  },
+  "NegatronCloak": {
+    "number": 5,
+    "id": "NegatronCloak",
+    "name": "ネガトロンクローク",
+    "description": "魔法防御力+20",
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/1057.png"
+  },
+  "RecurveBow": {
+    "number": 6,
+    "id": "RecurveBow",
+    "name": "リカーブボウ",
+    "description": "攻撃速度+20%",
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/1043.png"
+  },
+  "Spatula": {
+    "number": 8,
+    "id": "Spatula",
+    "name": "ヘラ",
+    "description": "何かをするに違いない",
+    "img": "./../img/Item/Spatula.png"
+  },
+  "TearOfTheGoddess": {
+    "number": 7,
+    "id": "TearOfTheGoddess",
+    "name": "女神の涙",
+    "description": "最大マナ+20",
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3070.png"
+  }
+}
