@@ -2,8 +2,8 @@
   .champion-page
     tft-header
     tft-drawer
-    .content(:class="[{'ml-0': !visibleSynegyViewer}]")
-      .champion-side-pick-container(v-if="visibleSynegyViewer")
+    .content(:class="[{'ml-1': !visibleSynegyViewer || windowSize < 960}]")
+      .champion-side-pick-container.hidden-sm-and-down(v-if="visibleSynegyViewer")
         champion-side-pick
       champion-deck-favorite
       champion-deck-origin
@@ -35,12 +35,24 @@ import ChampionSidePick from "@/components/Organisms/ChampionSidePick.vue";
   }
 })
 export default class ChampionPage extends Vue {
+  windowSize = 0;
   created() {
     setting.loadSetting();
   }
-
   get visibleSynegyViewer(): boolean {
     return setting.visibleSideSynergyViewer;
+  }
+  beforeDestroy() {
+    if (typeof window !== "undefined") {
+      window.removeEventListener("resize", this.onResize, true);
+    }
+  }
+  mounted() {
+    this.onResize();
+    window.addEventListener("resize", this.onResize, { passive: true });
+  }
+  onResize() {
+    this.windowSize = window.innerWidth;
   }
 }
 </script>
