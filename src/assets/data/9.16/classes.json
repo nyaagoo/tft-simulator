@@ -1,0 +1,177 @@
+{
+  "Assassin": {
+    "id": "Assassin",
+    "name": "アサシン",
+    "img": "./img/Class/Assassin.png",
+    "effect": [
+      {
+        "tier": 3,
+        "require": 3,
+        "bonus": "アサシンは戦闘開始時に最も遠い敵に飛びつく。+125％のクリティカルダメージを与える"
+      },
+      {
+        "tier": 1,
+        "require": 6,
+        "bonus": "アサシンは戦闘開始時に最も遠い敵に飛びつき+350％のクリティカルダメージを与える"
+      }
+    ]
+  },
+  "Blademaster": {
+    "id": "Blademaster",
+    "name": "ブレードマスター",
+    "img": "./img/Class/Blademaster.png",
+    "effect": [
+      {
+        "tier": 3,
+        "require": 3,
+        "bonus": "通常攻撃が一定確率で1回ヒットする"
+      },
+      {
+        "tier": 2,
+        "require": 6,
+        "bonus": "通常攻撃が一定確率で2回ヒットする"
+      },
+      {
+        "tier": 1,
+        "require": 9,
+        "bonus": "通常攻撃が一定確率で4回ヒットする"
+      }
+    ]
+  },
+  "Brawler": {
+    "id": "Brawler",
+    "name": "ブローラー",
+    "img": "./img/Class/Brawler.png",
+    "effect": [
+      {
+        "tier": 3,
+        "require": 2,
+        "bonus": "ブロウラーは+300HPを得る"
+      },
+      {
+        "tier": 2,
+        "require": 4,
+        "bonus": "ブロウラーは+600HPを得る"
+      },
+      {
+        "tier": 1,
+        "require": 6,
+        "bonus": "ブロウラーは+1000HPを得る"
+      }
+    ]
+  },
+  "Elementalist": {
+    "id": "Elementalist",
+    "name": "エレメンタリスト",
+    "img": "./img/Class/Elementalist.png",
+    "effect": [
+      {
+        "tier": 1,
+        "require": 3,
+        "bonus": "戦闘の開始時にエレメンタルを召喚する"
+      }
+    ]
+  },
+  "Guardian": {
+    "id": "Guardian",
+    "name": "ガーディアン",
+    "img": "./img/Class/Guardian.png",
+    "effect": [
+      {
+        "tier": 1,
+        "require": 2,
+        "bonus": "戦闘開始時に隣接する味方ユニットの物理防御が50上昇する（スタック上限無し）、ただしガーディアン自身に効果は適用されない"
+      }
+    ]
+  },
+  "Gunslinger": {
+    "id": "Gunslinger",
+    "name": "ガンスリンガー",
+    "img": "./img/Class/Gunslinger.png",
+    "effect": [
+      {
+        "tier": 3,
+        "require": 2,
+        "bonus": "一定確率で追加攻撃を1回行うようになる"
+      },
+      {
+        "tier": 2,
+        "require": 4,
+        "bonus": "一定確率で追加攻撃を2回行うようになる"
+      },
+      {
+        "tier": 1,
+        "require": 6,
+        "bonus": "一定確率で追加攻撃を3回行うようになる"
+      }
+    ]
+  },
+  "Knight": {
+    "id": "Knight",
+    "name": "ナイト",
+    "img": "./img/Class/Knight.png",
+    "effect": [
+      {
+        "tier": 3,
+        "require": 2,
+        "bonus": "チームがすべてのダメージを 15 無視する"
+      },
+      {
+        "tier": 2,
+        "require": 4,
+        "bonus": "チームがすべてのダメージを 30 無視する"
+      },
+      {
+        "tier": 1,
+        "require": 6,
+        "bonus": "チームがすべてのダメージを 55 無視する"
+      }
+    ]
+  },
+  "Ranger": {
+    "id": "Ranger",
+    "name": "レンジャー",
+    "img": "./img/Class/Ranger.png",
+    "effect": [
+      {
+        "tier": 1,
+        "require": 3,
+        "bonus": "レンジャーは攻撃時にASを2倍にする可能性がある"
+      }
+    ]
+  },
+  "Shapeshifter": {
+    "id": "Shapeshifter",
+    "name": "シェイプシフター",
+    "img": "./img/Class/Shapeshifter.png",
+    "effect": [
+      {
+        "tier": 3,
+        "require": 3,
+        "bonus": "変身時に60%の体力ボーナスを獲得"
+      },
+      {
+        "tier": 1,
+        "require": 6,
+        "bonus": "変身時に120%の体力ボーナスを獲得"
+      }
+    ]
+  },
+  "Sorcerer": {
+    "id": "Sorcerer",
+    "name": "ソーサラー",
+    "img": "./img/Class/Sorcerer.png",
+    "effect": [
+      {
+        "tier": 3,
+        "require": 3,
+        "bonus": "味方が与えるAPダメージが40%上昇する"
+      },
+      {
+        "tier": 1,
+        "require": 6,
+        "bonus": "味方が与えるAPダメージが100%上昇する"
+      }
+    ]
+  }
+}

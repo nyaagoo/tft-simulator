@@ -1,6 +1,6 @@
-import championList from "@/assets/json/champions.json";
-import originList from "@/assets/json/origins.json";
-import classList from "@/assets/json/classes.json";
+import championList from "@/assets/data/9.16/champions.json";
+import originList from "@/assets/data/9.16/origins.json";
+import classList from "@/assets/data/9.16/classes.json";
 import { Champion } from "@/models/champion";
 import { ActiveSynergy } from "@/models/type";
 import store from "@/store/store";
