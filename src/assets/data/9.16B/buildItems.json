@@ -1,0 +1,254 @@
+{
+  "InfinityEdge": {
+    "id": "InfinityEdge",
+    "name": "インフィニティ・エッジ",
+    "description": "クリティカル攻撃ダメージ倍率200%",
+    "recipe": ["BFSword", "BFSword"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3031.png"
+  },
+  "GuardianAngel": {
+    "id": "GuardianAngel",
+    "name": "ガーディアンエンジェル",
+    "description": "死亡時に500HPで復活する",
+    "recipe": ["BFSword", "ChainVest"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3026.png"
+  },
+  "ZekesHerald": {
+    "id": "ZekesHerald",
+    "name": "ジークヘラルド",
+    "description": "隣接する味方の攻撃速度が10%上昇",
+    "recipe": ["BFSword", "GiantsBelt"],
+    "img": "./../img/Item/ZekesHerald.png"
+  },
+  "HextechGunblade": {
+    "id": "HextechGunblade",
+    "name": "ヘクステックガンブレード",
+    "description": "すべての与えたダメージの25%を回復",
+    "recipe": ["BFSword", "NeedlesslyLargeRod"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3146.png"
+  },
+  "TheBloodthirster": {
+    "id": "TheBloodthirster",
+    "name": "ブラッドサースター",
+    "description": "通常攻撃で与えたダメージの50%を回復",
+    "recipe": ["BFSword", "NegatronCloak"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3080.png"
+  },
+  "SwordOfTheDivine": {
+    "id": "SwordOfTheDivine",
+    "name": "天帝の剣",
+    "description": "毎秒7%の確率で全ての攻撃がクリティカル化",
+    "recipe": ["BFSword", "RecurveBow"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3131.png"
+  },
+  "YoumuusGhostblade": {
+    "id": "YoumuusGhostblade",
+    "name": "妖夢の霊剣",
+    "description": "ユニットにアサシンを付与",
+    "recipe": ["BFSword", "Spatula"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3142.png"
+  },
+  "SpearOfShojin": {
+    "id": "SpearOfShojin",
+    "name": "ショウジンの矛",
+    "description": "スキル使用後、通常攻撃毎に最大マナの20%を得る",
+    "recipe": ["BFSword", "TearOfTheGoddess"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3161.png"
+  },
+  "Thornmail": {
+    "id": "Thornmail",
+    "name": "ソーンメイル",
+    "description": "通常攻撃をしてきた敵に100%の確定ダメージを与える",
+    "recipe": ["ChainVest", "ChainVest"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3075.png"
+  },
+  "RedBuff": {
+    "id": "RedBuff",
+    "name": "赤バフ",
+    "description": "通常攻撃が、10秒間かけて敵の最大体力の20%ダメージを与える",
+    "recipe": ["ChainVest", "GiantsBelt"],
+    "img": "./../img/Item/RedBuff.png"
+  },
+  "LocketOfTheIronSolari": {
+    "id": "LocketOfTheIronSolari",
+    "name": "ソラリのロケット",
+    "description": "ラウンド開始時に、装備者およびその左右それぞれ2マス以内にいる味方に6秒間持続する体力250相当のシールドを付与",
+    "recipe": ["ChainVest", "NeedlesslyLargeRod"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3190.png"
+  },
+  "SwordBreaker": {
+    "id": "SwordBreaker",
+    "name": "ソードブレイカー",
+    "description": "通常攻撃時に30%の確率で4秒間の武装解除を与える",
+    "recipe": ["ChainVest", "NegatronCloak"],
+    "img": "./../img/Item/SwordBreaker.png"
+  },
+  "PhantomDancer": {
+    "id": "PhantomDancer",
+    "name": "ファントムダンサー",
+    "description": "クリティカル攻撃を完全回避",
+    "recipe": ["ChainVest", "RecurveBow"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3046.png"
+  },
+  "KnightsVow": {
+    "id": "KnightsVow",
+    "name": "騎士の誓い",
+    "description": "ユニットにナイト付与",
+    "recipe": ["ChainVest", "Spatula"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3109.png"
+  },
+  "FrozenHeart": {
+    "id": "FrozenHeart",
+    "name": "フローズンハート",
+    "description": "隣接する敵の攻撃速度を25%低下させる",
+    "recipe": ["ChainVest", "TearOfTheGoddess"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3110.png"
+  },
+  "WarmogsArmor": {
+    "id": "WarmogsArmor",
+    "name": "ワーモグアーマー",
+    "description": "毎秒最大HPの6%を回復",
+    "recipe": ["GiantsBelt", "GiantsBelt"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3083.png"
+  },
+  "Morellonomicon": {
+    "id": "Morellonomicon",
+    "name": "モレロノミコン",
+    "description": "スキルが10秒間かけて敵の最大体力の20%ダメージを与える",
+    "recipe": ["GiantsBelt", "NeedlesslyLargeRod"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3165.png"
+  },
+  "Zephyr": {
+    "id": "Zephyr",
+    "name": "ゼファー",
+    "description": "戦闘開始時、5秒間敵を追放する。追放されている間はすべての効果の対象にならず、行動も出来ない",
+    "recipe": ["GiantsBelt", "NegatronCloak"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3172.png"
+  },
+  "TitanicHydra": {
+    "id": "TitanicHydra",
+    "name": "タイタンハイドラ",
+    "description": "最大HPの10%のスプラッシュダメージを追加",
+    "recipe": ["GiantsBelt", "RecurveBow"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3748.png"
+  },
+  "FrozenMallet": {
+    "id": "FrozenMallet",
+    "name": "フローズンマレット",
+    "description": "ユニットにグレイシャルを付与",
+    "recipe": ["GiantsBelt", "Spatula"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3022.png"
+  },
+  "Redemption": {
+    "id": "Redemption",
+    "name": "リデンプション",
+    "description": "装備したユニットのHPが25%を下回った場合、周囲の味方すべての1500HP回復",
+    "recipe": ["GiantsBelt", "TearOfTheGoddess"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3107.png"
+  },
+  "RabadonsDeathcap": {
+    "id": "RabadonsDeathcap",
+    "name": "ラバドン・デスキャップ",
+    "description": "AP+50%",
+    "recipe": ["NeedlesslyLargeRod", "NeedlesslyLargeRod"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3089.png"
+  },
+  "IonicSpark": {
+    "id": "IonicSpark",
+    "name": "アイオニックスパーク",
+    "description": "相手はスキルを使用するたびに125の確定ダメージを与える",
+    "recipe": ["NeedlesslyLargeRod", "NegatronCloak"],
+    "img": "./../img/Item/IonicSpark.png"
+  },
+  "GuinsoosRageblade": {
+    "id": "GuinsoosRageblade",
+    "name": "グインソー・レイジブレード",
+    "description": "通常攻撃する毎にAS+5%。この効果は無限にスタックする",
+    "recipe": ["NeedlesslyLargeRod", "RecurveBow"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3124.png"
+  },
+  "Yuumi": {
+    "id": "Yuumi",
+    "name": "ユーミ",
+    "description": "ユニットにソーサラーを付与",
+    "recipe": ["NeedlesslyLargeRod", "Spatula"],
+    "img": "./../img/Item/Yuumi.png"
+  },
+  "LudensEcho": {
+    "id": "LudensEcho",
+    "name": "ルーデンエコー",
+    "description": "敵にスキルが命中した際に対象とその周囲にいる敵に180の魔法ダメージを与える",
+    "recipe": ["NeedlesslyLargeRod", "TearOfTheGoddess"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3285.png"
+  },
+  "DragonsClaw": {
+    "id": "DragonsClaw",
+    "name": "ドラゴンクロー",
+    "description": "装備者が受ける魔法ダメージの83%をカットする",
+    "recipe": ["NegatronCloak", "NegatronCloak"],
+    "img": "./../img/Item/DragonsClaw.png"
+  },
+  "CursedBlade": {
+    "id": "CursedBlade",
+    "name": "呪いの刃",
+    "description": "通常攻撃時に20%の確率で相手の★Lvを一つ下げる",
+    "recipe": ["NegatronCloak", "RecurveBow"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3139.png"
+  },
+  "RunaansHurricane": {
+    "id": "RunaansHurricane",
+    "name": "ルナーン・ハリケーン",
+    "description": "攻撃時、追加で1体を75%のダメージで攻撃する。通常攻撃時の効果は適用される",
+    "recipe": ["NegatronCloak", "Spatula"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3085.png"
+  },
+  "Hush": {
+    "id": "Hush",
+    "name": "静寂",
+    "description": "通常攻撃命中時に33%の確率で、4秒間敵チャンピオンのマナ増加を阻害",
+    "recipe": ["NegatronCloak", "TearOfTheGoddess"],
+    "img": "./../img/Item/Hush.png"
+  },
+  "RapidFireCannon": {
+    "id": "RapidFireCannon",
+    "name": "ラピッドファイアキャノン",
+    "description": "射程距離が倍になり回避されなくなる",
+    "recipe": ["RecurveBow", "RecurveBow"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3094.png"
+  },
+  "BladeOfTheRuinedKing": {
+    "id": "BladeOfTheRuinedKing",
+    "name": "ルイドキングブレード",
+    "description": "ユニットにブレードマスターを付与",
+    "recipe": ["RecurveBow", "Spatula"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3163.png"
+  },
+  "StattikShiv": {
+    "id": "StattikShiv",
+    "name": "スタティック シヴ",
+    "description": "3回通常攻撃する毎に雷を放ち、100の魔法ダメージを与える。攻撃対象の2マス以内に別の敵がいた場合、3回まで雷が連鎖し同じ魔法ダメージを与える。",
+    "recipe": ["RecurveBow", "TearOfTheGoddess"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3087.png"
+  },
+  "ForceOfNature": {
+    "id": "ForceOfNature",
+    "name": "自然の力",
+    "description": "チーム枠が1つ増える",
+    "recipe": ["Spatula", "Spatula"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/4401.png"
+  },
+  "Darkin": {
+    "id": "Darkin",
+    "name": "ダーキン",
+    "description": "ユニットにデーモン付与",
+    "recipe": ["Spatula", "TearOfTheGoddess"],
+    "img": "./../img/Item/Darkin.png"
+  },
+  "SeraphsEmbrace": {
+    "id": "SeraphsEmbrace",
+    "name": "セラフ・エンブレイズ",
+    "description": "スキルを使用する毎に20マナを回復",
+    "recipe": ["TearOfTheGoddess", "TearOfTheGoddess"],
+    "img": "http://ddragon.leagueoflegends.com/cdn/9.12.1/img/item/3040.png"
+  }
+}
