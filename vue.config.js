@@ -1,5 +1,7 @@
 const path = require("path");
 const SpritesmithPlugin = require("webpack-spritesmith");
+const PurgecssPlugin = require("purgecss-webpack-plugin");
+const glob = require("glob-all");
 
 const spriteTemplate = setting => data => {
   // setting: {suffix: string}
@@ -143,6 +145,16 @@ module.exports = {
         spritesmithOptions: {
           algorithm: "top-down"
         }
+      }),
+      new PurgecssPlugin({
+        paths: glob.sync([
+          path.join(__dirname, './public/index.html'),
+          path.join(__dirname, './src/**/*.vue'),
+          path.join(__dirname, './src/**/*.js'),
+          path.join(__dirname, './src/**/*.ts'),
+          path.join(__dirname, './node_modules/vuetify/dist/vuetify.js')
+        ]),
+        whitelistPatterns: [/^icon/]
       })
     ],
     resolve: {
