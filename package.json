@@ -10,6 +10,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "sass-loader": "^7.3.1",
     "style-loader": "^0.23.1",
     "vue": "^2.6.6",
     "vue-class-component": "^6.0.0",
