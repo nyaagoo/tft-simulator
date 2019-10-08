@@ -40,10 +40,9 @@ export type ChampionDetail = {
   origin: string[];
   class: string[];
   cost: number;
-  hp: number[];
-  dps: number[];
+  hp: number;
   attackSpeed: number;
-  damage: number[];
+  damage: number;
   range: number;
   armor: number;
   magicRegist: number;

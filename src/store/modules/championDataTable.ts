@@ -14,6 +14,7 @@ import {
 class ChampionTableModule extends VuexModule {
   readonly championList = championList;
   readonly championTableRaw: ChampionDetail[] = Object.values(championList);
+  readonly levelRatio = [1, 1.8, 1.8 * 2.0];
   championTable: ChampionLevelStatus[] = [];
   selectOriginList: string[] = [];
   selectClassList: string[] = [];
@@ -53,9 +54,9 @@ class ChampionTableModule extends VuexModule {
     const data = this.championTableRaw.map(
       (x): ChampionLevelStatus => ({
         ...x,
-        hp: x.hp[index],
-        dps: x.dps[index],
-        damage: x.damage[index]
+        hp: Math.round(x.hp * this.levelRatio[index]),
+        dps: Math.round(x.damage * this.levelRatio[index] * x.attackSpeed),
+        damage: Math.round(x.damage * this.levelRatio[index])
       })
     );
     this.SET_SELECT_LEVEL(level);
