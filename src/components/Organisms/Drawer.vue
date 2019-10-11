@@ -3,15 +3,15 @@
     v-navigation-drawer(v-model="drawer" app fixed clipped)
         v-list(rounded)
           v-list-item(@click="transitPageChampion()")
-            v-icon.mr-3 mdi-octagon-outline
+            v-icon.mr-3 {{ icon.mdiOctagonOutline }}
             v-list-item-content
               v-list-item-title シナジーシミュレータ
           v-list-item(@click="transitPageItem()")
-            v-icon.mr-3 mdi-widgets
+            v-icon.mr-3 {{ icon.mdiWidgets }}
             v-list-item-content
               v-list-item-title アイテムビルダー
           v-list-item(@click="transitChampionTable()")
-            v-icon.mr-3 mdi-view-list
+            v-icon.mr-3 {{ icon.mdiViewList }}
             v-list-item-content
               v-list-item-title チャンピオンデータ
 </template>
@@ -22,6 +22,7 @@ import router from "@/router";
 import IconBase from "@/components/Icon/IconBase.vue";
 import IconSubtitle from "@/components/Icon/IconSubtitle.vue";
 import IconViewModule from "@/components/Icon/IconViewModule.vue";
+import { mdiOctagonOutline, mdiWidgets, mdiViewList } from "@mdi/js";
 
 @Component({
   name: "drawer",
@@ -32,6 +33,8 @@ import IconViewModule from "@/components/Icon/IconViewModule.vue";
   }
 })
 export default class Drawer extends Vue {
+  icon = { mdiOctagonOutline, mdiWidgets, mdiViewList };
+
   get drawer(): boolean {
     return setting.showDrawer;
   }

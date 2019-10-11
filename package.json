@@ -21,7 +21,7 @@
     "webpack-spritesmith": "^1.0.1"
   },
   "devDependencies": {
-    "@mdi/font": "^3.8.95",
+    "@mdi/js": "^4.5.95",
     "@types/jest": "^23.1.4",
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-eslint": "^3.5.0",

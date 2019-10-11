@@ -9,7 +9,7 @@
             .level-select.text-xs-center
               v-rating(v-model='selectedLevel' :length="3")
                 template(v-slot:item='props')
-                  v-icon(:color="props.isFilled ? genColor(props.index) : 'grey lighten-1'", large, @click='props.click') mdi-star
+                  v-icon(:color="props.isFilled ? genColor(props.index) : 'grey lighten-1'", large, @click='props.click') {{ icon.mdiStar }}
             .search-wrapper
               v-text-field(v-model="search", label='Search', single-line, hide-details)
           .origin-class-select
@@ -46,6 +46,7 @@ import IconBase from "@/components/Icon/IconBase.vue";
 import IconStar from "@/components/Icon/IconStar.vue";
 import IconAdd from "@/components/Icon/IconAdd.vue";
 import IconStarBorder from "@/components/Icon/IconStarBorder.vue";
+import { mdiStar } from "@mdi/js";
 
 @Component({
   name: "champion-data-table",
@@ -57,6 +58,7 @@ import IconStarBorder from "@/components/Icon/IconStarBorder.vue";
   }
 })
 export default class ChampionDataTable extends Vue {
+  icon = { mdiStar };
   rating: number = 1;
   colors: string[] = ["green", "purple", "orange"];
 

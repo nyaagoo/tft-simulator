@@ -2,14 +2,14 @@
   .tft-header
     v-app-bar(app dark fixed clipped-left dense)
       v-btn(icon @click.stop="toggleDrawer()")
-        v-icon mdi-menu
+        v-icon {{ icon.mdiMenu }}
       v-toolbar-title.white--text TFT Simulator
       v-spacer
       v-toolbar-items
         v-menu(v-model="menu", :close-on-content-click="false", :nudge-width="300", offset-x)
           template(v-slot:activator="{ on }")
             v-btn(v-on="on" icon)
-              v-icon mdi-settings
+              v-icon {{ icon.mdiSettings }}
           v-card
             v-list
               v-subheader サイドバー
@@ -31,6 +31,7 @@ import { setting, championDeck } from "@/store/index";
 import IconBase from "@/components/Icon/IconBase.vue";
 import IconSetting from "@/components/Icon/IconSetting.vue";
 import IconMenu from "@/components/Icon/IconMenu.vue";
+import { mdiMenu, mdiSettings } from "@mdi/js";
 
 @Component({
   name: "tft-header",
@@ -41,6 +42,7 @@ import IconMenu from "@/components/Icon/IconMenu.vue";
   }
 })
 export default class TFTHeader extends Vue {
+  icon = { mdiMenu, mdiSettings };
   column = "cost";
   menu: boolean = false;
   visibleSideSynergyViewer: boolean = setting.visibleSideSynergyViewer;
