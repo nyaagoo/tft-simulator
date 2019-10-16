@@ -12,13 +12,13 @@ import {
 
 @Module({ dynamic: true, store, name: "championTable", namespaced: true })
 class ChampionTableModule extends VuexModule {
+  // #region State
   readonly championList = championList;
   readonly championTableRaw: ChampionDetail[] = Object.values(championList);
-  readonly levelRatio = [1, 1.8, 1.8 * 2.0];
+  readonly levelRatio = [1, 1.8, 1.8 * 2.0]; // FIXME: ここ配列なのは意図が違う
   championTable: ChampionLevelStatus[] = [];
   selectOriginList: string[] = [];
   selectClassList: string[] = [];
-
   selectLevel: number = 1;
   searchWord: string = "";
   // #endregion
@@ -26,32 +26,32 @@ class ChampionTableModule extends VuexModule {
   // #region MUTATION
 
   @Mutation
-  public SET_CHAMPION_TABLE(data: ChampionLevelStatus[]) {
+  public setChampionTable(data: ChampionLevelStatus[]) {
     this.championTable = data;
   }
   @Mutation
-  public SET_SELECT_LEVEL(level: number) {
+  public setSelectLevel(level: number) {
     this.selectLevel = level;
   }
   @Mutation
-  public SET_SEARCH_WORD(word: string) {
+  public setSearchWord(word: string) {
     this.searchWord = word;
   }
   @Mutation
-  public SET_SELECT_OROIGIN_LIST(originList: string[]) {
+  public setSelectOriginList(originList: string[]) {
     this.selectOriginList = originList;
   }
   @Mutation
-  public SET_SELECT_CLASS_LIST(classList: string[]) {
+  public setSelectClassList(classList: string[]) {
     this.selectClassList = classList;
   }
   // #endregion
 
   // #region ACTION
   @Action({ rawError: true })
-  public SelectChampionLevel(level: number) {
+  public selectChampionLevel(level: number) {
     const index = level - 1;
-    const data = this.championTableRaw.map(
+    const championTable = this.championTableRaw.map(
       (x): ChampionLevelStatus => ({
         ...x,
         hp: Math.round(x.hp * this.levelRatio[index]),
@@ -59,16 +59,16 @@ class ChampionTableModule extends VuexModule {
         damage: Math.round(x.damage * this.levelRatio[index])
       })
     );
-    this.SET_SELECT_LEVEL(level);
-    this.SET_CHAMPION_TABLE(data);
+    this.setSelectLevel(level);
+    this.setChampionTable(championTable);
   }
 
   @Action({ rawError: true })
   public toggleSelectOrigin(originId: string) {
     if (!this.selectOriginList.includes(originId))
-      this.SET_SELECT_OROIGIN_LIST([...this.selectOriginList, originId]);
+      this.setSelectOriginList([...this.selectOriginList, originId]);
     else
-      this.SET_SELECT_OROIGIN_LIST(
+      this.setSelectOriginList(
         this.selectOriginList.filter(x => x !== originId)
       );
   }
@@ -76,21 +76,17 @@ class ChampionTableModule extends VuexModule {
   @Action({ rawError: true })
   public toggleSelectClass(classId: string) {
     if (!this.selectClassList.includes(classId))
-      this.SET_SELECT_CLASS_LIST([...this.selectClassList, classId]);
+      this.setSelectClassList([...this.selectClassList, classId]);
     else
-      this.SET_SELECT_CLASS_LIST(
-        this.selectClassList.filter(x => x !== classId)
-      );
+      this.setSelectClassList(this.selectClassList.filter(x => x !== classId));
   }
 
   @Action({ rawError: true })
   public sortChampion(classId: string) {
     if (!this.selectClassList.includes(classId))
-      this.SET_SELECT_CLASS_LIST([...this.selectClassList, classId]);
+      this.setSelectClassList([...this.selectClassList, classId]);
     else
-      this.SET_SELECT_CLASS_LIST(
-        this.selectClassList.filter(x => x !== classId)
-      );
+      this.setSelectClassList(this.selectClassList.filter(x => x !== classId));
   }
 
   // #endregion

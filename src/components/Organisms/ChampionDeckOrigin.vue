@@ -23,7 +23,7 @@ export default class DeckOrigin extends Vue {
   costColor: Map<number, string> = costColor;
 
   mounted() {
-    championDeck.SeparateChampionDeckOrigin();
+    championDeck.separateChampionDeckOrigin();
   }
 
   get championListEachOrigin(): ChampionOrigin[] {

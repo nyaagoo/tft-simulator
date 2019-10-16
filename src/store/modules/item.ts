@@ -23,12 +23,11 @@ class ItemModule extends VuexModule {
 
   // #region MUTATION
   @Mutation
-  public SET_BUILD_ITEM_EACH_BASIC_ITEM(list: BuildFromBasicItem[]) {
+  public setBuildItemEachBasicItem(list: BuildFromBasicItem[]) {
     this.buildItemEachBasicItem = list;
   }
-
   @Mutation
-  public SET_ITEM_POOL(basicItemList: BasicItem[]) {
+  public setItemPool(basicItemList: BasicItem[]) {
     this.itemPool = basicItemList;
   }
 
@@ -71,19 +70,19 @@ class ItemModule extends VuexModule {
       else if (pre.basicItem.id < cur.basicItem.id) return -1;
       return 0;
     });
-    this.SET_BUILD_ITEM_EACH_BASIC_ITEM(buildItemEachBasicItem);
+    this.setBuildItemEachBasicItem(buildItemEachBasicItem);
   }
 
   @Action({ rawError: true })
   public addItemPool(basicItem: BasicItem) {
-    this.SET_ITEM_POOL([...this.itemPool, basicItem]);
+    this.setItemPool([...this.itemPool, basicItem]);
   }
 
   @Action({ rawError: true })
   public removeItemPool(basicItem: BasicItem) {
     const itemPool2 = [...this.itemPool];
     itemPool2.splice(itemPool2.findIndex(x => x === basicItem), 1);
-    this.SET_ITEM_POOL(itemPool2);
+    this.setItemPool(itemPool2);
   }
 
   // #endregion

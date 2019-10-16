@@ -32,23 +32,23 @@ class ChampionPickModule extends VuexModule {
 
   // #region MUTATION
   @Mutation
-  public SET_CHAMPION_PICKED(championList: Champion[]) {
+  public setChampionPicked(championList: Champion[]) {
     this.championPicked = championList;
   }
   @Mutation
-  public SET_CHAMPION_PICKED_LENGTH(length: number) {
+  public setChampionPickedLength(length: number) {
     this.championPicked.splice(length);
   }
   @Mutation
-  public SET_MAX_COUNT_PICK_CHAMPION(count: number) {
+  public setMaxCountPickChampion(count: number) {
     this.maxCountPickChampion = count;
   }
   @Mutation
-  public SET_ACTIVE_ORIGIN_SYNERGY(synergyList: ActiveSynergy[]) {
+  public setActiveOriginSynergy(synergyList: ActiveSynergy[]) {
     this.activeOriginSynergy = synergyList;
   }
   @Mutation
-  public SET_ACTIVE_CLASS_SYNERGY(synergyList: ActiveSynergy[]) {
+  public setActiveClassSynergy(synergyList: ActiveSynergy[]) {
     this.activeClassSynergy = synergyList;
   }
 
@@ -56,38 +56,38 @@ class ChampionPickModule extends VuexModule {
 
   // #region ACTION
   @Action({ rawError: true })
-  public ToggleChampionPicked(champion: Champion) {
+  public toggleChampionPicked(champion: Champion) {
     const existList = this.championPicked.some(c => c.id === champion.id);
-    if (existList) this.RemoveChampionPicked(champion);
-    else this.AddChampionPicked(champion);
+    if (existList) this.removeChampionPicked(champion);
+    else this.addChampionPicked(champion);
   }
 
   @Action({ rawError: true })
-  public async AddChampionPicked(champion: Champion) {
+  public async addChampionPicked(champion: Champion) {
     if (this.championPicked.length >= this.maxCountPickChampion) return;
-    this.SET_CHAMPION_PICKED([...this.championPicked, champion]);
-    this.SET_ACTIVE_ORIGIN_SYNERGY(await this.CalculateOriginSynergy());
-    this.SET_ACTIVE_CLASS_SYNERGY(await this.CalculateClassSynergy());
+    this.setChampionPicked([...this.championPicked, champion]);
+    this.setActiveOriginSynergy(await this.calculateOriginSynergy());
+    this.setActiveClassSynergy(await this.calculateClassSynergy());
   }
 
   @Action({ rawError: true })
-  public async RemoveChampionPicked(champion: Champion) {
-    this.SET_CHAMPION_PICKED(
+  public async removeChampionPicked(champion: Champion) {
+    this.setChampionPicked(
       this.championPicked.filter(c => c.id !== champion.id)
     );
-    this.SET_ACTIVE_ORIGIN_SYNERGY(await this.CalculateOriginSynergy());
-    this.SET_ACTIVE_CLASS_SYNERGY(await this.CalculateClassSynergy());
+    this.setActiveOriginSynergy(await this.calculateOriginSynergy());
+    this.setActiveClassSynergy(await this.calculateClassSynergy());
   }
 
   @Action({ rawError: true })
-  public async CalculateChampionPicked() {
-    this.SET_ACTIVE_ORIGIN_SYNERGY(await this.CalculateOriginSynergy());
-    this.SET_ACTIVE_CLASS_SYNERGY(await this.CalculateClassSynergy());
+  public async calculateChampionPicked() {
+    this.setActiveOriginSynergy(await this.calculateOriginSynergy());
+    this.setActiveClassSynergy(await this.calculateClassSynergy());
   }
 
   @Action({ rawError: true })
-  public async CalculateOriginSynergy(): Promise<ActiveSynergy[]> {
-    const originCount = await this.CountChampionOrigin();
+  public async calculateOriginSynergy(): Promise<ActiveSynergy[]> {
+    const originCount = await this.countChampionOrigin();
     const activeSynergy: ActiveSynergy[] = [];
     for (const originItem of originCount) {
       const originSynergy = this.originList[originItem.id as originId];
@@ -129,8 +129,8 @@ class ChampionPickModule extends VuexModule {
   }
 
   @Action({ rawError: true })
-  public async CalculateClassSynergy(): Promise<ActiveSynergy[]> {
-    const synergyCount = await this.CountChampionClass();
+  public async calculateClassSynergy(): Promise<ActiveSynergy[]> {
+    const synergyCount = await this.countChampionClass();
 
     const activeSynergy: ActiveSynergy[] = [];
     for (const classItem of synergyCount) {
@@ -174,7 +174,7 @@ class ChampionPickModule extends VuexModule {
   }
 
   @Action({ rawError: true })
-  private CountChampionOrigin(): SynergyCount[] {
+  private countChampionOrigin(): SynergyCount[] {
     const synergyCount: SynergyCount[] = this.championPicked.reduce<
       SynergyCount[]
     >((acc, current) => {
@@ -193,7 +193,7 @@ class ChampionPickModule extends VuexModule {
   }
 
   @Action({ rawError: true })
-  private CountChampionClass(): SynergyCount[] {
+  private countChampionClass(): SynergyCount[] {
     const classCount: SynergyCount[] = this.championPicked.reduce<
       SynergyCount[]
     >((acc, current) => {
@@ -213,7 +213,7 @@ class ChampionPickModule extends VuexModule {
 
   @Action({ rawError: true })
   public resetPickChampion() {
-    this.SET_CHAMPION_PICKED([]);
+    this.setChampionPicked([]);
   }
 
   // #endregion

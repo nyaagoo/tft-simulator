@@ -29,21 +29,21 @@ export default class PickCoutenr extends Vue {
   incrementMaxCount() {
     if (10 <= championPick.maxCountPickChampion) return;
     const increment = championPick.maxCountPickChampion + 1;
-    championPick.SET_MAX_COUNT_PICK_CHAMPION(increment);
-    championPick.CalculateChampionPicked();
+    championPick.setMaxCountPickChampion(increment);
+    championPick.calculateChampionPicked();
   }
 
   decrementMaxCount() {
     if (championPick.maxCountPickChampion <= 1) return;
     const decrement = championPick.maxCountPickChampion - 1;
-    championPick.SET_CHAMPION_PICKED_LENGTH(decrement);
-    championPick.SET_MAX_COUNT_PICK_CHAMPION(decrement);
-    championPick.CalculateChampionPicked();
+    championPick.setChampionPickedLength(decrement);
+    championPick.setMaxCountPickChampion(decrement);
+    championPick.calculateChampionPicked();
   }
 
   resetPickChampion() {
     championPick.resetPickChampion();
-    championPick.CalculateChampionPicked();
+    championPick.calculateChampionPicked();
   }
 }
 </script>

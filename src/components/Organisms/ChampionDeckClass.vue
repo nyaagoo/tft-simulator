@@ -23,7 +23,7 @@ export default class DeckClass extends Vue {
   costColor: Map<number, string> = costColor;
 
   mounted() {
-    championDeck.SeparateChampionDeckClass();
+    championDeck.separateChampionDeckClass();
   }
   get championListEachClass(): ChampionClass[] {
     return championDeck.deckClass;

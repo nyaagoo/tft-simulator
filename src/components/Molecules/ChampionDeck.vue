@@ -36,7 +36,7 @@ export default class ChampionDeck extends Vue {
     return setting.visibleChampionCost;
   }
   championPick(c: Champion) {
-    championPick.ToggleChampionPicked(c);
+    championPick.toggleChampionPicked(c);
   }
   isPicked(id: string): boolean {
     return championPick.championPicked.some(picked => picked.id === id);

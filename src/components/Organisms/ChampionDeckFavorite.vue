@@ -50,13 +50,13 @@ export default class DeckFavorite extends Vue {
     return championDeck.favoriteOriginList;
   }
   set favoriteOriginList(list: string[]) {
-    championDeck.SET_FAVORITE_ORIGIN_LIST(list);
+    championDeck.setFavoriteOriginList(list);
   }
   get favoriteClassList(): string[] {
     return championDeck.favoriteClassList;
   }
   set favoriteClassList(list: string[]) {
-    championDeck.SET_FAVORITE_CLASS_LIST(list);
+    championDeck.setFavoriteClassList(list);
   }
   get originList(): string[] {
     return Object.keys(championDeck.originList);

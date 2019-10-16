@@ -57,7 +57,7 @@ export default class ChampionFooterOpen extends Vue {
   }
 
   removeChampion(targetChampion: Champion) {
-    championPick.RemoveChampionPicked(targetChampion);
+    championPick.removeChampionPicked(targetChampion);
   }
 }
 </script>

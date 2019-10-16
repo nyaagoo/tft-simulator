@@ -48,19 +48,19 @@ export default class TFTHeader extends Vue {
   }
 
   toggleVisibleSynergyViewer() {
-    setting.SET_VISIBLE_SIDE_SYNERGY_VIEWER(this.visibleSideSynergyViewer);
+    setting.setVisibleSideSynergyViewer(this.visibleSideSynergyViewer);
     setting.saveSetting();
   }
   toggleVisibleOrigin() {
-    setting.SET_VISIBLE_CHAMPION_ORIGIN(this.visibleOriginIcon);
+    setting.setVisibleChampionOrigin(this.visibleOriginIcon);
     setting.saveSetting();
   }
   toggleVisibleClass() {
-    setting.SET_VISIBLE_CHAMPION_CLASS(this.visibleClassIcon);
+    setting.setVisibleChampionClass(this.visibleClassIcon);
     setting.saveSetting();
   }
   toggleVisibleCost() {
-    setting.SET_VISIBLE_CHAMPION_COST(this.visibleCostIcon);
+    setting.setVisibleChampionCost(this.visibleCostIcon);
     setting.saveSetting();
   }
   sortChampionCost() {

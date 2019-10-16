@@ -24,7 +24,7 @@ export default class ChampionFooterClose extends Vue {
     return championPick.championPicked;
   }
   removeChampion(targetChampion: Champion) {
-    championPick.RemoveChampionPicked(targetChampion);
+    championPick.removeChampionPicked(targetChampion);
   }
 }
 </script>

@@ -20,23 +20,23 @@ class SettingModule extends VuexModule {
 
   // #region MUTATION
   @Mutation
-  public SET_VISIBLE_SIDE_SYNERGY_VIEWER(visibility: boolean) {
+  public setVisibleSideSynergyViewer(visibility: boolean) {
     this.visibleSideSynergyViewer = visibility;
   }
   @Mutation
-  public SET_VISIBLE_CHAMPION_ORIGIN(visibility: boolean) {
+  public setVisibleChampionOrigin(visibility: boolean) {
     this.visibleChampionOrigin = visibility;
   }
   @Mutation
-  public SET_VISIBLE_CHAMPION_CLASS(visibility: boolean) {
+  public setVisibleChampionClass(visibility: boolean) {
     this.visibleChampionClass = visibility;
   }
   @Mutation
-  public SET_VISIBLE_CHAMPION_COST(visibility: boolean) {
+  public setVisibleChampionCost(visibility: boolean) {
     this.visibleChampionCost = visibility;
   }
   @Mutation
-  public SET_DRAWER(isShow: boolean) {
+  public setShowDrawer(isShow: boolean) {
     this.showDrawer = isShow;
   }
 
@@ -45,7 +45,7 @@ class SettingModule extends VuexModule {
   // #region ACTION
   @Action({ rawError: true })
   public toggleDrawer() {
-    this.SET_DRAWER(!this.showDrawer);
+    this.setShowDrawer(!this.showDrawer);
   }
 
   @Action({ rawError: true })
@@ -72,10 +72,10 @@ class SettingModule extends VuexModule {
       visibleCost: boolean;
     } = JSON.parse(visibility);
 
-    this.SET_VISIBLE_SIDE_SYNERGY_VIEWER(setting.visibleSynergyViewer);
-    this.SET_VISIBLE_CHAMPION_ORIGIN(setting.visibleOrigin);
-    this.SET_VISIBLE_CHAMPION_CLASS(setting.visibleClass);
-    this.SET_VISIBLE_CHAMPION_COST(setting.visibleCost);
+    this.setVisibleSideSynergyViewer(setting.visibleSynergyViewer);
+    this.setVisibleChampionOrigin(setting.visibleOrigin);
+    this.setVisibleChampionClass(setting.visibleClass);
+    this.setVisibleChampionCost(setting.visibleCost);
   }
 
   // #endregion

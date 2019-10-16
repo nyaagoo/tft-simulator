@@ -33,25 +33,25 @@ class ChampionDeckModule extends VuexModule {
   // #region MUTATION
 
   @Mutation
-  public SET_FAVORITE_ORIGIN_LIST(list: string[]) {
+  public setFavoriteOriginList(list: string[]) {
     // #region
     this.favoriteOriginList = list;
   }
   @Mutation
-  public SET_FAVORITE_CLASS_LIST(list: string[]) {
+  public setFavoriteClassList(list: string[]) {
     this.favoriteClassList = list;
   }
   @Mutation // counter
-  public SET_CHAMPION_DECK_ORIGIN(championOrigin: ChampionOrigin[]) {
+  public setChampionDeckOrigin(championOrigin: ChampionOrigin[]) {
     this.deckOrigin = championOrigin;
   }
   @Mutation
-  public SET_CHAMPION_DECK_CLASS(championClass: ChampionClass[]) {
+  public setChampionDeckClass(championClass: ChampionClass[]) {
     this.deckClass = championClass;
   }
 
   @Mutation
-  public SET_FAVORITE_ORIGIN_CLASS(favorite: FavoriteOriginClass) {
+  public setFavoriteOriginClass(favorite: FavoriteOriginClass) {
     this.deckFavorite = favorite;
   }
 
@@ -59,7 +59,7 @@ class ChampionDeckModule extends VuexModule {
 
   // #region ACTION
   @Action({ rawError: true })
-  public SeparateChampionDeckOrigin() {
+  public separateChampionDeckOrigin() {
     const eachOrigin: ChampionOrigin[] = [];
     for (const originName of Object.keys(this.originList)) {
       for (const champion of Object.values(this.championList)) {
@@ -80,12 +80,12 @@ class ChampionDeckModule extends VuexModule {
         }
       }
     }
-    this.SET_CHAMPION_DECK_ORIGIN(eachOrigin);
+    this.setChampionDeckOrigin(eachOrigin);
     this.sortChampionOriginCost();
   }
 
   @Action({ rawError: true })
-  public SeparateChampionDeckClass() {
+  public separateChampionDeckClass() {
     const eachClass: ChampionClass[] = [];
     for (const className of Object.keys(this.classList)) {
       for (const champion of Object.values(this.championList)) {
@@ -106,7 +106,7 @@ class ChampionDeckModule extends VuexModule {
         }
       }
     }
-    this.SET_CHAMPION_DECK_CLASS(eachClass);
+    this.setChampionDeckClass(eachClass);
     this.sortChampionClassCost();
   }
 
@@ -120,7 +120,7 @@ class ChampionDeckModule extends VuexModule {
         return 0;
       })
     );
-    this.SET_CHAMPION_DECK_ORIGIN(copyDeckOrigin);
+    this.setChampionDeckOrigin(copyDeckOrigin);
   }
 
   @Action({ rawError: true })
@@ -133,7 +133,7 @@ class ChampionDeckModule extends VuexModule {
         return 0;
       })
     );
-    this.SET_CHAMPION_DECK_CLASS(copyDeckClass);
+    this.setChampionDeckClass(copyDeckClass);
   }
 
   @Action({ rawError: true })
@@ -146,7 +146,7 @@ class ChampionDeckModule extends VuexModule {
         return 0;
       })
     );
-    this.SET_CHAMPION_DECK_ORIGIN(copyDeckOrigin);
+    this.setChampionDeckOrigin(copyDeckOrigin);
   }
 
   @Action({ rawError: true })
@@ -159,7 +159,7 @@ class ChampionDeckModule extends VuexModule {
         return 0;
       })
     );
-    this.SET_CHAMPION_DECK_CLASS(copyDeckClass);
+    this.setChampionDeckClass(copyDeckClass);
   }
 
   // #endregion

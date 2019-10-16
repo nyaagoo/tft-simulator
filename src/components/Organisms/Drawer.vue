@@ -32,7 +32,7 @@ export default class Drawer extends Vue {
     return setting.showDrawer;
   }
   set drawer(isShow: boolean) {
-    setting.SET_DRAWER(isShow);
+    setting.setShowDrawer(isShow);
   }
 
   transitPageChampion() {

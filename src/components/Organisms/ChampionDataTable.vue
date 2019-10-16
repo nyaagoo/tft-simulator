@@ -86,14 +86,14 @@ export default class ChampionDataTable extends Vue {
     return championTable.searchWord;
   }
   set search(word: string) {
-    championTable.SET_SEARCH_WORD(word);
+    championTable.setSearchWord(word);
   }
 
   get selectedLevel(): number {
     return championTable.selectLevel;
   }
   set selectedLevel(level: number) {
-    championTable.SelectChampionLevel(level);
+    championTable.selectChampionLevel(level);
   }
 
   get originList() {
@@ -119,7 +119,7 @@ export default class ChampionDataTable extends Vue {
   }
 
   created() {
-    championTable.SelectChampionLevel(1);
+    championTable.selectChampionLevel(1);
   }
   get championList() {
     let filteredChampionList = championTable.championTable;
@@ -145,7 +145,7 @@ export default class ChampionDataTable extends Vue {
   }
 
   selectLevel(level: number) {
-    championTable.SelectChampionLevel(level);
+    championTable.selectChampionLevel(level);
   }
 }
 </script>
