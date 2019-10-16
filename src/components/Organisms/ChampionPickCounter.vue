@@ -13,17 +13,9 @@
 import { Component, Vue } from "vue-property-decorator";
 import { championPick } from "@/store/index";
 import router from "@/router";
-import IconBase from "@/components/Icon/IconBase.vue";
-import IconAdd from "@/components/Icon/IconAdd.vue";
-import IconRemove from "@/components/Icon/IconRemove.vue";
-
 @Component({
   name: "pick-counter",
-  components: {
-    "icon-base": IconBase,
-    "icon-add": IconAdd,
-    "icon-remove": IconRemove
-  }
+  components: {}
 })
 export default class PickCoutenr extends Vue {
   get pickCount(): number {

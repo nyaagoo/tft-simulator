@@ -28,18 +28,11 @@
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { setting, championDeck } from "@/store/index";
-import IconBase from "@/components/Icon/IconBase.vue";
-import IconSetting from "@/components/Icon/IconSetting.vue";
-import IconMenu from "@/components/Icon/IconMenu.vue";
 import { mdiMenu, mdiSettings } from "@mdi/js";
 
 @Component({
   name: "tft-header",
-  components: {
-    "icon-base": IconBase,
-    "icon-setting": IconSetting,
-    "icon-menu": IconMenu
-  }
+  components: {}
 })
 export default class TFTHeader extends Vue {
   icon = { mdiMenu, mdiSettings };

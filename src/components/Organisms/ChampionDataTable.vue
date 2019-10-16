@@ -42,20 +42,11 @@
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { championTable, championDeck } from "@/store/index";
-import IconBase from "@/components/Icon/IconBase.vue";
-import IconStar from "@/components/Icon/IconStar.vue";
-import IconAdd from "@/components/Icon/IconAdd.vue";
-import IconStarBorder from "@/components/Icon/IconStarBorder.vue";
 import { mdiStar } from "@mdi/js";
 
 @Component({
   name: "champion-data-table",
-  components: {
-    "icon-base": IconBase,
-    "icon-star": IconStar,
-    "icon-add": IconAdd,
-    "icon-star-border": IconStarBorder
-  }
+  components: {}
 })
 export default class ChampionDataTable extends Vue {
   icon = { mdiStar };

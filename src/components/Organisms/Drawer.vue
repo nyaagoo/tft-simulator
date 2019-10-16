@@ -19,18 +19,11 @@
 import { Component, Vue } from "vue-property-decorator";
 import { setting } from "@/store/index";
 import router from "@/router";
-import IconBase from "@/components/Icon/IconBase.vue";
-import IconSubtitle from "@/components/Icon/IconSubtitle.vue";
-import IconViewModule from "@/components/Icon/IconViewModule.vue";
 import { mdiOctagonOutline, mdiWidgets, mdiViewList } from "@mdi/js";
 
 @Component({
   name: "drawer",
-  components: {
-    "icon-base": IconBase,
-    "icon-subtitle": IconSubtitle,
-    "icon-view-module": IconViewModule
-  }
+  components: {}
 })
 export default class Drawer extends Vue {
   icon = { mdiOctagonOutline, mdiWidgets, mdiViewList };
