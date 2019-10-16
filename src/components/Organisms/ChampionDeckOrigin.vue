@@ -11,12 +11,12 @@ import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { ChampionOrigin, costColor } from "@/models/champion";
 import { championDeck } from "@/store/index";
-import ChampionDeckGroup from "@/components/Molecules/ChampionDeckGroup.vue";
 
 @Component({
   name: "deck-origin",
   components: {
-    "champion-deck-group": ChampionDeckGroup
+    "champion-deck-group": () =>
+      import("@/components/Molecules/ChampionDeckGroup.vue")
   }
 })
 export default class DeckOrigin extends Vue {

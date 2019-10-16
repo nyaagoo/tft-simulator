@@ -27,14 +27,13 @@ import { championPick } from "@/store/index";
 import { Champion, costColor } from "@/models/champion";
 import { ActiveSynergy } from "@/models/type";
 import router from "@/router";
-import PickCoutenr from "@/components/Organisms/ChampionPickCounter.vue";
-import ChampionDeck from "@/components/Molecules/ChampionDeck.vue";
 
 @Component({
   name: "footer-open",
   components: {
-    "pick-counter": PickCoutenr,
-    "champion-deck": ChampionDeck
+    "pick-counter": () =>
+      import("@/components/Organisms/ChampionPickCounter.vue"),
+    "champion-deck": () => import("@/components/Molecules/ChampionDeck.vue")
   }
 })
 export default class ChampionFooterOpen extends Vue {

@@ -10,11 +10,12 @@
 import { Component, Vue } from "vue-property-decorator";
 import { championPick } from "@/store/index";
 import { ActiveSynergy } from "@/models/type";
-import SynergyCountItem from "@/components/Organisms/SynergyCountItem.vue";
+
 @Component({
   name: "champion-side-pick",
   components: {
-    "active-synergy-item": SynergyCountItem
+    "active-synergy-item": () =>
+      import("@/components/Organisms/SynergyCountItem.vue")
   }
 })
 export default class ChampionSideDeck extends Vue {

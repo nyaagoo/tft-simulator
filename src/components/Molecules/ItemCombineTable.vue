@@ -17,12 +17,11 @@ import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { item } from "@/store/index";
 import { BuildItem, BasicItem, BuildFromBasicItem } from "@/models/item";
-import ItemPool from "@/components/Organisms/ItemPool.vue";
 
 @Component({
   name: "combine-table",
   components: {
-    "item-pool": ItemPool
+    "item-pool": () => import("@/components/Organisms/ItemPool.vue")
   }
 })
 export default class CombineTable extends Vue {

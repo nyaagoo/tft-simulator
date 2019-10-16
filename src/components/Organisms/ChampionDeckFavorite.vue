@@ -21,12 +21,11 @@
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { championDeck } from "@/store/index";
-import ChampionDeckGroup from "@/components/Molecules/ChampionDeckGroup.vue";
-
 @Component({
   name: "deck-favorite",
   components: {
-    "champion-deck-group": ChampionDeckGroup
+    "champion-deck-group": () =>
+      import("@/components/Molecules/ChampionDeckGroup.vue")
   }
 })
 export default class DeckFavorite extends Vue {

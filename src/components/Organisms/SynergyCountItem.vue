@@ -19,12 +19,10 @@
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 import { ActiveSynergy } from "@/models/type";
-import SynergyTooltip from "@/components/Molecules/SynergyTooltip.vue";
-
 @Component({
   name: "synergy-count-item",
   components: {
-    "synergy-tooltip": SynergyTooltip
+    "synergy-tooltip": () => import("@/components/Molecules/SynergyTooltip.vue")
   }
 })
 export default class SynergyCountItemActive extends Vue {

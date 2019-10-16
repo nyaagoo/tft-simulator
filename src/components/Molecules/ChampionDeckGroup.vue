@@ -16,14 +16,11 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 import router from "@/router";
 import { Champion } from "@/models/champion";
 import { Synergy } from "@/models/type";
-import ChampionDeck from "@/components/Molecules/ChampionDeck.vue";
-import SynergyTooltip from "@/components/Molecules/SynergyTooltip.vue";
-
 @Component({
   name: "champion-deck-group",
   components: {
-    "champion-deck": ChampionDeck,
-    "synergy-tooltip": SynergyTooltip
+    "champion-deck": () => import("@/components/Molecules/ChampionDeck.vue"),
+    "synergy-tooltip": () => import("@/components/Molecules/SynergyTooltip.vue")
   }
 })
 export default class ChampionDeckGroup extends Vue {

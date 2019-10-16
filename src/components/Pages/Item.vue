@@ -7,18 +7,16 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Header from "@/components/Organisms/Header.vue";
-import ItemBuildSheet from "@/components/Organisms/ItemBuildSheet.vue";
-import ItemCombineSimulator from "@/components/Organisms/ItemCombineTable.vue";
-import Drawer from "@/components/Organisms/Drawer.vue";
 
 @Component({
   name: "item-page",
   components: {
-    "tft-header": Header,
-    "tft-drawer": Drawer,
-    "item-build-sheed": ItemBuildSheet,
-    "item-combine-simulator": ItemCombineSimulator
+    "tft-header": () => import("@/components/Organisms/Header.vue"),
+    "tft-drawer": () => import("@/components/Organisms/Drawer.vue"),
+    "item-build-sheed": () =>
+      import("@/components/Organisms/ItemBuildSheet.vue"),
+    "item-combine-simulator": () =>
+      import("@/components/Organisms/ItemCombineTable.vue")
   }
 })
 export default class ItemPage extends Vue {}

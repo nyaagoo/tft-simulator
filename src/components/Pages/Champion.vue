@@ -15,23 +15,21 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { setting } from "@/store/index";
-import DeckOrigin from "@/components/Organisms/ChampionDeckOrigin.vue";
-import DeckClass from "@/components/Organisms/ChampionDeckClass.vue";
-import Header from "@/components/Organisms/Header.vue";
-import Drawer from "@/components/Organisms/Drawer.vue";
-import ChampionFooter from "@/components/Organisms/ChampionFooter.vue";
-import DeckFavorite from "@/components/Organisms/ChampionDeckFavorite.vue";
-import ChampionSidePick from "@/components/Organisms/ChampionSidePick.vue";
 
 @Component({
   components: {
-    "champion-deck-origin": DeckOrigin,
-    "champion-deck-class": DeckClass,
-    "champion-deck-favorite": DeckFavorite,
-    "tft-header": Header,
-    "tft-drawer": Drawer,
-    "champion-footer": ChampionFooter,
-    "champion-side-pick": ChampionSidePick
+    "champion-deck-origin": () =>
+      import("@/components/Organisms/ChampionDeckOrigin.vue"),
+    "champion-deck-class": () =>
+      import("@/components/Organisms/ChampionDeckClass.vue"),
+    "champion-deck-favorite": () =>
+      import("@/components/Organisms/ChampionDeckFavorite.vue"),
+    "tft-header": () => import("@/components/Organisms/Header.vue"),
+    "tft-drawer": () => import("@/components/Organisms/Drawer.vue"),
+    "champion-footer": () =>
+      import("@/components/Organisms/ChampionFooter.vue"),
+    "champion-side-pick": () =>
+      import("@/components/Organisms/ChampionSidePick.vue")
   }
 })
 export default class ChampionPage extends Vue {

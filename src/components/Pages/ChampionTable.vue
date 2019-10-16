@@ -6,16 +6,14 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Header from "@/components/Organisms/Header.vue";
-import Drawer from "@/components/Organisms/Drawer.vue";
-import ChampionDataTable from "@/components/Organisms/ChampionDataTable.vue";
 
 @Component({
   name: "champion-table-page",
   components: {
-    "tft-header": Header,
-    "tft-drawer": Drawer,
-    "champion-data-table": ChampionDataTable
+    "tft-header": () => import("@/components/Organisms/Header.vue"),
+    "tft-drawer": () => import("@/components/Organisms/Drawer.vue"),
+    "champion-data-table": () =>
+      import("@/components/Organisms/ChampionDataTable.vue")
   }
 })
 export default class ChampionTablePage extends Vue {}

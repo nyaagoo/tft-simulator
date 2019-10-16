@@ -7,12 +7,11 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
-import CombineTable from "@/components/Molecules/ItemCombineTable.vue";
 
 @Component({
   name: "item-combine-simulator",
   components: {
-    "combine-table": CombineTable
+    "combine-table": () => import("@/components/Molecules/ItemCombineTable.vue")
   }
 })
 export default class ItemCombineSimulator extends Vue {}
