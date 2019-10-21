@@ -10,12 +10,13 @@
 import { Component, Vue } from "vue-property-decorator";
 import router from "@/router";
 import { Champion, costColor } from "@/models/champion";
+import FooterClose from "@/components/Organisms/ChampionFooterClose.vue";
+import FooterOpen from "@/components/Organisms/ChampionFooterOpen.vue";
 @Component({
   name: "champion-footer",
   components: {
-    "footer-close": () =>
-      import("@/components/Organisms/ChampionFooterClose.vue"),
-    "footer-open": () => import("@/components/Organisms/ChampionFooterOpen.vue")
+    "footer-close": FooterClose,
+    "footer-open": FooterOpen
   }
 })
 export default class ChampionFooter extends Vue {
